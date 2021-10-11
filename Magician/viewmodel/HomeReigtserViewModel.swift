@@ -16,4 +16,10 @@ class HomeReigtserViewModel: ObservableObject {
     
     @Published var newPassword = ""
     @Published var reNewPassword = ""
+    
+    @Published var emailReset = ""
+
+    @Published var passwordLogin = ""
+    @Published var emailLogin = ""
+
 }

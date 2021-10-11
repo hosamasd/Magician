@@ -11,6 +11,8 @@
 		4E1538C82714B36700D5DD52 /* NewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538C72714B36700D5DD52 /* NewPasswordView.swift */; };
 		4E1538CA2714B3C100D5DD52 /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538C92714B3C100D5DD52 /* CustomTF.swift */; };
 		4E1538CD2714B48C00D5DD52 /* HomeReigtserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538CC2714B48C00D5DD52 /* HomeReigtserViewModel.swift */; };
+		4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538CE2714B64000D5DD52 /* ResetView.swift */; };
+		4E1538D12714B6DF00D5DD52 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538D02714B6DF00D5DD52 /* LoginView.swift */; };
 		4EB8FFE927148560008C0D03 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8FFE827148560008C0D03 /* Launch Screen.storyboard */; };
 		4ECD6D9D27145E0400011208 /* MagicianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD6D9C27145E0400011208 /* MagicianApp.swift */; };
 		4ECD6D9F27145E0400011208 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD6D9E27145E0400011208 /* ContentView.swift */; };
@@ -30,6 +32,8 @@
 		4E1538C72714B36700D5DD52 /* NewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordView.swift; sourceTree = "<group>"; };
 		4E1538C92714B3C100D5DD52 /* CustomTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
 		4E1538CC2714B48C00D5DD52 /* HomeReigtserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReigtserViewModel.swift; sourceTree = "<group>"; };
+		4E1538CE2714B64000D5DD52 /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
+		4E1538D02714B6DF00D5DD52 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4EB8FFE827148560008C0D03 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4ECD6D9927145E0400011208 /* Magician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECD6D9C27145E0400011208 /* MagicianApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicianApp.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				4E1538C72714B36700D5DD52 /* NewPasswordView.swift */,
+				4E1538CE2714B64000D5DD52 /* ResetView.swift */,
+				4E1538D02714B6DF00D5DD52 /* LoginView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 				4E1538C82714B36700D5DD52 /* NewPasswordView.swift in Sources */,
 				4ECD6DB927145E8500011208 /* Extensions_ui.swift in Sources */,
 				4E1538CA2714B3C100D5DD52 /* CustomTF.swift in Sources */,
+				4E1538D12714B6DF00D5DD52 /* LoginView.swift in Sources */,
 				4E1538CD2714B48C00D5DD52 /* HomeReigtserViewModel.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
+				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
 				4ECD6DBE271460D800011208 /* HomeONBoard.swift in Sources */,
 				4ECD6DB827145E8500011208 /* hideKeyboard.swift in Sources */,
 				4ECD6D9F27145E0400011208 /* ContentView.swift in Sources */,
