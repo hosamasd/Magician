@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct MagicianApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
+
         }
     }
 }

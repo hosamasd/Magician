@@ -1,0 +1,19 @@
+//
+//  HomeReigtserViewModel.swift
+//  Magician
+//
+//  Created by hosam on 11/10/2021.
+//
+
+import SwiftUI
+
+class HomeReigtserViewModel: ObservableObject {
+    @AppStorage("isUserLogin") var isUserLogin: Bool = false
+    
+    @Published var alert = false
+    @Published var alertMsg = ""
+    @Published var isLooding = false
+    
+    @Published var newPassword = ""
+    @Published var reNewPassword = ""
+}
