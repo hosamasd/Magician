@@ -19,15 +19,18 @@ struct ResetView: View {
             Text("Please enter your email to receive a\nlink to  create a new password via email")
                 .font(.system(size: 14))
                 .foregroundColor(.black.opacity(0.6))
-                .padding(.top)
-            
+//                .padding(.top)
+                .padding(.top,2)
+
             VStack(spacing:32){
                 
                 CustomTF(txt: $vm.newPassword,hint: "Email")
                 
                 Button(action: {
                     withAnimation{
-                        
+                        vm.isNewPass.toggle()
+
+                        vm.isResetPass.toggle()
                     }
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)
@@ -44,14 +47,18 @@ struct ResetView: View {
                 })
                 .frame(height:60)
             }
-            .padding(.horizontal,32)
-            .padding(.top,32)
-            
+            .frame(width:getFrameSize().width-48)
+
+//            .padding(.horizontal,32)
+//            .padding(.top,32)
+            .padding(.top,40)
+
             Spacer()
             
             
         }
-        
+        .padding(.top,60)
+
     }
 }
 

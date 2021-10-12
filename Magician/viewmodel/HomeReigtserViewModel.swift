@@ -14,6 +14,14 @@ class HomeReigtserViewModel: ObservableObject {
     @Published var alertMsg = ""
     @Published var isLooding = false
     
+    @Published var isMainScene = false
+    @Published var isLogin = false
+    @Published var isSignUp = false
+    @Published var isOTP = false
+    @Published var isResetPass = false
+    @Published var isNewPass = false
+
+    
     @Published var newPassword = ""
     @Published var reNewPassword = ""
     

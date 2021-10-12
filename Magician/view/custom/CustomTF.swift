@@ -29,13 +29,16 @@ struct CustomTF: View {
                     ZStack {
                         if isHide {
                             SecureField(hint,text:$txt)
-                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
+                                .foregroundColor(.black.opacity(0.6))
+//                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                                 .font(.system(size: 12))
                             
                         }
                         else {
                             TextField(hint,text:$txt)
-                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
+                                .foregroundColor(.black.opacity(0.6))
+
+//                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                                 .font(.system(size: 12))
                             
                         }

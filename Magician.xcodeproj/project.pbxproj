@@ -75,6 +75,25 @@
 			path = custom;
 			sourceTree = "<group>";
 		};
+		4E4C43C327155CCE004287E7 /* signup */ = {
+			isa = PBXGroup;
+			children = (
+				4ECF1EA427153EEF00698148 /* SignUpView.swift */,
+				4ECF1EAA271543AA00698148 /* OTP */,
+			);
+			path = signup;
+			sourceTree = "<group>";
+		};
+		4E4C43C427155CE1004287E7 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				4E1538D02714B6DF00D5DD52 /* LoginView.swift */,
+				4E1538CE2714B64000D5DD52 /* ResetView.swift */,
+				4E1538C72714B36700D5DD52 /* NewPasswordView.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		4EB8FFE727148551008C0D03 /* support files */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,11 +209,8 @@
 		4ECD6DB227145E3F00011208 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				4E1538C72714B36700D5DD52 /* NewPasswordView.swift */,
-				4E1538CE2714B64000D5DD52 /* ResetView.swift */,
-				4E1538D02714B6DF00D5DD52 /* LoginView.swift */,
-				4ECF1EA427153EEF00698148 /* SignUpView.swift */,
-				4ECF1EAA271543AA00698148 /* OTP */,
+				4E4C43C427155CE1004287E7 /* login */,
+				4E4C43C327155CCE004287E7 /* signup */,
 			);
 			path = Register;
 			sourceTree = "<group>";
