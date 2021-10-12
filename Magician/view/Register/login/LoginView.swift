@@ -16,16 +16,16 @@ struct LoginView: View {
                 
                 Image("Group 8397-1")
                     //                .offset(y:-120)
-                    .padding(.top,-150)
-                //                .resizable()
+//                    .padding(.top,-200)
+                                .resizable()
                 //
-                //                .aspectRatio(contentMode: .fill)
-                //                .frame(maxWidth:getFrameSize().width,maxHeight:getFrameSize().height/3)
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width:isSmallDevice() ?  getFrameSize().width+60 : getFrameSize().width+70, height:getFrameSize().height/4)
                 
                 Image("Magician LOGO")
                     .resizable()
                     .frame(width: 75, height: 80)
-                    .padding(.top,-150)
+//                    .padding(.top,-150)
                 //                .padding(.top,-250)
                 
                 VStack(spacing:24){
@@ -54,6 +54,7 @@ struct LoginView: View {
                     .frame(height:60)
                 }
                 .frame(width:getFrameSize().width-48)
+                .padding(.top,40)
                 
                 //                .frame(width:getFrameSize().width-32)
                 //            .padding(.horizontal,32)
@@ -90,7 +91,9 @@ struct LoginView: View {
                     }
                 )
                 
-                .padding(.bottom,60)
+                .padding(.bottom,isSmallDevice() ? 20 : 40)
+
+//                .padding(.bottom,20)
                 //            Spacer()
             }
             .opacity(vm.isResetPass ? 0 : 1)
@@ -119,6 +122,11 @@ struct LoginView: View {
         .edgesIgnoringSafeArea(.all)
         
         
+    }
+    
+    func getHeight() -> CGFloat {
+        !isSmallDevice() ? getFrameSize().height/2 - 60  : getFrameSize().height/2 - 200
+//         isSmallDevice() ?  120 : 60
     }
 }
 

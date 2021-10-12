@@ -11,9 +11,9 @@ import SwiftUI
 struct HomeONBoard: View {
     @State  var onBoard = [
         InfoModel(title:"Fast Delivery",  pic: "Layer 5",desc:"Fast Order Delivery To Your Home, Office Wherever \n You Are"),
-        InfoModel(title: "Select the Favorites Menu", pic: "",desc:"Now eat well, don't leave the house,You can \nchoose your favorite food only with \none click"),
+        InfoModel(title: "Select the Favorites Menu", pic: "Find food you love vector",desc:"Now eat well, don't leave the house,You can \nchoose your favorite food only with \none click"),
         
-        InfoModel(title: "Good food at a cheap price", pic: "safeFood",desc:"You can eat at expensive restaurants with\n affordable price"),
+        InfoModel(title: "Good food at a cheap price", pic: "Group 82q63",desc:"You can eat at expensive restaurants with\n affordable price"),
         
         
         
@@ -30,13 +30,16 @@ struct HomeONBoard: View {
             
            
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
-                Image("Group 83961")
+                Image("Group 8396-1")
                 
                 
-                Image(index == 1 ? getSecond() :  self.onBoard[self.index].pic)
+                Image(  self.onBoard[self.index].pic)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height:200)
                     .offset(y:-150)
             })
-            .offset(y:-150)
+//            .offset(y:-150)
             .frame(maxHeight:getFrameSize().height/2+60)
             
             HStack(spacing: 12){

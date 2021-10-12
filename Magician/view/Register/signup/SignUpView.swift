@@ -12,147 +12,153 @@ struct SignUpView: View {
     
     var body: some View {
         ZStack {
-            VStack {
-                
-                Text("Sign Up")
-                    .font(.system(size: 30))
-                
-                Text("Add your details to sign up")
-                    .font(.system(size: 14))
-                    .foregroundColor(.black.opacity(0.6))
-                    .padding(.top,2)
-                
-                VStack(spacing:12){
+            
+            ScrollView(isSmallDevice() ? .vertical : .init(),showsIndicators:false) {
+                VStack {
                     
-                    CustomTF(txt: $vm.nameSign,hint: "Name")
+                    Text("Sign Up")
+                        .font(.system(size: 30))
                     
-                    HStack {
+                    Text("Add your details to sign up")
+                        .font(.system(size: 14))
+                        .foregroundColor(.black.opacity(0.6))
+                        .padding(.top,2)
+                    
+                    VStack(spacing:12){
                         
-                        Spacer()
+                        CustomTF(txt: $vm.nameSign,hint: "Name")
                         
-                        Button(action: {
-                            withAnimation{vm.isMale=true}
-                        }, label: {
+                        HStack {
                             
-                            Label(
-                                title: {
-                                    
-                                    Text( "Male")
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.black)
-                                        .padding(.leading,8)
-                                    
-                                },
-                                icon: {
-                                    Image(vm.isMale ? "Group 8312" : "Rectangle 17387")
-                                    
-                                }
-                            )
+                            Spacer()
                             
-                        })
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            withAnimation{vm.isMale=false}
-                        }, label: {
-                            
-                            Label(
-                                title: {
-                                    
-                                    Text( "Female")
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.black)
-                                        .padding(.leading,8)
-                                    
-                                },
-                                icon: {
-                                    Image(!vm.isMale ? "Group 8312" : "Rectangle 17387")
-                                    
-                                }
-                            )
-                            
-                        })
-                        
-                        Spacer()
-                        
-                        
-                    }
-                    
-                }
-                .padding(.top,20)
-                .frame(width:getFrameSize().width-48)
-                
-                //                .padding(.horizontal,32)
-                .padding(.bottom,-16)
-                
-                
-                VStack(spacing:24){
-                    
-                    CustomTF(txt: $vm.emailSign,hint: "Email")
-                    
-                    CustomTF(txt: $vm.mobileSign,hint: "Mobile No")
-                    
-                    CustomTF(txt: $vm.addressSign,hint: "Address")
-                    
-                    CustomTF(txt: $vm.passwordSign,hint: "Password")
-                    
-                    CustomTF(txt: $vm.rePasswordSign,hint: "Confirm Password")
-                    
-                    Button(action: {
-                        withAnimation{
-                            vm.isOTP.toggle()
-                        }
-                    }, label: {
-                        RoundedRectangle(cornerRadius: 28)
-                            
-                            .fill(Color("mains"))
-                            .overlay(
+                            Button(action: {
+                                withAnimation{vm.isMale=true}
+                            }, label: {
                                 
-                                Text("Sign Up")
-                                    .font(.system(size: 16))
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color.white)//.opacity(0.6))
-                            )
-                        
-                    })
-                    .frame(height:60)
-                }
-                .frame(width:getFrameSize().width-48)
-                
-                //                .padding(.horizontal,32)
-                .padding(.top,32)
-                
-                Spacer()
-                
-                Label(
-                    title: {
-                        
-                        Button(action: { withAnimation{
-                            vm.isLogin.toggle()
-                            vm.isSignUp.toggle()
-                        }}, label: {
-                            Text( " Login")
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))//.opacity(0.6))
-                                .padding(.leading,-8)
+                                Label(
+                                    title: {
+                                        
+                                        Text( "Male")
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.black)
+                                            .padding(.leading,8)
+                                        
+                                    },
+                                    icon: {
+                                        Image(vm.isMale ? "Group 8312" : "Rectangle 17387")
+                                        
+                                    }
+                                )
+                                
+                            })
                             
-                        })
-                    },
-                    icon: {
-                        Text("Don't have an Account?")
-                            .foregroundColor(.black.opacity(0.6))
+                            Spacer()
+                            
+                            Button(action: {
+                                withAnimation{vm.isMale=false}
+                            }, label: {
+                                
+                                Label(
+                                    title: {
+                                        
+                                        Text( "Female")
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.black)
+                                            .padding(.leading,8)
+                                        
+                                    },
+                                    icon: {
+                                        Image(!vm.isMale ? "Group 8312" : "Rectangle 17387")
+                                        
+                                    }
+                                )
+                                
+                            })
+                            
+                            Spacer()
+                            
+                            
+                        }
                         
                     }
-                )
-                
-                
-                .padding(.bottom,40)
-                
-                
+                    .padding(.top,20)
+                    .frame(width:getFrameSize().width-48)
+                    
+                    //                .padding(.horizontal,32)
+                    .padding(.bottom,-16)
+                    
+                    
+                    VStack(spacing:24){
+                        
+                        CustomTF(txt: $vm.emailSign,hint: "Email")
+                        
+                        CustomTF(txt: $vm.mobileSign,hint: "Mobile No")
+                        
+                        CustomTF(txt: $vm.addressSign,hint: "Address")
+                        
+                        CustomTF(txt: $vm.passwordSign,hint: "Password")
+                        
+                        CustomTF(txt: $vm.rePasswordSign,hint: "Confirm Password")
+                        
+                        Button(action: {
+                            withAnimation{
+                                vm.isOTP.toggle()
+                            }
+                        }, label: {
+                            RoundedRectangle(cornerRadius: 28)
+                                
+                                .fill(Color("mains"))
+                                .overlay(
+                                    
+                                    Text("Sign Up")
+                                        .font(.system(size: 16))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(Color.white)//.opacity(0.6))
+                                )
+                            
+                        })
+                        .frame(height:60)
+                    }
+                    .frame(width:getFrameSize().width-48)
+                    
+                    //                .padding(.horizontal,32)
+                    .padding(.top,32)
+                    .padding(.bottom,40)
+
+                    Spacer()
+                    
+                    Label(
+                        title: {
+                            
+                            Button(action: { withAnimation{
+                                vm.isLogin.toggle()
+                                vm.isSignUp.toggle()
+                            }}, label: {
+                                Text( " Login")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color("mains"))//.opacity(0.6))
+                                    .padding(.leading,-8)
+                                
+                            })
+                        },
+                        icon: {
+                            Text("Don't have an Account?")
+                                .foregroundColor(.black.opacity(0.6))
+                            
+                        }
+                    )
+                    
+                    
+                    .padding(.bottom,isSmallDevice() ? 20 : 40)
+                    
+                    
+                }
+                .frame(width:getFrameSize().width-48)
+
             }
             .opacity(vm.isOTP ? 0 : 1)
-            
+
             if vm.isOTP {
                 
                 OTPView(vm:vm)

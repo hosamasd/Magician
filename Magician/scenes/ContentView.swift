@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        OTPView(vm: HomeReigtserViewModel())
+//        LoginView(vm: HomeReigtserViewModel())
 
         MainHomeReg()
     }
