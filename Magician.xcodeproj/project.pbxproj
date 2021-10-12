@@ -25,6 +25,9 @@
 		4ECD6DBC27145EBC00011208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD6DBB27145EBC00011208 /* AppDelegate.swift */; };
 		4ECD6DBE271460D800011208 /* HomeONBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD6DBD271460D800011208 /* HomeONBoard.swift */; };
 		4ECD6DC02714610B00011208 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD6DBF2714610B00011208 /* InfoModel.swift */; };
+		4ECF1EA527153EEF00698148 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF1EA427153EEF00698148 /* SignUpView.swift */; };
+		4ECF1EA7271542BC00698148 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF1EA6271542BC00698148 /* OTPView.swift */; };
+		4ECF1EA92715439F00698148 /* SPasscodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF1EA82715439F00698148 /* SPasscodeField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		4ECD6DBB27145EBC00011208 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ECD6DBD271460D800011208 /* HomeONBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeONBoard.swift; sourceTree = "<group>"; };
 		4ECD6DBF2714610B00011208 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		4ECF1EA427153EEF00698148 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		4ECF1EA6271542BC00698148 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		4ECF1EA82715439F00698148 /* SPasscodeField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPasscodeField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +193,19 @@
 				4E1538C72714B36700D5DD52 /* NewPasswordView.swift */,
 				4E1538CE2714B64000D5DD52 /* ResetView.swift */,
 				4E1538D02714B6DF00D5DD52 /* LoginView.swift */,
+				4ECF1EA427153EEF00698148 /* SignUpView.swift */,
+				4ECF1EAA271543AA00698148 /* OTP */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		4ECF1EAA271543AA00698148 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				4ECF1EA6271542BC00698148 /* OTPView.swift */,
+				4ECF1EA82715439F00698148 /* SPasscodeField.swift */,
+			);
+			path = OTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1538C82714B36700D5DD52 /* NewPasswordView.swift in Sources */,
+				4ECF1EA7271542BC00698148 /* OTPView.swift in Sources */,
 				4ECD6DB927145E8500011208 /* Extensions_ui.swift in Sources */,
 				4E1538CA2714B3C100D5DD52 /* CustomTF.swift in Sources */,
 				4E1538D12714B6DF00D5DD52 /* LoginView.swift in Sources */,
@@ -270,9 +288,11 @@
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
 				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
 				4ECD6DBE271460D800011208 /* HomeONBoard.swift in Sources */,
+				4ECF1EA92715439F00698148 /* SPasscodeField.swift in Sources */,
 				4ECD6DB827145E8500011208 /* hideKeyboard.swift in Sources */,
 				4ECD6D9F27145E0400011208 /* ContentView.swift in Sources */,
 				4ECD6DBC27145EBC00011208 /* AppDelegate.swift in Sources */,
+				4ECF1EA527153EEF00698148 /* SignUpView.swift in Sources */,
 				4ECD6DB727145E8500011208 /* ex_Image.swift in Sources */,
 				4ECD6D9D27145E0400011208 /* MagicianApp.swift in Sources */,
 				4ECD6DC02714610B00011208 /* InfoModel.swift in Sources */,

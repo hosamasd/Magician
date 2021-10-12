@@ -65,12 +65,17 @@ struct LoginView: View {
             
             Spacer()
             
-            Button(action: {}, label: {
+           
                 Label(
                     title: {
-                        Text( " Sign Up")
-                            .foregroundColor(Color("mains"))//.opacity(0.6))
                         
+                        Button(action: {}, label: {
+                        Text( " Sign Up")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("mains"))//.opacity(0.6))
+                            .padding(.leading,-8)
+                        
+                        })
                     },
                     icon: {
                         Text("Don't have an Account?")
@@ -78,7 +83,7 @@ struct LoginView: View {
                         
                     }
                 )
-            })
+            
             .padding(.bottom,60)
             //            Spacer()
         }

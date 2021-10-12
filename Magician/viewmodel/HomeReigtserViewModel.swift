@@ -22,4 +22,15 @@ class HomeReigtserViewModel: ObservableObject {
     @Published var passwordLogin = ""
     @Published var emailLogin = ""
 
+    @Published var nameSign = ""
+    @Published var emailSign = ""
+    @Published var mobileSign = ""
+    @Published var addressSign = ""
+
+    @Published var passwordSign = ""
+    @Published var rePasswordSign = ""
+    
+    @Published var isMale = true
+@Published var totalSmsmCode=""
+
 }

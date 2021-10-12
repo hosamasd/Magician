@@ -16,33 +16,33 @@ struct CustomTF: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 28)
             .fill(Color("txField"))
-//            .fill(Color.gray.opacity(0.2))
+            //            .fill(Color.gray.opacity(0.2))
             //            .fill(Color.white)
             .overlay(
                 
                 ZStack(alignment: .leading) {
                     if txt.isEmpty { Text(LocalizedStringKey(hint))
-                        .foregroundColor(.black.opacity(0.2))
+                        .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                         .fontWeight(.semibold)
                         .font(.system(size: 12))
                     }
                     ZStack {
                         if isHide {
                             SecureField(hint,text:$txt)
-                                .foregroundColor(.black.opacity(0.2))
+                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                                 .font(.system(size: 12))
                             
                         }
                         else {
                             TextField(hint,text:$txt)
-                                .foregroundColor(.black.opacity(0.2))
+                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                                 .font(.system(size: 12))
                             
                         }
                     }
                     
                 }
-                .padding(.leading)
+                .padding(.leading,32)
             )
             .frame(height:50)
     }
