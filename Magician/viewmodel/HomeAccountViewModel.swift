@@ -27,7 +27,17 @@ class HomeAccountViewModel: ObservableObject {
     @Published var name = "Eslam Hisham"
     @Published var phone = "010 234 10 673"
 
+    @Published var address = "Al-obour , Cairo , Egypt"
+
+    @Published var password = ""
+    @Published var rePassword = ""
+    @Published var isHidePassword = true
+    @Published var isHideREPassword = true
+
+
     @Published var isAccountInfo = false
+    @Published var isSavedAddress = false
+    @Published var isChangePassword = false
 
     
     //take picture

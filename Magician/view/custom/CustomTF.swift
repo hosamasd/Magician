@@ -14,6 +14,7 @@ struct CustomTF: View {
     @Binding var hide:Bool
     var isAddress = false
     var isAccountInfo = false
+    var isSavedAddress = false
     
     var body: some View {
         RoundedRectangle(cornerRadius: 28)
@@ -68,14 +69,27 @@ struct CustomTF: View {
                         }
                         .padding(.leading,32)
                         
-                        Button(action: {withAnimation{self.hide.toggle()}}, label: {
-                            Image(systemName: !hide ? "eye.slash" : "eye")
-                                .foregroundColor(.gray)
-                        })
-                        .buttonStyle(PlainButtonStyle())
-                        .padding(.trailing)
-                        .padding(.trailing)
-                        .opacity(!isHide ? 0 : 1)
+                        
+                        ZStack {
+                            Button(action: {withAnimation{self.hide.toggle()}}, label: {
+                                Image(systemName: !hide ? "eye.slash" : "eye")
+                                    .foregroundColor(.gray)
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                            .padding(.trailing)
+                            .padding(.trailing)
+                            .opacity(!isHide ? 0 : 1)
+                            
+                            Button(action: {withAnimation{self.hide.toggle()}}, label: {
+                                Image("Icon ionic-md-close-circle-outline")
+                            })
+                            .padding(.trailing)
+                            .padding(.bottom)
+    //                        .padding(.trailing)
+                            .opacity(!isSavedAddress ? 0 : 1)
+                        }
+                        
+                       
                     }
                 }
             )

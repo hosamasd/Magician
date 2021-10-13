@@ -1,5 +1,5 @@
 //
-//  AccountInfoView.swift
+//  AccountChangePassword.swift
 //  Magician
 //
 //  Created by hosam on 13/10/2021.
@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct AccountInfoView: View {
-//    var na = <#value#>
+struct AccountChangePassword: View {
     @ObservedObject var vm:HomeAccountViewModel
-    
+
     var body: some View {
         VStack {
             
@@ -29,7 +28,7 @@ struct AccountInfoView: View {
                     
                     Spacer()
                     
-                    Text("Account info")
+                    Text("Change password")
                         .font(.system(size: 16))
                         .fontWeight(.bold)
                         .foregroundColor(Color("mains"))
@@ -37,16 +36,15 @@ struct AccountInfoView: View {
                     Spacer()
                     
                 }
-                .padding(.horizontal,0)
+                .padding(.horizontal,8)
                 .padding(.bottom,20)
            
             
             VStack(spacing:20) {
-                CustomTF(txt: $vm.name,hint: "Name", hide: .constant(false),isAccountInfo:true)
+                CustomTF(txt: $vm.password,hint: "Password",isHide: true,hide: $vm.isHidePassword,isAccountInfo:true)
                 
-                CustomTF(txt: $vm.email,hint: "Email", hide: .constant(false),isAccountInfo:true)
+                CustomTF(txt: $vm.rePassword,hint: "Confirm Password",isHide: true,hide: $vm.isHideREPassword,isAccountInfo:true)
 
-                CustomTF(txt: $vm.phone,hint: "Mobile No", hide: .constant(false),isAccountInfo:true)
 
             }
             
@@ -75,7 +73,7 @@ struct AccountInfoView: View {
             
                 
         }
-            .padding(.horizontal,24)
+        .padding(.horizontal,24)
 
         }
         .edgesIgnoringSafeArea(.all)
@@ -83,7 +81,7 @@ struct AccountInfoView: View {
     }
 }
 
-struct AccountInfoView_Previews: PreviewProvider {
+struct AccountChangePassword_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }

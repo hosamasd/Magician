@@ -31,11 +31,16 @@ struct HomeAccount: View {
                             })
                         
                         AccountRowView(vm: vm,name: "Saved addresses")
+                            .onTapGesture(perform: {
+                                withAnimation{vm.isSavedAddress.toggle()}
+                            })
                         
                         AccountRowView(vm: vm,name: "Wallet",isText: true,isOriginal: false)
                         
                         AccountRowView(vm: vm,name: "Change password")
-                        
+                            .onTapGesture(perform: {
+                                withAnimation{vm.isChangePassword.toggle()}
+                            })
                         AccountRowView(vm: vm,name: "Notification",isCheck: true,isOriginal: false)
                         
                         
@@ -60,18 +65,25 @@ struct HomeAccount: View {
             Alert(title: Text("Error"), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
         }
         
-        //        .background(EmptyView()
-        //                        .fullScreenCover(isPresented: $isFQAS, content: {
-        //
-        //                            HomeFAQS(isShow: $isFQAS)
-        //
-        //                        })
-        //        )
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $vm.isSavedAddress, content: {
+                            
+                            AccountSavedAddress(vm: vm)
+                            
+                        })
+        )
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $vm.isAccountInfo, content: {
                             
                             AccountInfoView(vm: vm)
+                            
+                        })
+        )
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $vm.isChangePassword, content: {
+                            
+                            AccountChangePassword(vm: vm)
                             
                         })
         )
