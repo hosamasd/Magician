@@ -39,6 +39,12 @@
 		4EFC79482716C8DE00C5DF36 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC79452716C8DE00C5DF36 /* LocationFetcher.swift */; };
 		4EFC79492716C8DE00C5DF36 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC79462716C8DE00C5DF36 /* LocationView.swift */; };
 		4EFC794A2716C8DE00C5DF36 /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC79472716C8DE00C5DF36 /* MainMapView.swift */; };
+		4EFC794C2716CD9300C5DF36 /* GifI_mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC794B2716CD9300C5DF36 /* GifI_mage.swift */; };
+		4EFC794E2716CF6F00C5DF36 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC794D2716CF6F00C5DF36 /* GifImage.swift */; };
+		4EFC79512716CF9D00C5DF36 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EFC794F2716CF9D00C5DF36 /* 2.gif */; };
+		4EFC79522716CF9D00C5DF36 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EFC79502716CF9D00C5DF36 /* 1.gif */; };
+		4EFC79542716D11D00C5DF36 /* SHomeONBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC79532716D11D00C5DF36 /* SHomeONBoard.swift */; };
+		4EFC79562716D62F00C5DF36 /* SSHomeONBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC79552716D62F00C5DF36 /* SSHomeONBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +82,12 @@
 		4EFC79452716C8DE00C5DF36 /* LocationFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 		4EFC79462716C8DE00C5DF36 /* LocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		4EFC79472716C8DE00C5DF36 /* MainMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
+		4EFC794B2716CD9300C5DF36 /* GifI_mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifI_mage.swift; sourceTree = "<group>"; };
+		4EFC794D2716CF6F00C5DF36 /* GifImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		4EFC794F2716CF9D00C5DF36 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		4EFC79502716CF9D00C5DF36 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
+		4EFC79532716D11D00C5DF36 /* SHomeONBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHomeONBoard.swift; sourceTree = "<group>"; };
+		4EFC79552716D62F00C5DF36 /* SSHomeONBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHomeONBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 		4E1538CB2714B3C300D5DD52 /* custom */ = {
 			isa = PBXGroup;
 			children = (
+				4EFC794D2716CF6F00C5DF36 /* GifImage.swift */,
 				4EC550A52716B3420025F5C9 /* LoadingCapsuleSpacing.swift */,
 				4EC550A32716AE990025F5C9 /* KeyboardSpace.swift */,
 				4E1538C92714B3C100D5DD52 /* CustomTF.swift */,
@@ -121,6 +134,8 @@
 		4EB8FFE727148551008C0D03 /* support files */ = {
 			isa = PBXGroup;
 			children = (
+				4EFC79502716CF9D00C5DF36 /* 1.gif */,
+				4EFC794F2716CF9D00C5DF36 /* 2.gif */,
 				4EB8FFE827148560008C0D03 /* Launch Screen.storyboard */,
 			);
 			path = "support files";
@@ -222,6 +237,7 @@
 				4ECD6DB327145E8500011208 /* ex_Image.swift */,
 				4ECD6DB627145E8500011208 /* EX_View.swift */,
 				4ECD6DB527145E8500011208 /* Extensions_ui.swift */,
+				4EFC794B2716CD9300C5DF36 /* GifI_mage.swift */,
 				4ECD6DB427145E8500011208 /* hideKeyboard.swift */,
 			);
 			path = helpers;
@@ -237,6 +253,8 @@
 		4ECD6DB127145E3200011208 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				4EFC79552716D62F00C5DF36 /* SSHomeONBoard.swift */,
+				4EFC79532716D11D00C5DF36 /* SHomeONBoard.swift */,
 				4ECD6DBD271460D800011208 /* HomeONBoard.swift */,
 				4E1538C52714B15200D5DD52 /* MainHomeReg.swift */,
 				4EFC79442716C8D500C5DF36 /* location */,
@@ -341,6 +359,8 @@
 				4EB8FFE927148560008C0D03 /* Launch Screen.storyboard in Resources */,
 				4ECD6DA427145E0700011208 /* Preview Assets.xcassets in Resources */,
 				4ECD6DA127145E0700011208 /* Assets.xcassets in Resources */,
+				4EFC79522716CF9D00C5DF36 /* 1.gif in Resources */,
+				4EFC79512716CF9D00C5DF36 /* 2.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,12 +380,16 @@
 				4E1538CA2714B3C100D5DD52 /* CustomTF.swift in Sources */,
 				4EBF11592715882B008C3C89 /* URLBuilder.swift in Sources */,
 				4E1538D12714B6DF00D5DD52 /* LoginView.swift in Sources */,
+				4EFC79562716D62F00C5DF36 /* SSHomeONBoard.swift in Sources */,
 				4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */,
 				4E1538CD2714B48C00D5DD52 /* HomeReigtserViewModel.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
 				4EC550A42716AE990025F5C9 /* KeyboardSpace.swift in Sources */,
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
+				4EFC79542716D11D00C5DF36 /* SHomeONBoard.swift in Sources */,
+				4EFC794C2716CD9300C5DF36 /* GifI_mage.swift in Sources */,
 				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
+				4EFC794E2716CF6F00C5DF36 /* GifImage.swift in Sources */,
 				4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */,
 				4ECD6DBE271460D800011208 /* HomeONBoard.swift in Sources */,
 				4ECF1EA92715439F00698148 /* SPasscodeField.swift in Sources */,
