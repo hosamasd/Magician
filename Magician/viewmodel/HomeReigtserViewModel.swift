@@ -10,6 +10,8 @@ import SwiftUI
 class HomeReigtserViewModel: ObservableObject {
     @AppStorage("isUserLogin") var isUserLogin: Bool = false
     
+    @Published var isGet = false
+
     @Published var alert = false
     @Published var alertMsg = ""
     @Published var isLooding = false
@@ -20,7 +22,8 @@ class HomeReigtserViewModel: ObservableObject {
     @Published var isOTP = false
     @Published var isResetPass = false
     @Published var isNewPass = false
-    
+    @Published var isSHowLocation = false
+
     
     @Published var newPassword = ""
     @Published var isHideNewPass = true

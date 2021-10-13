@@ -9,10 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var vm = HomeMainTabBarViewModel()
+    @StateObject var vms = HomeReigtserViewModel()
+
     var body: some View {
 //        LoginView(vm: HomeReigtserViewModel())
 
         MainHomeReg()
+        
+        //enteredLocation: $enteredLocation)
+
 //        MainHomeTabBar()
 //            .environmentObject(vm)
     }

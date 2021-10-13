@@ -96,6 +96,9 @@ struct SignUpView: View {
                         CustomTF(txt: $vm.mobileSign,hint: "Mobile No",hide: .constant(false))
                         
                         CustomTF(txt: $vm.addressSign,hint: "Address",hide: .constant(false))
+                            .onTapGesture(perform: {
+                                withAnimation{vm.isSHowLocation.toggle()}
+                            })
                         
                         CustomTF(txt: $vm.passwordSign,hint: "Password",isHide: true,hide: $vm.isHidePassSign)
                         

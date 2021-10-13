@@ -109,7 +109,13 @@ struct MainHomeReg: View {
                 LoadingCapsuleSpacing()
             }
             
-            
+            if vm.isSHowLocation {
+                //                LoadingCircleOpacity()
+                LocationView(  locationText: $vm.addressSign )
+                    .environmentObject(vm)
+                    .transition(.move(edge: .bottom))
+                
+            }
         }
         
         .edgesIgnoringSafeArea(.all)
