@@ -14,6 +14,9 @@
 		4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538CE2714B64000D5DD52 /* ResetView.swift */; };
 		4E1538D12714B6DF00D5DD52 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538D02714B6DF00D5DD52 /* LoginView.swift */; };
 		4EB8FFE927148560008C0D03 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8FFE827148560008C0D03 /* Launch Screen.storyboard */; };
+		4EBF11582715882B008C3C89 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF11562715882B008C3C89 /* NetworkManger.swift */; };
+		4EBF11592715882B008C3C89 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF11572715882B008C3C89 /* URLBuilder.swift */; };
+		4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF115A27158869008C3C89 /* ApiURL.swift */; };
 		4ECD6D9D27145E0400011208 /* MagicianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD6D9C27145E0400011208 /* MagicianApp.swift */; };
 		4ECD6D9F27145E0400011208 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD6D9E27145E0400011208 /* ContentView.swift */; };
 		4ECD6DA127145E0700011208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD6DA027145E0700011208 /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		4ECF1EA527153EEF00698148 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF1EA427153EEF00698148 /* SignUpView.swift */; };
 		4ECF1EA7271542BC00698148 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF1EA6271542BC00698148 /* OTPView.swift */; };
 		4ECF1EA92715439F00698148 /* SPasscodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF1EA82715439F00698148 /* SPasscodeField.swift */; };
+		4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB12282716950D008A240A /* MainHomeTabBar.swift */; };
+		4EFB122B27169575008A240A /* HomeMainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB122A27169575008A240A /* HomeMainTabBarViewModel.swift */; };
+		4EFB122D271695F7008A240A /* UsedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB122C271695F7008A240A /* UsedTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,9 @@
 		4E1538CE2714B64000D5DD52 /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
 		4E1538D02714B6DF00D5DD52 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4EB8FFE827148560008C0D03 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		4EBF11562715882B008C3C89 /* NetworkManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		4EBF11572715882B008C3C89 /* URLBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		4EBF115A27158869008C3C89 /* ApiURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiURL.swift; sourceTree = "<group>"; };
 		4ECD6D9927145E0400011208 /* Magician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECD6D9C27145E0400011208 /* MagicianApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicianApp.swift; sourceTree = "<group>"; };
 		4ECD6D9E27145E0400011208 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +63,9 @@
 		4ECF1EA427153EEF00698148 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4ECF1EA6271542BC00698148 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		4ECF1EA82715439F00698148 /* SPasscodeField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPasscodeField.swift; sourceTree = "<group>"; };
+		4EFB12282716950D008A240A /* MainHomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeTabBar.swift; sourceTree = "<group>"; };
+		4EFB122A27169575008A240A /* HomeMainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainTabBarViewModel.swift; sourceTree = "<group>"; };
+		4EFB122C271695F7008A240A /* UsedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,15 @@
 			path = "support files";
 			sourceTree = "<group>";
 		};
+		4EBF11552715881C008C3C89 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				4EBF11562715882B008C3C89 /* NetworkManger.swift */,
+				4EBF11572715882B008C3C89 /* URLBuilder.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		4ECD6D9027145E0400011208 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				4ECD6D9C27145E0400011208 /* MagicianApp.swift */,
+				4EBF11552715881C008C3C89 /* network */,
 				4ECD6DB027145E2700011208 /* services */,
 				4ECD6DAF27145E2300011208 /* helpers */,
 				4ECD6DAE27145E1F00011208 /* viewmodel */,
@@ -147,6 +169,7 @@
 		4ECD6DAB27145E1500011208 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4EFB1227271694F4008A240A /* tab bar */,
 				4ECD6DB127145E3200011208 /* Register */,
 				4ECD6D9E27145E0400011208 /* ContentView.swift */,
 			);
@@ -174,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				4E1538CC2714B48C00D5DD52 /* HomeReigtserViewModel.swift */,
+				4EFB122A27169575008A240A /* HomeMainTabBarViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -181,6 +205,7 @@
 		4ECD6DAF27145E2300011208 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4EBF115A27158869008C3C89 /* ApiURL.swift */,
 				4ECD6DBB27145EBC00011208 /* AppDelegate.swift */,
 				4ECD6DB327145E8500011208 /* ex_Image.swift */,
 				4ECD6DB627145E8500011208 /* EX_View.swift */,
@@ -222,6 +247,15 @@
 				4ECF1EA82715439F00698148 /* SPasscodeField.swift */,
 			);
 			path = OTP;
+			sourceTree = "<group>";
+		};
+		4EFB1227271694F4008A240A /* tab bar */ = {
+			isa = PBXGroup;
+			children = (
+				4EFB12282716950D008A240A /* MainHomeTabBar.swift */,
+				4EFB122C271695F7008A240A /* UsedTabBar.swift */,
+			);
+			path = "tab bar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,19 +331,25 @@
 				4E1538C82714B36700D5DD52 /* NewPasswordView.swift in Sources */,
 				4ECF1EA7271542BC00698148 /* OTPView.swift in Sources */,
 				4ECD6DB927145E8500011208 /* Extensions_ui.swift in Sources */,
+				4EBF11582715882B008C3C89 /* NetworkManger.swift in Sources */,
 				4E1538CA2714B3C100D5DD52 /* CustomTF.swift in Sources */,
+				4EBF11592715882B008C3C89 /* URLBuilder.swift in Sources */,
 				4E1538D12714B6DF00D5DD52 /* LoginView.swift in Sources */,
+				4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */,
 				4E1538CD2714B48C00D5DD52 /* HomeReigtserViewModel.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
 				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
+				4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */,
 				4ECD6DBE271460D800011208 /* HomeONBoard.swift in Sources */,
 				4ECF1EA92715439F00698148 /* SPasscodeField.swift in Sources */,
 				4ECD6DB827145E8500011208 /* hideKeyboard.swift in Sources */,
+				4EFB122D271695F7008A240A /* UsedTabBar.swift in Sources */,
 				4ECD6D9F27145E0400011208 /* ContentView.swift in Sources */,
 				4ECD6DBC27145EBC00011208 /* AppDelegate.swift in Sources */,
 				4ECF1EA527153EEF00698148 /* SignUpView.swift in Sources */,
 				4ECD6DB727145E8500011208 /* ex_Image.swift in Sources */,
+				4EFB122B27169575008A240A /* HomeMainTabBarViewModel.swift in Sources */,
 				4ECD6D9D27145E0400011208 /* MagicianApp.swift in Sources */,
 				4ECD6DC02714610B00011208 /* InfoModel.swift in Sources */,
 			);

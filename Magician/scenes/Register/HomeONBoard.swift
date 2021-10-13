@@ -18,28 +18,83 @@ struct HomeONBoard: View {
         
         
     ]
+    @State var s0=false
+
     @State var s1=false
     @State var s2=false
     @State var s3=false
-
+    
+    @State var t1=false
+    @State var t2=false
     @State var index = 0
     
     
     var body: some View {
         VStack{
             
-           
-            ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
+            
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .center), content: {
                 Image("Group 8396-1")
+                //                    .resizable()
+                //                    .aspectRatio(contentMode: .fill)
+                //                    .frame(width: isSmallDevice() ?  getFrameSize().width+60 : getFrameSize().width+70, height: getHeight())
+                //                    .background(Color.gray)
                 
                 
-                Image(  self.onBoard[self.index].pic)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height:200)
-                    .offset(y:-150)
+                
+                ZStack {
+                    
+                    if index == 1 {
+                        
+                        Image( "Find food you love vector-1")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .opacity(!s0 ? 0 : 1)
+                        
+                        Image( "Find food you love vectoar")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .opacity(!s1 ? 0 : 1)
+                        
+                        Image("Find food you love s")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .opacity(!s2 ? 0 : 1)
+                        
+                        Image("Find food you love vector")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .opacity(!s3 ? 0 : 1)
+                        
+                    }
+                    else if index == 2 {
+                        
+                        Image("Group 8a263")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .opacity(!t1 ? 0 : 1)
+
+                            Image("Group 82q63")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .opacity(!t2 ? 0 : 1)
+                    }
+                    else {
+                    
+                    Image(  self.onBoard[self.index].pic)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    
+                    }
+                }
+                .frame(height:200)
+
+                //                    .offset(y:-250)
+                //                    .offset(y:-150)
             })
-//            .offset(y:-150)
+            .padding(.top,-60)
+            
+            //            .offset(y:-150)
             .frame(maxHeight:getFrameSize().height/2+60)
             
             HStack(spacing: 12){
@@ -81,6 +136,7 @@ struct HomeONBoard: View {
                 withAnimation{
                     if index < onBoard.count-1 {
                         self.index = index+1
+                        index==1 ? checkSecond() : index == 2 ? checkThird() : ()
                     }
                     else {
                         //                        show.toggle()
@@ -108,19 +164,50 @@ struct HomeONBoard: View {
     
     func checkSecond()  {
         DispatchQueue.main.async {
+            s0=true
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            withAnimation(.easeInOut){
+            s0=false
             s1=true
+            }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
-            s1=false
-            s2=true
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            withAnimation(.easeInOut){
 
+            s1=false
+            
+            s2=true
+            }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            withAnimation(.easeInOut){
+
             s2=false
             
             s3=true
-            
+            }
         }
+    }
+    
+    func checkThird()  {
+        DispatchQueue.main.async {
+            t1=true
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            withAnimation(.easeInOut){
+            t1=false
+            t2=true
+            }
+        }
+      
+    }
+    func getHeight() -> CGFloat {
+        getFrameSize().height/2
+        
+        //        !isSmallDevice() ? getFrameSize().height/2 - 60  : getFrameSize().height/2 - 200
+        //         isSmallDevice() ?  120 : 60
     }
     
     func getSecond() -> String {
@@ -134,5 +221,9 @@ struct HomeONBoard: View {
 struct ContentVisew_Previews: PreviewProvider {
     static var previews: some View {
         HomeONBoard()
+        
+        HomeONBoard()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro Max"))
+            .previewDisplayName("iPhone 12 Pro Max")
     }
 }

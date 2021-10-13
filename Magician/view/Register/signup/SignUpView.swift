@@ -125,7 +125,7 @@ struct SignUpView: View {
                     //                .padding(.horizontal,32)
                     .padding(.top,32)
                     .padding(.bottom,40)
-
+                    
                     Spacer()
                     
                     Label(
@@ -155,10 +155,10 @@ struct SignUpView: View {
                     
                 }
                 .frame(width:getFrameSize().width-48)
-
+                
             }
             .opacity(vm.isOTP ? 0 : 1)
-
+            
             if vm.isOTP {
                 
                 OTPView(vm:vm)
