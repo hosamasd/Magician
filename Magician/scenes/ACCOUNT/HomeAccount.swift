@@ -15,6 +15,27 @@ struct HomeAccount: View {
             
             HomeAccountTopView(vm:vm)
             
+            VStack {
+                HomeAccountPointsView(vm: vm)
+                
+                VStack(spacing:28) {
+                    
+                    AccountRowView(vm: vm)
+                    
+                    AccountRowView(vm: vm,name: "Saved addresses")
+                    
+                    AccountRowView(vm: vm,name: "Wallet",isText: true,isOriginal: false)
+                    
+                    AccountRowView(vm: vm,name: "Change password")
+                    
+                    AccountRowView(vm: vm,name: "Notification",isCheck: true,isOriginal: false)
+                    
+                    
+                }
+                .padding(.vertical,30)
+            }
+            .padding(.top,20)
+            
             Spacer()
         }
         .edgesIgnoringSafeArea(.all)

@@ -52,5 +52,7 @@
 	<string>we need to locat location to best serve</string>
 	<key>NSLocationUsageDescription</key>
 	<string>we need to locat location to best serve</string>
+	<key>NSCameraUsageDescription</key>
+	<string>to take photo</string>
 </dict>
 </plist>

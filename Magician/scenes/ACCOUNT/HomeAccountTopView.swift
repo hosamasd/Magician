@@ -51,80 +51,89 @@ struct HomeAccountTopView: View {
                 
             }
             
-            ZStack {
-                if vm.image == Image("Profile picture"){
-                    
-                    Image("Profile picture")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 145, height: 145)
-                        .clipShape(Circle())
-                        .padding(.top)
-                        .overlay(
-                            Button(action: {
-                                withAnimation{vm.shouldPresentActionScheet.toggle()}
-                            }, label: {
+            RoundedRectangle(cornerRadius: 0)
+                .fill(Color("bg"))
+                .frame(height:170)
+                .overlay(
+                    ZStack {
+                        if vm.image == Image("Profile picture"){
+                            
+                            Image("Profile picture")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 145, height: 145)
+                                .clipShape(Circle())
+                                .padding(.top)
+                                .overlay(
+                                    Button(action: {
+                                        withAnimation{vm.shouldPresentActionScheet.toggle()}
+                                    }, label: {
+                                        
+                                        
+                                        Image("Group 6778")
+                                    })
+                                    ,alignment:.bottom)
                                 
                                 
-                                Image("Group 6778")
-                            })
-                            ,alignment:.bottom)
+                                .sheet(isPresented: $vm.shouldPresentImagePicker) {
+                                    SUImagePickerView(sourceType: self.vm.shouldPresentCamera ? .camera : .photoLibrary, image: self.$vm.image, isPresented: self.$vm.shouldPresentImagePicker)
+                                }
+                                .actionSheet(isPresented: $vm.shouldPresentActionScheet) { () -> ActionSheet in
+                                    ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                                        self.vm.shouldPresentImagePicker = true
+                                        self.vm.shouldPresentCamera = true
+                                        
+                                    }), ActionSheet.Button.default(Text("Photo Library"), action: {
+                                        self.vm.shouldPresentImagePicker = true
+                                        self.vm.shouldPresentCamera = false
+                                    }), ActionSheet.Button.cancel()])
+                                }
+                            
+                        }
                         
                         
-                        .sheet(isPresented: $vm.shouldPresentImagePicker) {
-                            SUImagePickerView(sourceType: self.vm.shouldPresentCamera ? .camera : .photoLibrary, image: self.$vm.image, isPresented: self.$vm.shouldPresentImagePicker)
+                        else {
+                            
+                            vm.image!
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 145, height: 145)
+                                .clipShape(Circle())
+                                .padding(.top)
+                                .overlay(
+                                    Button(action: {
+                                        withAnimation{vm.shouldPresentActionScheet.toggle()}
+                                    }, label: {
+                                        
+                                        
+                                        Image("Group 6778")
+                                    })
+                                    ,alignment:.bottom)
+                                
+                                .sheet(isPresented: $vm.shouldPresentImagePicker) {
+                                    SUImagePickerView(sourceType: self.vm.shouldPresentCamera ? .camera : .photoLibrary, image: self.$vm.image, isPresented: self.$vm.shouldPresentImagePicker)
+                                }.actionSheet(isPresented: $vm.shouldPresentActionScheet) { () -> ActionSheet in
+                                    ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                                        self.vm.shouldPresentImagePicker = true
+                                        self.vm.shouldPresentCamera = true
+                                    }), ActionSheet.Button.default(Text("Photo Library"), action: {
+                                        self.vm.shouldPresentImagePicker = true
+                                        self.vm.shouldPresentCamera = false
+                                    }), ActionSheet.Button.cancel()])
+                                }
                         }
-                        .actionSheet(isPresented: $vm.shouldPresentActionScheet) { () -> ActionSheet in
-                            ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
-                                self.vm.shouldPresentImagePicker = true
-                                self.vm.shouldPresentCamera = true
-                                
-                            }), ActionSheet.Button.default(Text("Photo Library"), action: {
-                                self.vm.shouldPresentImagePicker = true
-                                self.vm.shouldPresentCamera = false
-                            }), ActionSheet.Button.cancel()])
-                        }
-                    
-                }
-                
-                
-                else {
-                    
-                    vm.image!
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 145, height: 145)
-                        .clipShape(Circle())
-                        .padding(.top)
-                        .overlay(
-                            Button(action: {
-                                withAnimation{vm.shouldPresentActionScheet.toggle()}
-                            }, label: {
-                                
-                                
-                                Image("Group 6778")
-                            })
-                            ,alignment:.bottom)
                         
-                        .sheet(isPresented: $vm.shouldPresentImagePicker) {
-                            SUImagePickerView(sourceType: self.vm.shouldPresentCamera ? .camera : .photoLibrary, image: self.$vm.image, isPresented: self.$vm.shouldPresentImagePicker)
-                        }.actionSheet(isPresented: $vm.shouldPresentActionScheet) { () -> ActionSheet in
-                            ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
-                                self.vm.shouldPresentImagePicker = true
-                                self.vm.shouldPresentCamera = true
-                            }), ActionSheet.Button.default(Text("Photo Library"), action: {
-                                self.vm.shouldPresentImagePicker = true
-                                self.vm.shouldPresentCamera = false
-                            }), ActionSheet.Button.cancel()])
-                        }
-                }
-                
-            }
+                    }
+                    .offset(y:-8)
+                    ,alignment: .center )
+            //    .frame(width:getFrameSize().width-8)
+            //            }
+            //            .background()
             
         }
         
         .padding(.top,getSafeArea()?.top)
-        .padding(.horizontal,24)
+        .padding(.horizontal,16)
         //        .padding(.top)
         
     }

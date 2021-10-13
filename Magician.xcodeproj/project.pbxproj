@@ -37,6 +37,8 @@
 		4ECF1EA527153EEF00698148 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF1EA427153EEF00698148 /* SignUpView.swift */; };
 		4ECF1EA7271542BC00698148 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF1EA6271542BC00698148 /* OTPView.swift */; };
 		4ECF1EA92715439F00698148 /* SPasscodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF1EA82715439F00698148 /* SPasscodeField.swift */; };
+		4EDC43902717054C00C2347B /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC438F2717054C00C2347B /* AccountRowView.swift */; };
+		4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC43912717087600C2347B /* HomeAccountPointsView.swift */; };
 		4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB12282716950D008A240A /* MainHomeTabBar.swift */; };
 		4EFB122B27169575008A240A /* HomeMainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB122A27169575008A240A /* HomeMainTabBarViewModel.swift */; };
 		4EFB122D271695F7008A240A /* UsedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB122C271695F7008A240A /* UsedTabBar.swift */; };
@@ -84,6 +86,8 @@
 		4ECF1EA427153EEF00698148 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4ECF1EA6271542BC00698148 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		4ECF1EA82715439F00698148 /* SPasscodeField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPasscodeField.swift; sourceTree = "<group>"; };
+		4EDC438F2717054C00C2347B /* AccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowView.swift; sourceTree = "<group>"; };
+		4EDC43912717087600C2347B /* HomeAccountPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountPointsView.swift; sourceTree = "<group>"; };
 		4EFB12282716950D008A240A /* MainHomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeTabBar.swift; sourceTree = "<group>"; };
 		4EFB122A27169575008A240A /* HomeMainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainTabBarViewModel.swift; sourceTree = "<group>"; };
 		4EFB122C271695F7008A240A /* UsedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedTabBar.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				4E171E3F2716F31A000837BF /* HomeAccount.swift */,
+				4EDC43912717087600C2347B /* HomeAccountPointsView.swift */,
 				4E171E442716F3C3000837BF /* HomeAccountTopView.swift */,
 			);
 			path = ACCOUNT;
@@ -133,6 +138,7 @@
 		4E171E3E2716F30C000837BF /* ACCOUNT */ = {
 			isa = PBXGroup;
 			children = (
+				4EDC438F2717054C00C2347B /* AccountRowView.swift */,
 			);
 			path = ACCOUNT;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 				4E171E422716F339000837BF /* HomeAccountViewModel.swift in Sources */,
 				4EFC79562716D62F00C5DF36 /* SSHomeONBoard.swift in Sources */,
 				4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */,
+				4EDC43902717054C00C2347B /* AccountRowView.swift in Sources */,
 				4E1538CD2714B48C00D5DD52 /* HomeReigtserViewModel.swift in Sources */,
 				4E171E402716F31A000837BF /* HomeAccount.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
@@ -431,6 +438,7 @@
 				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
 				4EFC794E2716CF6F00C5DF36 /* GifImage.swift in Sources */,
 				4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */,
+				4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */,
 				4ECD6DBE271460D800011208 /* HomeONBoard.swift in Sources */,
 				4ECF1EA92715439F00698148 /* SPasscodeField.swift in Sources */,
 				4ECD6DB827145E8500011208 /* hideKeyboard.swift in Sources */,
