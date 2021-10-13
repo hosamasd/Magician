@@ -20,7 +20,7 @@ struct MainHomeReg: View {
                     
                     .aspectRatio(contentMode: .fill)
                     .frame(width: isSmallDevice() ?  getFrameSize().width+60 : getFrameSize().width+70, height: getHeight())
-//                    .frame(maxWidth:.infinity,maxHeight:getFrameSize().height/2-60)
+                //                    .frame(maxWidth:.infinity,maxHeight:getFrameSize().height/2-60)
                 
                 Image("Magician LOGO")
                     .padding(.top,isSmallDevice() ? 40 : -40)
@@ -54,8 +54,8 @@ struct MainHomeReg: View {
                     
                 })
                 .frame(width:getFrameSize().width-48)
-
-//                .padding(.horizontal,32)
+                
+                //                .padding(.horizontal,32)
                 .frame(height:60)
                 
                 Button(action: {
@@ -77,8 +77,8 @@ struct MainHomeReg: View {
                     
                 })
                 .frame(width:getFrameSize().width-48)
-
-//                .padding(.horizontal,32)
+                
+                //                .padding(.horizontal,32)
                 .frame(height:60)
                 .padding(.top)
                 
@@ -93,7 +93,7 @@ struct MainHomeReg: View {
                 LoginView(vm:vm)
                     .transition(.move(edge: .bottom))
                     .opacity(vm.isLogin ? 1 : 0)
-
+                
             }
             
             if vm.isSignUp {
@@ -101,19 +101,31 @@ struct MainHomeReg: View {
                 SignUpView(vm:vm)
                     .transition(.move(edge: .bottom))
                     .opacity(vm.isSignUp ? 1 : 0)
-
+                
+            }
+            
+            if vm.isLooding {
+                //                LoadingCircleOpacity()
+                LoadingCapsuleSpacing()
             }
             
             
         }
         
         .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
         
+        .alert(isPresented: $vm.alert) {
+            
+            Alert(title: Text("Error"), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
+        }
     }
     
     func getHeight() -> CGFloat {
         !isSmallDevice() ? getFrameSize().height/2 - 60  : getFrameSize().height/2 - 200
-//         isSmallDevice() ?  120 : 60
+        //         isSmallDevice() ?  120 : 60
     }
 }
 
@@ -122,7 +134,7 @@ struct MainHomeReg_Previews: PreviewProvider {
         MainHomeReg()
         
         MainHomeReg()
-                    .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro Max"))
-                    .previewDisplayName("iPhone 12 Pro Max")
+            .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro Max"))
+            .previewDisplayName("iPhone 12 Pro Max")
     }
 }

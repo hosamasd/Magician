@@ -26,7 +26,7 @@ struct SignUpView: View {
                     
                     VStack(spacing:12){
                         
-                        CustomTF(txt: $vm.nameSign,hint: "Name")
+                        CustomTF(txt: $vm.nameSign,hint: "Name",hide: .constant(false))
                         
                         HStack {
                             
@@ -91,19 +91,21 @@ struct SignUpView: View {
                     
                     VStack(spacing:24){
                         
-                        CustomTF(txt: $vm.emailSign,hint: "Email")
+                        CustomTF(txt: $vm.emailSign,hint: "Email",hide: .constant(false))
                         
-                        CustomTF(txt: $vm.mobileSign,hint: "Mobile No")
+                        CustomTF(txt: $vm.mobileSign,hint: "Mobile No",hide: .constant(false))
                         
-                        CustomTF(txt: $vm.addressSign,hint: "Address")
+                        CustomTF(txt: $vm.addressSign,hint: "Address",hide: .constant(false))
                         
-                        CustomTF(txt: $vm.passwordSign,hint: "Password")
+                        CustomTF(txt: $vm.passwordSign,hint: "Password",isHide: true,hide: $vm.isHidePassSign)
                         
-                        CustomTF(txt: $vm.rePasswordSign,hint: "Confirm Password")
+                        CustomTF(txt: $vm.rePasswordSign,hint: "Confirm Password",isHide: true,hide: $vm.isHideREPassSign)
                         
                         Button(action: {
                             withAnimation{
                                 vm.isOTP.toggle()
+//                                vm.isLooding=true
+
                             }
                         }, label: {
                             RoundedRectangle(cornerRadius: 28)
@@ -157,6 +159,8 @@ struct SignUpView: View {
                 .frame(width:getFrameSize().width-48)
                 
             }
+            .keyboardSpace()
+
             .opacity(vm.isOTP ? 0 : 1)
             
             if vm.isOTP {

@@ -19,10 +19,12 @@ struct HomeONBoard: View {
         
     ]
     @State var s0=false
-
+    
     @State var s1=false
     @State var s2=false
     @State var s3=false
+    
+    @State var t0=false
     
     @State var t1=false
     @State var t2=false
@@ -35,6 +37,7 @@ struct HomeONBoard: View {
             
             ZStack(alignment: Alignment(horizontal: .center, vertical: .center), content: {
                 Image("Group 8396-1")
+                    .offset(y: t0 || s0 ? -800 : 0)
                 //                    .resizable()
                 //                    .aspectRatio(contentMode: .fill)
                 //                    .frame(width: isSmallDevice() ?  getFrameSize().width+60 : getFrameSize().width+70, height: getHeight())
@@ -54,41 +57,71 @@ struct HomeONBoard: View {
                         Image( "Find food you love vectoar")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .opacity(!s1 ? 0 : 1)
+                            .offset(y:!s1 ? -800 : 0 )
+                            //                            .opacity(!s1 ? 0 : 1)
+                            .transition(.move(edge: .top))
                         
                         Image("Find food you love s")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .opacity(!s2 ? 0 : 1)
+                            .offset(x:!s2 ? -350 : 0 )
+                            .transition(.move(edge: .leading))
+                        
+                        //                            .opacity(!s2 ? 0 : 1)
                         
                         Image("Find food you love vector")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .opacity(!s3 ? 0 : 1)
+                            .offset(x:!s3 ? 350 : 0 )
+                            
+                            //                            .opacity(!s3 ? 0 : 1)
+                            .transition(.move(edge: .trailing))
                         
                     }
                     else if index == 2 {
                         
+                        Image("Group 8263-2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            //                            .opacity(!t1 ? 0 : 1)
+                            .offset(y:!t0 ? -800 : 0 )
+                            
+                            .transition(.move(edge: .leading))
+                        
                         Image("Group 8a263")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .opacity(!t1 ? 0 : 1)
-
-                            Image("Group 82q63")
+                            //                            .opacity(!t1 ? 0 : 1)
+                            //                            .offset(x:!t1 || !t2 ? 350 : 0 )
+                            .offset(x: t0 ? 350 : 0 )
+                            .transition(.move(edge: .trailing))
+                        
+                        //                            Image("Group 82q63")
+                        //                            .resizable()
+                        //                            .aspectRatio(contentMode: .fit)
+                        //                                .transition(.move(edge: .bottom))
+                        //                                .offset(y:!t2 ? 800 : 0 )
+                        
+                        Image("prize")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .opacity(!t2 ? 0 : 1)
+                            .transition(.move(edge: .bottom))
+                            .offset(y:!t2 ? 800 : 0 )
+                            .transition(.move(edge: .bottom))
+                        
+                        
+                        //                            .opacity(!t2 ? 0 : 1)
                     }
                     else {
-                    
-                    Image(  self.onBoard[self.index].pic)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    
+                        
+                        Image(  self.onBoard[self.index].pic)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        
                     }
                 }
                 .frame(height:200)
-
+                
                 //                    .offset(y:-250)
                 //                    .offset(y:-150)
             })
@@ -168,40 +201,46 @@ struct HomeONBoard: View {
         }
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
             withAnimation(.easeInOut){
-            s0=false
-            s1=true
+                s0=false
+                s1=true
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             withAnimation(.easeInOut){
-
-            s1=false
-            
-            s2=true
+                
+                s1=false
+                
+                s2=true
             }
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             withAnimation(.easeInOut){
-
-            s2=false
-            
-            s3=true
+                
+                s2=false
+                
+                s3=true
             }
         }
     }
     
     func checkThird()  {
         DispatchQueue.main.async {
-            t1=true
+            t0=true
         }
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
             withAnimation(.easeInOut){
-            t1=false
-            t2=true
+                t0=false
+                t1=true
             }
         }
-      
+        DispatchQueue.main.asyncAfter(deadline: .now()+1.2) {
+            withAnimation(.easeInOut){
+                t1=false
+                t2=true
+            }
+        }
+        
     }
     func getHeight() -> CGFloat {
         getFrameSize().height/2

@@ -22,13 +22,15 @@ struct NewPasswordView: View {
             
             VStack(spacing:24){
                 
-                CustomTF(txt: $vm.newPassword)
+                CustomTF(txt: $vm.newPassword,isHide: true, hide: $vm.isHideNewPass)
                 
-                CustomTF(txt: $vm.reNewPassword,hint: "Confirm Password")
+                CustomTF(txt: $vm.reNewPassword,hint: "Confirm Password",isHide: true, hide: $vm.isHideRENewPass)
                 
                 Button(action: {
                     withAnimation{
                         vm.isNewPass.toggle()
+                        vm.isLooding=true
+
                     }
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)

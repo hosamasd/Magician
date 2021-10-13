@@ -12,8 +12,9 @@ struct ContentView: View {
     var body: some View {
 //        LoginView(vm: HomeReigtserViewModel())
 
-        MainHomeTabBar()
-            .environmentObject(vm)
+        MainHomeReg()
+//        MainHomeTabBar()
+//            .environmentObject(vm)
     }
 }
 

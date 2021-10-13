@@ -30,13 +30,13 @@ struct LoginView: View {
                 
                 VStack(spacing:24){
                     
-                    CustomTF(txt: $vm.emailLogin,hint: "Your Email")
+                    CustomTF(txt: $vm.emailLogin,hint: "Your Email",hide: .constant(false))
                     
-                    CustomTF(txt: $vm.passwordLogin,hint: "Password")
+                    CustomTF(txt: $vm.passwordLogin,hint: "Password",isHide: true,hide: $vm.isHidePassSign)
                     
                     Button(action: {
                         withAnimation{
-                            
+                            vm.isLooding=true
                         }
                     }, label: {
                         RoundedRectangle(cornerRadius: 28)

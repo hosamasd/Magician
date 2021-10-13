@@ -17,6 +17,8 @@
 		4EBF11582715882B008C3C89 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF11562715882B008C3C89 /* NetworkManger.swift */; };
 		4EBF11592715882B008C3C89 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF11572715882B008C3C89 /* URLBuilder.swift */; };
 		4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF115A27158869008C3C89 /* ApiURL.swift */; };
+		4EC550A42716AE990025F5C9 /* KeyboardSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC550A32716AE990025F5C9 /* KeyboardSpace.swift */; };
+		4EC550A62716B3420025F5C9 /* LoadingCapsuleSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC550A52716B3420025F5C9 /* LoadingCapsuleSpacing.swift */; };
 		4ECD6D9D27145E0400011208 /* MagicianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD6D9C27145E0400011208 /* MagicianApp.swift */; };
 		4ECD6D9F27145E0400011208 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD6D9E27145E0400011208 /* ContentView.swift */; };
 		4ECD6DA127145E0700011208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD6DA027145E0700011208 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		4EBF11562715882B008C3C89 /* NetworkManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		4EBF11572715882B008C3C89 /* URLBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		4EBF115A27158869008C3C89 /* ApiURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiURL.swift; sourceTree = "<group>"; };
+		4EC550A32716AE990025F5C9 /* KeyboardSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardSpace.swift; sourceTree = "<group>"; };
+		4EC550A52716B3420025F5C9 /* LoadingCapsuleSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCapsuleSpacing.swift; sourceTree = "<group>"; };
 		4ECD6D9927145E0400011208 /* Magician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECD6D9C27145E0400011208 /* MagicianApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicianApp.swift; sourceTree = "<group>"; };
 		4ECD6D9E27145E0400011208 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		4E1538CB2714B3C300D5DD52 /* custom */ = {
 			isa = PBXGroup;
 			children = (
+				4EC550A52716B3420025F5C9 /* LoadingCapsuleSpacing.swift */,
+				4EC550A32716AE990025F5C9 /* KeyboardSpace.swift */,
 				4E1538C92714B3C100D5DD52 /* CustomTF.swift */,
 			);
 			path = custom;
@@ -332,12 +338,14 @@
 				4ECF1EA7271542BC00698148 /* OTPView.swift in Sources */,
 				4ECD6DB927145E8500011208 /* Extensions_ui.swift in Sources */,
 				4EBF11582715882B008C3C89 /* NetworkManger.swift in Sources */,
+				4EC550A62716B3420025F5C9 /* LoadingCapsuleSpacing.swift in Sources */,
 				4E1538CA2714B3C100D5DD52 /* CustomTF.swift in Sources */,
 				4EBF11592715882B008C3C89 /* URLBuilder.swift in Sources */,
 				4E1538D12714B6DF00D5DD52 /* LoginView.swift in Sources */,
 				4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */,
 				4E1538CD2714B48C00D5DD52 /* HomeReigtserViewModel.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
+				4EC550A42716AE990025F5C9 /* KeyboardSpace.swift in Sources */,
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
 				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
 				4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */,

@@ -77,7 +77,7 @@ struct OTPView: View {
             Label(
                 title: {
                     
-                    Button(action: {}, label: {
+                    Button(action: {withAnimation{vm.isLooding.toggle()}}, label: {
                         Text( " Click Here")
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))//.opacity(0.6))

@@ -24,13 +24,15 @@ struct ResetView: View {
 
             VStack(spacing:32){
                 
-                CustomTF(txt: $vm.newPassword,hint: "Email")
+                CustomTF(txt: $vm.newPassword,hint: "Email",hide: .constant(false))
                 
                 Button(action: {
                     withAnimation{
                         vm.isNewPass.toggle()
 
                         vm.isResetPass.toggle()
+//                        vm.isLooding=true
+
                     }
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)
