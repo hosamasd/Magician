@@ -12,7 +12,8 @@ struct CustomTF: View {
     var hint = "New Password"
     var isHide = false
     @Binding var hide:Bool
-    
+    var isAddress = false
+
     var body: some View {
         RoundedRectangle(cornerRadius: 28)
             .fill(Color("txField"))
@@ -21,6 +22,9 @@ struct CustomTF: View {
             .overlay(
                 
                 HStack {
+                    
+                    
+                    
                     ZStack(alignment: .leading) {
                         if txt.isEmpty { Text(LocalizedStringKey(hint))
                             .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
@@ -33,6 +37,7 @@ struct CustomTF: View {
                                     .foregroundColor(.black.opacity(0.6))
                                     //                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                                     .font(.system(size: 12))
+                                    .disabled(isAddress ? true : false)
                                 
                             }
                             else {
@@ -41,7 +46,8 @@ struct CustomTF: View {
                                     
                                     //                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                                     .font(.system(size: 12))
-                                
+                                    .disabled(isAddress ? true : false)
+
                             }
                         }
 //                        .overlay(

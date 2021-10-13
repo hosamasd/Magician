@@ -14,12 +14,12 @@ struct ContentView: View {
     var body: some View {
 //        LoginView(vm: HomeReigtserViewModel())
 
-        SSHomeONBoard()
+//        MainHomeTabBar()
         
         //enteredLocation: $enteredLocation)
 
-//        MainHomeTabBar()
-//            .environmentObject(vm)
+        MainHomeTabBar()
+            .environmentObject(vm)
     }
 }
 

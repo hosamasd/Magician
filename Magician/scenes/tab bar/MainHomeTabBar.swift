@@ -16,7 +16,7 @@ struct MainHomeTabBar: View {
             
             
             if vm.index == "Home" {
-                Color.red
+                HomeAccount()
                 //                SSecondMainHome()
                 //                    .environmentObject(vm)
             }

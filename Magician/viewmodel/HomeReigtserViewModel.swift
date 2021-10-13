@@ -61,6 +61,10 @@ class HomeReigtserViewModel: ObservableObject {
         passwordSign==rePasswordSign
     }
     
+    func checkNewPasswordAndRe() -> Bool {
+        newPassword == reNewPassword
+    }
+    
     func getError(s:String)  {
         self.alertMsg = s
         self.alert.toggle()
@@ -69,14 +73,14 @@ class HomeReigtserViewModel: ObservableObject {
     
     func makeLogin()  {
         
-//        if checkPhone(p: nameLogin) {getError(s: "Please type valid username")  ; return  }
+        if checkPhone(p: emailLogin) {getError(s: "Please type valid Phone Number")  ; return  }
 //
-//        if checkPhone(p:passLogin) {getError(s: "Please type valid Password") ; return  }
+        if checkPhone(p:passwordLogin) {getError(s: "Please type valid Password") ; return  }
 //
-//        withAnimation{
-//
-//            self.isLoading.toggle()
-//        }
+        withAnimation{
+
+            self.isLooding.toggle()
+        }
 //
 //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
 //            withAnimation{self.isLoading.toggle()}
@@ -88,4 +92,53 @@ class HomeReigtserViewModel: ObservableObject {
 
     }
     
+    func makeSignUp()  {
+        
+        if checkPhone(p: nameSign) {getError(s: "Please type valid User Name")  ; return  }
+//
+        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
+        
+        if checkPhone(p: mobileSign) {getError(s: "Please type valid Phone Number")  ; return  }
+
+        if checkPhone(p:addressSign) {getError(s: "Please Choose vaLid Address") ; return  }
+        
+        if checkPhone(p: passwordSign) {getError(s: "Please type valid Password")  ; return  }
+//
+        if !checkPasswordAndRe() {getError(s: "Please make Password and confirm password same!") ; return }
+        
+        withAnimation{
+
+            self.isLooding.toggle()
+        }
+        
+    }
+    
+    func makeResetPass()  {
+        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
+
+        withAnimation{
+
+            self.isLooding.toggle()
+        }
+    }
+    
+    func makeNewPass()  {
+        
+        if !checkNewPasswordAndRe() {getError(s: "Please make Password and confirm password same!") ; return }
+
+        withAnimation{
+
+            self.isLooding.toggle()
+        }
+    }
+    
+    func makeOTPConfirmation()  {
+        
+        if totalSmsmCode.count != 3 {getError(s: "Please Type Correct Otp") ; return }
+        
+        withAnimation{
+
+            self.isLooding.toggle()
+        }
+    }
 }
