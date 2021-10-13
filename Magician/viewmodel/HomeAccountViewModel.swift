@@ -23,7 +23,12 @@ class HomeAccountViewModel: ObservableObject {
     
     @Published var isNotfyOn = true
 
-    
+    @Published var email = "islamhisham755@email.com"
+    @Published var name = "Eslam Hisham"
+    @Published var phone = "010 234 10 673"
+
+    @Published var isAccountInfo = false
+
     
     //take picture
     @Published  var image: Image? = Image("Profile picture")

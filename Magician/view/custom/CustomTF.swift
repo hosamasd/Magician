@@ -13,7 +13,8 @@ struct CustomTF: View {
     var isHide = false
     @Binding var hide:Bool
     var isAddress = false
-
+    var isAccountInfo = false
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 28)
             .fill(Color("txField"))
@@ -21,66 +22,64 @@ struct CustomTF: View {
             //            .fill(Color.white)
             .overlay(
                 
-                HStack {
+                VStack (spacing:-2){
                     
-                    
-                    
-                    ZStack(alignment: .leading) {
-                        if txt.isEmpty { Text(LocalizedStringKey(hint))
+                    if isAccountInfo {
+                        
+                        Text(LocalizedStringKey(hint))
                             .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                             .fontWeight(.semibold)
                             .font(.system(size: 12))
-                        }
-                        ZStack {
-                            if hide {
-                                SecureField(hint,text:$txt)
-                                    .foregroundColor(.black.opacity(0.6))
-                                    //                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
-                                    .font(.system(size: 12))
-                                    .disabled(isAddress ? true : false)
-                                
-                            }
-                            else {
-                                TextField(hint,text:$txt)
-                                    .foregroundColor(.black.opacity(0.6))
-                                    
-                                    //                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
-                                    .font(.system(size: 12))
-                                    .disabled(isAddress ? true : false)
+                            .frame(maxWidth:.infinity,alignment: .leading)
+                            .padding(.leading,32)
+//                            .padding(.top,4)
 
-                            }
-                        }
-//                        .overlay(
-//                            HStack {
-//                                Spacer()
-//
-//                                Button(action: {withAnimation{self.hide.toggle()}}, label: {
-//                                    Image(systemName: !hide ? "eye.slash" : "eye")
-//                                        .foregroundColor(.gray)
-//                                })
-//                                .buttonStyle(PlainButtonStyle())
-//                                .padding(.trailing)
-//                                .padding(.trailing)
-//
-//                            }
-//                            ,alignment: .trailing
-//                        )
-//                        .padding(.top,10)
-                        
                     }
-                    .padding(.leading,32)
                     
-                    Button(action: {withAnimation{self.hide.toggle()}}, label: {
-                        Image(systemName: !hide ? "eye.slash" : "eye")
-                            .foregroundColor(.gray)
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                    .padding(.trailing)
-                    .padding(.trailing)
-                    .opacity(!isHide ? 0 : 1)
+                    HStack {
+                        
+                        
+                        
+                        ZStack(alignment: .leading) {
+                            if txt.isEmpty { Text(LocalizedStringKey(hint))
+                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
+                                .fontWeight(.semibold)
+                                .font(.system(size: 12))
+                            }
+                            ZStack {
+                                if hide {
+                                    SecureField(hint,text:$txt)
+                                        .foregroundColor(.black.opacity(isAccountInfo ? 1 : 0.6))
+                                        //                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
+                                        .font(.system(size: 12))
+                                        .disabled(isAddress ? true : false)
+                                    
+                                }
+                                else {
+                                    TextField(hint,text:$txt)
+                                        .foregroundColor(.black.opacity(isAccountInfo ? 1 : 0.6))
+                                        
+                                        .font(.system(size: 12))
+                                        .disabled(isAddress ? true : false)
+                                    
+                                }
+                            }
+                            
+                        }
+                        .padding(.leading,32)
+                        
+                        Button(action: {withAnimation{self.hide.toggle()}}, label: {
+                            Image(systemName: !hide ? "eye.slash" : "eye")
+                                .foregroundColor(.gray)
+                        })
+                        .buttonStyle(PlainButtonStyle())
+                        .padding(.trailing)
+                        .padding(.trailing)
+                        .opacity(!isHide ? 0 : 1)
+                    }
                 }
             )
-            .frame(height:50)
+            .frame(height:isAccountInfo ? 60 : 50)
     }
 }
 

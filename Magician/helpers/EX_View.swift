@@ -75,5 +75,9 @@ extension View {
     func isFaoundBottomSafe() -> CGFloat? {
         return   UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? 0 : UIApplication.shared.windows.first?.safeAreaInsets.bottom
     }
+    
+    func bottomSafeArea(x:CGFloat,y:CGFloat = 0) -> CGFloat? {
+        return   UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? x : (UIApplication.shared.windows.first?.safeAreaInsets.bottom)!+y
+    }
 }
 
