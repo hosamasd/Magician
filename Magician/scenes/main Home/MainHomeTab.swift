@@ -20,6 +20,11 @@ struct MainHomeTab: View {
                 MainHomeTabProfileInfo(vm:vm)
                     .padding(.top,20)
                 
+                HomeCategoryView(vm: vm)
+                
+                HomeTopRating(vm: vm)
+
+                HomeSpecialOffer(vm:vm)
             }
             
         }

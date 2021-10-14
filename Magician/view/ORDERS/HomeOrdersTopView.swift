@@ -68,9 +68,9 @@ struct HomeOrdersTopView: View {
     }
 }
 
-struct HomeAccousntTopView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-//        HomeOrders()
-    }
-}
+//struct HomeAccousntTopView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+////        HomeOrders()
+//    }
+//}

@@ -57,10 +57,10 @@ struct HomeOrders: View {
     }
 }
 
-struct HomeOrders_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeOrders()
-//        ContentView()
+//struct HomeOrders_Previews: PreviewProvider {
+//    static var previews: some View {
 //        HomeOrders()
-    }
-}
+////        ContentView()
+////        HomeOrders()
+//    }
+//}

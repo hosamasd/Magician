@@ -102,10 +102,10 @@ struct OrderRowView: View {
     }
 }
 
-struct OrderRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeOrders()
-        //        ContentView()
-        //        OrderRowView()
-    }
-}
+//struct OrderRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeOrders()
+//        //        ContentView()
+//        //        OrderRowView()
+//    }
+//}

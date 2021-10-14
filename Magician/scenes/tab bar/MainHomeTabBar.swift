@@ -52,6 +52,7 @@ struct MainHomeTabBar: View {
 
 struct MainHomeTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        MainHomeTabBar()
+        ContentView()
+//        MainHomeTabBar()
     }
 }

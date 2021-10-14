@@ -12,4 +12,13 @@ class MainHomeTabViewModel: ObservableObject {
     @Published var alertMsg = ""
     @Published var isLooding = false
     
+    @Published var categoryIndex = 0
+    
+    @Published var categoryArray = [
+    "Group 8188", "Group 8188", "Group 8188", "Group 8188",
+    ]
+    
+    @Published var topRatingArray = [
+    "Food", "Toys", "Drinks", "Clothes",
+    ]
 }
