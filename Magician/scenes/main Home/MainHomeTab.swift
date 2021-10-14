@@ -17,17 +17,25 @@ struct MainHomeTab: View {
             
             ScrollView(showsIndicators:false){
                 
+
+                
                 MainHomeTabProfileInfo(vm:vm)
                     .padding(.top,20)
-                
+
                 HomeCategoryView(vm: vm)
-                
+
                 HomeTopRating(vm: vm)
 
                 HomeSpecialOffer(vm:vm)
+
             }
             
         }
+        .background(Color("bg"))
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

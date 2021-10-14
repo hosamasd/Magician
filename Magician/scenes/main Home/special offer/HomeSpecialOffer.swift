@@ -44,18 +44,21 @@ struct HomeSpecialOffer: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 
-                HStack(spacing:16){
+                HStack(spacing:12){
                     
-                    LazyVGrid(columns: columns,spacing: 16){
-                        //                        ForEach(vm.messagesUsers){gradient in
-                        
-                        Text("hello")
-                        
-                        //                        }
+                    
+                    LazyHGrid(rows: columns,spacing: 12){
+                        ForEach(vm.specialOffersArray){gradient in
+                            
+                            SpecialOfferRowView(vm: vm,x:gradient)
+                        }
                     }
+//                    .padding(.vertical)
                     
                 }
+                .padding(.horizontal,16)
             }
+            .padding(.vertical)
         }
     }
 }

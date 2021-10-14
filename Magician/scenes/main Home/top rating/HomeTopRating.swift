@@ -44,6 +44,7 @@ struct HomeTopRating: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 
+                
                 HStack(spacing:8){
                     
 //                    LazyVGrid(columns: columns,spacing: 12){
