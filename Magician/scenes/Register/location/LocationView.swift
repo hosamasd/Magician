@@ -12,14 +12,17 @@ import MapKit
 fileprivate let locationFetcher = LocationFetcher()
 
 struct LocationView: View {
-    @EnvironmentObject var vm : HomeReigtserViewModel
+//    @EnvironmentObject var vm : HomeReigtserViewModel
 
     @State var centerCoordinate = CLLocationCoordinate2D()
     @State var currentLocation: CLLocationCoordinate2D?
     @State var hideAddButton = false
     @State var annotation: MKPointAnnotation?
-//    @Binding var dismiss:Bool
+    @Binding var dismiss:Bool
     @Binding var locationText:String
+    
+    var isAdd = false
+    
 //    @Binding var isActive: Bool
 //    @Binding var enteredLocation: CLLocationCoordinate2D?
 //    @State var showLocation = false
@@ -79,24 +82,29 @@ struct LocationView: View {
                     .fill(Color.blue)
                     .opacity(0.3)
                     .frame(width: 32, height: 32)
-                    .padding(.horizontal,32)
+//                    .padding(.horizontal,32)
 
             }
             
             UserLocationView(self)
-                .padding(.horizontal,32)
+                .padding(.horizontal,isAdd ? 16 : 32)
+
+//                .padding(.horizontal,32)
 
             XMarkLocationView(self)
                 .padding(.top,20)
-                .padding(.horizontal,32)
+//                .padding(.horizontal,32)
+                .padding(.horizontal,isAdd ? 16 : 32)
 
-                .environmentObject(vm)
+//                .environmentObject(vm)
                 
             
             if !hideAddButton {
                 AddButton(self)
                     .padding(.bottom)
-                    .padding(.horizontal,32)
+                    .padding(.horizontal,isAdd ? 16 : 32)
+
+//                    .padding(.horizontal,32)
             }
             
             
@@ -190,7 +198,8 @@ struct LocationView: View {
                             .font(.title)
                             .clipShape(Circle())
                             .rotationEffect(.degrees(45))
-                            .padding(.trailing)
+//                            .padding(.horizontal)
+//                            .padding(.horizontal,parent.isAdd ? 0 : 16)
                     }
                 }
             }
@@ -198,7 +207,7 @@ struct LocationView: View {
     }
     
     struct XMarkLocationView: View {
-        @EnvironmentObject var vm : HomeReigtserViewModel
+//        @EnvironmentObject var vm : HomeReigtserViewModel
 //        @ObservedObject var vm : HomeReigtserViewModel
 
         var parent: LocationView
@@ -221,9 +230,9 @@ struct LocationView: View {
                             withAnimation {
 //                                parent.getAddress(loc: parent.centerCoordinate)
 
-//                                self.parent.dismiss.toggle()
-                                self.vm.isSHowLocation.toggle()
-                                vm.isGet.toggle()
+                                self.parent.dismiss.toggle()
+//                                self.vm.isSHowLocation.toggle()
+//                                vm.isGet.toggle()
                             }
                         
                         
@@ -235,7 +244,9 @@ struct LocationView: View {
                             .font(.title)
                             .clipShape(Circle())
 //                            .rotationEffect(.degrees(45))
-                            .padding(.trailing)
+//                            .padding(.horizontal,parent.isAdd ? 0 : 16)
+
+//                            .padding(.trailing)
                     }
                 }
                 Spacer()

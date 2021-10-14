@@ -111,8 +111,9 @@ struct MainHomeReg: View {
             
             if vm.isSHowLocation {
                 //                LoadingCircleOpacity()
-                LocationView(  locationText: $vm.addressSign )
-                    .environmentObject(vm)
+                LocationView(dismiss: $vm.isSHowLocation, locationText: $vm.addressSign)
+//                LocationView(  locationText: $vm.addressSign )
+//                    .environmentObject(vm)
                     .transition(.move(edge: .bottom))
                 
             }

@@ -17,6 +17,8 @@
 		4E171E422716F339000837BF /* HomeAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171E412716F339000837BF /* HomeAccountViewModel.swift */; };
 		4E171E452716F3C3000837BF /* HomeAccountTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171E442716F3C3000837BF /* HomeAccountTopView.swift */; };
 		4E171E472716F74F000837BF /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171E462716F74F000837BF /* SUImagePickerView.swift */; };
+		4E2ADBF32717E5380039C842 /* AddAddressSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ADBF22717E5380039C842 /* AddAddressSheetView.swift */; };
+		4E2ADBF52717E5E90039C842 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ADBF42717E5E90039C842 /* CustomCorners.swift */; };
 		4EB8FFE927148560008C0D03 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8FFE827148560008C0D03 /* Launch Screen.storyboard */; };
 		4EBF11582715882B008C3C89 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF11562715882B008C3C89 /* NetworkManger.swift */; };
 		4EBF11592715882B008C3C89 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF11572715882B008C3C89 /* URLBuilder.swift */; };
@@ -68,6 +70,8 @@
 		4E171E412716F339000837BF /* HomeAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountViewModel.swift; sourceTree = "<group>"; };
 		4E171E442716F3C3000837BF /* HomeAccountTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountTopView.swift; sourceTree = "<group>"; };
 		4E171E462716F74F000837BF /* SUImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
+		4E2ADBF22717E5380039C842 /* AddAddressSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressSheetView.swift; sourceTree = "<group>"; };
+		4E2ADBF42717E5E90039C842 /* CustomCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		4EB8FFE827148560008C0D03 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4EBF11562715882B008C3C89 /* NetworkManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		4EBF11572715882B008C3C89 /* URLBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		4E1538CB2714B3C300D5DD52 /* custom */ = {
 			isa = PBXGroup;
 			children = (
+				4E2ADBF42717E5E90039C842 /* CustomCorners.swift */,
 				4E171E462716F74F000837BF /* SUImagePickerView.swift */,
 				4EFC794D2716CF6F00C5DF36 /* GifImage.swift */,
 				4EC550A52716B3420025F5C9 /* LoadingCapsuleSpacing.swift */,
@@ -138,7 +143,7 @@
 			children = (
 				4E171E3F2716F31A000837BF /* HomeAccount.swift */,
 				4EEF4D8827171F1B00D39193 /* info */,
-				4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */,
+				4E2ADBF12717E51B0039C842 /* saved address */,
 				4EEF4D8D2717277400D39193 /* AccountChangePassword.swift */,
 			);
 			path = ACCOUNT;
@@ -159,6 +164,15 @@
 				4ECD6DBD271460D800011208 /* HomeONBoard.swift */,
 			);
 			path = "may be used";
+			sourceTree = "<group>";
+		};
+		4E2ADBF12717E51B0039C842 /* saved address */ = {
+			isa = PBXGroup;
+			children = (
+				4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */,
+				4E2ADBF22717E5380039C842 /* AddAddressSheetView.swift */,
+			);
+			path = "saved address";
 			sourceTree = "<group>";
 		};
 		4E4C43C327155CCE004287E7 /* signup */ = {
@@ -460,6 +474,7 @@
 				4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */,
 				4EDC43902717054C00C2347B /* AccountRowView.swift in Sources */,
 				4E1538CD2714B48C00D5DD52 /* HomeReigtserViewModel.swift in Sources */,
+				4E2ADBF52717E5E90039C842 /* CustomCorners.swift in Sources */,
 				4E171E402716F31A000837BF /* HomeAccount.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
 				4EC550A42716AE990025F5C9 /* KeyboardSpace.swift in Sources */,
@@ -468,6 +483,7 @@
 				4EFC79542716D11D00C5DF36 /* SHomeONBoard.swift in Sources */,
 				4EFC794C2716CD9300C5DF36 /* GifI_mage.swift in Sources */,
 				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
+				4E2ADBF32717E5380039C842 /* AddAddressSheetView.swift in Sources */,
 				4EFC794E2716CF6F00C5DF36 /* GifImage.swift in Sources */,
 				4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */,
 				4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */,

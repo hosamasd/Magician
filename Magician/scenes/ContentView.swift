@@ -18,8 +18,9 @@ struct ContentView: View {
         
         //enteredLocation: $enteredLocation)
 
-        MainHomeTabBar()
-            .environmentObject(vm)
+        AccountSavedAddress(vm: HomeAccountViewModel())
+//        MainHomeTabBar()
+//            .environmentObject(vm)
     }
 }
 
