@@ -17,6 +17,7 @@ struct UsedTabBar: View {
             ForEach(vm.tabs){tab in
                 
                 TabButton(tab: tab, selectedTab: $vm.index, animation: animation)
+                    .environmentObject(vm)
 //                TabButton(imageName: "", sImageName: "", title: tab, selectedTab: $vm.index, animation: animation)
 //                TabButton(title: tab, selectedTab: $selectedTab,animation: animation)
                 if tab.title != vm.tabs.last?.title {
@@ -41,7 +42,8 @@ struct TabButton : View {
 //
 //    var title : String
     var tab = TabModel(title: "Home", img: "Home", sImg: "Home-1")
-    
+    @EnvironmentObject var vm:HomeMainTabBarViewModel
+
     @Binding var selectedTab : String
     var animation : Namespace.ID
     
@@ -64,9 +66,27 @@ struct TabButton : View {
                 Image("Rectangle 17385")
                     .opacity(selectedTab==tab.title ? 1 : 0)
                     .padding(.bottom,10)
+               
                 
                 Image(selectedTab==tab.title ? tab.sImg : tab.img)
                     .offset(y: selectedTab==tab.title ? 8 : 0)
+                
+                    .overlay(
+                    
+                        Circle()
+                            .fill(Color("mains"))
+                            .frame(width: 15, height: 15)
+                            .overlay(
+                            
+                                Text(("\(vm.totalAddedNewOrders)"))
+                                    .font(.system(size: 10))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                            )
+                            .offset(x: 12, y: -2)
+                            .opacity(selectedTab==tab.title&&vm.addTabBadget() ? 1 : 0)
+
+                        ,alignment:.topTrailing)
                 
                 Text(tab.title)
                     .font(.caption)
@@ -86,6 +106,7 @@ struct TabButton : View {
 
 struct UsedTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        UsedTabBar()
+//        ContentView()
     }
 }

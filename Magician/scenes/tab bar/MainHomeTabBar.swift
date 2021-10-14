@@ -16,12 +16,12 @@ struct MainHomeTabBar: View {
             
             
             if vm.index == "Home" {
-                HomeAccount()
+                HomeOrders()
                 //                SSecondMainHome()
                 //                    .environmentObject(vm)
             }
             else if vm.index == "Filter" {
-                Color.gray
+                HomeOrders()
                 
                 
             }
@@ -30,12 +30,12 @@ struct MainHomeTabBar: View {
                 Color.blue
                 
             }
-//            else if vm.index ==  "Account" {
-//                Color.orange
-//
-//            }
+            else if vm.index ==  "Orders" {
+                HomeOrders()
+
+            }
             else {
-                Color.black
+               HomeAccount()
 
             }
             
