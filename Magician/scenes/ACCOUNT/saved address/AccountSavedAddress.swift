@@ -22,7 +22,7 @@ struct AccountSavedAddress: View {
                         
                         Button(action: {withAnimation{vm.isSavedAddress.toggle()}}, label: {
                             Image(systemName: "chevron.backward")
-                                .font(.system(size: 25))
+                                .font(.customFontSystem(size: 25))
                                 .foregroundColor(Color("mains"))
                             
                         })
@@ -30,7 +30,7 @@ struct AccountSavedAddress: View {
                         Spacer()
                         
                         Text("Saved addresses")
-                            .font(.system(size: 16))
+                            .font(.customFontSystem(size: 16))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
                         
@@ -62,7 +62,7 @@ struct AccountSavedAddress: View {
                             .overlay(
                                 
                                 Text("Add New Address")
-                                    .font(.system(size: 16))
+                                    .font(.customFontSystem(size: 16))
                                     .fontWeight(.semibold)
                                     .foregroundColor(Color.white)//.opacity(0.6))
                             )

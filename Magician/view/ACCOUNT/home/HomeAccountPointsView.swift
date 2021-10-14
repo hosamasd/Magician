@@ -21,12 +21,13 @@ struct HomeAccountPointsView: View {
                         VStack(alignment:.leading) {
                             
                             Text("Eslam Hisham")
-                                .font(.system(size: 18))
+
+                                .font(.customFontSystem(size: 18))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("mains"))
                             
                             Text("( Superman )")
-                                .font(.system(size: 13))
+                                .font(.customFontSystem(size: 13))
                                 .fontWeight(.semibold)
                         }
                         
@@ -42,12 +43,12 @@ struct HomeAccountPointsView: View {
                 Spacer()
                 
                 Text("1500 /\n")
-                    .font(.system(size: 18))
+                    .font(.customFontSystem(size: 18))
                     .fontWeight(.semibold)
                     .foregroundColor(Color("mains"))
                 +
                  Text(   "3000 EXP")
-                    .font(.system(size: 18))
+                    .font(.customFontSystem(size: 18))
                     .fontWeight(.semibold)
             }
             

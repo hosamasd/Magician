@@ -26,7 +26,7 @@ struct MainHomeReg: View {
                     .padding(.top,isSmallDevice() ? 40 : -40)
                 
                 Text("Discover The Best Order From Over 10,000\n Restaurants, Store And Fast Delivery To Your\n Doorstep")
-                    .font(.system(size: 13))
+                    .font(.customFontSystem(size: 13))
                     .fontWeight(.regular)
                     .foregroundColor(Color.black.opacity(0.6))
                     .multilineTextAlignment(.center)
@@ -47,7 +47,7 @@ struct MainHomeReg: View {
                         .overlay(
                             
                             Text("Login")
-                                .font(.system(size: 16))
+                                .font(.customFontSystem(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.white)//.opacity(0.6))
                         )
@@ -70,7 +70,7 @@ struct MainHomeReg: View {
                         .overlay(
                             
                             Text("Create an Account")
-                                .font(.system(size: 16))
+                                .font(.customFontSystem(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("mains"))//.opacity(0.6))
                         )

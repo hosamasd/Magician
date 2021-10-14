@@ -16,7 +16,7 @@ struct MainHomeTabBar: View {
             
             
             if vm.index == "Home" {
-                HomeOrders()
+                MainHomeTab()
                 //                SSecondMainHome()
                 //                    .environmentObject(vm)
             }

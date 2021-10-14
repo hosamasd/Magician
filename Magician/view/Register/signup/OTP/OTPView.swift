@@ -14,11 +14,11 @@ struct OTPView: View {
         VStack {
             
             Text("We have sent an OTP to\nyour Mobile")
-                .font(.system(size: 25))
+                .font(.customFontSystem(size: 25))
                 .multilineTextAlignment(.center)
             
             Text("Please check your mobile number 071*****12 \ncontinue to reset your password")
-                .font(.system(size: 14))
+                .font(.customFontSystem(size: 14))
                 .foregroundColor(.black.opacity(0.6))
                 //                .padding(.top)
                 .multilineTextAlignment(.center)
@@ -58,7 +58,7 @@ struct OTPView: View {
                         .overlay(
                             
                             Text("Next")
-                                .font(.system(size: 16))
+                                .font(.customFontSystem(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.white)//.opacity(0.6))
                         )

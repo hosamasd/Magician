@@ -23,7 +23,9 @@ struct AccountRowView: View {
             HStack {
                 
                 Text(name)
-                    .font(.system(size: 14))
+                    .font(.customFontSystem(size: 14))
+
+//                    .font(.system(size: 14))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)//.opacity(0.6))
                 
@@ -49,7 +51,9 @@ struct AccountRowView: View {
                     if isText {
                         
                         Text("300$")
-                            .font(.system(size: 15))
+                            .font(.customFontSystem(size: 15))
+
+//                            .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
                     }

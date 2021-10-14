@@ -31,7 +31,7 @@ struct AddAddressSheetView: View {
                 .padding(.horizontal)
                 
                 Text("Add New Address")
-                    .font(.system(size: 20))
+                    .font(.customFontSystem(size: 20))
                     .fontWeight(.bold)
                 
                 RoundedRectangle(cornerRadius: 10)
@@ -67,7 +67,7 @@ struct AddAddressSheetView: View {
                         .overlay(
                             
                             Text("Add")
-                                .font(.system(size: 16))
+                                .font(.customFontSystem(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.white)//.opacity(0.6))
                         )

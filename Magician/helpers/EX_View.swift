@@ -24,6 +24,18 @@ extension UIBezierPath {
   }
 }
 
+extension Font {
+
+    /// Create a font with the large title text style.
+      public static var customFont: Font {
+          return Font.custom("Lato-Regular", size: UIFont.preferredFont(forTextStyle: .largeTitle).pointSize)
+      }
+    
+    public static func customFontSystem(size: CGFloat) -> Font {
+        return Font.custom("Lato-Regular", size:size)
+ }
+}
+
 extension View {
     
     public func addBorder<S>(_ content: S, width: CGFloat = 1, cornerRadius: CGFloat) -> some View where S : ShapeStyle {

@@ -30,7 +30,7 @@ struct CustomTF: View {
                         Text(LocalizedStringKey(hint))
                             .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                             .fontWeight(.semibold)
-                            .font(.system(size: 12))
+                            .font(.customFontSystem(size: 12))
                             .frame(maxWidth:.infinity,alignment: .leading)
                             .padding(.leading,32)
 //                            .padding(.top,4)
@@ -45,14 +45,14 @@ struct CustomTF: View {
                             if txt.isEmpty { Text(LocalizedStringKey(hint))
                                 .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                                 .fontWeight(.semibold)
-                                .font(.system(size: 12))
+                                .font(.customFontSystem(size: 12))
                             }
                             ZStack {
                                 if hide {
                                     SecureField(hint,text:$txt)
                                         .foregroundColor(.black.opacity(isAccountInfo ? 1 : 0.6))
                                         //                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
-                                        .font(.system(size: 12))
+                                        .font(.customFontSystem(size: 12))
                                         .disabled(isAddress ? true : false)
                                     
                                 }
@@ -60,7 +60,7 @@ struct CustomTF: View {
                                     TextField(hint,text:$txt)
                                         .foregroundColor(.black.opacity(isAccountInfo ? 1 : 0.6))
                                         
-                                        .font(.system(size: 12))
+                                        .font(.customFontSystem(size: 12))
                                         .disabled(isAddress ? true : false)
                                     
                                 }

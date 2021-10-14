@@ -108,7 +108,7 @@ struct SSHomeONBoard: View {
             
                 VStack {
                     Text(LocalizedStringKey(self.onBoard[self.index].title))
-                        .font(.system(size: 24))
+                        .font(.customFontSystem(size: 24))
                         .fontWeight(.semibold)
                         .foregroundColor(Color.black)//.opacity(0.6))
                         .padding(.vertical,isSmallDevice() ? 16 : 32)
@@ -116,7 +116,7 @@ struct SSHomeONBoard: View {
                     
                     
                     Text(LocalizedStringKey(self.onBoard[self.index].desc))
-                        .font(.system(size: isSmallDevice() ? 13 : 13))
+                        .font(.customFontSystem(size: isSmallDevice() ? 13 : 13))
                         .fontWeight(.regular)
                         .foregroundColor(Color.black.opacity(0.6))
                         .padding(.top)
@@ -147,7 +147,7 @@ struct SSHomeONBoard: View {
                     .overlay(
                         
                         Text("Next")
-                            .font(.system(size: 16))
+                            .font(.customFontSystem(size: 16))
                             .fontWeight(.semibold)
                             .foregroundColor(Color.white)//.opacity(0.6))
                     )
