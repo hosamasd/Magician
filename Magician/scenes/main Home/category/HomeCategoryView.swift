@@ -42,39 +42,27 @@ struct HomeCategoryView: View {
             .padding(.top, 15)
             .padding(.bottom,4)
             
-            // Carousel List...
-            
-            VStack {
-                TabView(selection: self.$vm.categoryIndex){
-                    
-                    ForEach(0..<vm.categoryArray.count,id: \.self){index in
-                        
-                        CategoryRowView(x: vm.categoryArray[index],index:index, vm: vm)
-                        //                    Image(vm.categoryArray[index])
-                        //                        .resizable()
-                        //                        // adding animation...
-                        //                        .frame(height: self.vm.categoryIndex == index ?  170 : 120)
-                        //                        .cornerRadius(15)
-                        //                        .padding(.horizontal)
-                        // for identifying current index....
-                    }
-                }
-                .frame(height:170)
-                //                .padding(.top,25)
-                .tabViewStyle(PageTabViewStyle())
-                //                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                .animation(.easeOut)
+            ScrollView(.horizontal, showsIndicators: false) {
                 
-                HStack {
+                
+                HStack(spacing:8){
                     
-                    Spacer()
-                    
-                    
-                    
-                    Spacer()
+//                    LazyVGrid(columns: columns,spacing: 12){
+                        
+                        ForEach(0..<vm.categoryArray.count,id: \.self){index in
+
+                            CategoryRowView(x: vm.categoryArray[index], vm: vm)
+//                            TopRatingRowView(vm: vm,x:vm.topRatingArray[index])
+                            
+                        }
+                        
+                   
                     
                 }
+                .padding(.horizontal)
             }
+            
+       
         }
         .onAppear {
             setupAppearance()

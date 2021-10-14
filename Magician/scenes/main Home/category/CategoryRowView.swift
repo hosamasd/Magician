@@ -13,49 +13,49 @@ struct CategoryRowView: View {
     @ObservedObject var vm:MainHomeTabViewModel
     
     var body: some View {
-        ZStack {
+//        ZStack {
             Image(x)
-                .resizable()
-                // adding animation...
-                .frame(height: self.vm.categoryIndex == index ?  170 : 120)
-                .cornerRadius(15)
-                .padding(.horizontal)
-                .tag(index)
+//                .resizable()
+//                // adding animation...
+//                .frame(height: self.vm.categoryIndex == index ?  170 : 120)
+//                .cornerRadius(15)
+//                .padding(.horizontal)
+//                .tag(index)
             
-            HStack {
-                
-                Image("down arrow-1")
-                
-                Spacer()
-                
-                VStack {
-                    Text("Get First ")
-                        .font(.customFontSystem(size: 30))
-                        .fontWeight(.bold)
-                        +
-                        Text("Order")
-                        .font(.customFontSystem(size: 30))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
-                    
-                    Text("Get ")
-                        .font(.customFontSystem(size: 22))
-                        .fontWeight(.bold)
-                        
-                        +
-                        Text("200 EXP")
-                        .font(.customFontSystem(size: 22))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
-                }
-                
-                Spacer()
-                
-                Image("down arrow")
-                
-            }
-            .padding(.horizontal,32)
-        }
+//            HStack {
+//
+//                Image("down arrow-1")
+//
+//                Spacer()
+//
+//                VStack {
+//                    Text("Get First ")
+//                        .font(.customFontSystem(size: 30))
+//                        .fontWeight(.bold)
+//                        +
+//                        Text("Order")
+//                        .font(.customFontSystem(size: 30))
+//                        .fontWeight(.bold)
+//                        .foregroundColor(Color("mains"))
+//
+//                    Text("Get ")
+//                        .font(.customFontSystem(size: 22))
+//                        .fontWeight(.bold)
+//
+//                        +
+//                        Text("200 EXP")
+//                        .font(.customFontSystem(size: 22))
+//                        .fontWeight(.bold)
+//                        .foregroundColor(Color("mains"))
+//                }
+//
+//                Spacer()
+//
+//                Image("down arrow")
+//
+//            }
+//            .padding(.horizontal,32)
+//        }
         
     }
 }

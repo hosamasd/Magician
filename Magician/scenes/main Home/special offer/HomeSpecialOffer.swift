@@ -47,12 +47,12 @@ struct HomeSpecialOffer: View {
                 HStack(spacing:12){
                     
                     
-                    LazyHGrid(rows: columns,spacing: 12){
+//                    LazyHGrid(rows: columns,spacing: 12){
                         ForEach(vm.specialOffersArray){gradient in
                             
                             SpecialOfferRowView(vm: vm,x:gradient)
                         }
-                    }
+//                    }
 //                    .padding(.vertical)
                     
                 }

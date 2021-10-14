@@ -12,11 +12,11 @@ struct SpecialOfferRowView: View {
     var x =  OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
     var body: some View {
         
-        VStack {
+        HStack {
             
             Image(x.img)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .frame(width: 150, height: 200)
                 .overlay(
                     
@@ -39,40 +39,86 @@ struct SpecialOfferRowView: View {
             
             //            VStack {
             //
-            Label(
-                title: {
-                    VStack (alignment:.leading){
-                        Text(x.name)
-                            .font(.customFontSystem(size: 14))
-                            .foregroundColor(.black)
-                        //                                .padding(.leading,-4)
-                        Text(x.type)
-                            .font(.customFontSystem(size: 12))
-                            .foregroundColor(.gray.opacity(0.8))
-                            .padding(.top,4)
+            VStack(alignment:.leading) {
+                
+                Label(
+                    title: {
+                        VStack (alignment:.leading){
+                            HStack {
+                                Text(x.name)
+                                    .font(.customFontSystem(size: 10))
+                                    .fontWeight(.regular)
+                                    .foregroundColor(.black)
+                                
+                                Text(x.offersRange)
+                                    .font(.customFontSystem(size: 10))
+                                    .fontWeight(.regular)
+                                    
+                                    .foregroundColor(Color("mains").opacity(0.8))
+                                //                                        .padding(.top,4)
+                            }
+                            //                                .padding(.leading,-4)
+                            Text(x.type)
+                                .font(.customFontSystem(size: 8))
+                                .foregroundColor(.black.opacity(0.8))
+                                .padding(.top,4)
+                        }
+                        .offset(x:-4,y:-10)
+                    },
+                    icon: {
+                        
+                        Image("1-3")
+                            .overlay(
+                                Image( x.subImg)
+                            )
                     }
-                    .offset(x:-4,y:-10)
-                },
-                icon: {
+                )
+                .padding(.leading,-4)
+                
+//                Text("chickens stevers")
+                
+                Spacer()
+                
+                //
+                HStack {
+                    Label(
+                        title: {
+                            Text(x.location)
+                                .font(.customFontSystem(size: 10))
+                                .foregroundColor(.gray.opacity(0.8))
+                        },
+                        icon: { Image( "pin") }
+                    )
+                    .padding(.horizontal,8)
                     
-                    Image("1-3")
-                        .overlay(
-                            Image( x.subImg)
-                        )
+                    Label(
+                        title: {
+                            Text("55EGP")
+                                
+                                .font(.customFontSystem(size: 10))
+                                .fontWeight(.bold)
+                                .foregroundColor(.green.opacity(1))
+                        },
+                        icon: {
+                            Text("75EGP")
+                                .font(.customFontSystem(size: 8))
+                                
+                                .fontWeight(.regular)
+                                .foregroundColor(Color("mains").opacity(0.6))//.opacity(1))
+                                .overlay(
+                                    Rectangle()
+                                        .fill(Color("mains"))
+                                        .frame(height: 1).offset(y: 0)
+                                    , alignment: .center)
+                        }
+                    )
+                    
                 }
-            )
-            //
-            Label(
-                title: {
-                    Text(x.location)
-                        .font(.customFontSystem(size: 10))
-                        .foregroundColor(.gray.opacity(0.8))
-                },
-                icon: { Image( "pin") }
-            )
-            .frame(maxWidth:.infinity,alignment: .leading)
-            .padding(.horizontal,8)
-            .padding(.bottom)
+                
+                
+                
+                
+            }
             
         }
         //        .frame(height:200)
@@ -81,7 +127,7 @@ struct SpecialOfferRowView: View {
         .padding(.vertical,8)
         
         .background(Color.white)
-        .frame(height:300)
+        .frame(width:getFrameSize().width-64,height:220)
         
         .cornerRadius(12)
         .modifier(viewModifiers())

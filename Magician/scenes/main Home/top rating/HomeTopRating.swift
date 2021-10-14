@@ -42,24 +42,23 @@ struct HomeTopRating: View {
             .padding(.top, 15)
             .padding(.bottom,4)
             
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 
-                
-                HStack(spacing:8){
+                HStack(spacing:12){
                     
-//                    LazyVGrid(columns: columns,spacing: 12){
+                    
+                    //                    LazyHGrid(rows: columns,spacing: 12){
+                    ForEach(vm.topRatingArray){gradient in
                         
-                        ForEach(0..<vm.topRatingArray.count,id: \.self){index in
-
-                            TopRatingRowView(vm: vm,x:vm.topRatingArray[index])
-                            
-                        }
-                        
-                   
+                        STopRatingRowView(vm: vm, x: gradient)
+                    }
+                    //                    }
                     
                 }
-                .padding(.horizontal)
+                .padding(.horizontal,16)
             }
+            .padding(.top,-16)
         }
     }
 }

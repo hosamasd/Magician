@@ -60,6 +60,8 @@
 		4EDBAB152718053D00AFD181 /* viewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDBAB142718053D00AFD181 /* viewModifiers.swift */; };
 		4EDC43902717054C00C2347B /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC438F2717054C00C2347B /* AccountRowView.swift */; };
 		4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC43912717087600C2347B /* HomeAccountPointsView.swift */; };
+		4EE2798427187122004EE0B6 /* CarsoelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE2798327187122004EE0B6 /* CarsoelHome.swift */; };
+		4EE279862718765D004EE0B6 /* STopRatingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE279852718765D004EE0B6 /* STopRatingRowView.swift */; };
 		4EEF4D8627171D3900D39193 /* HomeAccountImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8527171D3900D39193 /* HomeAccountImage.swift */; };
 		4EEF4D8A27171F3F00D39193 /* AccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8927171F3F00D39193 /* AccountInfoView.swift */; };
 		4EEF4D8C271724D300D39193 /* AccountSavedAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */; };
@@ -134,6 +136,8 @@
 		4EDBAB142718053D00AFD181 /* viewModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewModifiers.swift; sourceTree = "<group>"; };
 		4EDC438F2717054C00C2347B /* AccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowView.swift; sourceTree = "<group>"; };
 		4EDC43912717087600C2347B /* HomeAccountPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountPointsView.swift; sourceTree = "<group>"; };
+		4EE2798327187122004EE0B6 /* CarsoelHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsoelHome.swift; sourceTree = "<group>"; };
+		4EE279852718765D004EE0B6 /* STopRatingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STopRatingRowView.swift; sourceTree = "<group>"; };
 		4EEF4D8527171D3900D39193 /* HomeAccountImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountImage.swift; sourceTree = "<group>"; };
 		4EEF4D8927171F3F00D39193 /* AccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoView.swift; sourceTree = "<group>"; };
 		4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSavedAddress.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 			children = (
 				4E09BFB527182FD5006928FD /* HomeTopRating.swift */,
 				4E5C6C2C27184C8300FA5298 /* TopRatingRowView.swift */,
+				4EE279852718765D004EE0B6 /* STopRatingRowView.swift */,
 			);
 			path = "top rating";
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5B597727181B34004C7D2F /* MainHomeTab.swift */,
+				4EE2798327187122004EE0B6 /* CarsoelHome.swift */,
 				4E09BFB127182EB0006928FD /* category */,
 				4E09BFB427182FC7006928FD /* top rating */,
 				4E09BFB727183083006928FD /* special offer */,
@@ -571,6 +577,7 @@
 			files = (
 				4E1538C82714B36700D5DD52 /* NewPasswordView.swift in Sources */,
 				4ECF1EA7271542BC00698148 /* OTPView.swift in Sources */,
+				4EE279862718765D004EE0B6 /* STopRatingRowView.swift in Sources */,
 				4EEF4D8A27171F3F00D39193 /* AccountInfoView.swift in Sources */,
 				4ECD6DB927145E8500011208 /* Extensions_ui.swift in Sources */,
 				4E171E452716F3C3000837BF /* HomeAccountTopView.swift in Sources */,
@@ -631,6 +638,7 @@
 				4ECD6D9D27145E0400011208 /* MagicianApp.swift in Sources */,
 				4EFC79492716C8DE00C5DF36 /* LocationView.swift in Sources */,
 				4ECD6DC02714610B00011208 /* InfoModel.swift in Sources */,
+				4EE2798427187122004EE0B6 /* CarsoelHome.swift in Sources */,
 				4EFC79482716C8DE00C5DF36 /* LocationFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

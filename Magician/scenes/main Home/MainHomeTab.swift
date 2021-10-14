@@ -17,11 +17,17 @@ struct MainHomeTab: View {
             
             ScrollView(showsIndicators:false){
                 
+//                HomeTopRating(vm: vm)
 
-                
+//                HomeTopRating(vm: vm)
+
+                HomeSpecialOffer(vm:vm)
+
                 MainHomeTabProfileInfo(vm:vm)
                     .padding(.top,20)
 
+                CarsoelHome(vm: vm)
+                
                 HomeCategoryView(vm: vm)
 
                 HomeTopRating(vm: vm)
