@@ -57,7 +57,10 @@ class HomeAccountViewModel: ObservableObject {
         .init(title: "Saved addresses"),
         .init(title: "Wallet",isNumer:true),
         .init(title: "Change password"),
-        .init(title: "Notification",isCheck:true)
+        .init(title: "Notification",isCheck:true),
+            .init(title: "Language",isCheck:true),
+            .init(title: "Logout",isCheck:true)
+
     ]
     
 }

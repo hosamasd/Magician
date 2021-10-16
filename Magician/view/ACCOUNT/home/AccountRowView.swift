@@ -9,13 +9,16 @@ import SwiftUI
 
 struct AccountRowView: View {
     @ObservedObject var vm :HomeAccountViewModel
-
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+    
     var name = "Account info"
     //    var is = <#value#>
     
     var isCheck = false
     var isText = false
     var isOriginal = true
+    var isLogout = false
+    var isChangeLanguage = false
     
     var body: some View {
         VStack{
@@ -24,8 +27,8 @@ struct AccountRowView: View {
                 
                 Text(name)
                     .font(.customFontSystem(size: 14))
-
-//                    .font(.system(size: 14))
+                    
+                    //                    .font(.system(size: 14))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)//.opacity(0.6))
                 
@@ -52,8 +55,8 @@ struct AccountRowView: View {
                         
                         Text("300$")
                             .font(.customFontSystem(size: 15))
-
-//                            .font(.system(size: 15))
+                            
+                            //                            .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
                     }
@@ -62,6 +65,82 @@ struct AccountRowView: View {
                             Image(systemName: "chevron.forward")
                                 .foregroundColor(.black)
                         })
+                    }
+                    
+                    if isChangeLanguage {
+                        
+                        Menu {
+                            VStack {
+                                
+                                
+                                Button(action: {
+                                    withAnimation{
+                                        print(123)
+                                    }
+                                }, label: {
+                                    
+                                    Label(
+                                        title: {
+                                            Text("Eng")
+                                                .foregroundColor(.black)
+                                        },
+                                        icon: {
+                                            Image("united-states-of-america-flag-3d-icon-16")
+                                            
+                                        }
+                                    )
+                                    
+                                    
+                                    
+                                })
+                                //                                .background(Color.black)
+                                
+                                Button(action: {
+                                    withAnimation{
+                                        print(123)
+                                        
+                                    }
+                                    
+                                }, label: {
+                                    
+                                    Label(
+                                        title: {
+                                            Text("AR")
+                                                .foregroundColor(.black)
+                                            
+                                            
+                                        },
+                                        icon: {
+                                            Image( "egypt-flag-3d-icon-16")
+                                        }
+                                    )
+                                    
+                                    
+                                    
+                                    
+                                })
+                            }
+                            
+                        } label: {
+                            Button(action: {
+                                withAnimation{
+                                    print(123)
+                                }
+                            }, label: {
+                                
+                                //                                        Image("united-states-of-america-flag-3d-icon-16")
+                                
+                                Text("Eng")
+                                    .foregroundColor(.black)
+                                
+                            })
+                        }
+                        
+                        
+                    }
+                    
+                    if isLogout {
+                        Spacer(minLength: 0)
                     }
                 }
                 

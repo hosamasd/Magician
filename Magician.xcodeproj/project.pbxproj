@@ -424,9 +424,9 @@
 		4ECD6DB127145E3200011208 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				4EE52440271A9E4600AADB1F /* MainHomeWelcome.swift */,
 				4EFC79552716D62F00C5DF36 /* SSHomeONBoard.swift */,
 				4E1538C52714B15200D5DD52 /* MainHomeReg.swift */,
-				4EE52440271A9E4600AADB1F /* MainHomeWelcome.swift */,
 				4EFC79442716C8D500C5DF36 /* location */,
 			);
 			path = Register;

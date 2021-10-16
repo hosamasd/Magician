@@ -16,7 +16,8 @@ struct MainHomeTabBar: View {
             
             
             if vm.index == "Home" {
-                MainHomeTab()
+                HomeAccount()
+//                MainHomeTab()
                 //                SSecondMainHome()
                 //                    .environmentObject(vm)
             }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeAccount: View {
     @StateObject var vm = HomeAccountViewModel()
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
     
     var body: some View {
         VStack {
@@ -43,7 +44,9 @@ struct HomeAccount: View {
                                 withAnimation{vm.isChangePassword.toggle()}
                             })
                         AccountRowView(vm: vm,name: "Notification",isCheck: true,isOriginal: false)
-                        
+                        AccountRowView(vm: vm,name: "Language",isCheck: false,isOriginal: false,isChangeLanguage: true)
+                        AccountRowView(vm: vm,name: "Logout",isCheck: false,isOriginal: false,isLogout: true)
+
                         
                     }
                     .padding(.vertical,30)
@@ -52,13 +55,14 @@ struct HomeAccount: View {
                 .padding(.top,20)
                 
             }
-            .padding(.bottom,isSmallDevice() ? 60 : 40)
+            .padding(.bottom,CGFloat(isSmallDevice() ? 60 : 40))
                 
             }
             .padding(.horizontal,32)
             
             Spacer()
         }
+        .environmentObject(vmm)
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")
