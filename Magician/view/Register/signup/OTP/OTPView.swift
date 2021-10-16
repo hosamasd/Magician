@@ -49,7 +49,7 @@ struct OTPView: View {
                 
                 Button(action: {
                     withAnimation{
-                        
+                        vm.makeOTPConfirmation()
                     }
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)

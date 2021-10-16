@@ -11,7 +11,7 @@ class HomeReigtserViewModel: ObservableObject {
     @AppStorage("isUserLogin") var isUserLogin: Bool = false
     
     @Published var isGet = false
-
+    
     @Published var alert = false
     @Published var alertMsg = ""
     @Published var isLooding = false
@@ -23,19 +23,19 @@ class HomeReigtserViewModel: ObservableObject {
     @Published var isResetPass = false
     @Published var isNewPass = false
     @Published var isSHowLocation = false
-
+    
     
     @Published var newPassword = ""
     @Published var isHideNewPass = true
-
+    
     @Published var reNewPassword = ""
     @Published var isHideRENewPass = true
-
+    
     @Published var emailReset = ""
     
     @Published var passwordLogin = ""
     @Published var isHidePassLogin = true
-
+    
     @Published var emailLogin = ""
     
     @Published var nameSign = ""
@@ -45,7 +45,7 @@ class HomeReigtserViewModel: ObservableObject {
     
     @Published var passwordSign = ""
     @Published var isHidePassSign = true
-
+    
     @Published var isHideREPassSign = true
     @Published var rePasswordSign = ""
     
@@ -73,72 +73,112 @@ class HomeReigtserViewModel: ObservableObject {
     
     func makeLogin()  {
         
-        if checkPhone(p: emailLogin) {getError(s: "Please type valid Phone Number")  ; return  }
-//
-        if checkPhone(p:passwordLogin) {getError(s: "Please type valid Password") ; return  }
-//
+//        if checkPhone(p: emailLogin) {getError(s: "Please type valid Phone Number")  ; return  }
+//        //
+//        if checkPhone(p:passwordLogin) {getError(s: "Please type valid Password") ; return  }
+        //
         withAnimation{
-
+            
             self.isLooding.toggle()
         }
-//
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
-//            withAnimation{self.isLoading.toggle()}
-//            DispatchQueue.main.async {
-//                self.isUserLogin.toggle()
-//
-//            }
-//        }
-
+        //
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
+            withAnimation{self.isLooding.toggle()}
+            DispatchQueue.main.async {
+                self.isUserLogin.toggle()
+                self.isLogin=false
+                
+            }
+        }
+        
     }
     
     func makeSignUp()  {
         
-        if checkPhone(p: nameSign) {getError(s: "Please type valid User Name")  ; return  }
+//        if checkPhone(p: nameSign) {getError(s: "Please type valid User Name")  ; return  }
+//        //
+//        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
 //
-        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
-        
-        if checkPhone(p: mobileSign) {getError(s: "Please type valid Phone Number")  ; return  }
-
-        if checkPhone(p:addressSign) {getError(s: "Please Choose vaLid Address") ; return  }
-        
-        if checkPhone(p: passwordSign) {getError(s: "Please type valid Password")  ; return  }
+//        if checkPhone(p: mobileSign) {getError(s: "Please type valid Phone Number")  ; return  }
 //
-        if !checkPasswordAndRe() {getError(s: "Please make Password and confirm password same!") ; return }
-        
+//        if checkPhone(p:addressSign) {getError(s: "Please Choose vaLid Address") ; return  }
+//
+//        if checkPhone(p: passwordSign) {getError(s: "Please type valid Password")  ; return  }
+//        //
+//        if !checkPasswordAndRe() {getError(s: "Please make Password and confirm password same!") ; return }
+//
         withAnimation{
-
+            
             self.isLooding.toggle()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
+            withAnimation{self.isLooding.toggle()}
+            DispatchQueue.main.async {
+                self.isOTP.toggle()
+//                self.isSignUp=false
+                
+            }
         }
         
     }
     
     func makeResetPass()  {
-        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
-
+//        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
+        
         withAnimation{
-
+            
             self.isLooding.toggle()
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
+            withAnimation{self.isLooding.toggle()}
+            DispatchQueue.main.async {
+                self.isNewPass.toggle()
+                self.isResetPass=false
+                
+            }
+        }
+        
     }
     
     func makeNewPass()  {
         
-        if !checkNewPasswordAndRe() {getError(s: "Please make Password and confirm password same!") ; return }
-
+//        if !checkNewPasswordAndRe() {getError(s: "Please make Password and confirm password same!") ; return }
+        
         withAnimation{
-
+            
             self.isLooding.toggle()
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
+            withAnimation{self.isLooding.toggle()}
+            DispatchQueue.main.async {
+                //                self.isNewPass.toggle()
+                self.isNewPass=false
+                
+            }
+        }
+        
     }
     
     func makeOTPConfirmation()  {
         
-        if totalSmsmCode.count != 3 {getError(s: "Please Type Correct Otp") ; return }
+//        if totalSmsmCode.count != 3 {getError(s: "Please Type Correct Otp") ; return }
         
         withAnimation{
-
+            
             self.isLooding.toggle()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
+            withAnimation{self.isLooding.toggle()}
+            DispatchQueue.main.async {
+                self.isUserLogin.toggle()
+                self.isOTP=false
+                self.isSignUp=false
+                
+            }
         }
     }
 }

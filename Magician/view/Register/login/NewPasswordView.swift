@@ -28,9 +28,9 @@ struct NewPasswordView: View {
                 
                 Button(action: {
                     withAnimation{
-                        vm.isNewPass.toggle()
-                        vm.isLooding=true
-
+                        //                        vm.isNewPass.toggle()
+                        //                        vm.isLooding=true
+                        vm.makeNewPass()
                     }
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)

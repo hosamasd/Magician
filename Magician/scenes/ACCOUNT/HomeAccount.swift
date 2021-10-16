@@ -13,6 +13,7 @@ struct HomeAccount: View {
     var body: some View {
         VStack {
             
+            VStack {
             HomeAccountTopView(vm:vm)
             
             ScrollView(showsIndicators:false){
@@ -52,6 +53,10 @@ struct HomeAccount: View {
                 
             }
             .padding(.bottom,isSmallDevice() ? 60 : 40)
+                
+            }
+            .padding(.horizontal,32)
+            
             Spacer()
         }
         .background(Color("bg"))

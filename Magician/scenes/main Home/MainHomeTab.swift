@@ -13,7 +13,9 @@ struct MainHomeTab: View {
     var body: some View {
         VStack {
             
-            MainHomeTabTopView(vm:vm)
+            VStack {
+                MainHomeTabTopView(vm:vm)
+           
             
             ScrollView(showsIndicators:false){
                 
@@ -35,8 +37,11 @@ struct MainHomeTab: View {
                 HomeSpecialOffer(vm:vm)
 
             }
-            
+         
+            }
+            .padding(.horizontal,32)
         }
+        
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")

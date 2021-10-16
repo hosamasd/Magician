@@ -62,6 +62,7 @@
 		4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC43912717087600C2347B /* HomeAccountPointsView.swift */; };
 		4EE2798427187122004EE0B6 /* CarsoelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE2798327187122004EE0B6 /* CarsoelHome.swift */; };
 		4EE279862718765D004EE0B6 /* STopRatingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE279852718765D004EE0B6 /* STopRatingRowView.swift */; };
+		4EE52441271A9E4600AADB1F /* MainHomeWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE52440271A9E4600AADB1F /* MainHomeWelcome.swift */; };
 		4EEF4D8627171D3900D39193 /* HomeAccountImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8527171D3900D39193 /* HomeAccountImage.swift */; };
 		4EEF4D8A27171F3F00D39193 /* AccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8927171F3F00D39193 /* AccountInfoView.swift */; };
 		4EEF4D8C271724D300D39193 /* AccountSavedAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */; };
@@ -138,6 +139,7 @@
 		4EDC43912717087600C2347B /* HomeAccountPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountPointsView.swift; sourceTree = "<group>"; };
 		4EE2798327187122004EE0B6 /* CarsoelHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsoelHome.swift; sourceTree = "<group>"; };
 		4EE279852718765D004EE0B6 /* STopRatingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STopRatingRowView.swift; sourceTree = "<group>"; };
+		4EE52440271A9E4600AADB1F /* MainHomeWelcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeWelcome.swift; sourceTree = "<group>"; };
 		4EEF4D8527171D3900D39193 /* HomeAccountImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountImage.swift; sourceTree = "<group>"; };
 		4EEF4D8927171F3F00D39193 /* AccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoView.swift; sourceTree = "<group>"; };
 		4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSavedAddress.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 			children = (
 				4EFC79552716D62F00C5DF36 /* SSHomeONBoard.swift */,
 				4E1538C52714B15200D5DD52 /* MainHomeReg.swift */,
+				4EE52440271A9E4600AADB1F /* MainHomeWelcome.swift */,
 				4EFC79442716C8D500C5DF36 /* location */,
 			);
 			path = Register;
@@ -637,6 +640,7 @@
 				4EFB122B27169575008A240A /* HomeMainTabBarViewModel.swift in Sources */,
 				4ECD6D9D27145E0400011208 /* MagicianApp.swift in Sources */,
 				4EFC79492716C8DE00C5DF36 /* LocationView.swift in Sources */,
+				4EE52441271A9E4600AADB1F /* MainHomeWelcome.swift in Sources */,
 				4ECD6DC02714610B00011208 /* InfoModel.swift in Sources */,
 				4EE2798427187122004EE0B6 /* CarsoelHome.swift in Sources */,
 				4EFC79482716C8DE00C5DF36 /* LocationFetcher.swift in Sources */,

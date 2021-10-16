@@ -28,23 +28,30 @@ struct MainHomeTabBar: View {
             
             else if vm.index == "Map" {
                 Color.blue
-                
+//                    .padding(.horizontal,40)
+
             }
             else if vm.index ==  "Orders" {
                 HomeOrders()
+//                    .padding(.horizontal,40)
 
             }
             else {
                HomeAccount()
+//                .padding(.horizontal,40)
 
             }
             
             UsedTabBar()
+                .padding(.horizontal,24)
+//                .padding(.horizontal,-16)
+
                 .transition(.move(edge: .trailing))
                 .environmentObject(vm)
             
             
         })
+
         .environmentObject(vm)
         .edgesIgnoringSafeArea(.all)
     }

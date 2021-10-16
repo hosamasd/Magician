@@ -16,16 +16,16 @@ struct LoginView: View {
                 
                 Image("Group 8397-1")
                     //                .offset(y:-120)
-//                    .padding(.top,-200)
-                                .resizable()
-                //
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width:isSmallDevice() ?  getFrameSize().width+60 : getFrameSize().width+70, height:getFrameSize().height/4)
+                    //                    .padding(.top,-200)
+                    .resizable()
+                    //
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width:isSmallDevice() ?  getFrameSize().width+60 : getFrameSize().width+70, height:getFrameSize().height/4)
                 
                 Image("Magician LOGO")
                     .resizable()
                     .frame(width: 75, height: 80)
-//                    .padding(.top,-150)
+                //                    .padding(.top,-150)
                 //                .padding(.top,-250)
                 
                 VStack(spacing:24){
@@ -36,7 +36,8 @@ struct LoginView: View {
                     
                     Button(action: {
                         withAnimation{
-                            vm.isLooding=true
+//                            vm.isLooding=true
+                            vm.makeLogin()
                         }
                     }, label: {
                         RoundedRectangle(cornerRadius: 28)
@@ -92,8 +93,8 @@ struct LoginView: View {
                 )
                 
                 .padding(.bottom,isSmallDevice() ? 20 : 40)
-
-//                .padding(.bottom,20)
+                
+                //                .padding(.bottom,20)
                 //            Spacer()
             }
             .opacity(vm.isResetPass ? 0 : 1)
@@ -104,7 +105,7 @@ struct LoginView: View {
                 ResetView(vm:vm)
                     .transition(.move(edge: .trailing))
                     .opacity(!vm.isResetPass ? 0 : 1)
-
+                
                 
             }
             
@@ -113,7 +114,7 @@ struct LoginView: View {
                 NewPasswordView(vm:vm)
                     .transition(.move(edge: .leading))
                     .opacity(!vm.isNewPass ? 0 : 1)
-
+                
                 
             }
             
@@ -126,7 +127,7 @@ struct LoginView: View {
     
     func getHeight() -> CGFloat {
         !isSmallDevice() ? getFrameSize().height/2 - 60  : getFrameSize().height/2 - 200
-//         isSmallDevice() ?  120 : 60
+        //         isSmallDevice() ?  120 : 60
     }
 }
 

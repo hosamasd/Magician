@@ -106,7 +106,8 @@ struct SignUpView: View {
                         
                         Button(action: {
                             withAnimation{
-                                vm.isOTP.toggle()
+//                                vm.isOTP.toggle()
+                                vm.makeSignUp()
 //                                vm.isLooding=true
 
                             }

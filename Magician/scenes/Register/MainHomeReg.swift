@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainHomeReg: View {
     @StateObject var vm = HomeReigtserViewModel()
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
     
     var body: some View {
         ZStack {

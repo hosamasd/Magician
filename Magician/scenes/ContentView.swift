@@ -12,6 +12,11 @@ struct ContentView: View {
     @StateObject var vms = HomeReigtserViewModel()
 
     var body: some View {
+        
+//        MainHomeTabBar()
+//                    .environmentObject(vm)
+        
+        
 //        LoginView(vm: HomeReigtserViewModel())
 
 //        MainHomeTabBar()
@@ -19,7 +24,11 @@ struct ContentView: View {
         //enteredLocation: $enteredLocation)
 
 //        AccountSavedAddress(vm: HomeAccountViewModel())
-        MainHomeTabBar()
+        
+            
+            
+//final
+                    MainHomeWelcome()
             .environmentObject(vm)
     }
 }

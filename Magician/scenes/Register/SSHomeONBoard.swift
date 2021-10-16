@@ -28,70 +28,71 @@ struct SSHomeONBoard: View {
     @State var t1=false
     @State var t2=false
     @State var index = 0
+    @AppStorage("onBoardDone") var isonBoardDone: Bool = false
     
     
     var body: some View {
         VStack{
             
             
-          
-//                    .offset(y: t0 || s0 ? -800 : 0)
-                
+            
+            //                    .offset(y: t0 || s0 ? -800 : 0)
+            
             ZStack {
                 
                 
                 if index == 0 {
                     Image("Group 8396-2")
                         .offset(y:-60)
-//                    ZStack(alignment: Alignment(horizontal: .center, vertical: .center), content: {
-//
-//                        Image("Group 8396-1")
-////                            .resizable()
-////                            .aspectRatio(contentMode: .fill)
-////                            .frame(maxWidth:getFrameSize().width+200,maxHeight:getFrameSize().height/2+120)
-//
-////                            .opacity(index == 0 ? 1 : 0)
-//
-//                    Image(  self.onBoard[self.index].pic)
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .offset(y:-60)
-//                        .frame(width:getFrameSize().width-48)
-//
-//
-//                    })
-//                    .frame(height:getFrameSize().height/2)
-//                                            .frame(width:getFrameSize().width-48)
-
-//                    .background(Color.green)
-
-//                    .frame(maxHeight:getFrameSize().height/2+80)
-//                    .background(Color.red)
-
-
+                    //                    ZStack(alignment: Alignment(horizontal: .center, vertical: .center), content: {
+                    //
+                    //                        Image("Group 8396-1")
+                    ////                            .resizable()
+                    ////                            .aspectRatio(contentMode: .fill)
+                    ////                            .frame(maxWidth:getFrameSize().width+200,maxHeight:getFrameSize().height/2+120)
+                    //
+                    ////                            .opacity(index == 0 ? 1 : 0)
+                    //
+                    //                    Image(  self.onBoard[self.index].pic)
+                    //                        .resizable()
+                    //                        .aspectRatio(contentMode: .fit)
+                    //                        .offset(y:-60)
+                    //                        .frame(width:getFrameSize().width-48)
+                    //
+                    //
+                    //                    })
+                    //                    .frame(height:getFrameSize().height/2)
+                    //                                            .frame(width:getFrameSize().width-48)
+                    
+                    //                    .background(Color.green)
+                    
+                    //                    .frame(maxHeight:getFrameSize().height/2+80)
+                    //                    .background(Color.red)
+                    
+                    
                 }
                 else if index == 1 {
-                GifImage("1")
-//                    .padding(.top,-60)
-//                    .offset(y:-30)
-//
-//                    .frame(maxHeight:getFrameSize().height/2+130)
+                    GifImage("1")
+                    //                    .padding(.top,-60)
+                    //                    .offset(y:-30)
+                    //
+                    //                    .frame(maxHeight:getFrameSize().height/2+130)
                 }else {
                     GifImage("2")
-//                        .padding(.top,-60)
-
-                        
-//                        .frame(maxHeight:getFrameSize().height/2+130)
+                    //                        .padding(.top,-60)
+                    
+                    
+                    //                        .frame(maxHeight:getFrameSize().height/2+130)
                 }
             }
             .padding(.top,-60)
             .frame(height:getHeights())//getFrameSize().height/2+120)
-
-                
-//            })
-
-//            VStack {
-
+            
+            
+            //            })
+            
+            //            VStack {
+            
             HStack(spacing: 12){
                 
                 ForEach(0..<self.onBoard.count,id: \.self){i in
@@ -106,29 +107,29 @@ struct SSHomeONBoard: View {
             .padding(.top, isSmallDevice() ?  100 : 0)// : -120)
             //            .padding(.top,30)
             
-                VStack {
-                    Text(LocalizedStringKey(self.onBoard[self.index].title))
-                        .font(.customFontSystem(size: 24))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.black)//.opacity(0.6))
-                        .padding(.vertical,isSmallDevice() ? 16 : 32)
-                        .multilineTextAlignment(.center)
-                    
-                    
-                    Text(LocalizedStringKey(self.onBoard[self.index].desc))
-                        .font(.customFontSystem(size: isSmallDevice() ? 13 : 13))
-                        .fontWeight(.regular)
-                        .foregroundColor(Color.black.opacity(0.6))
-                        .padding(.top)
-                        .multilineTextAlignment(.center)
-                    
-                }
-                .frame(width:getFrameSize().width-64)
-//                .padding(.vertical,16)
-//            .padding(.top,index == 0 ? 0 : 120)
+            VStack {
+                Text(LocalizedStringKey(self.onBoard[self.index].title))
+                    .font(.customFontSystem(size: 24))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.black)//.opacity(0.6))
+                    .padding(.vertical,isSmallDevice() ? 16 : 32)
+                    .multilineTextAlignment(.center)
+                
+                
+                Text(LocalizedStringKey(self.onBoard[self.index].desc))
+                    .font(.customFontSystem(size: isSmallDevice() ? 13 : 13))
+                    .fontWeight(.regular)
+                    .foregroundColor(Color.black.opacity(0.6))
+                    .padding(.top)
+                    .multilineTextAlignment(.center)
+                
+            }
+            .frame(width:getFrameSize().width-64)
+            //                .padding(.vertical,16)
+            //            .padding(.top,index == 0 ? 0 : 120)
             //            .padding(.horizontal, 62)
             
-//                Spacer()
+            //                Spacer()
             Spacer(minLength: 0)
             
             Button(action: {
@@ -138,6 +139,7 @@ struct SSHomeONBoard: View {
                         index==1 ? checkSecond() : index == 2 ? checkThird() : ()
                     }
                     else {
+                        goToMainApp()
                         //                        show.toggle()
                     }                }
             }, label: {
@@ -154,15 +156,15 @@ struct SSHomeONBoard: View {
                 
             })
             .frame(width:getFrameSize().width-48)
-
-//            .padding(.horizontal,32)
+            
+            //            .padding(.horizontal,32)
             .frame(height:60)
             
-                Spacer()
-
-//            }
-//            .offset(y:index == 0 ? -getFrameSize().height/2+60 : -getFrameSize().height/2)
-
+            Spacer()
+            
+            //            }
+            //            .offset(y:index == 0 ? -getFrameSize().height/2+60 : -getFrameSize().height/2)
+            
         }
         .edgesIgnoringSafeArea(.all)
         .edgesIgnoringSafeArea(.top)
@@ -170,6 +172,10 @@ struct SSHomeONBoard: View {
     
     func getHeights() ->CGFloat {
         isSmallDevice() ? getFrameSize().height/2 : getFrameSize().height/2+120
+    }
+    
+    func goToMainApp()  {
+        withAnimation{isonBoardDone=true}
     }
     
     func checkSecond()  {

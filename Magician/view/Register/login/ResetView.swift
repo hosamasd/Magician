@@ -28,9 +28,8 @@ struct ResetView: View {
                 
                 Button(action: {
                     withAnimation{
-                        vm.isNewPass.toggle()
-
-                        vm.isResetPass.toggle()
+                      
+                        vm.makeResetPass()
 //                        vm.isLooding=true
 
                     }

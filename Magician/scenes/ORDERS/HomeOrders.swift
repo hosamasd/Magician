@@ -13,6 +13,8 @@ struct HomeOrders: View {
     var body: some View {
         VStack {
             
+            VStack {
+                
             HomeOrdersTopView(vm:vm)
             
             ScrollView(showsIndicators:false){
@@ -36,6 +38,10 @@ struct HomeOrders: View {
             
                 
             }
+            
+        }
+        .padding(.horizontal,32)
+
 //            .padding(.bottom,getBottomSpace())
             Spacer()
         }
