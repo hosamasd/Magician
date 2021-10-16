@@ -182,8 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				4E09BFB527182FD5006928FD /* HomeTopRating.swift */,
-				4E5C6C2C27184C8300FA5298 /* TopRatingRowView.swift */,
 				4EE279852718765D004EE0B6 /* STopRatingRowView.swift */,
+				4E5C6C2C27184C8300FA5298 /* TopRatingRowView.swift */,
 			);
 			path = "top rating";
 			sourceTree = "<group>";

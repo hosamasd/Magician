@@ -58,7 +58,9 @@ struct HomeSpecialOffer: View {
                 }
                 .padding(.horizontal,16)
             }
-            .padding(.vertical)
+            .padding(.top,-16)
+
+//            .padding(.vertical)
         }
     }
 }

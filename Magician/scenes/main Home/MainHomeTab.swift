@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MainHomeTab: View {
     @StateObject var vm = MainHomeTabViewModel()
-    
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+
     var body: some View {
         VStack {
             
@@ -23,10 +24,13 @@ struct MainHomeTab: View {
 
 //                HomeTopRating(vm: vm)
 
-                HomeSpecialOffer(vm:vm)
+//                HomeSpecialOffer(vm:vm)
 
-                MainHomeTabProfileInfo(vm:vm)
-                    .padding(.top,20)
+                VStack {
+                    MainHomeTabProfileInfo(vm:vm)
+                        .padding(.top,20)
+                        .padding(.bottom)
+               
 
                 CarsoelHome(vm: vm)
                 
@@ -36,22 +40,33 @@ struct MainHomeTab: View {
 
                 HomeSpecialOffer(vm:vm)
 
+                }
+                    .padding(.top,20)
+//                    .frame(width:getFrameSize().width-28)
+                    .padding(.bottom,getBottomSpace())
             }
-         
+           
+
             }
+            
             .padding(.horizontal,32)
         }
-        
+        .environmentObject(vmm)
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
     }
+    
+    func getBottomSpace() ->CGFloat {
+       CGFloat( isSmallDevice() ? 130 : 100)
+    }
 }
 
 struct MainHomeTab_Previews: PreviewProvider {
     static var previews: some View {
         MainHomeTab()
+            .environmentObject(HomeMainTabBarViewModel())
     }
 }
