@@ -21,22 +21,22 @@ struct HomeCategoryView: View {
                 
                 Spacer()
                 
-                Button(action: {withAnimation{}}, label: {
-                    Label(
-                        title: {
-                            Image(systemName: "chevron.forward")
-                                .foregroundColor(Color("mains"))
-                                .padding(.leading,-6)
-                            
-                        },
-                        icon: {
-                            Text("View All")
-                                .font(.customFontSystem(size: 12))
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))
-                        }
-                    )
-                })
+                //                Button(action: {withAnimation{vm.selectedCategoryOffAll="Categories"}}, label: {
+                //                    Label(
+                //                        title: {
+                //                            Image(systemName: "chevron.forward")
+                //                                .foregroundColor(Color("mains"))
+                //                                .padding(.leading,-6)
+                //                            
+                //                        },
+                //                        icon: {
+                //                            Text("View All")
+                //                                .font(.customFontSystem(size: 12))
+                //                                .fontWeight(.bold)
+                //                                .foregroundColor(Color("mains"))
+                //                        }
+                //                    )
+                //                })
             }
             .padding(.horizontal)
             .padding(.top, 15)
@@ -47,22 +47,22 @@ struct HomeCategoryView: View {
                 
                 HStack(spacing:8){
                     
-//                    LazyVGrid(columns: columns,spacing: 12){
+                    //                    LazyVGrid(columns: columns,spacing: 12){
+                    
+                    ForEach(0..<vm.categoryArray.count,id: \.self){index in
                         
-                        ForEach(0..<vm.categoryArray.count,id: \.self){index in
-
-                            CategoryRowView(x: vm.categoryArray[index], vm: vm)
-//                            TopRatingRowView(vm: vm,x:vm.topRatingArray[index])
-                            
-                        }
+                        CategoryRowView(x: vm.categoryArray[index], vm: vm)
+                        //                            TopRatingRowView(vm: vm,x:vm.topRatingArray[index])
                         
-                   
+                    }
+                    
+                    
                     
                 }
                 .padding(.horizontal)
             }
             
-       
+            
         }
         .onAppear {
             setupAppearance()

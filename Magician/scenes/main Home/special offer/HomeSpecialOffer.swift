@@ -21,7 +21,12 @@ struct HomeSpecialOffer: View {
                 
                 Spacer()
                 
-                Button(action: {withAnimation{}}, label: {
+                Button(action: {withAnimation{vm.selectedCategoryOffAll="Special Offers"
+                    vm.isSelectedCategoryOffAll.toggle()
+
+                }
+                    
+                }, label: {
                     Label(
                         title: {
                             Image(systemName: "chevron.forward")

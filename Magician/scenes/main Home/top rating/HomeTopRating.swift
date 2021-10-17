@@ -21,7 +21,10 @@ struct HomeTopRating: View {
                 
                 Spacer()
                 
-                Button(action: {withAnimation{}}, label: {
+                Button(action: {withAnimation{vm.selectedCategoryOffAll="Top Rating"
+                    vm.isSelectedCategoryOffAll.toggle()
+                }
+                }, label: {
                     Label(
                         title: {
                             Image(systemName: "chevron.forward")

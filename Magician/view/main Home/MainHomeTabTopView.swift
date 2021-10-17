@@ -46,10 +46,11 @@ struct MainHomeTabTopView: View {
                         //                        .frame(width: 45, height: 50)
                     }
                 )
-                .padding(.horizontal,16)
-                .frame(height:40)
+//                .padding(.horizontal,16)
+//                .frame(height:40)
+                .frame(width:130,height:40)
                 //                .padding(16)
-                .background(Color("mains").opacity(0.15))
+                .background(Color("mains").opacity(0.10))
                 .cornerRadius(10)
                 
                 //                Image("Group 8179")

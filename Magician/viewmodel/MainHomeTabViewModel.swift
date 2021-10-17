@@ -13,27 +13,31 @@ class MainHomeTabViewModel: ObservableObject {
     @Published var isLooding = false
     
     @Published var categoryIndex = 0
-    @Published var isSingleItemLists = 2
-
+    @Published var isSingleItemLists = 1
+    
+    //select all of category
+    @Published var isSelectedCategoryOffAll = false
+    @Published var selectedCategoryOffAll = ""
+    
     @Published var carseolSwapArray = [
-    "Group 8188", "Group 8188", "Group 8188", "Group 8188",
+        "Group 8188", "Group 8188", "Group 8188", "Group 8188",
     ]
     
     @Published var categoryArray = [
-    "Group 8367", "Group 8368", "Group 8370", "Group 8369",
+        "Group 8367", "Group 8368", "Group 8370", "Group 8369",
     ]
-  
+    
     init() {
-//        getData()
+        //        getData()
     }
     
     @Published var topRatingArray:[OfferModel] = [
         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
         OfferModel(name: "Nobile Housev", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-//        OfferModel(name: "Nobile Houseb", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        //        OfferModel(name: "Nobile Houseb", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
         OfferModel(name: "Nobile Housex", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
         OfferModel(name: "Nobile Housez", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-
+        
     ]
     
     @Published var specialOffersArray:[OfferModel] = [
@@ -42,25 +46,25 @@ class MainHomeTabViewModel: ObservableObject {
         OfferModel(name: "Nobile Houseb", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
         OfferModel(name: "Nobile Housex", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
         OfferModel(name: "Nobile Housez", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-
+        
     ]
     
     func getData()  {
-//        withAnimation{isLooding.toggle()}
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
-//            
-//            withAnimation{self.isLooding.toggle()}
-//            
-//            self.topRatingArray =
-//            [
-//                OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-//                OfferModel(name: "Nobile Housev", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-//        //        OfferModel(name: "Nobile Houseb", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-//                OfferModel(name: "Nobile Housex", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-//                OfferModel(name: "Nobile Housez", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-//            ]
-//            
-//        }
+        //        withAnimation{isLooding.toggle()}
+        //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
+        //
+        //            withAnimation{self.isLooding.toggle()}
+        //
+        //            self.topRatingArray =
+        //            [
+        //                OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        //                OfferModel(name: "Nobile Housev", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        //        //        OfferModel(name: "Nobile Houseb", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        //                OfferModel(name: "Nobile Housex", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        //                OfferModel(name: "Nobile Housez", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        //            ]
+        //
+        //        }
         
     }
 }

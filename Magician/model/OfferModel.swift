@@ -12,5 +12,6 @@ struct OfferModel: Identifiable{ //Equatable
     var id = UUID().uuidString
     var name,img,subImg,type,location,rating:String
     var offersRange = "55% OFF"
+    var isFavorite = false
     
 }

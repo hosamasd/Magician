@@ -10,11 +10,11 @@ import SwiftUI
 struct AccountSavedAddress: View {
     @ObservedObject var vm:HomeAccountViewModel
     @ObservedObject var vmm:HomeMainTabBarViewModel
-
+    
     var names = "Saved addresses"
     
     var name : Namespace.ID
-@State var changePositions=false
+    @State var changePositions=false
     
     var body: some View {
         ZStack {
@@ -40,14 +40,14 @@ struct AccountSavedAddress: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
                             .matchedGeometryEffect(id: names, in: name)
-
+                        
                         Spacer()
                         
                     }
                     .padding(.horizontal,8)
                     .padding(.bottom,20)
                     .offset(x: changePositions ? 0 : -600)//, y: changePositions ? 0 )
-
+                    
                     
                     
                     VStack(spacing:20) {
@@ -98,8 +98,8 @@ struct AccountSavedAddress: View {
             if vm.isSHowLocation {
                 //                LoadingCircleOpacity()
                 LocationView(dismiss: $vm.isSHowLocation, locationText: $vm.newAddedAddress,isAdd:true)
-//                LocationView(  locationText: $vm.newAddedAddress )
-//                    .environmentObject(vm)
+                    //                LocationView(  locationText: $vm.newAddedAddress )
+                    //                    .environmentObject(vm)
                     .transition(.move(edge: .bottom))
                 
             }

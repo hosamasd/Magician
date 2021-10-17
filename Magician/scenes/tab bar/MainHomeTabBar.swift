@@ -10,8 +10,10 @@ import SwiftUI
 struct MainHomeTabBar: View {
     @EnvironmentObject var vm : HomeMainTabBarViewModel
     @StateObject var vma = HomeAccountViewModel()
+    @StateObject var vmas = HomeFavoriteViewModel()
+
     @StateObject var vmh = MainHomeTabViewModel()
-    @StateObject var vms=MainHomeTabViewModel()
+//    @StateObject var vms=MainHomeTabViewModel()
 
     
     var body: some View {
@@ -20,17 +22,18 @@ struct MainHomeTabBar: View {
             
             if vm.index == "Home" {
                 //                HomeAccount()
-                HomeSelectedCategory()
-//                HomeAccount()
-                    .environmentObject(vma)
-                    .environmentObject(vms)
+//                HomeSelectedCategory()
+////                HomeAccount()
+//                    .environmentObject(vma)
+//                    .environmentObject(vms)
                 
                 //mains
 //                HomeAccount()
 //                                   .environmentObject(vma)
                 
-//                MainHomeTab()
-//                    .environmentObject(vmh)
+                MainHomeTab()
+                    .environmentObject(vmh)
+                    .environmentObject(vm)
                 //                SSecondMainHome()
                 //                    .environmentObject(vm)
             }
@@ -40,8 +43,11 @@ struct MainHomeTabBar: View {
                 
             }
             
-            else if vm.index == "Map" {
-                Color.blue
+            else if vm.index == "Favorite" {
+                HomeFavorite()
+                    .environmentObject(vm)
+                    .environmentObject(vmas)
+//                Color.blue
                 //                    .padding(.horizontal,40)
                 
             }

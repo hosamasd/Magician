@@ -33,7 +33,9 @@ struct HomeSelectedCategoryTopView: View {
                 
                 Image("Group 8179")
                     .resizable()
-                    .frame(width:150,height:40)
+                    .frame(width:130,height:40)
+
+//                    .frame(width:150,height:40)
                     .overlay(
                         
                         Label(
@@ -42,7 +44,7 @@ struct HomeSelectedCategoryTopView: View {
                                 .font(.customFontSystem(size: 14))
 
                                 .fontWeight(.regular)
-                                .padding(.horizontal,16)
+                                .padding(.horizontal,8)
                                 
                             },
                             icon: { Image("location")

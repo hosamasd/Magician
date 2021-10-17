@@ -17,27 +17,27 @@ struct MainHomeWelcome: View {
         ZStack {
             
             
-            MainHomeTabBar()
+//            MainHomeTabBar()
             
-//            if isonBoardDone {
-//
-//                MainHomeReg()
-//
-//                    .transition(.move(edge: .bottom))
-//                //                    .environmentObject(vm)
-//
-//                if isUserLogin {
-//                    MainHomeTabBar()
-//                    //                        .transition(.move(edge: .bottom))
-//
-//                }
-//
-//
-//            }
-//            else {
-//                SSHomeONBoard()
-//
-//            }
+            if isonBoardDone {
+
+                MainHomeReg()
+
+                    .transition(.move(edge: .bottom))
+                //                    .environmentObject(vm)
+
+                if isUserLogin {
+                    MainHomeTabBar()
+                    //                        .transition(.move(edge: .bottom))
+
+                }
+
+
+            }
+            else {
+                SSHomeONBoard()
+
+            }
             
         }
         .environmentObject(vm)

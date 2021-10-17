@@ -1,5 +1,5 @@
 //
-//  HomeSelectedCategory.swift
+//  HomeFavorite.swift
 //  Magician
 //
 //  Created by hosam on 17/10/2021.
@@ -7,29 +7,25 @@
 
 import SwiftUI
 
-struct HomeSelectedCategory: View {
-    @EnvironmentObject var vm:MainHomeTabViewModel
+struct HomeFavorite: View {
+    @EnvironmentObject var vm:HomeFavoriteViewModel
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
     
-    var x = "Top Rating"
-    
     var body: some View {
-//        VStack {
+        VStack {
             
             ZStack {
                 
-                VStack {
+            VStack {
                     
-                    VStack {
-                        
                     HomeSelectedCategoryTopView()
-//                        .padding(.horizontal,8)
-//                        .padding(.bottom,20)
+                    //                        .padding(.horizontal,8)
+                    //                        .padding(.bottom,20)
                     
                     ScrollView(showsIndicators:false){
                         
-                        SecondHomeSelectedCategoryTopView(columns: $columns)
+                        HomeFavoriteTopView(columns: $columns)
                             .padding(.vertical)
                         
                         
@@ -37,32 +33,49 @@ struct HomeSelectedCategory: View {
                             
                             // assigning name as ID...
                             
-                            ForEach(vm.topRatingArray,id: \.name){gradient in
+                            ForEach(vm.favoriteArray,id: \.name){gradient in
                                 
-                                SelectedCategoryRowView(x:gradient)
+                                FavoriteRowView(x:gradient)
                                 //                                    GradientView(columns: $columns, gradient: gradient, vm: vm)
                             }
                         }
                         .padding(.horizontal)
                         .padding(.bottom)
+                        
+                        .padding(.bottom,getBottomSpace())
+
                     }
                     
                 }
-                
+            .padding(.horizontal,32)
+
+                if vm.isLooding {
+                    LoadingCapsuleSpacing()
                 }
-                .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
-
             }
-            .edgesIgnoringSafeArea(.all)
-
-//        }
-        
+            
+        }
         .environmentObject(vmm)
+        .environmentObject(vm)
+
+        .background(Color("bg"))
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        
+        //        }
+        
+        
+    }
+    
+    func getBottomSpace() ->CGFloat {
+        CGFloat( isSmallDevice() ? 130 : 100)
     }
 }
 
-struct HomeSelectedCategory_Previews: PreviewProvider {
+struct HomeFavorite_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeFavorite()
     }
 }

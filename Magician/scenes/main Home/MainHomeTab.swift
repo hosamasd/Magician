@@ -72,6 +72,16 @@ struct MainHomeTab: View {
                 vm.topRatingArray.isEmpty ? vm.getData() : ()
             })
         
+            .background(EmptyView()
+                            .fullScreenCover(isPresented: $vm.isSelectedCategoryOffAll, content: {
+                                HomeSelectedCategory()
+                                    .environmentObject(vmm)
+                                    .environmentObject(vm)
+//                                AccountChangePassword(vm: vm,vmm: vmm)
+                                
+                            })
+            )
+        
     }
     
     func getBottomSpace() ->CGFloat {

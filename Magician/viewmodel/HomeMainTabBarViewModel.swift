@@ -23,9 +23,9 @@ class HomeMainTabBarViewModel: ObservableObject {
         [
             .init(title: "Home", img: "home-1", sImg: "home"),
             .init(title: "Filter", img: "filter", sImg: "filter-1"),
-            .init(title: "Map", img: "map", sImg: "map-1"),
+            .init(title: "Favorite", img: "Icon ionic-ios-heart-empty", sImg: "Icon ionic-ios-heart-empty-1"),
             .init(title: "Orders", img: "Orders", sImg: "Orders-1"),
-            
+
             .init(title: "Account", img: "account", sImg: "account-1"),
             
         ]
