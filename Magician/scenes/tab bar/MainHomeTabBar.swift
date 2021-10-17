@@ -11,7 +11,8 @@ struct MainHomeTabBar: View {
     @EnvironmentObject var vm : HomeMainTabBarViewModel
     @StateObject var vma = HomeAccountViewModel()
     @StateObject var vmh = MainHomeTabViewModel()
-    
+    @StateObject var vms=MainHomeTabViewModel()
+
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
@@ -19,8 +20,14 @@ struct MainHomeTabBar: View {
             
             if vm.index == "Home" {
                 //                HomeAccount()
-                HomeAccount()
+                HomeSelectedCategory()
+//                HomeAccount()
                     .environmentObject(vma)
+                    .environmentObject(vms)
+                
+                //mains
+//                HomeAccount()
+//                                   .environmentObject(vma)
                 
 //                MainHomeTab()
 //                    .environmentObject(vmh)

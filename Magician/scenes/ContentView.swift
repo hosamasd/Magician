@@ -11,7 +11,8 @@ struct ContentView: View {
     @StateObject var vm = HomeMainTabBarViewModel()
     @StateObject var vms = HomeReigtserViewModel()
     @StateObject var vmss = HomeOrdersViewModel()
-    
+    @StateObject var vmsss = MainHomeTabViewModel()
+
     var body: some View {
         
         //        HomeONBoardScene()
@@ -30,7 +31,8 @@ struct ContentView: View {
         
         
         
-//        HomeRemindingOrders()
+        
+//            .environmentObject(vmsss)
             
             
             //        MainHomeWelcome()

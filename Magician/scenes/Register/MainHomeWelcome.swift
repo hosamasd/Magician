@@ -12,29 +12,32 @@ struct MainHomeWelcome: View {
     @AppStorage("isUserLogin") var isUserLogin: Bool = false
     
     @EnvironmentObject var vm:HomeMainTabBarViewModel
-    
+
     var body: some View {
         ZStack {
             
-            if isonBoardDone {
-                
-                MainHomeReg()
-                    
-                    .transition(.move(edge: .bottom))
-                //                    .environmentObject(vm)
-                
-                if isUserLogin {
-                    MainHomeTabBar()
-                    //                        .transition(.move(edge: .bottom))
-                    
-                }
-                
-                
-            }
-            else {
-                SSHomeONBoard()
-                
-            }
+            
+            MainHomeTabBar()
+            
+//            if isonBoardDone {
+//
+//                MainHomeReg()
+//
+//                    .transition(.move(edge: .bottom))
+//                //                    .environmentObject(vm)
+//
+//                if isUserLogin {
+//                    MainHomeTabBar()
+//                    //                        .transition(.move(edge: .bottom))
+//
+//                }
+//
+//
+//            }
+//            else {
+//                SSHomeONBoard()
+//
+//            }
             
         }
         .environmentObject(vm)

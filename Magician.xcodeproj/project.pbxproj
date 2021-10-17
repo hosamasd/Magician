@@ -20,6 +20,9 @@
 		4E171E422716F339000837BF /* HomeAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171E412716F339000837BF /* HomeAccountViewModel.swift */; };
 		4E171E452716F3C3000837BF /* HomeAccountTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171E442716F3C3000837BF /* HomeAccountTopView.swift */; };
 		4E171E472716F74F000837BF /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171E462716F74F000837BF /* SUImagePickerView.swift */; };
+		4E250C82271C44A9001873B6 /* HomeSelectedCategoryTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E250C81271C44A9001873B6 /* HomeSelectedCategoryTopView.swift */; };
+		4E250C84271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E250C83271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift */; };
+		4E250C86271C4B9D001873B6 /* SelectedCategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E250C85271C4B9D001873B6 /* SelectedCategoryRowView.swift */; };
 		4E2ADBF32717E5380039C842 /* AddAddressSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ADBF22717E5380039C842 /* AddAddressSheetView.swift */; };
 		4E2ADBF52717E5E90039C842 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ADBF42717E5E90039C842 /* CustomCorners.swift */; };
 		4E5609402718558300539B9C /* SpecialOfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56093F2718558300539B9C /* SpecialOfferRowView.swift */; };
@@ -101,6 +104,9 @@
 		4E171E412716F339000837BF /* HomeAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountViewModel.swift; sourceTree = "<group>"; };
 		4E171E442716F3C3000837BF /* HomeAccountTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountTopView.swift; sourceTree = "<group>"; };
 		4E171E462716F74F000837BF /* SUImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
+		4E250C81271C44A9001873B6 /* HomeSelectedCategoryTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSelectedCategoryTopView.swift; sourceTree = "<group>"; };
+		4E250C83271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHomeSelectedCategoryTopView.swift; sourceTree = "<group>"; };
+		4E250C85271C4B9D001873B6 /* SelectedCategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryRowView.swift; sourceTree = "<group>"; };
 		4E2ADBF22717E5380039C842 /* AddAddressSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressSheetView.swift; sourceTree = "<group>"; };
 		4E2ADBF42717E5E90039C842 /* CustomCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		4E56093F2718558300539B9C /* SpecialOfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOfferRowView.swift; sourceTree = "<group>"; };
@@ -470,6 +476,9 @@
 			isa = PBXGroup;
 			children = (
 				4ED40A29271C218A00E73138 /* HomeSelectedCategory.swift */,
+				4E250C85271C4B9D001873B6 /* SelectedCategoryRowView.swift */,
+				4E250C83271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift */,
+				4E250C81271C44A9001873B6 /* HomeSelectedCategoryTopView.swift */,
 			);
 			path = selected;
 			sourceTree = "<group>";
@@ -623,6 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E250C86271C4B9D001873B6 /* SelectedCategoryRowView.swift in Sources */,
 				4E1538C82714B36700D5DD52 /* NewPasswordView.swift in Sources */,
 				4ECF1EA7271542BC00698148 /* OTPView.swift in Sources */,
 				4EE279862718765D004EE0B6 /* STopRatingRowView.swift in Sources */,
@@ -661,9 +671,11 @@
 				4EDDBF51271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift in Sources */,
 				4E5C6C2D27184C8300FA5298 /* TopRatingRowView.swift in Sources */,
 				4E171E472716F74F000837BF /* SUImagePickerView.swift in Sources */,
+				4E250C82271C44A9001873B6 /* HomeSelectedCategoryTopView.swift in Sources */,
 				4EFC79542716D11D00C5DF36 /* SHomeONBoard.swift in Sources */,
 				4EDBAB152718053D00AFD181 /* viewModifiers.swift in Sources */,
 				4EFC794C2716CD9300C5DF36 /* GifI_mage.swift in Sources */,
+				4E250C84271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift in Sources */,
 				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
 				4E2ADBF32717E5380039C842 /* AddAddressSheetView.swift in Sources */,
 				4EFC794E2716CF6F00C5DF36 /* GifImage.swift in Sources */,
