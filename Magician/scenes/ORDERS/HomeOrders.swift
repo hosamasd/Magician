@@ -59,7 +59,9 @@ struct HomeOrders: View {
     }
     
     func getBottomSpace() ->CGFloat {
-       CGFloat( isSmallDevice() ? 130 : 100)
+        CGFloat( isSmallDevice() ? 80 : 100)
+
+//       CGFloat( isSmallDevice() ? 130 : 100)
     }
 }
 

@@ -35,7 +35,7 @@ struct CarsoelHome: View {
             .tabViewStyle(PageTabViewStyle())
             //                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .animation(.easeOut)
-            
+            .padding(.horizontal,isSmallDevice() ? 16 : 0)
            
         }
             
