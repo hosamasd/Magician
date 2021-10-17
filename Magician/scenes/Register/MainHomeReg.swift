@@ -26,7 +26,7 @@ struct MainHomeReg: View {
                 Image("Magician LOGO")
                     .padding(.top,isSmallDevice() ? 40 : -40)
                 
-                Text("Discover The Best Order From Over 10,000\n Restaurants, Store And Fast Delivery To Your\n Doorstep")
+                Text(LocalizedStringKey("Discover The Best Order From Over 10,000\n Restaurants, Store And Fast Delivery To Your\n Doorstep"))
                     .font(.customFontSystem(size: 13))
                     .fontWeight(.regular)
                     .foregroundColor(Color.black.opacity(0.6))
@@ -47,7 +47,7 @@ struct MainHomeReg: View {
                         .fill(Color("mains"))
                         .overlay(
                             
-                            Text("Login")
+                            Text(LocalizedStringKey("Login"))
                                 .font(.customFontSystem(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.white)//.opacity(0.6))
@@ -70,7 +70,7 @@ struct MainHomeReg: View {
                         .stroke(Color("mains"))
                         .overlay(
                             
-                            Text("Create an Account")
+                            Text(LocalizedStringKey("Create an Account"))
                                 .font(.customFontSystem(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("mains"))//.opacity(0.6))
@@ -127,7 +127,7 @@ struct MainHomeReg: View {
         
         .alert(isPresented: $vm.alert) {
             
-            Alert(title: Text("Error"), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
+            Alert(title: Text(LocalizedStringKey("Error")), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
         }
     }
     

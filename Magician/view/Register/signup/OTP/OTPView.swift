@@ -13,7 +13,7 @@ struct OTPView: View {
     var body: some View {
         VStack {
             
-            Text("We have sent an OTP to\nyour Mobile")
+            Text(LocalizedStringKey("We have sent an OTP to\nyour Mobile"))
                 .font(.customFontSystem(size: 25))
                 .multilineTextAlignment(.center)
             
@@ -57,7 +57,7 @@ struct OTPView: View {
                         .fill(Color("mains"))
                         .overlay(
                             
-                            Text("Next")
+                            Text(LocalizedStringKey("Next"))
                                 .font(.customFontSystem(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.white)//.opacity(0.6))
@@ -78,7 +78,7 @@ struct OTPView: View {
                 title: {
                     
                     Button(action: {withAnimation{vm.isLooding.toggle()}}, label: {
-                        Text( " Click Here")
+                        Text( LocalizedStringKey(" Click Here"))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))//.opacity(0.6))
                             .padding(.leading,-8)
@@ -86,7 +86,7 @@ struct OTPView: View {
                     })
                 },
                 icon: {
-                    Text("Don't Receive?")
+                    Text(LocalizedStringKey("Don't Receive?"))
                         .foregroundColor(.black.opacity(0.6))
                     
                 }

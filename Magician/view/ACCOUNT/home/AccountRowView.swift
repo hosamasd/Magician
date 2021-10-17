@@ -19,7 +19,8 @@ struct AccountRowView: View {
     var isOriginal = true
     var isLogout = false
     var isChangeLanguage = false
-    
+    var names : Namespace.ID
+
     var body: some View {
         VStack{
             
@@ -31,7 +32,8 @@ struct AccountRowView: View {
                     //                    .font(.system(size: 14))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)//.opacity(0.6))
-                
+                    .matchedGeometryEffect(id: name, in: names)
+
                 
                 
                 
@@ -130,7 +132,7 @@ struct AccountRowView: View {
                                 
                                 //                                        Image("united-states-of-america-flag-3d-icon-16")
                                 
-                                Text("Eng")
+                                Text(LocalizedStringKey(vmm.getAppLanguage()))
                                     .foregroundColor(.black)
                                 
                             })
@@ -154,6 +156,7 @@ struct AccountRowView: View {
 
 struct AccountRowView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountRowView(vm: HomeAccountViewModel())
+        HomeAccount()
+//        AccountRowView(vm: HomeAccountViewModel())
     }
 }

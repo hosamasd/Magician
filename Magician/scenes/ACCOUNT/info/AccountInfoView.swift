@@ -10,7 +10,9 @@ import SwiftUI
 struct AccountInfoView: View {
 //    var na = <#value#>
     @ObservedObject var vm:HomeAccountViewModel
-    
+    @ObservedObject var vmm:HomeMainTabBarViewModel
+    @State var changePositions=false
+
     var body: some View {
         VStack {
             
@@ -21,7 +23,7 @@ struct AccountInfoView: View {
                 HStack {
                     
                     Button(action: {withAnimation{vm.isAccountInfo.toggle()}}, label: {
-                        Image(systemName: "chevron.backward")
+                        Image(systemName: vmm.getBackImage())// "chevron.backward")
                             .font(.customFontSystem(size: 25))
                             .foregroundColor(Color("mains"))
                         
@@ -39,7 +41,8 @@ struct AccountInfoView: View {
                 }
                 .padding(.horizontal,0)
                 .padding(.bottom,20)
-           
+                .offset(x: changePositions ? 0 : -600)//, y: changePositions ? 0 )
+
             
             VStack(spacing:20) {
                 CustomTF(txt: $vm.name,hint: "Name", hide: .constant(false),isAccountInfo:true)
@@ -80,6 +83,16 @@ struct AccountInfoView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
+        
+        .onAppear(perform: {
+            withAnimation{
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.3) {
+                    withAnimation{
+                        changePositions=true
+                    }
+                }
+            }
+        })
     }
 }
 

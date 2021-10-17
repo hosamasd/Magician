@@ -16,13 +16,16 @@ struct AccountModel {
 }
 class HomeAccountViewModel: ObservableObject {
     
+    @AppStorage("isUserLogin") var isUserLogin: Bool = false
+    @Published var isShowLogout = false
+
     
     @Published var alert = false
     @Published var alertMsg = ""
     @Published var isLooding = false
     
     //add address
-    @Published var isAddAddressSheet = true
+    @Published var isAddAddressSheet = false
     @Published var newAddedAddress = "Al-obour , Cairo , Egypt"
     @Published var isSHowLocation=false
     
@@ -58,9 +61,27 @@ class HomeAccountViewModel: ObservableObject {
         .init(title: "Wallet",isNumer:true),
         .init(title: "Change password"),
         .init(title: "Notification",isCheck:true),
-            .init(title: "Language",isCheck:true),
-            .init(title: "Logout",isCheck:true)
-
+        .init(title: "Language",isCheck:true),
+        .init(title: "Logout",isCheck:true)
+        
     ]
     
+//    func makeLogout()  {
+//        withAnimation{isLooding.toggle()}
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
+//
+//            withAnimation{self.isLooding.toggle()}
+//            self.isUserLogin.toggle()
+//        }
+//    }
+    
+    func makeLogout(vm:HomeMainTabBarViewModel)  {
+        withAnimation{isLooding.toggle()}
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
+            
+            withAnimation{self.isLooding.toggle()}
+            vm.index="Home"
+            self.isUserLogin.toggle()
+        }
+    }
 }

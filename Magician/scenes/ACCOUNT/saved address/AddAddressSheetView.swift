@@ -100,6 +100,7 @@ struct AddAddressSheetView: View {
 
 struct AddAddressSheetView_Previews: PreviewProvider {
     static var previews: some View {
-    AccountSavedAddress(vm: HomeAccountViewModel())
+        HomeAccount()
+//    AccountSavedAddress(vm: HomeAccountViewModel(),vmm: HomeMainTabBarViewModel())
     }
 }

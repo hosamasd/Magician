@@ -17,6 +17,7 @@ class HomeMainTabBarViewModel: ObservableObject {
     @AppStorage("isArabicLanguage") var isArabicLanguage = false
     @AppStorage("onBoardDone") var isonBoardDone: Bool = false
 
+    
     @Published var index = "Home"
     var tabs:[TabModel] =
         [
@@ -32,6 +33,14 @@ class HomeMainTabBarViewModel: ObservableObject {
     @Published var isAddNewOrder = false
     @Published var totalAddedNewOrders=0
     
+    func getAppLanguage() -> String {
+        isArabicLanguage ? "AR" : "Eng"
+    }
+    
+    
+    func getBackImage() -> String {
+        !isArabicLanguage ? "chevron.backward" : "chevron.forward"
+    }
     
     func addTabBadget() -> Bool {
         index == "Orders" && isAddNewOrder

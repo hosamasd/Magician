@@ -45,7 +45,7 @@ struct LoginView: View {
                             .fill(Color("mains"))
                             .overlay(
                                 
-                                Text("Login")
+                                Text(LocalizedStringKey("Login"))
                                     .font(.customFontSystem(size: 16))
                                     .fontWeight(.semibold)
                                     .foregroundColor(Color.white)//.opacity(0.6))
@@ -61,7 +61,7 @@ struct LoginView: View {
                 //            .padding(.horizontal,32)
                 
                 Button(action: {withAnimation{vm.isResetPass.toggle()}}, label: {
-                    Text("Forgot your password?")
+                    Text(LocalizedStringKey("Forgot your password?"))
                         .font(.customFontSystem(size: 14))
                         .fontWeight(.semibold)
                         .foregroundColor(.black.opacity(0.6))
@@ -78,7 +78,7 @@ struct LoginView: View {
                             vm.isSignUp.toggle()
                             //                            vm.isLogin.toggle()
                         }}, label: {
-                            Text( " Sign Up")
+                            Text( LocalizedStringKey(" Sign Up"))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("mains"))//.opacity(0.6))
                                 .padding(.leading,-8)
@@ -86,7 +86,7 @@ struct LoginView: View {
                         })
                     },
                     icon: {
-                        Text("Don't have an Account?")
+                        Text(LocalizedStringKey("Don't have an Account?"))
                             .foregroundColor(.black.opacity(0.6))
                         
                     }

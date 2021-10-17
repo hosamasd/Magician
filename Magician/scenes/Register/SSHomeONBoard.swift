@@ -148,7 +148,7 @@ struct SSHomeONBoard: View {
                     .fill(Color("mains"))
                     .overlay(
                         
-                        Text("Next")
+                        Text(LocalizedStringKey("Next"))
                             .font(.customFontSystem(size: 16))
                             .fontWeight(.semibold)
                             .foregroundColor(Color.white)//.opacity(0.6))

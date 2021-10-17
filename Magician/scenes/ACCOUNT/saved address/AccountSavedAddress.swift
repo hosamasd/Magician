@@ -9,6 +9,12 @@ import SwiftUI
 
 struct AccountSavedAddress: View {
     @ObservedObject var vm:HomeAccountViewModel
+    @ObservedObject var vmm:HomeMainTabBarViewModel
+
+    var names = "Saved addresses"
+    
+    var name : Namespace.ID
+@State var changePositions=false
     
     var body: some View {
         ZStack {
@@ -21,7 +27,7 @@ struct AccountSavedAddress: View {
                     HStack {
                         
                         Button(action: {withAnimation{vm.isSavedAddress.toggle()}}, label: {
-                            Image(systemName: "chevron.backward")
+                            Image(systemName: vmm.getBackImage())//"chevron.backward")
                                 .font(.customFontSystem(size: 25))
                                 .foregroundColor(Color("mains"))
                             
@@ -29,16 +35,19 @@ struct AccountSavedAddress: View {
                         
                         Spacer()
                         
-                        Text("Saved addresses")
+                        Text(names)
                             .font(.customFontSystem(size: 16))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
-                        
+                            .matchedGeometryEffect(id: names, in: name)
+
                         Spacer()
                         
                     }
                     .padding(.horizontal,8)
                     .padding(.bottom,20)
+                    .offset(x: changePositions ? 0 : -600)//, y: changePositions ? 0 )
+
                     
                     
                     VStack(spacing:20) {
@@ -97,6 +106,15 @@ struct AccountSavedAddress: View {
             //            .edgesIgnoringSafeArea(.all)
         }
         .edgesIgnoringSafeArea(.all)
+        .onAppear(perform: {
+            withAnimation{
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.3) {
+                    withAnimation{
+                        changePositions=true
+                    }
+                }
+            }
+        })
         
     }
 }

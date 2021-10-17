@@ -1,0 +1,68 @@
+/* 
+  Localizable.strings
+  Magician
+
+  Created by hosam on 17/10/2021.
+  
+*/
+
+
+
+//SSHomeONBoard
+
+"Fast Delivery"="Fast Delivery";
+"Fast Order Delivery To Your Home, Office Wherever \n You Are"="Fast Order Delivery To Your Home, Office Wherever \n You Are";
+"Select the Favorites Menu"="Select the Favorites Menu";
+"Now eat well, don't leave the house,You can \nchoose your favorite food only with \none click"="Now eat well, don't leave the house,You can \nchoose your favorite food only with \none click";
+"Good food at a cheap price"="Good food at a cheap price";
+"You can eat at expensive restaurants with\n affordable price"="You can eat at expensive restaurants with\n affordable price";
+"Next"="Next";
+
+//MainHomeReg
+
+"Discover The Best Order From Over 10,000\n Restaurants, Store And Fast Delivery To Your\n Doorstep"="Discover The Best Order From Over 10,000\n Restaurants, Store And Fast Delivery To Your\n Doorstep";
+"Login"="Login";
+"Create an Account"="Create an Account";
+"Error"="Error";
+
+//LoginView
+
+"Your Email"="Your Email";
+"Password"="Password";
+"Login"="Login";
+"Forgot your password?"="Forgot your password?";
+" Sign Up"=" Sign Up";
+"Don't have an Account?"="Don't have an Account?";
+
+//ResetView
+
+"Reset Password"="Reset Password";
+"Please enter your email to receive a\nlink to  create a new password via email"="Please enter your email to receive a\nlink to  create a new password via email";
+"Email"="Email";
+"Send"="Send";
+
+//NewPasswordView
+
+"New Password"="New Password";
+"Please enter your email to receive a\nlink to  create a new password via email"="Please enter your email to receive a\nlink to  create a new password via email";
+"Confirm Password"="Confirm Password";
+
+//SignUpView
+
+"Sign Up"="Sign Up";
+"Add your details to sign up"="Add your details to sign up";
+"Name"="Name";
+"Male"="Male";
+"Female"="Female";
+"Mobile No"="Mobile No";
+"Address"="Address";
+"Confirm Password"="Confirm Password";
+" Login"= " Login";
+"Don't have an Account?"="Don't have an Account?";
+
+//OTPView
+
+"We have sent an OTP to\nyour Mobile"="We have sent an OTP to\nyour Mobile";
+" Click Here"=" Click Here";
+"Don't Receive?"="Don't Receive?";
+

@@ -16,10 +16,10 @@ struct SignUpView: View {
             ScrollView(isSmallDevice() ? .vertical : .init(),showsIndicators:false) {
                 VStack {
                     
-                    Text("Sign Up")
+                    Text(LocalizedStringKey("Sign Up"))
                         .font(.customFontSystem(size: 30))
                     
-                    Text("Add your details to sign up")
+                    Text(LocalizedStringKey("Add your details to sign up"))
                         .font(.customFontSystem(size: 14))
                         .foregroundColor(.black.opacity(0.6))
                         .padding(.top,2)
@@ -39,7 +39,7 @@ struct SignUpView: View {
                                 Label(
                                     title: {
                                         
-                                        Text( "Male")
+                                        Text( LocalizedStringKey("Male"))
                                             .fontWeight(.bold)
                                             .foregroundColor(.black)
                                             .padding(.leading,8)
@@ -62,7 +62,7 @@ struct SignUpView: View {
                                 Label(
                                     title: {
                                         
-                                        Text( "Female")
+                                        Text( LocalizedStringKey("Female"))
                                             .fontWeight(.bold)
                                             .foregroundColor(.black)
                                             .padding(.leading,8)
@@ -95,10 +95,13 @@ struct SignUpView: View {
                         
                         CustomTF(txt: $vm.mobileSign,hint: "Mobile No",hide: .constant(false))
                         
-                        CustomTF(txt: $vm.addressSign,hint: "Address",hide: .constant(false),isAddress:true)
-                            .onTapGesture(perform: {
-                                withAnimation{vm.isSHowLocation.toggle()}
-                            })
+                        CustomTF(txt: $vm.addressSign,hint: "Address",hide: .constant(false))
+                          
+                        
+//                        CustomTF(txt: $vm.addressSign,hint: "Address",hide: .constant(false),isAddress:true)
+//                            .onTapGesture(perform: {
+//                                withAnimation{vm.isSHowLocation.toggle()}
+//                            })
                         
                         CustomTF(txt: $vm.passwordSign,hint: "Password",isHide: true,hide: $vm.isHidePassSign)
                         
@@ -117,7 +120,7 @@ struct SignUpView: View {
                                 .fill(Color("mains"))
                                 .overlay(
                                     
-                                    Text("Sign Up")
+                                    Text(LocalizedStringKey("Sign Up"))
                                         .font(.customFontSystem(size: 16))
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color.white)//.opacity(0.6))
@@ -141,7 +144,7 @@ struct SignUpView: View {
                                 vm.isLogin.toggle()
                                 vm.isSignUp.toggle()
                             }}, label: {
-                                Text( " Login")
+                                Text(LocalizedStringKey( " Login"))
                                     .fontWeight(.bold)
                                     .foregroundColor(Color("mains"))//.opacity(0.6))
                                     .padding(.leading,-8)
@@ -149,7 +152,7 @@ struct SignUpView: View {
                             })
                         },
                         icon: {
-                            Text("Don't have an Account?")
+                            Text(LocalizedStringKey("Don't have an Account?"))
                                 .foregroundColor(.black.opacity(0.6))
                             
                         }

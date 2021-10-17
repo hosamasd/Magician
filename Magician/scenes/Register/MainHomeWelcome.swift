@@ -25,7 +25,7 @@ struct MainHomeWelcome: View {
                 
                 if isUserLogin {
                     MainHomeTabBar()
-                        .transition(.move(edge: .bottom))
+                    //                        .transition(.move(edge: .bottom))
                     
                 }
                 

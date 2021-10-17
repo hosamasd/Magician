@@ -48,6 +48,7 @@ struct CarsoelHome: View {
 
                 }}, label: {
                     Image("down arrow-1")
+                       
 
                 })
                 
@@ -86,6 +87,8 @@ struct CarsoelHome: View {
                         vm.categoryIndex+=1 : ()
                 }}, label: {
                 Image("down arrow")
+                    .background(Color.red)
+                   
                 })
             }
             .padding(.horizontal,32)
@@ -96,7 +99,11 @@ struct CarsoelHome: View {
 }
 
 struct CarsoelHome_Previews: PreviewProvider {
+//    @EnvironmentObject var vmm : HomeMainTabBarViewModel
+
     static var previews: some View {
-        MainHomeTab()
+//    MainHomeTab(vmm: vmm, vm: MainHomeTabViewModel)
+        ContentView()
+//        MainHomeTab()
     }
 }

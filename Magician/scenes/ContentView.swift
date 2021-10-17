@@ -10,26 +10,39 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var vm = HomeMainTabBarViewModel()
     @StateObject var vms = HomeReigtserViewModel()
-
+    @StateObject var vmss = HomeOrdersViewModel()
+    
     var body: some View {
         
-//        MainHomeTabBar()
-//                    .environmentObject(vm)
+        //        HomeONBoardScene()
+        //        MainHomeTabBar()
+        //                    .environmentObject(vm)
         
         
-//        LoginView(vm: HomeReigtserViewModel())
-
-//        MainHomeTabBar()
+        //        LoginView(vm: HomeReigtserViewModel())
+        
+        //        MainHomeTabBar()
         
         //enteredLocation: $enteredLocation)
-
-//        AccountSavedAddress(vm: HomeAccountViewModel())
         
+        //        AccountSavedAddress(vm: HomeAccountViewModel())
+        
+        
+        
+        
+//        HomeRemindingOrders()
             
             
-//final
+            //        MainHomeWelcome()
+//            .environmentObject(vm)
+//            .environmentObject(vmss)
+            
+            
+            //final
                     MainHomeWelcome()
-            .environmentObject(vm)
+                               .environmentObject(vm)
+            .environment(\.layoutDirection, vm.isArabicLanguage ?  .rightToLeft : .leftToRight)
+            .environment(\.locale, Locale(identifier:vm.isArabicLanguage ? "ar" : "en"))
     }
 }
 

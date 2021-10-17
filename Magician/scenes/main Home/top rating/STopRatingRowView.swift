@@ -81,6 +81,7 @@ struct STopRatingRowView: View {
 
         .modifier(viewModifiers())
         .padding(.vertical)
+        .padding(.bottom,-4)
 
 //        .frame(height:320)
 //        .background(Color.red)

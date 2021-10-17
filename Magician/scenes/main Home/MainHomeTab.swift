@@ -8,48 +8,58 @@
 import SwiftUI
 
 struct MainHomeTab: View {
-    @StateObject var vm = MainHomeTabViewModel()
+//    @StateObject var vm = MainHomeTabViewModel()
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
+    @EnvironmentObject var vm:MainHomeTabViewModel
 
     var body: some View {
-        VStack {
-            
+//        ZStack {
             VStack {
-                MainHomeTabTopView(vm:vm)
-           
-            
-            ScrollView(showsIndicators:false){
                 
-//                HomeTopRating(vm: vm)
-
-//                HomeTopRating(vm: vm)
-
-//                HomeSpecialOffer(vm:vm)
-
+                ZStack {
+                    
                 VStack {
-                    MainHomeTabProfileInfo(vm:vm)
+                    MainHomeTabTopView(vm:vm)
+                    
+                    
+                    ScrollView(showsIndicators:false){
+                        
+                        //                HomeTopRating(vm: vm)
+                        
+                        //                HomeTopRating(vm: vm)
+                        
+                        //                HomeSpecialOffer(vm:vm)
+                        
+                        VStack {
+                            MainHomeTabProfileInfo(vm:vm)
+//                                .padding(.top,20)
+                                .padding(.bottom)
+                            
+                            
+                            CarsoelHome(vm: vm)
+                            
+                            HomeCategoryView(vm: vm)
+                            
+                            HomeTopRating(vm: vm)
+                            
+                            HomeSpecialOffer(vm:vm)
+                            
+                        }
                         .padding(.top,20)
-                        .padding(.bottom)
-               
-
-                CarsoelHome(vm: vm)
-                
-                HomeCategoryView(vm: vm)
-
-                HomeTopRating(vm: vm)
-
-                HomeSpecialOffer(vm:vm)
-
+                        //                    .frame(width:getFrameSize().width-28)
+                        .padding(.bottom,getBottomSpace())
+                    }
+                    
+                    
                 }
-                    .padding(.top,20)
-//                    .frame(width:getFrameSize().width-28)
-                    .padding(.bottom,getBottomSpace())
-            }
-           
-
+                
+                .padding(.horizontal,32)
+                    
+                    if vm.isLooding {
+                        LoadingCapsuleSpacing()
+                    }
             }
             
-            .padding(.horizontal,32)
         }
         .environmentObject(vmm)
         .background(Color("bg"))
@@ -57,10 +67,15 @@ struct MainHomeTab: View {
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        
+            .onAppear(perform: {
+                vm.topRatingArray.isEmpty ? vm.getData() : ()
+            })
+        
     }
     
     func getBottomSpace() ->CGFloat {
-       CGFloat( isSmallDevice() ? 130 : 100)
+        CGFloat( isSmallDevice() ? 130 : 100)
     }
 }
 

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainHomeTabBar: View {
     @EnvironmentObject var vm : HomeMainTabBarViewModel
+    @StateObject var vma = HomeAccountViewModel()
+    @StateObject var vmh = MainHomeTabViewModel()
     
     
     var body: some View {
@@ -16,8 +18,12 @@ struct MainHomeTabBar: View {
             
             
             if vm.index == "Home" {
-//                HomeAccount()
-                MainHomeTab()
+                //                HomeAccount()
+                HomeAccount()
+                    .environmentObject(vma)
+                
+//                MainHomeTab()
+//                    .environmentObject(vmh)
                 //                SSecondMainHome()
                 //                    .environmentObject(vm)
             }
@@ -29,30 +35,32 @@ struct MainHomeTabBar: View {
             
             else if vm.index == "Map" {
                 Color.blue
-//                    .padding(.horizontal,40)
-
+                //                    .padding(.horizontal,40)
+                
             }
             else if vm.index ==  "Orders" {
                 HomeOrders()
-//                    .padding(.horizontal,40)
-
+                //                    .padding(.horizontal,40)
+                
             }
             else {
-               HomeAccount()
-//                .padding(.horizontal,40)
-
+                HomeAccount()
+                    .environmentObject(vma)
+                
+                //                .padding(.horizontal,40)
+                
             }
             
             UsedTabBar()
                 .padding(.horizontal,24)
-//                .padding(.horizontal,-16)
-
+                //                .padding(.horizontal,-16)
+                
                 .transition(.move(edge: .trailing))
                 .environmentObject(vm)
             
             
         })
-
+        
         .environmentObject(vm)
         .edgesIgnoringSafeArea(.all)
     }
@@ -61,6 +69,6 @@ struct MainHomeTabBar: View {
 struct MainHomeTabBar_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//        MainHomeTabBar()
+        //        MainHomeTabBar()
     }
 }
