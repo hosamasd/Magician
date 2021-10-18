@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct HomeAccount: View {
-//    @StateObject var vm = HomeAccountViewModel()
+    //    @StateObject var vm = HomeAccountViewModel()
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @EnvironmentObject var vm : HomeAccountViewModel
-
-    @Namespace var name
-
     
-//    var name : Namespace.ID
-
+    @Namespace var name
+    
+    
+    //    var name : Namespace.ID
+    
     var body: some View {
         VStack {
             
@@ -24,15 +24,30 @@ struct HomeAccount: View {
                 
                 VStack {
                     
-                    HomeAccountTopView(vm:vm)
-                    
+//                    HomeAccountTopView(vm:vm)
+                    HomeAccountTopView()
+                        
+
                     ScrollView(showsIndicators:false){
                         
-                        HomeAccountImage(vm:vm)
+                        HomeAccountImage()
+                            .onTapGesture(perform: {
+                                withAnimation{
+                                    vmm.isHideTabBar=true
+                                    vmm.isShowUserGift=true}
+                            })
+//                            .onTapGesture
+
+//                        HomeAccountImage(vm:vm)
                             .padding(.top,20)
+                        
                         
                         VStack {
                             HomeAccountPointsView(vm: vm)
+                                .padding(.bottom)
+                            
+                            HomeAccountGifts()
+                            
                             
                             VStack(spacing:28) {
                                 
@@ -62,19 +77,31 @@ struct HomeAccount: View {
                                 
                             }
                             .padding(.vertical,30)
+                            .background(Color.white)
+                            .cornerRadius(10)
                         }
-                        .background(Color.white)
+                        //                        .background(Color.white)
                         .padding(.top,20)
                         
                     }
-                    .padding(.bottom,CGFloat(isSmallDevice() ? 60 : 40))
+                    .padding(.bottom,CGFloat(isSmallDevice() ? 60 : 80))
                     
                 }
                 .padding(.horizontal,32)
-//                .environmentObject(vmm)
+                //                .environmentObject(vmm)
                 
                 if vm.isLooding {
                     LoadingCapsuleSpacing()
+                }
+                
+                if vmm.isShowUserGift {
+                    AccountSheetView( )
+                        .opacity(vmm.isShowUserGift ? 1 : 0)
+                        //            EditSheets( vm: vm)
+                        .transition(.move(edge: .bottom))
+                        .environmentObject(vmm)
+                        .environmentObject(vm)
+                    //                    .padding(.horizontal)
                 }
             }
             
@@ -83,6 +110,8 @@ struct HomeAccount: View {
             Spacer()
         }
         .environmentObject(vmm)
+        .environmentObject(vm)
+
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")
@@ -116,23 +145,28 @@ struct HomeAccount: View {
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $vm.isSavedAddress, content: {
-                            
-                            AccountSavedAddress(vm: vm,vmm: vmm, name: name)
+                            AccountSavedAddress(name:name)
+                                .environmentObject(vmm)
+//                            AccountSavedAddress(vm: vm,vmm: vmm, name: name)
                             
                         })
         )
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $vm.isAccountInfo, content: {
-                            
-                            AccountInfoView(vm: vm,vmm: vmm)
+                            AccountInfoView()
+                                .environmentObject(vmm)
+
+//                            AccountInfoView(vm: vm,vmm: vmm)
                             
                         })
         )
         .background(EmptyView()
                         .fullScreenCover(isPresented: $vm.isChangePassword, content: {
-                            
-                            AccountChangePassword(vm: vm,vmm: vmm)
+                            AccountChangePassword()
+                                .environmentObject(vmm)
+
+//                            AccountChangePassword(vm: vm,vmm: vmm)
                             
                         })
         )

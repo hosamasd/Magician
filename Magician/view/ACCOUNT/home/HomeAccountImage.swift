@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeAccountImage: View {
-    @ObservedObject var vm:HomeAccountViewModel
+//    @ObservedObject var vm:HomeAccountViewModel
+    @EnvironmentObject var vm : HomeAccountViewModel
 
     var body: some View {
         RoundedRectangle(cornerRadius: 0)

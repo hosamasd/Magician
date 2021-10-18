@@ -44,7 +44,7 @@ struct HomeSpecialOffer: View {
                 })
             }
             .padding(.horizontal)
-            .padding(.top, 15)
+            .padding(.vertical, 15)
             .padding(.bottom,4)
             
             ScrollView(.horizontal, showsIndicators: false) {

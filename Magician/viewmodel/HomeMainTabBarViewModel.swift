@@ -17,7 +17,9 @@ class HomeMainTabBarViewModel: ObservableObject {
     @AppStorage("isArabicLanguage") var isArabicLanguage = false
     @AppStorage("onBoardDone") var isonBoardDone: Bool = false
 
-    
+    @Published var isHideTabBar=false
+    @Published var isShowUserGift=false
+
     @Published var index = "Home"
     var tabs:[TabModel] =
         [

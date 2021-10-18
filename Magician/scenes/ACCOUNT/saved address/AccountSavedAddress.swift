@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct AccountSavedAddress: View {
-    @ObservedObject var vm:HomeAccountViewModel
-    @ObservedObject var vmm:HomeMainTabBarViewModel
+//    @ObservedObject var vm:HomeAccountViewModel
+//    @ObservedObject var vmm:HomeMainTabBarViewModel
     
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+    @EnvironmentObject var vm : HomeAccountViewModel
     var names = "Saved addresses"
     
     var name : Namespace.ID
@@ -20,7 +22,7 @@ struct AccountSavedAddress: View {
         ZStack {
             VStack {
                 
-                HomeAccountTopView(vm: vm)
+                HomeAccountTopView()
                     .padding(.bottom,20)
                 
                 VStack {

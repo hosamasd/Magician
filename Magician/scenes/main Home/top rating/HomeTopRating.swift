@@ -42,7 +42,7 @@ struct HomeTopRating: View {
                 })
             }
             .padding(.horizontal)
-            .padding(.top, 15)
+            .padding(.vertical, 15)//top
             .padding(.bottom,4)
             
             

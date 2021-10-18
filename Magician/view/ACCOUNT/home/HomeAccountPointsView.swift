@@ -65,6 +65,7 @@ struct HomeAccountPointsView: View {
 
         }
         .padding(.horizontal,32)
+        .cornerRadius(10)
 //        .frame(width:getFrameSize().width-32)
 
     }

@@ -77,15 +77,32 @@ struct STopRatingRowView: View {
             .padding(.bottom,4)
             
         }
+        
         .padding(.horizontal,8)
         .padding(.vertical,8)
-        .background(Color("topRate"))
-        .cornerRadius(12)
+        
+        .background(
+            RoundedRectangle(
+                cornerRadius: 10
+            )
+            .foregroundColor(Color("topRate"))
+            .shadow(
+                color: Color.gray.opacity(0.6),
+                radius: 2.5,
+                x: 0,
+                y: 2
+            )
+        )
+        
+//        .padding(.horizontal,8)
+//        .padding(.vertical,8)
+//        .background(Color("topRate"))
 //        .cornerRadius(12)
-
-        .modifier(viewModifiers())
-        .padding(.vertical)
-        .padding(.bottom,-16)//-4
+////        .cornerRadius(12)
+//
+//        .modifier(viewModifiers())
+//        .padding(.vertical)
+//        .padding(.bottom,-16)//-4
 
 //        .frame(height:320)
 //        .background(Color.red)

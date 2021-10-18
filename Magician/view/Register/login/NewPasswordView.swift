@@ -36,6 +36,7 @@ struct NewPasswordView: View {
                     RoundedRectangle(cornerRadius: 28)
                         
                         .fill(Color("mains"))
+                        
                         .overlay(
                             
                             Text(LocalizedStringKey("Next"))

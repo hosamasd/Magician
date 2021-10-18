@@ -9,14 +9,19 @@ import SwiftUI
 
 struct AccountInfoView: View {
 //    var na = <#value#>
-    @ObservedObject var vm:HomeAccountViewModel
-    @ObservedObject var vmm:HomeMainTabBarViewModel
+//    @ObservedObject var vm:HomeAccountViewModel
+//    @ObservedObject var vmm:HomeMainTabBarViewModel
+    
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+    @EnvironmentObject var vm : HomeAccountViewModel
     @State var changePositions=false
 
     var body: some View {
         VStack {
             
-            HomeAccountTopView(vm: vm)
+            HomeAccountTopView()
+
+//            HomeAccountTopView(vm: vm)
                 .padding(.bottom,20)
             
             VStack {

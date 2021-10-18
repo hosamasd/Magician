@@ -12,40 +12,30 @@ struct HomeSelectedCategory: View {
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
     var x = "Top Rating"
-
+    
     var body: some View {
-//        VStack {
+        //        VStack {
+        
+        ZStack {
             
-            ZStack {
+            VStack {
                 
                 VStack {
                     
-                    VStack {
-                        
                     HomeSelectedCategoryTopView()
-//                        .padding(.horizontal,8)
-//                        .padding(.bottom,20)
+                    //                        .padding(.horizontal,8)
+                    //                        .padding(.bottom,20)
                     
-                        SecondHomeSelectedCategoryTopView(columns: $columns)
-                            .padding(.vertical)
-                        
-                        if vm.isMainCategoryChosen{
+                    SecondHomeSelectedCategoryTopView(columns: $columns)
+                        .padding(.vertical)
+                    
+                    if vm.isMainCategoryChosen{
                         ThirdHomeSelectedCategoryTopView()
                             .padding(.bottom)
-                        }
-                        
+                    }
+                    
                     ScrollView(showsIndicators:false){
                         
-//                        SecondHomeSelectedCategoryTopView()
-
-//                        SecondHomeSelectedCategoryTopView(columns: $columns)
-//                            .padding(.vertical)
-//
-//                        if vm.isMainCategoryChosen{
-//                        ThirdHomeSelectedCategoryTopView()
-//                            .padding(.bottom)
-//                        }
-//                            .opacity(vm.isMainCategoryChosen ? 1 : 0)
                         
                         LazyVGrid(columns: columns,spacing: vm.isSingleItemLists == 1 ?  16 : 16){
                             
@@ -63,13 +53,13 @@ struct HomeSelectedCategory: View {
                     
                 }
                 
-                }
-                .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
-
             }
-            .edgesIgnoringSafeArea(.all)
-
-//        }
+            .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+        //        }
         
         .environmentObject(vmm)
     }
@@ -78,6 +68,6 @@ struct HomeSelectedCategory: View {
 struct HomeSelectedCategory_Previews: PreviewProvider {
     static var previews: some View {
         SContentView()
-//        ContentView()
+        //        ContentView()
     }
 }

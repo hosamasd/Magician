@@ -66,6 +66,8 @@ struct MainHomeTabBar: View {
                 
             }
             
+            if !vm.isShowUserGift {
+
             UsedTabBar()
                 .padding(.horizontal,24)
                 //                .padding(.horizontal,-16)
@@ -73,6 +75,7 @@ struct MainHomeTabBar: View {
                 .transition(.move(edge: .trailing))
                 .environmentObject(vm)
             
+            }
             
         })
         
