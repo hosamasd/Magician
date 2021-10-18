@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct CategoryRowView: View {
-    var x = "Group 8188"
+//    var x = "Group 8188"
+    var x =         MainCategory(name: "Food", img: "Group 8367-1",nameAr:"Food",subImage:"food",mainImg:"")
+    
     var index = 0
     @ObservedObject var vm:MainHomeTabViewModel
     
     var body: some View {
 //        ZStack {
-            Image(x)
+        Image(x.mainImg)
+//            .overlay(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Overlay Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/)
 //                .resizable()
 //                // adding animation...
 //                .frame(height: self.vm.categoryIndex == index ?  170 : 120)

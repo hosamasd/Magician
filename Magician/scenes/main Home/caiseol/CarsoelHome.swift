@@ -20,7 +20,8 @@ struct CarsoelHome: View {
                 
                 ForEach(0..<vm.carseolSwapArray.count,id: \.self){index in
                     
-                    CategoryRowView(x: vm.carseolSwapArray[index],index:index, vm: vm)
+                    CarsoelRowView(x: vm.carseolSwapArray[index])
+//                    CategoryRowView(x: vm.carseolSwapArray[index],index:index, vm: vm)
                     //                    Image(vm.categoryArray[index])
                     //                        .resizable()
                     //                        // adding animation...

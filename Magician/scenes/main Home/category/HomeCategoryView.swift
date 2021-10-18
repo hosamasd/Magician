@@ -49,9 +49,17 @@ struct HomeCategoryView: View {
                     
                     //                    LazyVGrid(columns: columns,spacing: 12){
                     
-                    ForEach(0..<vm.categoryArray.count,id: \.self){index in
+                    ForEach(vm.categoryArray){index in
                         
-                        CategoryRowView(x: vm.categoryArray[index], vm: vm)
+                        CategoryRowView(x: index, vm: vm)
+                            .onTapGesture(perform: {
+                                withAnimation{
+                                    vm.mainCategoryChosenName=index.subImage
+                                    vm.selectedCategoryOffAll=index.name
+                                    vm.isSelectedCategoryOffAll.toggle()
+                                    vm.isMainCategoryChosen.toggle()
+                                }
+                            })
                         //                            TopRatingRowView(vm: vm,x:vm.topRatingArray[index])
                         
                     }

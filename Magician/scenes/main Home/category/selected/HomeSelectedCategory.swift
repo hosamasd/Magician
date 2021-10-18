@@ -11,9 +11,8 @@ struct HomeSelectedCategory: View {
     @EnvironmentObject var vm:MainHomeTabViewModel
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
-    
     var x = "Top Rating"
-    
+
     var body: some View {
 //        VStack {
             
@@ -29,9 +28,13 @@ struct HomeSelectedCategory: View {
                     
                     ScrollView(showsIndicators:false){
                         
+//                        SecondHomeSelectedCategoryTopView()
+
                         SecondHomeSelectedCategoryTopView(columns: $columns)
                             .padding(.vertical)
                         
+                        ThirdHomeSelectedCategoryTopView()
+                            .padding(.bottom)
                         
                         LazyVGrid(columns: columns,spacing: vm.isSingleItemLists == 1 ?  16 : 16){
                             
@@ -63,6 +66,7 @@ struct HomeSelectedCategory: View {
 
 struct HomeSelectedCategory_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SContentView()
+//        ContentView()
     }
 }
