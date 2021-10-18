@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct HomeFilter: View {
-    //    @EnvironmentObject var vm : HomeFilterViewModel
-    @StateObject var vm = HomeFilterViewModel()
-    @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
+        @EnvironmentObject var vm : HomeFilterViewModel
+    @EnvironmentObject var vmm : HomeMainTabBarViewModel
+
+//    @StateObject var vm = HomeFilterViewModel()
+    @State var columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 2)
     
     var body: some View {
-        ZStack {
+        VStack {
             
-            VStack {
+            ZStack {
                 
-                VStack {
+            VStack {
                     
                     HomeFilterTopView()
                     //                        .padding(.horizontal,8)
@@ -25,12 +27,13 @@ struct HomeFilter: View {
                     
                     SecondHomeFilterTopView()
                         .padding(.vertical)
+                
                     
                     
                     ScrollView(showsIndicators:false){
                         
                         
-                        LazyVGrid(columns: columns,spacing:16){
+                        LazyVGrid(columns: columns,spacing:12){
                             
                             // assigning name as ID...
                             
@@ -43,18 +46,28 @@ struct HomeFilter: View {
                         .padding(.horizontal)
                         .padding(.bottom)
                     }
+                    .padding(.top,-12)
                     
                 }
-                
+                .padding(.horizontal,32)
+                    
+                    if vm.isLooding {
+                        LoadingCapsuleSpacing()
+                    }
             }
-            .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
             
         }
+        .environmentObject(vmm)
+        .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
         
-        //        }
+            .onAppear(perform: {
+                vm.filterArray.isEmpty ? vm.getData() : ()
+            })
         
-        //        .environmentObject(vmm)
     }
 }
 

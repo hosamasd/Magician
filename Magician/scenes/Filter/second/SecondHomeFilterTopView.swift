@@ -15,7 +15,7 @@ struct SecondHomeFilterTopView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             
             
-            HStack(spacing:14){
+            HStack(spacing:8){
                 
                 //                    LazyVGrid(columns: columns,spacing: 12){
                 

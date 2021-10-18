@@ -11,6 +11,7 @@ struct MainHomeTabBar: View {
     @EnvironmentObject var vm : HomeMainTabBarViewModel
     @StateObject var vma = HomeAccountViewModel()
     @StateObject var vmas = HomeFavoriteViewModel()
+        @StateObject var vmF = HomeFilterViewModel()
 
     @StateObject var vmh = MainHomeTabViewModel()
 //    @StateObject var vms=MainHomeTabViewModel()
@@ -38,8 +39,9 @@ struct MainHomeTabBar: View {
                 //                    .environmentObject(vm)
             }
             else if vm.index == "Filter" {
-                HomeOrders()
-                
+                HomeFilter()
+                    .environmentObject(vmh)
+                    .environmentObject(vmF)
                 
             }
             
