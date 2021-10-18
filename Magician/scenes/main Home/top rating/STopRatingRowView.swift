@@ -46,7 +46,9 @@ struct STopRatingRowView: View {
                         //                                .padding(.leading,-4)
                         Text(x.type)
                             .font(.customFontSystem(size: 12))
-                            .foregroundColor(.gray.opacity(0.8))
+                            .foregroundColor(Color.black.opacity(0.6))
+
+//                            .foregroundColor(.gray.opacity(0.8))
                             .padding(.top,4)
                     }
                     .offset(x:-4,y:-10)
@@ -64,24 +66,26 @@ struct STopRatingRowView: View {
                 title: {
                     Text(x.location)
                         .font(.customFontSystem(size: 10))
-                        .foregroundColor(.gray.opacity(0.8))
+                        .foregroundColor(Color.black.opacity(0.6))
+
+//                        .foregroundColor(.gray.opacity(0.8))
                 },
                 icon: { Image( "pin") }
             )
             .frame(maxWidth:.infinity,alignment: .leading)
             .padding(.horizontal,8)
-            .padding(.bottom)
+            .padding(.bottom,4)
             
         }
         .padding(.horizontal,8)
         .padding(.vertical,8)
-        .background(Color.white)
+        .background(Color("topRate"))
         .cornerRadius(12)
 //        .cornerRadius(12)
 
         .modifier(viewModifiers())
         .padding(.vertical)
-        .padding(.bottom,-4)
+        .padding(.bottom,-16)//-4
 
 //        .frame(height:320)
 //        .background(Color.red)

@@ -42,16 +42,16 @@ struct CarsoelHome: View {
             
             HStack {
                 
-                Button(action: {withAnimation{
-                    print(9999)
-                    vm.categoryIndex > 1 ?
-                        vm.categoryIndex-=1 : ()
-
-                }}, label: {
-                    Image("down arrow-1")
-                       
-
-                })
+//                Button(action: {withAnimation{
+//                    print(9999)
+//                    vm.categoryIndex > 1 ?
+//                        vm.categoryIndex-=1 : ()
+//
+//                }}, label: {
+//                    Image("down arrow-1")
+//
+//
+//                })
                 
                 Spacer()
                 
@@ -82,15 +82,15 @@ struct CarsoelHome: View {
                 
                 Spacer()
                 
-                Button(action: {withAnimation{
-                    print(9999)
-                    vm.categoryIndex < vm.carseolSwapArray.count-1 ?
-                        vm.categoryIndex+=1 : ()
-                }}, label: {
-                Image("down arrow")
-                    .background(Color.red)
-                   
-                })
+//                Button(action: {withAnimation{
+//                    print(9999)
+//                    vm.categoryIndex < vm.carseolSwapArray.count-1 ?
+//                        vm.categoryIndex+=1 : ()
+//                }}, label: {
+//                Image("down arrow")
+//                    .background(Color.red)
+//                   
+//                })
             }
             .padding(.horizontal,32)
             

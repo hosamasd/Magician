@@ -23,21 +23,35 @@ struct SelectedCategoryRowView: View {
                 //                .cornerRadius(12)
                 .overlay(
                     
-                    Label(
-                        title: { Text(x.rating)
-                            .font(.customFontSystem(size: 10))
-                            .foregroundColor(.black)
-                            .padding(.leading,-4)
-                        },
-                        icon: { Image( "Icon awesome-star") }
-                    )
-                    .padding(.horizontal,6)
-                    .padding(.vertical,8)
-                    .background(Color.white)
-                    .clipShape(Capsule())
-                    .offset(x: 10.0, y: 10)
+                    HStack {
+                        Label(
+                            title: { Text(x.rating)
+                                .font(.customFontSystem(size: 10))
+                                .foregroundColor(.black)
+                                .padding(.leading,-4)
+                            },
+                            icon: { Image( "Icon awesome-star") }
+                        )
+                        .padding(.horizontal,6)
+                        .padding(.vertical,8)
+                        .background(Color.white)
+                        .clipShape(Capsule())
+                        //                        .offset(x: 10.0, y: 10)
+                        
+                        Spacer()
+                        
+                        Button(action: {withAnimation{
+                            
+                        }}, label: {
+                            Image(x.isFavorite ? "Group 8441" : "Group 8441-1")
+                        })
+                        
+                    }
+                    .padding(10)
+                    //                    .offset(x: 10.0, y: 10)
                     
-                    ,alignment:.topLeading)
+                    
+                    ,alignment:.top)
                 .cornerRadius(19)
             
             
@@ -53,11 +67,11 @@ struct SelectedCategoryRowView: View {
                         Spacer()
                         
                         Text("50% OFF")
-                            .font(.customFontSystem(size: 14))
+                            .font(.customFontSystem(size:  14))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
-                            .padding(.horizontal)
-                            .padding(.vertical,6)
+                            .padding(.horizontal ,  16 )
+                            .padding(.vertical, 6 )
                             .background(Color("mains").opacity(0.22))
                             .clipShape(Capsule())
                     }
@@ -128,13 +142,13 @@ struct SelectedCategoryRowView: View {
                             )
                             
                             Spacer()
-
+                            
                             Text("50% OFF")
                                 .font(.customFontSystem(size: 10))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("mains"))
-                                .padding(.horizontal)
-                                .padding(.vertical,6)
+                                .padding(.horizontal,8)
+                                .padding(.vertical,3)
                                 .background(Color("mains").opacity(0.22))
                                 .clipShape(Capsule())
                             
@@ -163,8 +177,8 @@ struct SelectedCategoryRowView: View {
                         }
                     })
                     .padding(.horizontal,12)
-//                    .background(Color.red)
-//                    .offset(y:-60)
+                    //                    .background(Color.red)
+                    //                    .offset(y:-60)
                     
                 }
             }

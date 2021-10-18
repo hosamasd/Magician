@@ -26,15 +26,26 @@ struct HomeSelectedCategory: View {
 //                        .padding(.horizontal,8)
 //                        .padding(.bottom,20)
                     
+                        SecondHomeSelectedCategoryTopView(columns: $columns)
+                            .padding(.vertical)
+                        
+                        if vm.isMainCategoryChosen{
+                        ThirdHomeSelectedCategoryTopView()
+                            .padding(.bottom)
+                        }
+                        
                     ScrollView(showsIndicators:false){
                         
 //                        SecondHomeSelectedCategoryTopView()
 
-                        SecondHomeSelectedCategoryTopView(columns: $columns)
-                            .padding(.vertical)
-                        
-                        ThirdHomeSelectedCategoryTopView()
-                            .padding(.bottom)
+//                        SecondHomeSelectedCategoryTopView(columns: $columns)
+//                            .padding(.vertical)
+//
+//                        if vm.isMainCategoryChosen{
+//                        ThirdHomeSelectedCategoryTopView()
+//                            .padding(.bottom)
+//                        }
+//                            .opacity(vm.isMainCategoryChosen ? 1 : 0)
                         
                         LazyVGrid(columns: columns,spacing: vm.isSingleItemLists == 1 ?  16 : 16){
                             

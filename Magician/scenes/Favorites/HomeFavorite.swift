@@ -23,10 +23,13 @@ struct HomeFavorite: View {
                     //                        .padding(.horizontal,8)
                     //                        .padding(.bottom,20)
                     
+                HomeFavoriteTopView(columns: $columns)
+                    .padding(.vertical)
+                
                     ScrollView(showsIndicators:false){
                         
-                        HomeFavoriteTopView(columns: $columns)
-                            .padding(.vertical)
+//                        HomeFavoriteTopView(columns: $columns)
+//                            .padding(.vertical)
                         
                         
                         LazyVGrid(columns: columns,spacing: vm.isSingleItemLists == 1 ?  16 : 16){
