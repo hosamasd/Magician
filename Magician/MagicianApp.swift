@@ -14,7 +14,8 @@ struct MagicianApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SContentView()
+//            ContentView()
                 .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
 
         }

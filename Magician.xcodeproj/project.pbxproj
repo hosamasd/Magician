@@ -20,6 +20,8 @@
 		4E171E422716F339000837BF /* HomeAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171E412716F339000837BF /* HomeAccountViewModel.swift */; };
 		4E171E452716F3C3000837BF /* HomeAccountTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171E442716F3C3000837BF /* HomeAccountTopView.swift */; };
 		4E171E472716F74F000837BF /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171E462716F74F000837BF /* SUImagePickerView.swift */; };
+		4E181F59271DB5AA00248DF3 /* SelectedItemScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E181F58271DB5AA00248DF3 /* SelectedItemScenes.swift */; };
+		4E181F5B271DB7FC00248DF3 /* SelectedItemScenesTopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E181F5A271DB7FC00248DF3 /* SelectedItemScenesTopRow.swift */; };
 		4E250C82271C44A9001873B6 /* HomeSelectedCategoryTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E250C81271C44A9001873B6 /* HomeSelectedCategoryTopView.swift */; };
 		4E250C84271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E250C83271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift */; };
 		4E250C86271C4B9D001873B6 /* SelectedCategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E250C85271C4B9D001873B6 /* SelectedCategoryRowView.swift */; };
@@ -120,6 +122,8 @@
 		4E171E412716F339000837BF /* HomeAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountViewModel.swift; sourceTree = "<group>"; };
 		4E171E442716F3C3000837BF /* HomeAccountTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountTopView.swift; sourceTree = "<group>"; };
 		4E171E462716F74F000837BF /* SUImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
+		4E181F58271DB5AA00248DF3 /* SelectedItemScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemScenes.swift; sourceTree = "<group>"; };
+		4E181F5A271DB7FC00248DF3 /* SelectedItemScenesTopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemScenesTopRow.swift; sourceTree = "<group>"; };
 		4E250C81271C44A9001873B6 /* HomeSelectedCategoryTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSelectedCategoryTopView.swift; sourceTree = "<group>"; };
 		4E250C83271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHomeSelectedCategoryTopView.swift; sourceTree = "<group>"; };
 		4E250C85271C4B9D001873B6 /* SelectedCategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryRowView.swift; sourceTree = "<group>"; };
@@ -291,6 +295,15 @@
 				4ECD6DBD271460D800011208 /* HomeONBoard.swift */,
 			);
 			path = "may be used";
+			sourceTree = "<group>";
+		};
+		4E181F57271DB58500248DF3 /* LAST */ = {
+			isa = PBXGroup;
+			children = (
+				4E181F58271DB5AA00248DF3 /* SelectedItemScenes.swift */,
+				4E181F5A271DB7FC00248DF3 /* SelectedItemScenesTopRow.swift */,
+			);
+			path = LAST;
 			sourceTree = "<group>";
 		};
 		4E2ADBF12717E51B0039C842 /* saved address */ = {
@@ -476,6 +489,7 @@
 		4ECD6DAB27145E1500011208 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4E181F57271DB58500248DF3 /* LAST */,
 				4E3AF3F0271D80A60051A70B /* Filter */,
 				4ECAD7F1271C673400C258A5 /* Favorites */,
 				4E5B597527181B14004C7D2F /* main Home */,
@@ -789,6 +803,7 @@
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
 				4EDDBF51271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift in Sources */,
 				4E5C6C2D27184C8300FA5298 /* TopRatingRowView.swift in Sources */,
+				4E181F5B271DB7FC00248DF3 /* SelectedItemScenesTopRow.swift in Sources */,
 				4E171E472716F74F000837BF /* SUImagePickerView.swift in Sources */,
 				4E250C82271C44A9001873B6 /* HomeSelectedCategoryTopView.swift in Sources */,
 				4EFC79542716D11D00C5DF36 /* SHomeONBoard.swift in Sources */,
@@ -820,6 +835,7 @@
 				4E560942271855A200539B9C /* OfferModel.swift in Sources */,
 				4EDBAB0F2717FFCF00AFD181 /* HomeOrdersTopView.swift in Sources */,
 				4ED40A2A271C218A00E73138 /* HomeSelectedCategory.swift in Sources */,
+				4E181F59271DB5AA00248DF3 /* SelectedItemScenes.swift in Sources */,
 				4EB64AFB271D9C970012EB48 /* AccountSheetView.swift in Sources */,
 				4EDDBF4B271BF4FC00BACD49 /* HomeONBoardScene.swift in Sources */,
 				4ECF1EA527153EEF00698148 /* SignUpView.swift in Sources */,
