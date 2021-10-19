@@ -97,6 +97,10 @@
 		4EDDBF4D271BFBCD00BACD49 /* HomeRemindingOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDBF4C271BFBCC00BACD49 /* HomeRemindingOrders.swift */; };
 		4EDDBF51271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDBF50271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift */; };
 		4EDDBF53271BFFDD00BACD49 /* SelectedOrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDBF52271BFFDD00BACD49 /* SelectedOrderRowView.swift */; };
+		4EDFA7DA271EB1F00067D83E /* HomeCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */; };
+		4EDFA7DC271EB2960067D83E /* HomeCheckoutTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */; };
+		4EDFA7DE271EB3E80067D83E /* HomeCheckoutItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */; };
+		4EDFA7E1271EB6F10067D83E /* HomeCheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFA7E0271EB6F10067D83E /* HomeCheckoutRowView.swift */; };
 		4EE2798427187122004EE0B6 /* CarsoelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE2798327187122004EE0B6 /* CarsoelHome.swift */; };
 		4EE279862718765D004EE0B6 /* STopRatingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE279852718765D004EE0B6 /* STopRatingRowView.swift */; };
 		4EE52441271A9E4600AADB1F /* MainHomeWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE52440271A9E4600AADB1F /* MainHomeWelcome.swift */; };
@@ -214,6 +218,10 @@
 		4EDDBF4C271BFBCC00BACD49 /* HomeRemindingOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemindingOrders.swift; sourceTree = "<group>"; };
 		4EDDBF50271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemindingOrdersTopView.swift; sourceTree = "<group>"; };
 		4EDDBF52271BFFDD00BACD49 /* SelectedOrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedOrderRowView.swift; sourceTree = "<group>"; };
+		4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckout.swift; sourceTree = "<group>"; };
+		4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutTopView.swift; sourceTree = "<group>"; };
+		4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutItemRowView.swift; sourceTree = "<group>"; };
+		4EDFA7E0271EB6F10067D83E /* HomeCheckoutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutRowView.swift; sourceTree = "<group>"; };
 		4EE2798327187122004EE0B6 /* CarsoelHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsoelHome.swift; sourceTree = "<group>"; };
 		4EE279852718765D004EE0B6 /* STopRatingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STopRatingRowView.swift; sourceTree = "<group>"; };
 		4EE52440271A9E4600AADB1F /* MainHomeWelcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeWelcome.swift; sourceTree = "<group>"; };
@@ -324,6 +332,7 @@
 		4E181F57271DB58500248DF3 /* LAST */ = {
 			isa = PBXGroup;
 			children = (
+				4EDFA7D8271EB1D20067D83E /* CHECKOUT */,
 				4E181F58271DB5AA00248DF3 /* SelectedItemScenes.swift */,
 				4E3F6B27271E7B8F00529C15 /* bottom */,
 				4E181F5A271DB7FC00248DF3 /* SelectedItemScenesTopRow.swift */,
@@ -713,6 +722,25 @@
 			path = reminding;
 			sourceTree = "<group>";
 		};
+		4EDFA7D8271EB1D20067D83E /* CHECKOUT */ = {
+			isa = PBXGroup;
+			children = (
+				4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */,
+				4EDFA7DF271EB6EA0067D83E /* row view */,
+				4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */,
+				4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */,
+			);
+			path = CHECKOUT;
+			sourceTree = "<group>";
+		};
+		4EDFA7DF271EB6EA0067D83E /* row view */ = {
+			isa = PBXGroup;
+			children = (
+				4EDFA7E0271EB6F10067D83E /* HomeCheckoutRowView.swift */,
+			);
+			path = "row view";
+			sourceTree = "<group>";
+		};
 		4EEF4D8727171F0900D39193 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,18 +904,22 @@
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
 				4EDDBF51271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift in Sources */,
 				4E5C6C2D27184C8300FA5298 /* TopRatingRowView.swift in Sources */,
+				4EDFA7E1271EB6F10067D83E /* HomeCheckoutRowView.swift in Sources */,
 				4E181F5B271DB7FC00248DF3 /* SelectedItemScenesTopRow.swift in Sources */,
 				4E171E472716F74F000837BF /* SUImagePickerView.swift in Sources */,
 				4E250C82271C44A9001873B6 /* HomeSelectedCategoryTopView.swift in Sources */,
 				4EFC79542716D11D00C5DF36 /* SHomeONBoard.swift in Sources */,
 				4EDBAB152718053D00AFD181 /* viewModifiers.swift in Sources */,
+				4EDFA7DE271EB3E80067D83E /* HomeCheckoutItemRowView.swift in Sources */,
 				4EFC794C2716CD9300C5DF36 /* GifI_mage.swift in Sources */,
 				4E250C84271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift in Sources */,
 				4E38AF83271E948A00D87FAA /* FirstStepViewRowView.swift in Sources */,
 				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
+				4EDFA7DC271EB2960067D83E /* HomeCheckoutTopView.swift in Sources */,
 				4E2ADBF32717E5380039C842 /* AddAddressSheetView.swift in Sources */,
 				4E3AF3F7271D818A0051A70B /* HomeFilterRowView.swift in Sources */,
 				4EFC794E2716CF6F00C5DF36 /* GifImage.swift in Sources */,
+				4EDFA7DA271EB1F00067D83E /* HomeCheckout.swift in Sources */,
 				4E5C6C2B271847A100FA5298 /* CategoryRowView.swift in Sources */,
 				4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */,
 				4EDDBF4D271BFBCD00BACD49 /* HomeRemindingOrders.swift in Sources */,
