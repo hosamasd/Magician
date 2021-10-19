@@ -15,7 +15,8 @@ struct CustomTF: View {
     var isAddress = false
     var isAccountInfo = false
     var isSavedAddress = false
-    
+    var isAddVisa = false
+
     var body: some View {
         RoundedRectangle(cornerRadius: 28)
             .fill(Color("txField"))
@@ -57,7 +58,16 @@ struct CustomTF: View {
                                     
                                 }
                                 else {
-                                    TextField(hint,text:$txt)
+//                                    TextField(hint,text:$txt)
+//                                        .foregroundColor(.black.opacity(isAccountInfo ? 1 : 0.6))
+//
+//                                        .font(.customFontSystem(size: 12))
+//                                        .disabled(isAddress ? true : false)
+                                        
+                                    
+                                    TextField(hint,text:$txt, onEditingChanged: { focused in
+                                        print(focused ? "focused" : "unfocused")
+                                    })
                                         .foregroundColor(.black.opacity(isAccountInfo ? 1 : 0.6))
                                         
                                         .font(.customFontSystem(size: 12))
@@ -93,7 +103,7 @@ struct CustomTF: View {
                     }
                 }
             )
-            .frame(height:isAccountInfo ? 60 : 50)
+            .frame(height:isAccountInfo ? 60 : isAddVisa ? 60 : 50)
     }
 }
 

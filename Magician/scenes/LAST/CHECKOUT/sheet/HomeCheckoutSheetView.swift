@@ -9,10 +9,11 @@ import SwiftUI
 
 struct HomeCheckoutSheetView: View {
     @ObservedObject var vm:HomeCheckoutViewModel
+    @State var isFocus=false
     
     var body: some View {
+        
         VStack() {
-            
             Spacer()
             
             VStack(spacing:8) {
@@ -31,6 +32,8 @@ struct HomeCheckoutSheetView: View {
                 //                .padding()
                 .padding(.horizontal,24)
                 
+                //                    ScrollView {
+                
                 HStack {
                     
                     
@@ -46,7 +49,7 @@ struct HomeCheckoutSheetView: View {
                 
                 VStack(spacing:16) {
                     
-                    CustomTF(txt: $vm.cardNumber, hint: "Card Number",hide: .constant(false))
+                    CustomTF(txt: $vm.cardNumber, hint: "Card Number",hide: .constant(false),isAddVisa:true)
                         .keyboardType(.numberPad)
                     
                     HStack {
@@ -59,21 +62,52 @@ struct HomeCheckoutSheetView: View {
                         Spacer()
                         
                         HStack(spacing:24) {
-                            CustomTF(txt: $vm.expiryMonth, hint: "MM",hide: .constant(false))
-                                .frame(width:100)
                             
+                            RoundedRectangle(cornerRadius: 24)
+                                .fill(Color("txField"))
+                                
+                                .frame(width:80,height:60)
+                                .overlay(
+                                    
+                                    Text(vm.expiryMonth)
+                                        .foregroundColor(Color("hintTF"))
+                                    
+                                )
+                                .onTapGesture(perform: {
+                                    withAnimation{
+                                        vm.isMonth.toggle()
+                                    }
+                                })
                             
-                            CustomTF(txt: $vm.expiryYear, hint: "YY",hide: .constant(false))
-                                .frame(width:100)
+                            RoundedRectangle(cornerRadius: 24)
+                                .fill(Color("txField"))
+                                .frame(width:80,height:60)
+                                .overlay(
+                                    
+                                    Text(vm.expiryYear)
+                                        .foregroundColor(Color("hintTF"))
+                                    
+                                )
+                                .onTapGesture(perform: {
+                                    withAnimation{
+                                        vm.isYear.toggle()
+                                    }
+                                })
+                            
                         }
                         
                     }
-                    CustomTF(txt: $vm.securityCode, hint: "security Code",hide: .constant(false))
+                    CustomTF(txt: $vm.securityCode, hint: "security Code",hide: .constant(false),isAddVisa:true)
                         .keyboardType(.numberPad)
                     
-                    CustomTF(txt: $vm.firstName, hint: "first Name",hide: .constant(false))
+                    CustomTF(txt: $vm.firstName, hint: "first Name",hide: .constant(false),isAddVisa:true)
+                        .frame(height:60)
                     
-                    CustomTF(txt: $vm.secondName, hint: "second Name",hide: .constant(false))
+                    
+                    //                        CustomTF(txt: $vm.secondName, hint: "second Name",hide: .constant(false),isAddVisa:true)
+                    SCustomTF(txt: $vm.secondName,isFocus: $isFocus, hint: "second Name")
+                    
+                    //                            .
                     
                     HStack{
                         
@@ -90,6 +124,7 @@ struct HomeCheckoutSheetView: View {
                 }
                 .padding(.horizontal,24)
                 .padding(.top,30)
+                .offset(y:isFocus  ? -60 : 0)
                 
                 Button(action: {withAnimation{
                     vm.isAddVisaSheet.toggle()
@@ -128,11 +163,44 @@ struct HomeCheckoutSheetView: View {
             //            .padding(.bottom,10)
             //            .padding(.bottom,getSafeArea()?.bottom)
             .padding(.top,20)
-            .background(Color.white.clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 18)))
+            .background(GETBG().clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 18)))
             .offset(y: vm.isAddVisaSheet ? 0 : UIScreen.main.bounds.height/2)
+            //                .keyboardSpace()
+            
+            
+            
+            //            .background(Color.black.opacity(0.6))
+            //            .edgesIgnoringSafeArea(.all)
         }
+        
+        
         .background(Color.black.opacity(0.6))
         .edgesIgnoringSafeArea(.all)
+        .ignoresSafeArea(.keyboard, edges: .bottom)
+        .popup(isPresented: vm.isMonth) {
+            BottomPopupView {
+                YearPicker.init(isMonth: $vm.isMonth,isYear:$vm.isYear, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
+            }
+        }
+        
+        .popup(isPresented: vm.isYear) {
+            BottomPopupView {
+                YearPicker.init(isMonth: $vm.isMonth,isYear:$vm.isYear, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
+            }
+        }
+        //            .popup(isPresented: vm.isMonth, alignment: .center, content:
+        //                    YearPicker.init(isMonth: $vm.isMonth, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
+        ////                    YearPicker(isMonth: $vm.isMonth, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
+        //            )
+        
+    }
+    
+    func GETBG() -> Color {
+        if vm.isYear || vm.isMonth {
+            return  Color.white.opacity(0.6)
+        }else {
+            return Color.white//.clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 18)
+        }
     }
 }
 

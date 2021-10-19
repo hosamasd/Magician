@@ -23,8 +23,12 @@ class HomeCheckoutViewModel:ObservableObject {
     
     //add card
     @Published var cardNumber = ""
-    @Published var expiryMonth = ""
-    @Published var expiryYear = ""
+    @Published var isMonth = false
+
+    @Published var expiryMonth = "MM"
+    @Published var isYear = false
+
+    @Published var expiryYear = "YY"
     @Published var securityCode = ""
     @Published var firstName = ""
     @Published var secondName = ""
