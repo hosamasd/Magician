@@ -55,6 +55,12 @@
 		4E5B598227182501004C7D2F /* MainHomeTaPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B598127182501004C7D2F /* MainHomeTaPointsView.swift */; };
 		4E5C6C2B271847A100FA5298 /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C6C2A271847A100FA5298 /* CategoryRowView.swift */; };
 		4E5C6C2D27184C8300FA5298 /* TopRatingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C6C2C27184C8300FA5298 /* TopRatingRowView.swift */; };
+		4EAEE3B1271EC135003C482F /* HomeCheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B0271EC135003C482F /* HomeCheckoutViewModel.swift */; };
+		4EAEE3B4271EC260003C482F /* HomeCheckoutAddVisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B3271EC260003C482F /* HomeCheckoutAddVisa.swift */; };
+		4EAEE3B6271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B5271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift */; };
+		4EAEE3B8271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B7271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift */; };
+		4EAEE3BA271EC891003C482F /* PaymentCosenRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B9271EC891003C482F /* PaymentCosenRowView.swift */; };
+		4EB56956271EDE8300AB03B4 /* HomeCheckoutSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB56955271EDE8300AB03B4 /* HomeCheckoutSheetView.swift */; };
 		4EB64AF9271D96D20012EB48 /* HomeAccountGifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */; };
 		4EB64AFB271D9C970012EB48 /* AccountSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */; };
 		4EB8FFE927148560008C0D03 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8FFE827148560008C0D03 /* Launch Screen.storyboard */; };
@@ -173,6 +179,12 @@
 		4E5B598127182501004C7D2F /* MainHomeTaPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeTaPointsView.swift; sourceTree = "<group>"; };
 		4E5C6C2A271847A100FA5298 /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
 		4E5C6C2C27184C8300FA5298 /* TopRatingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatingRowView.swift; sourceTree = "<group>"; };
+		4EAEE3B0271EC135003C482F /* HomeCheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutViewModel.swift; sourceTree = "<group>"; };
+		4EAEE3B3271EC260003C482F /* HomeCheckoutAddVisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutAddVisa.swift; sourceTree = "<group>"; };
+		4EAEE3B5271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutAddVisaTopView.swift; sourceTree = "<group>"; };
+		4EAEE3B7271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutAddVisaAddVisa.swift; sourceTree = "<group>"; };
+		4EAEE3B9271EC891003C482F /* PaymentCosenRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCosenRowView.swift; sourceTree = "<group>"; };
+		4EB56955271EDE8300AB03B4 /* HomeCheckoutSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutSheetView.swift; sourceTree = "<group>"; };
 		4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountGifts.swift; sourceTree = "<group>"; };
 		4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSheetView.swift; sourceTree = "<group>"; };
 		4EB8FFE827148560008C0D03 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -471,6 +483,17 @@
 			path = "main Home";
 			sourceTree = "<group>";
 		};
+		4EAEE3B2271EC257003C482F /* Add Visa */ = {
+			isa = PBXGroup;
+			children = (
+				4EAEE3B3271EC260003C482F /* HomeCheckoutAddVisa.swift */,
+				4EAEE3B9271EC891003C482F /* PaymentCosenRowView.swift */,
+				4EAEE3B7271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift */,
+				4EAEE3B5271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift */,
+			);
+			path = "Add Visa";
+			sourceTree = "<group>";
+		};
 		4EB8FFE727148551008C0D03 /* support files */ = {
 			isa = PBXGroup;
 			children = (
@@ -614,6 +637,7 @@
 				4E5B597927181B6D004C7D2F /* MainHomeTabViewModel.swift */,
 				4ECAD7F5271C678800C258A5 /* HomeFavoriteViewModel.swift */,
 				4E3AF3F4271D80D30051A70B /* HomeFilterViewModel.swift */,
+				4EAEE3B0271EC135003C482F /* HomeCheckoutViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -725,7 +749,9 @@
 		4EDFA7D8271EB1D20067D83E /* CHECKOUT */ = {
 			isa = PBXGroup;
 			children = (
+				4EAEE3B2271EC257003C482F /* Add Visa */,
 				4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */,
+				4EB56955271EDE8300AB03B4 /* HomeCheckoutSheetView.swift */,
 				4EDFA7DF271EB6EA0067D83E /* row view */,
 				4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */,
 				4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */,
@@ -865,6 +891,7 @@
 				4ECD6DB927145E8500011208 /* Extensions_ui.swift in Sources */,
 				4E171E452716F3C3000837BF /* HomeAccountTopView.swift in Sources */,
 				4EFC794A2716C8DE00C5DF36 /* MainMapView.swift in Sources */,
+				4EAEE3B1271EC135003C482F /* HomeCheckoutViewModel.swift in Sources */,
 				4E3AF3FB271D823A0051A70B /* SecondHomeFilterTopView.swift in Sources */,
 				4EED73C2271D45B60059DD57 /* ThirdHomeSelectedCategoryTopView.swift in Sources */,
 				4EEF4D8C271724D300D39193 /* AccountSavedAddress.swift in Sources */,
@@ -885,6 +912,7 @@
 				4EFC79562716D62F00C5DF36 /* SSHomeONBoard.swift in Sources */,
 				4EDBAB0D2717FF8400AFD181 /* HomeOrdersViewModel.swift in Sources */,
 				4E38AF7E271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift in Sources */,
+				4EAEE3B8271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift in Sources */,
 				4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */,
 				4ECAD7F8271C67E800C258A5 /* FavoriteRowView.swift in Sources */,
 				4EDC43902717054C00C2347B /* AccountRowView.swift in Sources */,
@@ -895,6 +923,7 @@
 				4E09BFB327182EC3006928FD /* HomeCategoryView.swift in Sources */,
 				4E5B597827181B34004C7D2F /* MainHomeTab.swift in Sources */,
 				4EDBAB112718010700AFD181 /* OrderMmodel.swift in Sources */,
+				4EB56956271EDE8300AB03B4 /* HomeCheckoutSheetView.swift in Sources */,
 				4E171E402716F31A000837BF /* HomeAccount.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
 				4E38AF7C271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift in Sources */,
@@ -902,6 +931,7 @@
 				4ED0F596271D633900D12DBD /* CarsoelRowView.swift in Sources */,
 				4EC550A42716AE990025F5C9 /* KeyboardSpace.swift in Sources */,
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
+				4EAEE3B6271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift in Sources */,
 				4EDDBF51271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift in Sources */,
 				4E5C6C2D27184C8300FA5298 /* TopRatingRowView.swift in Sources */,
 				4EDFA7E1271EB6F10067D83E /* HomeCheckoutRowView.swift in Sources */,
@@ -940,6 +970,7 @@
 				4EED73C4271D48D50059DD57 /* ThirdHomeSelectedCategoryRowView.swift in Sources */,
 				4E3AF3FD271D83DB0051A70B /* SecondHomeFilterRowView.swift in Sources */,
 				4EB64AF9271D96D20012EB48 /* HomeAccountGifts.swift in Sources */,
+				4EAEE3BA271EC891003C482F /* PaymentCosenRowView.swift in Sources */,
 				4E3F6B26271E7A9500529C15 /* SelectedItemScenesBottomScroll.swift in Sources */,
 				4ECD6DBC27145EBC00011208 /* AppDelegate.swift in Sources */,
 				4E560942271855A200539B9C /* OfferModel.swift in Sources */,
@@ -958,6 +989,7 @@
 				4EFC79492716C8DE00C5DF36 /* LocationView.swift in Sources */,
 				4EE52441271A9E4600AADB1F /* MainHomeWelcome.swift in Sources */,
 				4ECD6DC02714610B00011208 /* InfoModel.swift in Sources */,
+				4EAEE3B4271EC260003C482F /* HomeCheckoutAddVisa.swift in Sources */,
 				4EE2798427187122004EE0B6 /* CarsoelHome.swift in Sources */,
 				4EFC79482716C8DE00C5DF36 /* LocationFetcher.swift in Sources */,
 				4E3AF3F5271D80D30051A70B /* HomeFilterViewModel.swift in Sources */,

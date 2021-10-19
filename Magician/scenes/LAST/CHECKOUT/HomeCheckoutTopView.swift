@@ -9,12 +9,14 @@ import SwiftUI
 
 struct HomeCheckoutTopView: View {
 //    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+    @ObservedObject var vm:HomeCheckoutViewModel
     @Binding var isShow:Bool
     var body: some View {
         HStack{
             
             HStack (spacing:16){
                 Button(action: {withAnimation{
+                    vm.isCheckOut ? vm.isCheckOut.toggle() : 
                     isShow.toggle()
                 }}, label: {
     //                Image(systemName: vmm.getBackImage())
@@ -22,7 +24,7 @@ struct HomeCheckoutTopView: View {
             })
                 .foregroundColor(.black)
                 
-                Text("My Order")
+                Text(LocalizedStringKey(vm.isCheckOut ? "Checkout" : "My Order"))
                     .font(.boldCustomFontSystem(size: 27))
                     .fontWeight(.bold)
             }

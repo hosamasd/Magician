@@ -8,6 +8,13 @@
 
 import SwiftUI
 
+extension Color {
+    
+//    init(_ mainColor:String ) {
+//        self.init("mains")
+//    }
+//    
+}
 extension Image {
     init(_ name: String, defaultImage: String) {
         if let img = UIImage(named: name) {
@@ -23,7 +30,11 @@ extension Image {
         } else {
             self.init(systemName: defaultSystemImage)
         }
+        
+        
     }
+    
+
 }
 
 //Image("landscape", defaultSystemImage: "questionmark.circle.fill")
