@@ -41,6 +41,8 @@ struct SelectedItemScenes: View {
             
             SelectedItemScenesTopRow()
             
+            SelectedItemScenesBottomScroll()
+            
             Spacer()
             
         }

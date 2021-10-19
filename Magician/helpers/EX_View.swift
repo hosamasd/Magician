@@ -34,6 +34,10 @@ extension Font {
     public static func customFontSystem(size: CGFloat) -> Font {
         return Font.custom("Lato-Regular", size:size)
  }
+    
+    public static func boldCustomFontSystem(size: CGFloat) -> Font {
+        return Font.custom("Lato-Black", size:size)
+ }
 }
 
 extension View {
