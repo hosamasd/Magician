@@ -27,6 +27,13 @@
 		4E250C86271C4B9D001873B6 /* SelectedCategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E250C85271C4B9D001873B6 /* SelectedCategoryRowView.swift */; };
 		4E2ADBF32717E5380039C842 /* AddAddressSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ADBF22717E5380039C842 /* AddAddressSheetView.swift */; };
 		4E2ADBF52717E5E90039C842 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ADBF42717E5E90039C842 /* CustomCorners.swift */; };
+		4E38AF7A271E8F6000D87FAA /* SelectedItemAddNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF79271E8F6000D87FAA /* SelectedItemAddNotes.swift */; };
+		4E38AF7C271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF7B271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift */; };
+		4E38AF7E271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF7D271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift */; };
+		4E38AF81271E93B000D87FAA /* FirstStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF80271E93B000D87FAA /* FirstStepView.swift */; };
+		4E38AF83271E948A00D87FAA /* FirstStepViewRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF82271E948A00D87FAA /* FirstStepViewRowView.swift */; };
+		4E38AF85271E962500D87FAA /* BottomAddNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF84271E962500D87FAA /* BottomAddNotesView.swift */; };
+		4E38AF87271E98D600D87FAA /* SelectedItemAddNotesSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF86271E98D600D87FAA /* SelectedItemAddNotesSheetView.swift */; };
 		4E3AF3F3271D80B90051A70B /* HomeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3AF3F2271D80B90051A70B /* HomeFilter.swift */; };
 		4E3AF3F5271D80D30051A70B /* HomeFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3AF3F4271D80D30051A70B /* HomeFilterViewModel.swift */; };
 		4E3AF3F7271D818A0051A70B /* HomeFilterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3AF3F6271D818A0051A70B /* HomeFilterRowView.swift */; };
@@ -134,6 +141,13 @@
 		4E250C85271C4B9D001873B6 /* SelectedCategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryRowView.swift; sourceTree = "<group>"; };
 		4E2ADBF22717E5380039C842 /* AddAddressSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressSheetView.swift; sourceTree = "<group>"; };
 		4E2ADBF42717E5E90039C842 /* CustomCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		4E38AF79271E8F6000D87FAA /* SelectedItemAddNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemAddNotes.swift; sourceTree = "<group>"; };
+		4E38AF7B271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemAddNotesTopRow.swift; sourceTree = "<group>"; };
+		4E38AF7D271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemAddNotesAddMinusView.swift; sourceTree = "<group>"; };
+		4E38AF80271E93B000D87FAA /* FirstStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepView.swift; sourceTree = "<group>"; };
+		4E38AF82271E948A00D87FAA /* FirstStepViewRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepViewRowView.swift; sourceTree = "<group>"; };
+		4E38AF84271E962500D87FAA /* BottomAddNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomAddNotesView.swift; sourceTree = "<group>"; };
+		4E38AF86271E98D600D87FAA /* SelectedItemAddNotesSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemAddNotesSheetView.swift; sourceTree = "<group>"; };
 		4E3AF3F2271D80B90051A70B /* HomeFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilter.swift; sourceTree = "<group>"; };
 		4E3AF3F4271D80D30051A70B /* HomeFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterViewModel.swift; sourceTree = "<group>"; };
 		4E3AF3F6271D818A0051A70B /* HomeFilterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterRowView.swift; sourceTree = "<group>"; };
@@ -326,6 +340,28 @@
 			path = "saved address";
 			sourceTree = "<group>";
 		};
+		4E38AF78271E8F1300D87FAA /* Selected Item */ = {
+			isa = PBXGroup;
+			children = (
+				4E38AF79271E8F6000D87FAA /* SelectedItemAddNotes.swift */,
+				4E38AF86271E98D600D87FAA /* SelectedItemAddNotesSheetView.swift */,
+				4E38AF84271E962500D87FAA /* BottomAddNotesView.swift */,
+				4E38AF7F271E93A600D87FAA /* first step */,
+				4E38AF7D271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift */,
+				4E38AF7B271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift */,
+			);
+			path = "Selected Item";
+			sourceTree = "<group>";
+		};
+		4E38AF7F271E93A600D87FAA /* first step */ = {
+			isa = PBXGroup;
+			children = (
+				4E38AF80271E93B000D87FAA /* FirstStepView.swift */,
+				4E38AF82271E948A00D87FAA /* FirstStepViewRowView.swift */,
+			);
+			path = "first step";
+			sourceTree = "<group>";
+		};
 		4E3AF3EF271D7C7B0051A70B /* top view */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +402,7 @@
 		4E3F6B27271E7B8F00529C15 /* bottom */ = {
 			isa = PBXGroup;
 			children = (
+				4E38AF78271E8F1300D87FAA /* Selected Item */,
 				4E3F6B25271E7A9500529C15 /* SelectedItemScenesBottomScroll.swift */,
 				4E3F6B2A271E7E1100529C15 /* SelectedItemScenesBottomRowView.swift */,
 				4E3F6B28271E7B9800529C15 /* SelectedItemSceneRowView.swift */,
@@ -813,11 +850,13 @@
 				4E5B597E27181D0D004C7D2F /* MainHomeTabProfileInfo.swift in Sources */,
 				4E1538CA2714B3C100D5DD52 /* CustomTF.swift in Sources */,
 				4EBF11592715882B008C3C89 /* URLBuilder.swift in Sources */,
+				4E38AF81271E93B000D87FAA /* FirstStepView.swift in Sources */,
 				4E1538D12714B6DF00D5DD52 /* LoginView.swift in Sources */,
 				4EEF4D8627171D3900D39193 /* HomeAccountImage.swift in Sources */,
 				4E171E422716F339000837BF /* HomeAccountViewModel.swift in Sources */,
 				4EFC79562716D62F00C5DF36 /* SSHomeONBoard.swift in Sources */,
 				4EDBAB0D2717FF8400AFD181 /* HomeOrdersViewModel.swift in Sources */,
+				4E38AF7E271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift in Sources */,
 				4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */,
 				4ECAD7F8271C67E800C258A5 /* FavoriteRowView.swift in Sources */,
 				4EDC43902717054C00C2347B /* AccountRowView.swift in Sources */,
@@ -830,6 +869,7 @@
 				4EDBAB112718010700AFD181 /* OrderMmodel.swift in Sources */,
 				4E171E402716F31A000837BF /* HomeAccount.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
+				4E38AF7C271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift in Sources */,
 				4E5B597C27181B9F004C7D2F /* MainHomeTabTopView.swift in Sources */,
 				4ED0F596271D633900D12DBD /* CarsoelRowView.swift in Sources */,
 				4EC550A42716AE990025F5C9 /* KeyboardSpace.swift in Sources */,
@@ -843,6 +883,7 @@
 				4EDBAB152718053D00AFD181 /* viewModifiers.swift in Sources */,
 				4EFC794C2716CD9300C5DF36 /* GifI_mage.swift in Sources */,
 				4E250C84271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift in Sources */,
+				4E38AF83271E948A00D87FAA /* FirstStepViewRowView.swift in Sources */,
 				4E1538CF2714B64000D5DD52 /* ResetView.swift in Sources */,
 				4E2ADBF32717E5380039C842 /* AddAddressSheetView.swift in Sources */,
 				4E3AF3F7271D818A0051A70B /* HomeFilterRowView.swift in Sources */,
@@ -853,9 +894,11 @@
 				4E5609402718558300539B9C /* SpecialOfferRowView.swift in Sources */,
 				4ED0F594271D57CC00D12DBD /* SContentView.swift in Sources */,
 				4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */,
+				4E38AF85271E962500D87FAA /* BottomAddNotesView.swift in Sources */,
 				4EDDBF53271BFFDD00BACD49 /* SelectedOrderRowView.swift in Sources */,
 				4ECD6DBE271460D800011208 /* HomeONBoard.swift in Sources */,
 				4ECF1EA92715439F00698148 /* SPasscodeField.swift in Sources */,
+				4E38AF87271E98D600D87FAA /* SelectedItemAddNotesSheetView.swift in Sources */,
 				4ECAD7FA271C68B500C258A5 /* HomeFavoriteTopView.swift in Sources */,
 				4ECD6DB827145E8500011208 /* hideKeyboard.swift in Sources */,
 				4E3F6B2B271E7E1100529C15 /* SelectedItemScenesBottomRowView.swift in Sources */,
@@ -886,6 +929,7 @@
 				4EE2798427187122004EE0B6 /* CarsoelHome.swift in Sources */,
 				4EFC79482716C8DE00C5DF36 /* LocationFetcher.swift in Sources */,
 				4E3AF3F5271D80D30051A70B /* HomeFilterViewModel.swift in Sources */,
+				4E38AF7A271E8F6000D87FAA /* SelectedItemAddNotes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

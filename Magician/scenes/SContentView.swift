@@ -14,7 +14,7 @@ struct SContentView: View {
 //    @StateObject var vmsss = MainHomeTabViewModel()
     
     var body: some View {
-        SelectedItemScenes()
+        SelectedItemAddNotes()
 //            .environmentObject(vm)
 //            .environmentObject(vmsss)
     }

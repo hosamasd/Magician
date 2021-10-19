@@ -38,8 +38,12 @@ struct SelectedItemScenesBottomScroll: View {
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)) {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack (alignment:.leading){
-                        Text(vm.selectedMenu)
-                            .frame(width:.infinity,alignment: .leading)
+                        HStack {
+                            Text(vm.selectedMenu)
+
+Spacer()
+                            
+                        }
                         
                         LazyVGrid(columns: columns,spacing:12){
                             
