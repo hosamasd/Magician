@@ -13,6 +13,7 @@ struct HomeFilterProcess: View {
     
     @StateObject var vm = HomeFilterViewModel()
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 1)
+    var sColumns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 3)
     
     var body: some View {
         VStack {
@@ -23,29 +24,46 @@ struct HomeFilterProcess: View {
                 
                 HomeFilterProcessMainChoise()
                 
+                // Pinned View...
+                
+                if !vm.pinnedViewsArray.isEmpty{
+                    
+                    LazyVGrid(columns: sColumns,spacing: 16){
+                        
+                        ForEach(vm.pinnedViewsArray,id:\.name){pinned in
+                            
+                            HomeFilterProcessPinnedRowView(x:pinned)
+                        }
+                        
+                    }
+                    .padding(.top)
+                    .padding()
+                    
+                }
+                
                 ZStack {
                     LazyVGrid(columns: columns,spacing:12){
                         
-                        ForEach(vm.isFirst ? vm.popularArray : vm.sortArray) {index in
+                        ForEach( vm.popularArray ,id:\.name) {index in
                             HomeFilterProcessPoplurRowView(x:index)
                         }
                     }
                     .opacity(vm.isFirst ? 1 : 0)
                     .transition(.move(edge: .trailing))
-
+                    
                     
                     if vm.isSecond{
-                    LazyVGrid(columns: columns,spacing:12){
-                        
-                        ForEach( vm.sortArray) {index in
-                            HomeFilterProcessPoplurRowView(x:index)
+                        LazyVGrid(columns: columns,spacing:12){
+                            
+                            ForEach( vm.sortArray ,id:\.name) {index in
+                                HomeFilterProcessPoplurRowView(x:index)
+                            }
                         }
+                        //                    }
+                        .transition(.move(edge: .trailing))
+                        //                    .opacity(vm.isSecond ? 1 : 0)
+                        
                     }
-//                    }
-                    .transition(.move(edge: .trailing))
-//                    .opacity(vm.isSecond ? 1 : 0)
-
-                }
                 }
                 .padding()
                 .padding(.top)
@@ -71,7 +89,7 @@ struct HomeFilterProcess: View {
                 })
                 .padding(.horizontal,42)
                 .frame(height:60)
-                                .padding(.bottom,bottomSafeArea(x: 30.0,y: 0.0) )
+                //                .padding(.bottom,bottomSafeArea(x: 30.0,y: 0.0) )
                 
             }
             

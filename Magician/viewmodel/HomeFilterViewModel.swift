@@ -7,7 +7,14 @@
 
 import SwiftUI
 
-struct FixedFilterModel:Identifiable {
+class FixedFilterModel {
+    internal init(id: String = UUID().uuidString, name: String, nameAr: String, isCheck: Bool = false) {
+        self.id = id
+        self.name = name
+        self.nameAr = nameAr
+        self.isCheck = isCheck
+    }
+    
     var id = UUID().uuidString
     var name,nameAr:String
     var isCheck = false
@@ -48,23 +55,67 @@ class HomeFilterViewModel:ObservableObject {
     @Published var popularArray:[FixedFilterModel] = [
         FixedFilterModel(name: "Free Delivery", nameAr: "Free Delivery"),
         FixedFilterModel(name: "Fast Delivery", nameAr: "Fast Delivery")
-,
+        ,
         FixedFilterModel(name: "Top Rated", nameAr: "Top Rated")
-,
+        ,
         FixedFilterModel(name: "New Added", nameAr: "New Added")
-
+        
     ]
     
     @Published var sortArray:[FixedFilterModel] = [
         FixedFilterModel(name: "Recommendation", nameAr: "Recommendation"),
         FixedFilterModel(name: "Price : Low - High", nameAr: "Price : Low - High")
-,
+        ,
         FixedFilterModel(name: "Price : High - Low", nameAr: "Price : High - Low")
-,
+        ,
         FixedFilterModel(name: "A to Z", nameAr: "A to Z")
-,
+        ,
         FixedFilterModel(name: "Rating", nameAr: "Rating")
     ]
+    
+    @Published var pinnedViewsArray:[FixedFilterModel] = [
+//        FixedFilterModel(name: "Price ", nameAr: "Price : Low - High")
+        
+    ]
+    
+    func addToPinnedView(x:FixedFilterModel)  {
+        if popularArray.contains(where: {$0.name==x.name}) {
+            let q = popularArray.filter{$0.name==x.name}
+            q.first?.isCheck=true
+        }
+        
+        if sortArray.contains(where: {$0.name==x.name}) {
+            let q = sortArray.filter{$0.name==x.name}
+            q.first?.isCheck=true
+        }
+        pinnedViewsArray.contains(where:{$0.name==x.name}) ? () : pinnedViewsArray.append(x)
+        
+    }
+    func removePinnedFilter(x:FixedFilterModel)  {
+        var index = 0
+        
+        for i in 0..<pinnedViewsArray.count{
+            
+            if x.name == pinnedViewsArray[i].name{
+                
+                index = i
+            }
+        }
+        
+        // removing pin view...
+        
+        pinnedViewsArray.remove(at: index)
+        
+        if popularArray.contains(where: {$0.name==x.name}) {
+            let q = popularArray.filter{$0.name==x.name}
+            q.first?.isCheck=false
+        }
+        
+        if sortArray.contains(where: {$0.name==x.name}) {
+            let q = sortArray.filter{$0.name==x.name}
+            q.first?.isCheck=false
+        }
+    }
     
     func getData()  {
         //        withAnimation{isLooding.toggle()}
