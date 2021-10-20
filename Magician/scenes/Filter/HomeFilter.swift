@@ -30,23 +30,47 @@ struct HomeFilter: View {
                 
                     
                     
-                    ScrollView(showsIndicators:false){
+                ZStack {
+                    
+                    VStack {
                         
+                        Spacer()
                         
-                        LazyVGrid(columns: columns,spacing:12){
-                            
-                            // assigning name as ID...
-                            
-                            ForEach(vm.filterArray,id: \.name){gradient in
-                                
-                                HomeFilterRowView(x:gradient)
-                                //                                    GradientView(columns: $columns, gradient: gradient, vm: vm)
-                            }
-                        }
-                        .padding(.horizontal)
-                        .padding(.bottom)
+                        Text("Select Your Category")
+                            .font(.system(size: 25))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("mains"))
+                        
+                        Image("Group 8275")
+                        
+                        Spacer()
+                        
                     }
+                    .opacity(vm.selectedCategory == "" ? 1 : 0)
+                    
+                 if    vm.selectedCategory != "" {
+                    
+                    ScrollView(showsIndicators:false){
+                            
+                            
+                            LazyVGrid(columns: columns,spacing:12){
+                                
+                                // assigning name as ID...
+                                
+                                ForEach(vm.filterArray,id: \.name){gradient in
+                                    
+                                    HomeFilterRowView(x:gradient)
+                                    //                                    GradientView(columns: $columns, gradient: gradient, vm: vm)
+                                }
+                            }
+                            .padding(.horizontal)
+                            .padding(.bottom)
+                        }
                     .padding(.top,-12)
+                    .transition(.move(edge: .leading))
+                    
+                 }
+                }
                     
                 }
                 .padding(.horizontal,32)

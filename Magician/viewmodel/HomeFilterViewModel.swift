@@ -28,7 +28,7 @@ class HomeFilterViewModel:ObservableObject {
     @Published var alertMsg = ""
     @Published var isLooding = false
     
-    @Published var selectedCategory = "Food"
+    @Published var selectedCategory = ""//"Food"
     @Published var isShowFilter = false
     
     @Published var isFirst = true

@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct SContentView: View {
-//    @StateObject var vm = HomeMainTabBarViewModel()
-//    @StateObject var vms = HomeReigtserViewModel()
+    @StateObject var vm = HomeMainTabBarViewModel()
+    @StateObject var vms = HomeFilterViewModel()
 //    @StateObject var vmss = HomeOrdersViewModel()
 //    @StateObject var vmsss = MainHomeTabViewModel()
     
     var body: some View {
+        HomeFilter()
+            .environmentObject(vm)
+            .environmentObject(vms)
 //        HomeTrackOrder()
 //        YearPicker(isMonth: .constant(false))//start: 2000, end: 2020)
-        HomeCheckout(isShow: .constant(false))
+//        HomeCheckout(isShow: .constant(false))
 //        HomeFilterProcess()
 //        SelectedItemAddNotes()
 //            .environmentObject(vm)

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SelectedCategoryRowView: View {
     var x =                 OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
-    @EnvironmentObject var vm:MainHomeTabViewModel
+    //    @EnvironmentObject var vm:MainHomeTabViewModel
+    @StateObject var vm=MainHomeTabViewModel()
     
     
     var body: some View {
@@ -58,54 +59,106 @@ struct SelectedCategoryRowView: View {
             ZStack {
                 VStack(alignment: .leading, spacing: 12, content: {
                     //                VStack {
+                    //                    HStack {
+                    Text(x.name)
+                        .font(.customFontSystem(size: 15))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("mains"))
+                    
+                    //                        Spacer()
+                    //
+                    //                        Text("50% OFF")
+                    //                            .font(.system(size: 14))
+                    ////                            .font(.customFontSystem(size:  14))
+                    //                            .fontWeight(.bold)
+                    //                            .foregroundColor(Color("mains"))
+                    //                            .padding(.horizontal ,  16 )
+                    //                            .padding(.vertical, 6 )
+                    //                            .background(Color("mains").opacity(0.22))
+                    //                            .clipShape(Capsule())
+                    //                    }
                     HStack {
-                        Text(x.name)
-                            .font(.customFontSystem(size: 15))
-                            .fontWeight(.bold)
-                            .foregroundColor(Color("mains"))
+                        
+                        Text("Chicken skewers ")
+                            .font(.customFontSystem(size: 12))
+                            .fontWeight(.regular)
+                            .foregroundColor(Color.black.opacity(0.6))
+                            .padding(.top,4)
                         
                         Spacer()
                         
                         Text("50% OFF")
-                            .font(.customFontSystem(size:  14))
+                            .font(.system(size: 14))
+                            //                            .font(.customFontSystem(size:  14))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
                             .padding(.horizontal ,  16 )
                             .padding(.vertical, 6 )
                             .background(Color("mains").opacity(0.22))
                             .clipShape(Capsule())
+                        
                     }
-                    
-                    
-                    Text("Chicken skewers with slices of sweet peppers and dill")
-                        .font(.customFontSystem(size: 12))
-                        .fontWeight(.regular)
-                        .foregroundColor(Color.black.opacity(0.6))
-                        .padding(.top,4)
+                    //                    Text("Chicken skewers with slices of sweet peppers and dill")
+                    //                        .font(.customFontSystem(size: 12))
+                    //                        .fontWeight(.regular)
+                    //                        .foregroundColor(Color.black.opacity(0.6))
+                    //                        .padding(.top,4)
                     
                     //                }
                     //                .padding(.ver)
                     
-                    HStack(spacing:24){
-                        
-                        Label(
-                            title: { Text("Cairo, Egypt") },
-                            icon: { Image("pin") }
-                        )
-                        
-                        Label(
-                            title: { Text("20 min") },
-                            icon: { Image("XMLID_1031_") }
-                        )
+                    HStack {
                         
                         Label(
                             title: { Text("10 EGP") },
                             icon: { Image("delivery") }
                         )
-                        
                         Spacer()
+                        
+                        HStack(spacing:12){
+                            
+                            Text("110 EGP")
+                                .font(.customFontSystem(size:  15))
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color("mains"))
+                                .overlay(
+                                    
+                                    RoundedRectangle(cornerRadius: 2)
+                                        .fill(Color("mains").opacity(0.6))
+                                        .frame(height:1)
+                                    
+                                )
+                            
+                            Text("50EGP")
+                                .font(.customFontSystem(size: 20))
+                                
+                                //                    .font(.system(size: 25))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color("oprice"))
+                            
+                        }
+                        
+                        //                    HStack(spacing:24){
+                        //
+                        //                        Label(
+                        //                            title: { Text("Cairo, Egypt") },
+                        //                            icon: { Image("pin") }
+                        //                        )
+                        //
+                        //                        Label(
+                        //                            title: { Text("20 min") },
+                        //                            icon: { Image("XMLID_1031_") }
+                        //                        )
+                        //
+                        //                            Label(
+                        //                                title: { Text("10 EGP") },
+                        //                                icon: { Image("delivery") }
+                        //                            )
+                        //
+                        //                        Spacer()
+                        //                    }
+                        .foregroundColor(Color.black.opacity(0.6))
                     }
-                    .foregroundColor(Color.black.opacity(0.6))
                     
                     
                     
@@ -118,28 +171,12 @@ struct SelectedCategoryRowView: View {
                     
                     VStack(alignment: .leading, spacing: 12, content: {
                         //                VStack {
-                        Text(x.name)
-                            .font(.customFontSystem(size: 15))
-                            .fontWeight(.bold)
-                            .foregroundColor(Color("mains"))
-                        
-                        Text("Chicken skewers with slices of sweet peppers and dill")
-                            .font(.customFontSystem(size: 12))
-                            .fontWeight(.regular)
-                            .lineLimit(2)
-                            .foregroundColor(Color.black.opacity(0.6))
-                            .padding(.top,4)
-                        
-                        
-                        HStack(){
+                        HStack {
                             
-                            Label(
-                                title: { Text("Cairo, Egypt")
-                                    .font(.customFontSystem(size: 10))
-                                    
-                                },
-                                icon: { Image("pin") }
-                            )
+                            Text(x.name)
+                                .font(.customFontSystem(size: 15))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color("mains"))
                             
                             Spacer()
                             
@@ -151,29 +188,91 @@ struct SelectedCategoryRowView: View {
                                 .padding(.vertical,3)
                                 .background(Color("mains").opacity(0.22))
                                 .clipShape(Capsule())
-                            
-                            
-                            
                         }
                         
-                        HStack(){
-                            Label(
-                                title: { Text("20 min")
-                                    .font(.customFontSystem(size: 10))
-                                },
-                                icon: { Image("XMLID_1031_") }
-                            )
+                        Text("Chicken skewers with slices of sweet peppers and dill")
+                            .font(.customFontSystem(size: 12))
+                            .fontWeight(.regular)
+                            .lineLimit(2)
+                            .foregroundColor(Color.black.opacity(0.6))
+                            .padding(.top,4)
+                        
+                        
+//                        HStack(){
+//
+//                            Label(
+//                                title: { Text("Cairo, Egypt")
+//                                    .font(.customFontSystem(size: 10))
+//
+//                                },
+//                                icon: { Image("pin") }
+//                            )
+//
+//                            Spacer()
+//
+//                            Text("50% OFF")
+//                                .font(.customFontSystem(size: 10))
+//                                .fontWeight(.semibold)
+//                                .foregroundColor(Color("mains"))
+//                                .padding(.horizontal,8)
+//                                .padding(.vertical,3)
+//                                .background(Color("mains").opacity(0.22))
+//                                .clipShape(Capsule())
+//
+//
+//
+//                        }
+                        
+//                        HStack(){
+//                            Label(
+//                                title: { Text("20 min")
+//                                    .font(.customFontSystem(size: 10))
+//                                },
+//                                icon: { Image("XMLID_1031_") }
+//                            )
+//
+//                            Spacer()
+//
+//                            Label(
+//                                title: { Text("10 EGP")
+//                                    .font(.customFontSystem(size: 10))
+//
+//                                },
+//                                icon: { Image("delivery") }
+//                            )
+//
+//                        }
+                        
+                        HStack {
                             
-                            Spacer()
-                            
                             Label(
-                                title: { Text("10 EGP")
-                                    .font(.customFontSystem(size: 10))
-                                    
-                                },
+                                title: { Text("10 EGP") },
                                 icon: { Image("delivery") }
                             )
+                            Spacer()
                             
+                            HStack(spacing:12){
+                                
+                                Text("110 EGP")
+                                    .font(.customFontSystem(size:  15))
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color("mains"))
+                                    .overlay(
+                                        
+                                        RoundedRectangle(cornerRadius: 2)
+                                            .fill(Color("mains").opacity(0.6))
+                                            .frame(height:1)
+                                        
+                                    )
+                                
+                                Text("50EGP")
+                                    .font(.customFontSystem(size: 20))
+                                    
+                                    //                    .font(.system(size: 25))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color("oprice"))
+                                
+                            }
                         }
                     })
                     .padding(.horizontal,12)
@@ -193,7 +292,8 @@ struct SelectedCategoryRowView: View {
 
 struct SelectedCategoryRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SelectedCategoryRowView()
+        //        ContentView()
         //        SelectedCategoryRowView()
     }
 }
