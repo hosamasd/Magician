@@ -31,9 +31,9 @@ struct HomeCheckout: View {
         ZStack {
             VStack {
                 
-               
-                        HomeCheckoutTopView(vm:vm,isShow: $isShow)
-                        
+                
+                HomeCheckoutTopView(vm:vm,isShow: $isShow)
+                
                 ZStack {
                     
                     VStack {
@@ -152,7 +152,7 @@ struct HomeCheckout: View {
                         })
                         .frame(height:60)
                         .padding(.horizontal)
-//                        .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
+                        //                        .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
                     }
                     .opacity(vm.isCheckOut ? 0 : 1)
                     
@@ -175,14 +175,19 @@ struct HomeCheckout: View {
             }
         }
         
-//        .environmentObject(vmm)
-//        .environmentObject(vm)
-
+        //        .environmentObject(vmm)
+        //        .environmentObject(vm)
+        
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        
+        .alert(isPresented: $vm.isChangeAddress, AlertConfig(title: "Change Address", action: {
+            //                    print("Text \($0 ?? "Cancelled")")
+            vm.address=$0 ?? ""
+        }))
         
     }
 }

@@ -1,0 +1,91 @@
+//
+//  HomeFilterProcess.swift
+//  Magician
+//
+//  Created by hosam on 20/10/2021.
+//
+
+import SwiftUI
+
+struct HomeFilterProcess: View {
+    //    @EnvironmentObject var vm : HomeFilterViewModel
+    //@EnvironmentObject var vmm : HomeMainTabBarViewModel
+    
+    @StateObject var vm = HomeFilterViewModel()
+    @State var columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 1)
+    
+    var body: some View {
+        VStack {
+            
+            HomeFilterProcessTopView()
+            
+            VStack {
+                
+                HomeFilterProcessMainChoise()
+                
+                ZStack {
+                    LazyVGrid(columns: columns,spacing:12){
+                        
+                        ForEach(vm.isFirst ? vm.popularArray : vm.sortArray) {index in
+                            HomeFilterProcessPoplurRowView(x:index)
+                        }
+                    }
+                    .opacity(vm.isFirst ? 1 : 0)
+                    .transition(.move(edge: .trailing))
+
+                    
+                    if vm.isSecond{
+                    LazyVGrid(columns: columns,spacing:12){
+                        
+                        ForEach( vm.sortArray) {index in
+                            HomeFilterProcessPoplurRowView(x:index)
+                        }
+                    }
+//                    }
+                    .transition(.move(edge: .trailing))
+//                    .opacity(vm.isSecond ? 1 : 0)
+
+                }
+                }
+                .padding()
+                .padding(.top)
+                Spacer()
+                
+                Button(action: {
+                    withAnimation{
+                        //                            vm.isLooding=true
+                        //                        vm.makeLogin()
+                    }
+                }, label: {
+                    RoundedRectangle(cornerRadius: 28)
+                        
+                        .fill(Color("mains"))
+                        .overlay(
+                            
+                            Text(LocalizedStringKey("Apply "))
+                                .font(.customFontSystem(size: 16))
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.white)//.opacity(0.6))
+                        )
+                    
+                })
+                .padding(.horizontal,42)
+                .frame(height:60)
+                                .padding(.bottom,bottomSafeArea(x: 30.0,y: 0.0) )
+                
+            }
+            
+            .padding(.top,40)
+            
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        .environmentObject(vm)
+    }
+}
+
+struct HomeFilterProcess_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeFilterProcess()
+    }
+}

@@ -7,13 +7,26 @@
 
 import SwiftUI
 
+struct FixedFilterModel:Identifiable {
+    var id = UUID().uuidString
+    var name,nameAr:String
+    var isCheck = false
+    
+    
+    
+}
+
 class HomeFilterViewModel:ObservableObject {
     @Published var alert = false
     @Published var alertMsg = ""
     @Published var isLooding = false
     
     @Published var selectedCategory = "Food"
-
+    @Published var isShowFilter = false
+    
+    @Published var isFirst = true
+    @Published var isSecond = false
+    
     
     @Published var categoryArray:[MainCategory] = [
         MainCategory(name: "Food", img: "Group 8367-1",nameAr:"Food",subImage:"food",mainImg: "Group 8367"),
@@ -30,6 +43,27 @@ class HomeFilterViewModel:ObservableObject {
         OfferModel(name: "Nobile Housex", img: "28", subImg: "ramen", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true),
         OfferModel(name: "Nobile Housez", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
         
+    ]
+    
+    @Published var popularArray:[FixedFilterModel] = [
+        FixedFilterModel(name: "Free Delivery", nameAr: "Free Delivery"),
+        FixedFilterModel(name: "Fast Delivery", nameAr: "Fast Delivery")
+,
+        FixedFilterModel(name: "Top Rated", nameAr: "Top Rated")
+,
+        FixedFilterModel(name: "New Added", nameAr: "New Added")
+
+    ]
+    
+    @Published var sortArray:[FixedFilterModel] = [
+        FixedFilterModel(name: "Recommendation", nameAr: "Recommendation"),
+        FixedFilterModel(name: "Price : Low - High", nameAr: "Price : Low - High")
+,
+        FixedFilterModel(name: "Price : High - Low", nameAr: "Price : High - Low")
+,
+        FixedFilterModel(name: "A to Z", nameAr: "A to Z")
+,
+        FixedFilterModel(name: "Rating", nameAr: "Rating")
     ]
     
     func getData()  {

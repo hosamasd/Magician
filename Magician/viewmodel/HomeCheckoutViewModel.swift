@@ -12,14 +12,16 @@ class HomeCheckoutViewModel:ObservableObject {
     @Published var alertMsg = ""
     @Published var isLooding = false
     
-    @Published var isCheckOut = true
+    @Published var isCheckOut = false
     
     @Published var address = "653 Nostrand Ave.,\n Brooklyn, NY 11216"
+    @Published var isChangeAddress = false
+
     @Published var isCashOnDelivery = false
     @Published var isFirstVisa = false
     @Published var isSecondVisa = false
     
-    @Published var isAddVisaSheet = true
+    @Published var isAddVisaSheet = false
     
     //add card
     @Published var cardNumber = ""

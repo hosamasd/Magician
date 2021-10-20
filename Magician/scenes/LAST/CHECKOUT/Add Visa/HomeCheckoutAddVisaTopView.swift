@@ -30,7 +30,7 @@ struct HomeCheckoutAddVisaTopView: View {
                     Spacer()
                     
                     Button(action: {withAnimation{
-                        
+                        vm.isChangeAddress.toggle()
                     }}, label: {
                         Text("Change")
                             .foregroundColor(Color("mains"))

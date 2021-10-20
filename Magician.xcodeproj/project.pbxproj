@@ -101,6 +101,11 @@
 		4EDBAB112718010700AFD181 /* OrderMmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDBAB102718010700AFD181 /* OrderMmodel.swift */; };
 		4EDBAB13271801C300AFD181 /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDBAB12271801C300AFD181 /* OrderRowView.swift */; };
 		4EDBAB152718053D00AFD181 /* viewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDBAB142718053D00AFD181 /* viewModifiers.swift */; };
+		4EDC3934271FE7AA008011E0 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC3933271FE7AA008011E0 /* AlertHelper.swift */; };
+		4EDC3937271FE9DF008011E0 /* HomeFilterProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC3936271FE9DF008011E0 /* HomeFilterProcess.swift */; };
+		4EDC393A271FEA51008011E0 /* HomeFilterProcessTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC3939271FEA51008011E0 /* HomeFilterProcessTopView.swift */; };
+		4EDC393C271FEB71008011E0 /* HomeFilterProcessMainChoise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC393B271FEB71008011E0 /* HomeFilterProcessMainChoise.swift */; };
+		4EDC393E271FEF47008011E0 /* HomeFilterProcessPoplurRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC393D271FEF47008011E0 /* HomeFilterProcessPoplurRowView.swift */; };
 		4EDC43902717054C00C2347B /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC438F2717054C00C2347B /* AccountRowView.swift */; };
 		4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC43912717087600C2347B /* HomeAccountPointsView.swift */; };
 		4EDDBF4B271BF4FC00BACD49 /* HomeONBoardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDBF4A271BF4FC00BACD49 /* HomeONBoardScene.swift */; };
@@ -232,6 +237,11 @@
 		4EDBAB102718010700AFD181 /* OrderMmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMmodel.swift; sourceTree = "<group>"; };
 		4EDBAB12271801C300AFD181 /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
 		4EDBAB142718053D00AFD181 /* viewModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewModifiers.swift; sourceTree = "<group>"; };
+		4EDC3933271FE7AA008011E0 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		4EDC3936271FE9DF008011E0 /* HomeFilterProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterProcess.swift; sourceTree = "<group>"; };
+		4EDC3939271FEA51008011E0 /* HomeFilterProcessTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterProcessTopView.swift; sourceTree = "<group>"; };
+		4EDC393B271FEB71008011E0 /* HomeFilterProcessMainChoise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterProcessMainChoise.swift; sourceTree = "<group>"; };
+		4EDC393D271FEF47008011E0 /* HomeFilterProcessPoplurRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterProcessPoplurRowView.swift; sourceTree = "<group>"; };
 		4EDC438F2717054C00C2347B /* AccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowView.swift; sourceTree = "<group>"; };
 		4EDC43912717087600C2347B /* HomeAccountPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountPointsView.swift; sourceTree = "<group>"; };
 		4EDDBF4A271BF4FC00BACD49 /* HomeONBoardScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeONBoardScene.swift; sourceTree = "<group>"; };
@@ -314,7 +324,8 @@
 				4EFC794D2716CF6F00C5DF36 /* GifImage.swift */,
 				4EC550A52716B3420025F5C9 /* LoadingCapsuleSpacing.swift */,
 				4EC550A32716AE990025F5C9 /* KeyboardSpace.swift */,
-				4E1538C92714B3C100D5DD52 /* CustomTF.swift */,
+				4EBED106271EEF0B00FF5779 /* sheet */,
+				4EDC3932271FE79F008011E0 /* alert with text field */,
 				4EDA2DAC271F0679003CA71A /* textfield */,
 			);
 			path = custom;
@@ -405,6 +416,7 @@
 		4E3AF3F0271D80A60051A70B /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				4EDC3935271FE9CA008011E0 /* filter process */,
 				4E3AF3F2271D80B90051A70B /* HomeFilter.swift */,
 				4E3AF3FE271D83E10051A70B /* second */,
 				4E3AF3F8271D81DF0051A70B /* HomeFilterTopView.swift */,
@@ -416,6 +428,7 @@
 		4E3AF3F1271D80AD0051A70B /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				4EDC3938271FEA43008011E0 /* filter process */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -733,6 +746,7 @@
 		4EDA2DAC271F0679003CA71A /* textfield */ = {
 			isa = PBXGroup;
 			children = (
+				4E1538C92714B3C100D5DD52 /* CustomTF.swift */,
 				4EDA2DAD271F0683003CA71A /* SCustomTF.swift */,
 			);
 			path = textfield;
@@ -757,6 +771,32 @@
 			path = ORDERS;
 			sourceTree = "<group>";
 		};
+		4EDC3932271FE79F008011E0 /* alert with text field */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC3933271FE7AA008011E0 /* AlertHelper.swift */,
+			);
+			path = "alert with text field";
+			sourceTree = "<group>";
+		};
+		4EDC3935271FE9CA008011E0 /* filter process */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC3936271FE9DF008011E0 /* HomeFilterProcess.swift */,
+				4EDC393D271FEF47008011E0 /* HomeFilterProcessPoplurRowView.swift */,
+			);
+			path = "filter process";
+			sourceTree = "<group>";
+		};
+		4EDC3938271FEA43008011E0 /* filter process */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC3939271FEA51008011E0 /* HomeFilterProcessTopView.swift */,
+				4EDC393B271FEB71008011E0 /* HomeFilterProcessMainChoise.swift */,
+			);
+			path = "filter process";
+			sourceTree = "<group>";
+		};
 		4EDDBF4E271BFD4600BACD49 /* reminding */ = {
 			isa = PBXGroup;
 			children = (
@@ -779,7 +819,6 @@
 			children = (
 				4EAEE3B2271EC257003C482F /* Add Visa */,
 				4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */,
-				4EBED106271EEF0B00FF5779 /* sheet */,
 				4EDFA7DF271EB6EA0067D83E /* row view */,
 				4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */,
 				4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */,
@@ -914,6 +953,7 @@
 				4EBED108271EEF1600FF5779 /* YearPicker.swift in Sources */,
 				4E1538C82714B36700D5DD52 /* NewPasswordView.swift in Sources */,
 				4ECF1EA7271542BC00698148 /* OTPView.swift in Sources */,
+				4EDC3937271FE9DF008011E0 /* HomeFilterProcess.swift in Sources */,
 				4E3AF3F3271D80B90051A70B /* HomeFilter.swift in Sources */,
 				4EE279862718765D004EE0B6 /* STopRatingRowView.swift in Sources */,
 				4EEF4D8A27171F3F00D39193 /* AccountInfoView.swift in Sources */,
@@ -923,6 +963,7 @@
 				4EAEE3B1271EC135003C482F /* HomeCheckoutViewModel.swift in Sources */,
 				4E3AF3FB271D823A0051A70B /* SecondHomeFilterTopView.swift in Sources */,
 				4EED73C2271D45B60059DD57 /* ThirdHomeSelectedCategoryTopView.swift in Sources */,
+				4EDC393C271FEB71008011E0 /* HomeFilterProcessMainChoise.swift in Sources */,
 				4EEF4D8C271724D300D39193 /* AccountSavedAddress.swift in Sources */,
 				4EEF4D8E2717277400D39193 /* AccountChangePassword.swift in Sources */,
 				4E5B598227182501004C7D2F /* MainHomeTaPointsView.swift in Sources */,
@@ -957,6 +998,7 @@
 				4E171E402716F31A000837BF /* HomeAccount.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
 				4E38AF7C271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift in Sources */,
+				4EDC393E271FEF47008011E0 /* HomeFilterProcessPoplurRowView.swift in Sources */,
 				4E5B597C27181B9F004C7D2F /* MainHomeTabTopView.swift in Sources */,
 				4ED0F596271D633900D12DBD /* CarsoelRowView.swift in Sources */,
 				4EC550A42716AE990025F5C9 /* KeyboardSpace.swift in Sources */,
@@ -984,10 +1026,12 @@
 				4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */,
 				4EDDBF4D271BFBCD00BACD49 /* HomeRemindingOrders.swift in Sources */,
 				4E5609402718558300539B9C /* SpecialOfferRowView.swift in Sources */,
+				4EDC393A271FEA51008011E0 /* HomeFilterProcessTopView.swift in Sources */,
 				4ED0F594271D57CC00D12DBD /* SContentView.swift in Sources */,
 				4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */,
 				4E38AF85271E962500D87FAA /* BottomAddNotesView.swift in Sources */,
 				4EDDBF53271BFFDD00BACD49 /* SelectedOrderRowView.swift in Sources */,
+				4EDC3934271FE7AA008011E0 /* AlertHelper.swift in Sources */,
 				4ECD6DBE271460D800011208 /* HomeONBoard.swift in Sources */,
 				4ECF1EA92715439F00698148 /* SPasscodeField.swift in Sources */,
 				4E38AF87271E98D600D87FAA /* SelectedItemAddNotesSheetView.swift in Sources */,
