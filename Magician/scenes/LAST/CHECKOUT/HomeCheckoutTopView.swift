@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeCheckoutTopView: View {
-//    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+    //    @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @ObservedObject var vm:HomeCheckoutViewModel
     @Binding var isShow:Bool
     var body: some View {
@@ -17,14 +17,14 @@ struct HomeCheckoutTopView: View {
             HStack (spacing:16){
                 Button(action: {withAnimation{
                     vm.isCheckOut ? vm.isCheckOut.toggle() : 
-                    isShow.toggle()
+                        vm.isOperationSheetDone ? vm.isOperationSheetDone.toggle() :  isShow.toggle()
                 }}, label: {
-    //                Image(systemName: vmm.getBackImage())
+                    //                Image(systemName: vmm.getBackImage())
                     Image(systemName: "chevron.backward")
-            })
+                })
                 .foregroundColor(.black)
                 
-                Text(LocalizedStringKey(vm.isCheckOut ? "Checkout" : "My Order"))
+                Text(LocalizedStringKey(vm.isCheckOut ? "Checkout" : vm.isTrackMyOrder ? "Back" : "My Order"))
                     .font(.boldCustomFontSystem(size: 27))
                     .fontWeight(.bold)
             }

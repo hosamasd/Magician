@@ -46,6 +46,7 @@
 		4E3F6B2B271E7E1100529C15 /* SelectedItemScenesBottomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F6B2A271E7E1100529C15 /* SelectedItemScenesBottomRowView.swift */; };
 		4E3F6B2E271E81B500529C15 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3F6B2D271E81B500529C15 /* Lato-Bold.ttf */; };
 		4E3F6B30271E822500529C15 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3F6B2F271E822500529C15 /* Lato-Black.ttf */; };
+		4E4ACA532720148100AE6703 /* HomeCheckoutSuccessfullSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4ACA522720148100AE6703 /* HomeCheckoutSuccessfullSheetView.swift */; };
 		4E5609402718558300539B9C /* SpecialOfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56093F2718558300539B9C /* SpecialOfferRowView.swift */; };
 		4E560942271855A200539B9C /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E560941271855A200539B9C /* OfferModel.swift */; };
 		4E5B597827181B34004C7D2F /* MainHomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B597727181B34004C7D2F /* MainHomeTab.swift */; };
@@ -61,6 +62,10 @@
 		4EAEE3B6271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B5271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift */; };
 		4EAEE3B8271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B7271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift */; };
 		4EAEE3BA271EC891003C482F /* PaymentCosenRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B9271EC891003C482F /* PaymentCosenRowView.swift */; };
+		4EAFFC3E27202B320027B8B3 /* HomeTrackOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC3D27202B320027B8B3 /* HomeTrackOrder.swift */; };
+		4EAFFC4027202CEB0027B8B3 /* HomeTrackOrderAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC3F27202CEB0027B8B3 /* HomeTrackOrderAnimated.swift */; };
+		4EAFFC4227202DC60027B8B3 /* HomeTrackOrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC4127202DC60027B8B3 /* HomeTrackOrderRowView.swift */; };
+		4EAFFC45272031A90027B8B3 /* HomeTrackOrdersRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC44272031A90027B8B3 /* HomeTrackOrdersRowView.swift */; };
 		4EB56956271EDE8300AB03B4 /* HomeCheckoutSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB56955271EDE8300AB03B4 /* HomeCheckoutSheetView.swift */; };
 		4EB64AF9271D96D20012EB48 /* HomeAccountGifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */; };
 		4EB64AFB271D9C970012EB48 /* AccountSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */; };
@@ -180,6 +185,7 @@
 		4E3F6B2A271E7E1100529C15 /* SelectedItemScenesBottomRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemScenesBottomRowView.swift; sourceTree = "<group>"; };
 		4E3F6B2D271E81B500529C15 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		4E3F6B2F271E822500529C15 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		4E4ACA522720148100AE6703 /* HomeCheckoutSuccessfullSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutSuccessfullSheetView.swift; sourceTree = "<group>"; };
 		4E56093F2718558300539B9C /* SpecialOfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOfferRowView.swift; sourceTree = "<group>"; };
 		4E560941271855A200539B9C /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
 		4E5B597727181B34004C7D2F /* MainHomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeTab.swift; sourceTree = "<group>"; };
@@ -195,6 +201,10 @@
 		4EAEE3B5271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutAddVisaTopView.swift; sourceTree = "<group>"; };
 		4EAEE3B7271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutAddVisaAddVisa.swift; sourceTree = "<group>"; };
 		4EAEE3B9271EC891003C482F /* PaymentCosenRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCosenRowView.swift; sourceTree = "<group>"; };
+		4EAFFC3D27202B320027B8B3 /* HomeTrackOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrder.swift; sourceTree = "<group>"; };
+		4EAFFC3F27202CEB0027B8B3 /* HomeTrackOrderAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrderAnimated.swift; sourceTree = "<group>"; };
+		4EAFFC4127202DC60027B8B3 /* HomeTrackOrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrderRowView.swift; sourceTree = "<group>"; };
+		4EAFFC44272031A90027B8B3 /* HomeTrackOrdersRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrdersRowView.swift; sourceTree = "<group>"; };
 		4EB56955271EDE8300AB03B4 /* HomeCheckoutSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutSheetView.swift; sourceTree = "<group>"; };
 		4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountGifts.swift; sourceTree = "<group>"; };
 		4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSheetView.swift; sourceTree = "<group>"; };
@@ -526,6 +536,25 @@
 			path = "Add Visa";
 			sourceTree = "<group>";
 		};
+		4EAFFC3C27202B1D0027B8B3 /* track my order */ = {
+			isa = PBXGroup;
+			children = (
+				4EAFFC3D27202B320027B8B3 /* HomeTrackOrder.swift */,
+				4EAFFC432720319D0027B8B3 /* orders */,
+				4EAFFC4127202DC60027B8B3 /* HomeTrackOrderRowView.swift */,
+				4EAFFC3F27202CEB0027B8B3 /* HomeTrackOrderAnimated.swift */,
+			);
+			path = "track my order";
+			sourceTree = "<group>";
+		};
+		4EAFFC432720319D0027B8B3 /* orders */ = {
+			isa = PBXGroup;
+			children = (
+				4EAFFC44272031A90027B8B3 /* HomeTrackOrdersRowView.swift */,
+			);
+			path = orders;
+			sourceTree = "<group>";
+		};
 		4EB8FFE727148551008C0D03 /* support files */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,8 +857,10 @@
 		4EDFA7D8271EB1D20067D83E /* CHECKOUT */ = {
 			isa = PBXGroup;
 			children = (
+				4EAFFC3C27202B1D0027B8B3 /* track my order */,
 				4EAEE3B2271EC257003C482F /* Add Visa */,
 				4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */,
+				4E4ACA522720148100AE6703 /* HomeCheckoutSuccessfullSheetView.swift */,
 				4EDFA7DF271EB6EA0067D83E /* row view */,
 				4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */,
 				4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */,
@@ -997,6 +1028,7 @@
 				4E38AF7E271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift in Sources */,
 				4EAEE3B8271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift in Sources */,
 				4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */,
+				4EAFFC3E27202B320027B8B3 /* HomeTrackOrder.swift in Sources */,
 				4ECAD7F8271C67E800C258A5 /* FavoriteRowView.swift in Sources */,
 				4EDC43902717054C00C2347B /* AccountRowView.swift in Sources */,
 				4E09BFB927183092006928FD /* HomeSpecialOffer.swift in Sources */,
@@ -1007,6 +1039,7 @@
 				4E5B597827181B34004C7D2F /* MainHomeTab.swift in Sources */,
 				4EDBAB112718010700AFD181 /* OrderMmodel.swift in Sources */,
 				4EB56956271EDE8300AB03B4 /* HomeCheckoutSheetView.swift in Sources */,
+				4E4ACA532720148100AE6703 /* HomeCheckoutSuccessfullSheetView.swift in Sources */,
 				4E171E402716F31A000837BF /* HomeAccount.swift in Sources */,
 				4ECD6DBA27145E8500011208 /* EX_View.swift in Sources */,
 				4E38AF7C271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift in Sources */,
@@ -1016,6 +1049,7 @@
 				4EC550A42716AE990025F5C9 /* KeyboardSpace.swift in Sources */,
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
 				4EAEE3B6271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift in Sources */,
+				4EAFFC45272031A90027B8B3 /* HomeTrackOrdersRowView.swift in Sources */,
 				4EDDBF51271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift in Sources */,
 				4E5C6C2D27184C8300FA5298 /* TopRatingRowView.swift in Sources */,
 				4EDFA7E1271EB6F10067D83E /* HomeCheckoutRowView.swift in Sources */,
@@ -1033,6 +1067,7 @@
 				4E2ADBF32717E5380039C842 /* AddAddressSheetView.swift in Sources */,
 				4E3AF3F7271D818A0051A70B /* HomeFilterRowView.swift in Sources */,
 				4EFC794E2716CF6F00C5DF36 /* GifImage.swift in Sources */,
+				4EAFFC4227202DC60027B8B3 /* HomeTrackOrderRowView.swift in Sources */,
 				4EDFA7DA271EB1F00067D83E /* HomeCheckout.swift in Sources */,
 				4E5C6C2B271847A100FA5298 /* CategoryRowView.swift in Sources */,
 				4EBF115B27158869008C3C89 /* ApiURL.swift in Sources */,
@@ -1066,6 +1101,7 @@
 				4ED40A2A271C218A00E73138 /* HomeSelectedCategory.swift in Sources */,
 				4E181F59271DB5AA00248DF3 /* SelectedItemScenes.swift in Sources */,
 				4EDA2DAE271F0683003CA71A /* SCustomTF.swift in Sources */,
+				4EAFFC4027202CEB0027B8B3 /* HomeTrackOrderAnimated.swift in Sources */,
 				4EB64AFB271D9C970012EB48 /* AccountSheetView.swift in Sources */,
 				4EDDBF4B271BF4FC00BACD49 /* HomeONBoardScene.swift in Sources */,
 				4ECF1EA527153EEF00698148 /* SignUpView.swift in Sources */,

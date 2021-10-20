@@ -114,6 +114,8 @@ struct HomeCheckoutAddVisa: View {
                 
                 Button(action: {
                     withAnimation{
+                        vm.isOperationSheetDone.toggle()
+
                         //                        vm.isCheckOut.toggle()
                     }
                 }, label: {

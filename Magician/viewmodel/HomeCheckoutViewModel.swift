@@ -12,8 +12,10 @@ class HomeCheckoutViewModel:ObservableObject {
     @Published var alertMsg = ""
     @Published var isLooding = false
     
+    //main pages
     @Published var isCheckOut = false
-    
+    @Published var isTrackMyOrder = true
+
     @Published var address = "653 Nostrand Ave.,\n Brooklyn, NY 11216"
     @Published var isChangeAddress = false
 
@@ -21,7 +23,6 @@ class HomeCheckoutViewModel:ObservableObject {
     @Published var isFirstVisa = false
     @Published var isSecondVisa = false
     
-    @Published var isAddVisaSheet = false
     
     //add card
     @Published var cardNumber = ""
@@ -36,11 +37,23 @@ class HomeCheckoutViewModel:ObservableObject {
     @Published var secondName = ""
     @Published var isCanRemoveCard = false
     
-    
+    //sheet view
+    @Published var isAddVisaSheet = false
+    @Published var isOperationSheetDone = false
+
     func makeCheckVisa(s:inout Bool)  {
         isCashOnDelivery=false
         isFirstVisa=false
         isSecondVisa=false
         s=true
     }
+    
+    @Published var ordersArray:[OfferModel] = [
+        OfferModel(name: "Nobile Houses", img: "28", subImg: "ramen", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        OfferModel(name: "Nobile Housev", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true),
+        //        OfferModel(name: "Nobile Houseb", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        OfferModel(name: "Nobile Housex", img: "28", subImg: "ramen", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true),
+        OfferModel(name: "Nobile Housez", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        
+    ]
 }
