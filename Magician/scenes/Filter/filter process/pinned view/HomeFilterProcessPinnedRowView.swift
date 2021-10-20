@@ -21,11 +21,15 @@ struct HomeFilterProcessPinnedRowView: View {
                 vm.removePinnedFilter(x: x)
             }}, label: {
                 Image(systemName: "xmark")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 15, height: 13)
             })
             .foregroundColor(.black)
         }
         .padding(.vertical,8)
-        .padding(.horizontal,16)
+        .padding(.horizontal,11)
+        
         .background(Color("mains").opacity(0.2))//0.16
         .clipShape(Capsule())
     }
