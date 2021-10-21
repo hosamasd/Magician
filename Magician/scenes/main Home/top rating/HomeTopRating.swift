@@ -11,6 +11,9 @@ struct HomeTopRating: View {
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
     @ObservedObject var vm : MainHomeTabViewModel
     
+    @Binding var isShow:Bool
+//    @Binding var selected:MainCategory
+    
     var body: some View {
         VStack(spacing: 15){
             HStack {
@@ -21,8 +24,12 @@ struct HomeTopRating: View {
                 
                 Spacer()
                 
-                Button(action: {withAnimation{vm.selectedCategoryOffAll="Top Rating"
-                    vm.isSelectedCategoryOffAll.toggle()
+                Button(action: {withAnimation{
+//                    vm.isMainCategoryChosen=true
+                    isShow=true
+                    
+                    vm.selectedCategoryOffAll="Top Rating"
+//                    vm.isSelectedCategoryOffAll.toggle()
                 }
                 }, label: {
                     Label(

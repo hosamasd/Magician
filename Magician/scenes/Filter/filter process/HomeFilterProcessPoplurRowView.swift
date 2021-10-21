@@ -39,6 +39,6 @@ struct HomeFilterProcessPoplurRowView: View {
 
 struct HomeFilterProcessPoplurRowView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeFilterProcess()
+        HomeFilterProcess(isShowFilter: .constant(false))
     }
 }

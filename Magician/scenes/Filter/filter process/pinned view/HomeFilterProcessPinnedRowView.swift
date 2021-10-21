@@ -37,6 +37,6 @@ struct HomeFilterProcessPinnedRowView: View {
 
 struct HomeFilterProcessPinnedRowView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeFilterProcess()
+        HomeFilterProcess(isShowFilter: .constant(false))
     }
 }

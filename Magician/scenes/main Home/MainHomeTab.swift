@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct MainHomeTab: View {
-//    @StateObject var vm = MainHomeTabViewModel()
+    //    @StateObject var vm = MainHomeTabViewModel()
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @EnvironmentObject var vm:MainHomeTabViewModel
-
+    @State var isSelectFromCateg=false
+//    @State var selectedCategName=""
+//    @State var selectedCategImg=""
+   @State var selectedCateg = MainCategory(name: "", img: "", nameAr: "", subImage: "", mainImg: "")
+    
     var body: some View {
-//        ZStack {
-            VStack {
+        //        ZStack {
+        VStack {
+            
+            ZStack {
                 
-                ZStack {
-                    
                 VStack {
                     MainHomeTabTopView(vm:vm)
                     
@@ -32,15 +36,16 @@ struct MainHomeTab: View {
                         
                         VStack {
                             MainHomeTabProfileInfo(vm:vm)
-//                                .padding(.top,20)
+                                //                                .padding(.top,20)
                                 .padding(.bottom)
                             
                             
                             CarsoelHome(vm: vm)
                             
-                            HomeCategoryView(vm: vm)
-                            
-                            HomeTopRating(vm: vm)
+//                            HomeCategoryView(vm: vm)
+                            HomeCategoryView(vm: vm, isShow: $isSelectFromCateg, selected: $selectedCateg)
+
+                            HomeTopRating(vm: vm,isShow:$isSelectFromCateg)
                             
                             HomeSpecialOffer(vm:vm)
                             
@@ -54,10 +59,10 @@ struct MainHomeTab: View {
                 }
                 
                 .padding(.horizontal,32)
-                    
-                    if vm.isLooding {
-                        LoadingCapsuleSpacing()
-                    }
+                
+                if vm.isLooding {
+                    LoadingCapsuleSpacing()
+                }
             }
             
         }
@@ -68,27 +73,36 @@ struct MainHomeTab: View {
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         
-            .onAppear(perform: {
-                vm.topRatingArray.isEmpty ? vm.getData() : ()
-            })
+        .onAppear(perform: {
+            vm.topRatingArray.isEmpty ? vm.getData() : ()
+        })
         
-            .background(EmptyView()
-                            .fullScreenCover(isPresented: $vm.isSelectedCategoryOffAll, content: {
-                                HomeSelectedCategory()
-                                    .environmentObject(vmm)
-                                    .environmentObject(vm)
-//                                AccountChangePassword(vm: vm,vmm: vmm)
-                                
-                            })
-            )
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isSelectFromCateg, content: {
+                            HomeSelectedCategory(isShow: $isSelectFromCateg, x:selectedCateg)
+                                .environmentObject(vmm)
+                                .environmentObject(vm)
+                            
+                        })
+        )
+        //            .background(EmptyView()
+        //                            .fullScreenCover(isPresented: $vm.isSelectedCategoryOffAll, content: {
+        //                                HomeSelectedCategory()
+        //                                    .environmentObject(vmm)
+        //                                    .environmentObject(vm)
+        //
+        //                            })
+        //            )
+        
+        
         
     }
     
     func getBottomSpace() ->CGFloat {
         CGFloat( isSmallDevice() ? 80 : 100)
         
-//        CGFloat( isSmallDevice() ? 130 : 100)
-
+        //        CGFloat( isSmallDevice() ? 130 : 100)
+        
     }
 }
 

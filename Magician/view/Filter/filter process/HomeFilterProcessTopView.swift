@@ -11,12 +11,13 @@ struct HomeFilterProcessTopView: View {
 //    @EnvironmentObject var vm : HomeFilterViewModel
 //@EnvironmentObject var vmm : HomeMainTabBarViewModel
     
-        @StateObject var vm = HomeFilterViewModel()
+//        @StateObject var vm = HomeFilterViewModel()
+    @Binding var isShowFilter:Bool
 
     var body: some View {
         HStack {
             
-            Button(action: {withAnimation{vm.isShowFilter.toggle()}}, label: {
+            Button(action: {withAnimation{isShowFilter.toggle()}}, label: {
                 Image(systemName: "chevron.backward")
 
 //                Image(systemName: vmm.getBackImage())//"chevron.backward")
@@ -35,13 +36,15 @@ struct HomeFilterProcessTopView: View {
             Spacer()
             
         }
+        .padding(.top,getSafeArea()?.top)
         .padding(.horizontal,16)
+//        .padding(.horizontal,16)
 //        .padding(.bottom,20)
     }
 }
 
 struct HomeFilterProcessTopView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeFilterProcess()
+        HomeFilterProcess(isShowFilter: .constant(false))
     }
 }

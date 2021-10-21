@@ -40,6 +40,8 @@ class MainHomeTabViewModel: ObservableObject {
     @Published var isSelectedCategoryOffAll = false
     @Published var selectedCategoryOffAll = ""
     
+    
+    
     //main category
     @Published var selectedMainCategoryArray:[MainSelectedCateg] = [
         

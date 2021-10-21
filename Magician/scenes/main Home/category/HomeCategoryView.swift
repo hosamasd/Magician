@@ -11,6 +11,11 @@ struct HomeCategoryView: View {
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
     @ObservedObject var vm : MainHomeTabViewModel
     
+    @Binding var isShow:Bool
+    @Binding var selected:MainCategory
+//    @Binding var selectedCateg:String
+//    @Binding var selectedCategImg:String
+    
     var body: some View {
         VStack(spacing: 15){
             HStack {
@@ -54,10 +59,14 @@ struct HomeCategoryView: View {
                         CategoryRowView(x: index, vm: vm)
                             .onTapGesture(perform: {
                                 withAnimation{
-                                    vm.mainCategoryChosenName=index.subImage
-                                    vm.selectedCategoryOffAll=index.name
-                                    vm.isSelectedCategoryOffAll.toggle()
-                                    vm.isMainCategoryChosen.toggle()
+                                    vm.isMainCategoryChosen=true
+                                    selected=index
+                                    isShow.toggle()
+//                                    sele
+//                                    vm.mainCategoryChosenName=index.subImage
+//                                    vm.selectedCategoryOffAll=index.name
+//                                    vm.isSelectedCategoryOffAll.toggle()
+//                                    vm.isMainCategoryChosen.toggle()
                                 }
                             })
                         //                            TopRatingRowView(vm: vm,x:vm.topRatingArray[index])

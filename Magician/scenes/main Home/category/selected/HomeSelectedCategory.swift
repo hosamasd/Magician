@@ -11,8 +11,13 @@ struct HomeSelectedCategory: View {
     @EnvironmentObject var vm:MainHomeTabViewModel
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
-    var x = "Top Rating"
+//    var x = "Top Rating"
+    @Binding var isShow:Bool
+//    @Binding var selectedCateg:String
+//    @Binding var selectedCategImg:String
     
+    var x = MainCategory(name: "", img: "", nameAr: "", subImage: "", mainImg: "")
+    @State var isShowFilter=false
     var body: some View {
         //        VStack {
         
@@ -26,7 +31,9 @@ struct HomeSelectedCategory: View {
                     //                        .padding(.horizontal,8)
                     //                        .padding(.bottom,20)
                     
-                    SecondHomeSelectedCategoryTopView(columns: $columns)
+                    SecondHomeSelectedCategoryTopView(columns: $columns, isShow: $isShow,x:x,isShowFilter: $isShowFilter)
+
+//                    SecondHomeSelectedCategoryTopView(columns: $columns)
                         .padding(.vertical)
                     
                     if vm.isMainCategoryChosen{
@@ -60,8 +67,20 @@ struct HomeSelectedCategory: View {
         .edgesIgnoringSafeArea(.all)
         
         //        }
-        
+        .environmentObject(vm)
+
         .environmentObject(vmm)
+        
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isShowFilter, content: {
+                            HomeFilterProcess(isShowFilter: $isShowFilter)
+//                            Text("")
+//                            HomeSelectedCategory(isShow: $isSelectFromCateg, x:selectedCateg)
+//                                .environmentObject(vmm)
+//                                .environmentObject(vm)
+                            
+                        })
+        )
     }
 }
 

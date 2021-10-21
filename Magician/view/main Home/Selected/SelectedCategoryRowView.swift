@@ -9,9 +9,10 @@ import SwiftUI
 
 struct SelectedCategoryRowView: View {
     var x =                 OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
-    //    @EnvironmentObject var vm:MainHomeTabViewModel
-    @StateObject var vm=MainHomeTabViewModel()
-    
+        @EnvironmentObject var vm:MainHomeTabViewModel
+//    @StateObject var vm=MainHomeTabViewModel()
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+
     
     var body: some View {
         VStack{
@@ -164,38 +165,41 @@ struct SelectedCategoryRowView: View {
                     
                 })
                 .padding(.horizontal)
-                .padding(.bottom,24)
+//                .padding(.bottom,24)
                 .opacity(vm.isSingleItemLists==1 ? 1 : 0)
                 
                 if self.vm.isSingleItemLists==2 {
                     
-                    VStack(alignment: .leading, spacing: 12, content: {
+                    VStack(alignment: .leading, spacing: 8, content: {
                         //                VStack {
                         HStack {
                             
                             Text(x.name)
-                                .font(.customFontSystem(size: 15))
+                                .font(.customFontSystem(size: isSmallDevice() ? 12 : 15))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("mains"))
                             
-                            Spacer()
+//                            Spacer()
                             
                             Text("50% OFF")
-                                .font(.customFontSystem(size: 10))
+                                .font(.system(size: 10))
+
+//                                .font(.customFontSystem(size: 10))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("mains"))
-                                .padding(.horizontal,8)
+                                .padding(.horizontal,6)
                                 .padding(.vertical,3)
                                 .background(Color("mains").opacity(0.22))
                                 .clipShape(Capsule())
+                                .padding(.leading,isSmallDevice() ? 2 : 4)
                         }
                         
-                        Text("Chicken skewers with slices of sweet peppers and dill")
-                            .font(.customFontSystem(size: 12))
+                        Text("Chicken skewers ")
+                            .font(.system(size: 12))
+//                            .font(.customFontSystem(size: 12))
                             .fontWeight(.regular)
                             .lineLimit(2)
                             .foregroundColor(Color.black.opacity(0.6))
-                            .padding(.top,4)
                         
                         
 //                        HStack(){
@@ -246,15 +250,27 @@ struct SelectedCategoryRowView: View {
                         HStack {
                             
                             Label(
-                                title: { Text("10 EGP") },
-                                icon: { Image("delivery") }
+                                title: { Text("10 EGP")
+                                    .font(.system(size: isSmallDevice() ? 8 : 10))
+
+                                },
+                                icon: { Image("delivery")
+                                    .font(.system(size: isSmallDevice() ? 8 : 10))
+
+                                }
                             )
+                            .font(.system(size: 8))
+                            
+                            if !isSmallDevice() {
                             Spacer()
                             
-                            HStack(spacing:12){
+                            }
+                            HStack(spacing:isSmallDevice() ? 2 : 2){
                                 
                                 Text("110 EGP")
-                                    .font(.customFontSystem(size:  15))
+                                    .font(.system(size: isSmallDevice() ? 8 : 10))
+
+//                                    .font(.customFontSystem(size:  15))
                                     .fontWeight(.semibold)
                                     .foregroundColor(Color("mains"))
                                     .overlay(
@@ -266,27 +282,45 @@ struct SelectedCategoryRowView: View {
                                     )
                                 
                                 Text("50EGP")
-                                    .font(.customFontSystem(size: 20))
+                                    .font(.system(size:isSmallDevice() ? 8 : 10))
+
+//                                    .font(.customFontSystem(size: 20))
                                     
                                     //                    .font(.system(size: 25))
                                     .fontWeight(.bold)
                                     .foregroundColor(Color("oprice"))
                                 
                             }
+                            .padding(.leading,4)
                         }
                     })
-                    .padding(.horizontal,12)
+                    .padding(.horizontal,isSmallDevice() ? 3 : 6)
                     //                    .background(Color.red)
                     //                    .offset(y:-60)
                     
                 }
             }
         }
+        .frame(height:vm.isSingleItemLists==1 ? 250 : 230)
+
         //        .padding(.bottom,12)
-        .background(Color.white)
-        .cornerRadius(20)
-        .modifier(viewModifiers())
-        .frame(height:vm.isSingleItemLists==1 ? 250 : 300)
+        .background(
+            RoundedRectangle(
+                cornerRadius: 20
+            )
+            .foregroundColor(Color.white)
+            .shadow(
+                color: Color.gray.opacity(0.6),
+                radius: 2.5,
+                x: 0,
+                y: 2
+            )
+        )
+//        .background(Color.white)
+//        .cornerRadius(20)
+//        .modifier(viewModifiers())
+//        .frame(height:vm.isSingleItemLists==1 ? 250 : 230)
+
     }
 }
 

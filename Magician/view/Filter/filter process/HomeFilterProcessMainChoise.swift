@@ -69,7 +69,7 @@ struct HomeFilterProcessMainChoise: View {
 
 struct HomeFilterProcessMainChoise_Previews: PreviewProvider {
     static var previews: some View {
-        HomeFilterProcess()
+        HomeFilterProcess(isShowFilter: .constant(false))
         //        HomeFilterProcessMainChoise()
     }
 }

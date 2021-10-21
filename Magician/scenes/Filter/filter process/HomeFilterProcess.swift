@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct HomeFilterProcess: View {
-        @EnvironmentObject var vm : HomeFilterViewModel
+    //        @EnvironmentObject var vm : HomeFilterViewModel
     //    @EnvironmentObject var vmm : HomeMainTabBarViewModel
     
-//    @StateObject var vm = HomeFilterViewModel()
+    @StateObject var vm = HomeFilterViewModel()
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 1)
     var sColumns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 3)
+    @Binding var isShowFilter:Bool
     
     var body: some View {
         VStack {
             
-            HomeFilterProcessTopView()
+            HomeFilterProcessTopView(isShowFilter: $isShowFilter)
             
             VStack {
                 
@@ -73,6 +74,7 @@ struct HomeFilterProcess: View {
                     
                     Button(action: {
                         withAnimation{
+                            isShowFilter.toggle()
                             //                            vm.isLooding=true
                             //                        vm.makeLogin()
                         }
@@ -108,6 +110,6 @@ struct HomeFilterProcess: View {
 
 struct HomeFilterProcess_Previews: PreviewProvider {
     static var previews: some View {
-        HomeFilterProcess()
+        HomeFilterProcess(isShowFilter: .constant(false))
     }
 }
