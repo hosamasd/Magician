@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BottomAddNotesView: View {
     @Binding var isShow:Bool
+    @Binding var notesText:String
+    @Binding var isShowSheet:Bool
 
     var body: some View {
         VStack {
@@ -28,9 +30,38 @@ struct BottomAddNotesView: View {
                         title: { Text("Add Notes") },
                         icon: { Image( "Group 8358") }
 )
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(Color("mains")                .opacity(notesText=="" ? 1 : 0)
+)
                 })
+                .disabled(                notesText=="" ? false : true)
+
             }
+            
+         
+                
+                VStack {
+                    HStack {
+                        
+                        Text(notesText)
+                            .lineLimit(3)
+                        
+                        VStack {
+                            Button(action: {withAnimation{
+                                isShowSheet.toggle()
+                            }}, label: {
+                                Image("Icon awesome-edit")
+                            }
+                         )
+                            Spacer()
+                        }
+                        .padding(.top,4)
+
+                    }
+                    .padding()
+                }
+                .background(Color.white)
+                .opacity(notesText=="" ? 0 : 1)
+            
             
             HStack {
                 Button(action: {withAnimation{
@@ -59,6 +90,6 @@ struct BottomAddNotesView: View {
 
 struct BottomAddNotesView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemAddNotes()
+        SelectedItemAddNotes(isShow: .constant(false))
     }
 }

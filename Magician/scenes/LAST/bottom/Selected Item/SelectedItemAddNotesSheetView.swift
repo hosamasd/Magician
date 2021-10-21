@@ -28,7 +28,7 @@ struct SelectedItemAddNotesSheetView: View {
                     })
                     
                 }
-//                .padding()
+                //                .padding()
                 .padding(.horizontal)
                 
                 Text("Add Notes To Your Order")
@@ -41,17 +41,14 @@ struct SelectedItemAddNotesSheetView: View {
                         
                         TextEditor(text: $notesText)
                             .padding()
-
+                        
                         ,alignment: .leading)
                     .frame(width:getFrameSize().width-64,height: 150)
                     .padding(.vertical,20)
                 
                 Button(action: {
                     withAnimation{
-                        //                        vm.isOTP.toggle()
-                        //                                vm.isLooding=true
-                        
-                    }
+                        isShow.toggle()    }
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)
                         
@@ -88,8 +85,8 @@ struct SelectedItemAddNotesSheetView: View {
 struct SelectedItemAddNotesSheetView_Previews: PreviewProvider {
     static var previews: some View {
         SelectedItemAddNotesSheetView(isShow: .constant(true), notesText: .constant(""))
-//        SContentView()
-//        SelectedItemAddNotes()
+        //        SContentView()
+        //        SelectedItemAddNotes()
         //        SelectedItemAddNotesSheetView(isShow:.constant(false))
     }
 }

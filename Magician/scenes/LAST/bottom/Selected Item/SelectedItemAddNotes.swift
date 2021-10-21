@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct SelectedItemAddNotes: View {
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+    
     @StateObject var vm = HomeFavoriteViewModel()
     @State var isShowSheetView = false
     @State var notesText=""
+    
+    @Binding var isShow:Bool
+    var selectedItem =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
+    
     var body: some View {
         ZStack {
             VStack {
@@ -21,25 +27,39 @@ struct SelectedItemAddNotes: View {
                     .frame(width:getFrameSize().width,height:getFrameSize().height/3)
                     .overlay(
                         
-                        Button(action: {withAnimation{
+                        
+                        HStack {
                             
-                        }}, label: {
-                            //                        Image(systemName:vmm.getBackImage() )
-                            HStack {
+                            Button(action: {withAnimation{
+                                isShow.toggle()
+                            }}, label: {
+                                //                        Image(systemName:vmm.getBackImage() )
+                                //                        HStack {
                                 
-                                Image(systemName: "chevron.backward")
-                                    .foregroundColor(Color("mains"))
-                                    .padding()
-                                    .background(Color.white)
-                                    .clipShape(Circle())
-                                
-                                Spacer()
-                            }
-                            .padding(.top,getSafeArea()?.top)
-                            .padding(.horizontal,16)
-                        })
+                                Circle()
+                                    .fill(Color.white)
+                                    .frame(width: 31, height: 31)
+                                    .overlay(
+                                        Image(systemName: vmm.getBackImage())// "chevron.backward")
+                                            .foregroundColor(Color("mains"))
+                                    )
+                                //
+                            })
+                            Spacer()
+                        }
+                        .padding(.top,getSafeArea()?.top)
+                        .padding(.horizontal,16)
+                        
                         ,alignment: .top)
-                    .cornerRadius(10)
+                    //                        .cornerRadius(20)
+                    .clipShape(CustomCorners(corners: [.bottomLeft,.bottomRight], width: 20))
+                
+                
+               
+                    
+                      
+                    
+                    
                 
                 SelectedItemAddNotesTopRow()
                 
@@ -56,7 +76,7 @@ struct SelectedItemAddNotes: View {
                             
                             FirstStepView()
                             
-                            BottomAddNotesView(isShow: $isShowSheetView)
+                            BottomAddNotesView(isShow: $isShowSheetView,notesText: $notesText,isShowSheet: $isShowSheetView)
                                 .padding(.bottom)
                             //                    SecondStepView()
                             
@@ -71,7 +91,7 @@ struct SelectedItemAddNotes: View {
                     })
                     //                .offset(x:10)
                 }
-                .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
+                //                .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
                 //            SelectedItemAddNotesAddMinusView()
                 
                 Spacer()
@@ -94,6 +114,6 @@ struct SelectedItemAddNotes: View {
 
 struct SelectedItemAddNotes_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemAddNotes()
+        SelectedItemAddNotes(isShow: .constant(false))
     }
 }

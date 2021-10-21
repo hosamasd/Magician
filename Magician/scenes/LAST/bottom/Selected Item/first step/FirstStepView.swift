@@ -42,6 +42,6 @@ struct FirstStepView: View {
 
 struct FirstStepView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemAddNotes()
+        SelectedItemAddNotes(isShow: .constant(false))
     }
 }

@@ -126,7 +126,7 @@ struct SelectedItemScenesTopRow: View {
 
 struct SelectedItemScenesTopRow_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemScenes()
+        SelectedItemScenes(isShow: .constant(false))
         //        SelectedItemScenesTopRow()
     }
 }

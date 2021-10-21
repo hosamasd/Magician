@@ -37,6 +37,6 @@ struct SelectedItemSceneRowView: View {
 
 struct SelectedItemSceneRowView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemScenes()
+        SelectedItemScenes(isShow: .constant(false))
     }
 }

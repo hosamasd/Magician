@@ -10,6 +10,8 @@ import SwiftUI
 struct SelectedItemScenesBottomScroll: View {
     @StateObject var vm = HomeFavoriteViewModel()
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 1)
+    @Binding var isShow:Bool
+    @Binding var selected:OfferModel
     
     var body: some View {
         VStack (alignment:.leading){
@@ -40,8 +42,8 @@ struct SelectedItemScenesBottomScroll: View {
                     VStack (alignment:.leading){
                         HStack {
                             Text(vm.selectedMenu)
-
-Spacer()
+                            
+                            Spacer()
                             
                         }
                         
@@ -51,6 +53,13 @@ Spacer()
                             
                             ForEach(vm.favoriteArray){gradient in
                                 SelectedItemScenesBottomRowView(x:gradient)
+                                    .onTapGesture {
+                                        withAnimation{
+                                            
+                                            selected=gradient
+                                            isShow.toggle()
+                                        }
+                                    }
                                 //                            HomeFilterRowView(x:gradient)
                                 //                                    GradientView(columns: $columns, gradient: gradient, vm: vm)
                             }
@@ -76,6 +85,6 @@ Spacer()
 
 struct SelectedItemScenesBottomScroll_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemScenes()
+        SelectedItemScenes(isShow: .constant(false))
     }
 }

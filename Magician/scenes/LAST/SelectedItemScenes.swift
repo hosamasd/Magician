@@ -8,51 +8,67 @@
 import SwiftUI
 
 struct SelectedItemScenes: View {
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+    
     @StateObject var vm = HomeFavoriteViewModel()
+    @Binding var isShow:Bool
+    var selectedItem =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
+    @State var isFirstStep=false
+    @State var secondSelectedItem =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
     
     var body: some View {
         VStack {
-
+            
             Image("sfa")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width:getFrameSize().width,height:getFrameSize().height/3)
                 .overlay(
-                
-                    Button(action: {withAnimation{
+                    
+                    HStack {
                         
-                    }}, label: {
-//                        Image(systemName:vmm.getBackImage() )
-                        HStack {
+                        Button(action: {withAnimation{
+                            isShow.toggle()
+                        }}, label: {
+                            //                        Image(systemName:vmm.getBackImage() )
+                            //                        HStack {
                             
-                            Image(systemName: "chevron.backward")
-                                .foregroundColor(Color("mains"))
-                                .padding()
-                                .background(Color.white)
-                                .clipShape(Circle())
-                        
-                            Spacer()
-                        }
-                        .padding(.top,getSafeArea()?.top)
-                        .padding(.horizontal,16)
-                    })
+                            Circle()
+                                .fill(Color.white)
+                                .frame(width: 31, height: 31)
+                                .overlay(
+                                    Image(systemName: vmm.getBackImage())// "chevron.backward")
+                                        .foregroundColor(Color("mains"))
+                                )
+                            //
+                        })
+                        Spacer()
+                    }
+                    .padding(.top,getSafeArea()?.top)
+                    .padding(.horizontal,16)
+                    
                     ,alignment: .top)
-                .cornerRadius(10)
+                .clipShape(CustomCorners(corners: [.bottomLeft,.bottomRight], width: 20))
+//                .cornerRadius(20)
             
             SelectedItemScenesTopRow()
             
-            SelectedItemScenesBottomScroll()
+            SelectedItemScenesBottomScroll(isShow: $isFirstStep, selected: $secondSelectedItem)
             
             Spacer()
             
         }
         .edgesIgnoringSafeArea(.all)
-
+        
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isFirstStep, content: {
+                                            SelectedItemAddNotes(isShow:  $isFirstStep,selectedItem:selectedItem)  })
+        )
     }
 }
 
 struct SelectedItemScenes_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemScenes()
+        SelectedItemScenes(isShow: .constant(false))
     }
 }

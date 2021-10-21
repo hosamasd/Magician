@@ -98,6 +98,6 @@ struct SelectedItemScenesBottomRowView: View {
 
 struct SelectedItemScenesBottomRowView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemScenes()
+        SelectedItemScenes(isShow: .constant(false))
     }
 }
