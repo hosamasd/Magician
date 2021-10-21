@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SecondHomeFilterTopView: View {
-    
-    @StateObject var vm = HomeFilterViewModel()
+    @EnvironmentObject var vm : HomeFilterViewModel
+
+//    @StateObject var vm = HomeFilterViewModel()
     var body: some View {
         
         ScrollView(.horizontal, showsIndicators: false) {

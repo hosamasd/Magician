@@ -27,7 +27,7 @@ struct HomeFilter: View {
                     
                     SecondHomeFilterTopView()
                         .padding(.vertical)
-                
+//                        .padding(.horizontal)
                     
                     
                 ZStack {
@@ -47,6 +47,7 @@ struct HomeFilter: View {
                         
                     }
                     .opacity(vm.selectedCategory == "" ? 1 : 0)
+                    .padding(.bottom,isSmallDevice() ? 80 : 0)
                     
                  if    vm.selectedCategory != "" {
                     
@@ -64,10 +65,14 @@ struct HomeFilter: View {
                                 }
                             }
                             .padding(.horizontal)
+//                            .padding(.horizontal)
+
                             .padding(.bottom)
+                            .padding(.bottom,isSmallDevice() ? 80 : 100)
                         }
                     .padding(.top,-12)
                     .transition(.move(edge: .leading))
+//                    .padding(.bottom,isSmallDevice() ? 80 : 100)
                     
                  }
                 }
@@ -82,6 +87,7 @@ struct HomeFilter: View {
             
         }
         .environmentObject(vmm)
+        .environmentObject(vm)
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")

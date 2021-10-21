@@ -52,7 +52,9 @@ struct MainHomeTab: View {
                         }
                         .padding(.top,20)
                         //                    .frame(width:getFrameSize().width-28)
-                        .padding(.bottom,getBottomSpace())
+//                        .padding(.bottom,getBottomSpace())
+                        .padding(.bottom)
+                        .padding(.bottom,isSmallDevice() ? 80 : 100)
                     }
                     
                     

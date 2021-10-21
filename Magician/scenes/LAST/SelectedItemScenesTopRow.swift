@@ -13,13 +13,19 @@ struct SelectedItemScenesTopRow: View {
     var body: some View {
         HStack  {
             
-            Image("1-3")
+            Image( x.subImg)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 60, height: 70)
-                .overlay(
-                    Image( x.subImg)
-                )
+                .frame(width: 23, height: 24)
+                .padding(6)
+                .modifier(viewModifiers())
+//            Image("1-3")
+//                .resizable()
+//                .aspectRatio(contentMode: .fill)
+//                .frame(width: 60, height: 70)
+//                .overlay(
+//                    Image( x.subImg)
+//                )
             
             VStack {
                 

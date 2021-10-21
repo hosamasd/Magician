@@ -18,8 +18,8 @@ struct SpecialOfferRowView: View {
             
             Image(x.img)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: getImageWidth())//, height: 150)//150 // 200
+                //                .aspectRatio(contentMode: .fill)
+                .frame(width: getImageWidth(),height: 130)//, height: 150)//150 // 200
                 .overlay(
                     
                     Label(
@@ -45,7 +45,7 @@ struct SpecialOfferRowView: View {
                 
                 Label(
                     title: {
-                        VStack (alignment:.leading){
+                        VStack (alignment:.leading,spacing:6){
                             HStack {
                                 Text(x.name)
                                     .font(.customFontSystem(size: 10))
@@ -57,26 +57,39 @@ struct SpecialOfferRowView: View {
                                     .fontWeight(.regular)
                                     
                                     .foregroundColor(Color("mains").opacity(0.8))
-                                    .offset(y:8)
+                                //                                    .offset(y:8)
                                 //                                        .padding(.top,4)
                             }
                             //                                .padding(.leading,-4)
                             Text(x.type)
                                 .font(.customFontSystem(size: 8))
                                 .foregroundColor(.black.opacity(0.8))
-                                .padding(.top,4)
+                            //                                .padding(.top,4)
                         }
-                        .offset(x:-4,y:-10)
+                        .offset(y:-10)
                     },
                     icon: {
                         
-                        Image("1-3")
-                            .overlay(
-                                Image( x.subImg)
-                            )
+                        Image( x.subImg)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 23, height: 24)
+                            .padding(6)
+                            .modifier(viewModifiers())
+                        //                            .padding()
+                        
+                        //                        Image("1-3")
+                        //                            .resizable()
+                        //                            .frame(width: 31, height: 36)
+                        //                            .overlay(
+                        //                                Image( x.subImg)
+                        //                                    .resizable()
+                        //                                    .aspectRatio(contentMode: .fit)
+                        //                                    .frame(width: 23, height: 24)
+                        //                            )
                     }
                 )
-                .padding(.leading,-4)
+                //                .padding(.leading,-4)
                 
                 //                Text("chickens stevers")
                 VStack(alignment:.leading) {
@@ -92,15 +105,15 @@ struct SpecialOfferRowView: View {
                         
                         //                    .font(.system(size: 15))
                         .fontWeight(.regular)
-                        .multilineTextAlignment(.leading)
+                        //                        .multilineTextAlignment(.leading)
                         .lineLimit(3)
-                        .foregroundColor(Color.black.opacity(0.7))
-                        
-                        //                        .foregroundColor(.black.opacity(0.4))
-                        .padding(.top,-4)
+                        .foregroundColor(Color.black.opacity(0.6))
+                    
+                    //                        .foregroundColor(.black.opacity(0.4))
+                    //                        .padding(.top,-4)
                 }
-                .padding(.horizontal,8)//16
-                
+                //                .padding(.horizontal,8)//16
+                .padding(.vertical,4)
                 
                 //
                 HStack {
@@ -116,7 +129,7 @@ struct SpecialOfferRowView: View {
                     )
                     //                    .padding(.horizontal,8)
                     
-                    Spacer()
+                    //                    Spacer()
                     
                     Label(
                         title: {
@@ -142,22 +155,24 @@ struct SpecialOfferRowView: View {
                     )
                     
                 }
-                .padding(.top)
+                //                .padding(.top)
                 .padding(.horizontal,8)
-                
+                //                .padding(.bottom,8)
                 
                 
                 
             }
             
+            
         }
         
         .padding(.horizontal,8)
         .padding(.vertical,8)
+        .frame(width:getFrameSize().width-64,height: 145)//,height:220)
         
         .background(
             RoundedRectangle(
-                cornerRadius: 10
+                cornerRadius: 19
             )
             .foregroundColor(Color("topRate"))
             .shadow(
@@ -167,7 +182,6 @@ struct SpecialOfferRowView: View {
                 y: 2
             )
         )
-        .frame(width:getFrameSize().width-64)//,height:220)
         
         //        .frame(height:200)
         //        .padding(8)

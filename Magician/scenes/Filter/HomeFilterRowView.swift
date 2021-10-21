@@ -15,11 +15,11 @@ struct HomeFilterRowView: View {
             
             Image(x.img)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
+//                .aspectRatio(contentMode: .fill)
                 .frame( height: 190)
                 
                     
-                .cornerRadius(10)
+                .cornerRadius(19)
             
             HStack (spacing:12){
                 
