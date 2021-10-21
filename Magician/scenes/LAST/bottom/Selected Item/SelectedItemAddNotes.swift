@@ -16,7 +16,8 @@ struct SelectedItemAddNotes: View {
     @State var isAddCheckout=false
 
     @Binding var isShow:Bool
-    @Binding var isMakeCheckout:Bool
+//    @Binding var isMakeCheckout:Bool
+    @State var isMakeCheckout=false
 
     var selectedItem =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
     
@@ -126,12 +127,19 @@ struct SelectedItemAddNotes: View {
         }
         .edgesIgnoringSafeArea(.all)
         
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isMakeCheckout, content: {
+                            SHomeCheckout(isShow: $isMakeCheckout)
+
+//                            HomeCheckout(isShow: $isMakeCheckout)
+                        } )
+        )
     }
 }
 
 struct SelectedItemAddNotes_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))
-//        SelectedItemAddNotes(isShow: .constant(false))
+//        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))
+        SelectedItemAddNotes(isShow: .constant(false))
     }
 }

@@ -64,7 +64,9 @@ struct SelectedItemScenes: View {
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isFirstStep, content: {
-                                            SelectedItemAddNotes(isShow:  $isFirstStep,isMakeCheckout: $isMakeCheckout, selectedItem:selectedItem)  })
+                                            SelectedItemAddNotes(isShow:  $isFirstStep, selectedItem:selectedItem)  })
+
+//                                            SelectedItemAddNotes(isShow:  $isFirstStep,isMakeCheckout: $isMakeCheckout, selectedItem:selectedItem)  })
         )
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isMakeCheckout, content: {

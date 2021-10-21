@@ -39,6 +39,7 @@ struct HomeCheckoutAddVisa: View {
                     
                 }
                 .padding(.top,getSafeArea()?.top)
+                .padding(.top,-12)
                 .padding(.horizontal,24)//16
                 
                 //            HomeCheckoutTopView(vm:vm,isShow: $isShow)
@@ -207,7 +208,8 @@ struct HomeCheckoutAddVisa: View {
                     .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
                 }
             }
-         
+//            .edgesIgnoringSafeArea(.all)
+
             if vm.isAddVisaSheet {
                 
                 HomeCheckoutSheetView(vm:vm)
@@ -228,11 +230,11 @@ struct HomeCheckoutAddVisa: View {
             //        .environmentObject(vmm)
             //        .environmentObject(vm)
             
-            .background(Color("bg"))
-            .edgesIgnoringSafeArea(.all)
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
+        .background(Color("bg"))
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
         
         .alert(isPresented: $vm.isChangeAddress, AlertConfig(title: "Change Address", action: {
             //                    print("Text \($0 ?? "Cancelled")")
