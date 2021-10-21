@@ -11,7 +11,9 @@ struct BottomAddNotesView: View {
     @Binding var isShow:Bool
     @Binding var notesText:String
     @Binding var isShowSheet:Bool
+    @Binding var isAddCheckout:Bool
 
+    
     var body: some View {
         VStack {
             
@@ -65,7 +67,7 @@ struct BottomAddNotesView: View {
             
             HStack {
                 Button(action: {withAnimation{
-                    
+                    isAddCheckout.toggle()
                 }}, label: {
                     Label(
                         title: { Text("Add Cards")
@@ -90,6 +92,8 @@ struct BottomAddNotesView: View {
 
 struct BottomAddNotesView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemAddNotes(isShow: .constant(false))
+        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))
+
+//        SelectedItemAddNotes(isShow: .constant(false))
     }
 }

@@ -14,7 +14,7 @@ class HomeCheckoutViewModel:ObservableObject {
     
     //main pages
     @Published var isCheckOut = false
-    @Published var isTrackMyOrder = true
+    @Published var isTrackMyOrder = false
 
     @Published var address = "653 Nostrand Ave.,\n Brooklyn, NY 11216"
     @Published var isChangeAddress = false

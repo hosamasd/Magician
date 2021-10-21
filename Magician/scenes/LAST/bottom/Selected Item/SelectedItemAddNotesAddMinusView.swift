@@ -81,6 +81,8 @@ struct SelectedItemAddNotesAddMinusView: View {
 
 struct SelectedItemAddNotesAddMinusView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemAddNotes(isShow: .constant(false))
+        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))
+
+//        SelectedItemAddNotes(isShow: .constant(false))
     }
 }

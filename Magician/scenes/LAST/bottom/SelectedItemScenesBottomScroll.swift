@@ -12,7 +12,8 @@ struct SelectedItemScenesBottomScroll: View {
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 1)
     @Binding var isShow:Bool
     @Binding var selected:OfferModel
-    
+    @Binding var isMakeCheckout:Bool
+
     var body: some View {
         VStack (alignment:.leading){
             ScrollView(.horizontal, showsIndicators: false) {
@@ -71,9 +72,21 @@ struct SelectedItemScenesBottomScroll: View {
                 }
                 
                 Button(action: {withAnimation{
-                    
+                    isMakeCheckout.toggle()
                 }}, label: {
                     Image("Group 8333")
+//                        .overlay(
+//                            
+//                            Circle()
+//                                .fill(Color("mains"))
+//                                .frame(width: 25, height: 25)
+//                                .overlay(
+//                                    
+//                                    Text("1")
+//                                        .foregroundColor(.white)
+//                                )
+//                                .offset(x:20,y:5)
+//                            ,alignment: .top)
                 })
                 .offset(x:10)
             }

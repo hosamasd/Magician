@@ -16,15 +16,18 @@ struct HomeCheckoutTopView: View {
             
             HStack (spacing:16){
                 Button(action: {withAnimation{
-                    vm.isCheckOut ? vm.isCheckOut.toggle() : 
-                        vm.isOperationSheetDone ? vm.isOperationSheetDone.toggle() :  isShow.toggle()
+                    isShow.toggle()
+//                    vm.isCheckOut ? vm.isCheckOut.toggle() :
+//                        vm.isOperationSheetDone ? vm.isOperationSheetDone.toggle() :  isShow.toggle()
                 }}, label: {
                     //                Image(systemName: vmm.getBackImage())
                     Image(systemName: "chevron.backward")
                 })
                 .foregroundColor(.black)
                 
-                Text(LocalizedStringKey(vm.isCheckOut ? "Checkout" : vm.isTrackMyOrder ? "Back" : "My Order"))
+                Text(LocalizedStringKey("My Order"))
+                        
+//                        vm.isCheckOut ? "Checkout" : vm.isTrackMyOrder ? "Back" : "My Order"))
                     .font(.boldCustomFontSystem(size: 27))
                     .fontWeight(.bold)
             }

@@ -13,13 +13,21 @@ struct PaymentCosenRowView: View {
     
     @Binding var isSelect : Bool
     @ObservedObject var vm:HomeCheckoutViewModel
-
+    var isFirst = false
+    
     var body: some View {
         HStack {
             
             Label(
                 title: { Text(x) },
-                icon: { Image(img) }
+                icon: {
+                    if isFirst { Text("")
+                    }
+                        else {
+                    
+                Image(img)
+                    }
+                    }
             )
             
             Spacer()

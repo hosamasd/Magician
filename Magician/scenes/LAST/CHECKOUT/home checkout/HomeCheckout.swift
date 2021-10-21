@@ -130,12 +130,15 @@ struct HomeCheckout: View {
                             
                             
                         }
+                        .padding(.bottom)
                         
                         Spacer()
                         
                         Button(action: {
                             withAnimation{
-                                vm.isCheckOut.toggle()
+                                //                                isShow.toggle()
+//                                vm.isTrackMyOrder.toggle()
+                                                                vm.isCheckOut.toggle()
                             }
                         }, label: {
                             RoundedRectangle(cornerRadius: 28)
@@ -152,30 +155,30 @@ struct HomeCheckout: View {
                         })
                         .frame(height:60)
                         .padding(.horizontal)
-                        //                        .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
+                        .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
                     }
                     .opacity(vm.isCheckOut || vm.isTrackMyOrder ? 0 : 1)
-//                    .opacity(vm.isCheckOut ? 0 : 1)
-
+                    //                    .opacity(vm.isCheckOut ? 0 : 1)
+                    
                     if vm.isCheckOut {
-
+                        
                         HomeCheckoutAddVisa(vm: vm)
-                            .transition(.move(edge: .bottom))
+                            .transition(.move(edge: .leading))
                     }
                     
                     if vm.isTrackMyOrder {
-
+                        
                         HomeTrackOrder(vm: vm)
-                            .transition(.move(edge: .bottom))
+                            .transition(.move(edge: .trailing))
                     }
-//
-//                    if vm.isOperationDone {
-//
-//                        HomeCheckoutSuccessfullSheetView(vm:vm)
-//                            //                    .environmentObject(vmm)
-//                            .transition(.move(edge: .bottom))
-//
-//                    }
+                    //
+                    //                    if vm.isOperationDone {
+                    //
+                    //                        HomeCheckoutSuccessfullSheetView(vm:vm)
+                    //                            //                    .environmentObject(vmm)
+                    //                            .transition(.move(edge: .bottom))
+                    //
+                    //                    }
                 }
                 
             }
@@ -190,14 +193,14 @@ struct HomeCheckout: View {
             }
             
             if vm.isOperationSheetDone {
-
+                
                 HomeCheckoutSuccessfullSheetView(vm:vm)
                     //                    .environmentObject(vmm)
                     .transition(.move(edge: .bottom))
-
+                
             }
             
-          
+            
         }
         
         //        .environmentObject(vmm)

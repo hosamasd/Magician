@@ -13,8 +13,11 @@ struct SelectedItemAddNotes: View {
     @StateObject var vm = HomeFavoriteViewModel()
     @State var isShowSheetView = false
     @State var notesText=""
-    
+    @State var isAddCheckout=false
+
     @Binding var isShow:Bool
+    @Binding var isMakeCheckout:Bool
+
     var selectedItem =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
     
     var body: some View {
@@ -55,11 +58,11 @@ struct SelectedItemAddNotes: View {
                     .clipShape(CustomCorners(corners: [.bottomLeft,.bottomRight], width: 20))
                 
                 
-               
-                    
-                      
-                    
-                    
+                
+                
+                
+                
+                
                 
                 SelectedItemAddNotesTopRow()
                 
@@ -76,7 +79,7 @@ struct SelectedItemAddNotes: View {
                             
                             FirstStepView()
                             
-                            BottomAddNotesView(isShow: $isShowSheetView,notesText: $notesText,isShowSheet: $isShowSheetView)
+                            BottomAddNotesView(isShow: $isShowSheetView,notesText: $notesText,isShowSheet: $isShowSheetView,isAddCheckout:$isAddCheckout)
                                 .padding(.bottom)
                             //                    SecondStepView()
                             
@@ -85,9 +88,23 @@ struct SelectedItemAddNotes: View {
                         
                     })
                     Button(action: {withAnimation{
-                        
+                        isMakeCheckout.toggle()
+
                     }}, label: {
                         Image("Group 8333")
+                            .overlay(
+                                
+                                Circle()
+                                    .fill(Color("mains"))
+                                    .frame(width: 25, height: 25)
+                                    .overlay(
+                                        
+                                        Text("1")
+                                            .foregroundColor(.white)
+                                    )
+                                    .offset(x:20,y:5)
+                                    .opacity(isAddCheckout ? 1 : 0)
+                                ,alignment: .top)
                     })
                     //                .offset(x:10)
                 }
@@ -114,6 +131,7 @@ struct SelectedItemAddNotes: View {
 
 struct SelectedItemAddNotes_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemAddNotes(isShow: .constant(false))
+        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))
+//        SelectedItemAddNotes(isShow: .constant(false))
     }
 }

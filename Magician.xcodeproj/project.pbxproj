@@ -66,6 +66,7 @@
 		4EAFFC4027202CEB0027B8B3 /* HomeTrackOrderAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC3F27202CEB0027B8B3 /* HomeTrackOrderAnimated.swift */; };
 		4EAFFC4227202DC60027B8B3 /* HomeTrackOrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC4127202DC60027B8B3 /* HomeTrackOrderRowView.swift */; };
 		4EAFFC45272031A90027B8B3 /* HomeTrackOrdersRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC44272031A90027B8B3 /* HomeTrackOrdersRowView.swift */; };
+		4EB2A0212721AB92008DAC14 /* SHomeCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2A0202721AB92008DAC14 /* SHomeCheckout.swift */; };
 		4EB56956271EDE8300AB03B4 /* HomeCheckoutSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB56955271EDE8300AB03B4 /* HomeCheckoutSheetView.swift */; };
 		4EB64AF9271D96D20012EB48 /* HomeAccountGifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */; };
 		4EB64AFB271D9C970012EB48 /* AccountSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */; };
@@ -205,6 +206,7 @@
 		4EAFFC3F27202CEB0027B8B3 /* HomeTrackOrderAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrderAnimated.swift; sourceTree = "<group>"; };
 		4EAFFC4127202DC60027B8B3 /* HomeTrackOrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrderRowView.swift; sourceTree = "<group>"; };
 		4EAFFC44272031A90027B8B3 /* HomeTrackOrdersRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrdersRowView.swift; sourceTree = "<group>"; };
+		4EB2A0202721AB92008DAC14 /* SHomeCheckout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHomeCheckout.swift; sourceTree = "<group>"; };
 		4EB56955271EDE8300AB03B4 /* HomeCheckoutSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutSheetView.swift; sourceTree = "<group>"; };
 		4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountGifts.swift; sourceTree = "<group>"; };
 		4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSheetView.swift; sourceTree = "<group>"; };
@@ -555,6 +557,17 @@
 			path = orders;
 			sourceTree = "<group>";
 		};
+		4EB2A01F2721AAC6008DAC14 /* home checkout */ = {
+			isa = PBXGroup;
+			children = (
+				4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */,
+				4EB2A0202721AB92008DAC14 /* SHomeCheckout.swift */,
+				4E4ACA522720148100AE6703 /* HomeCheckoutSuccessfullSheetView.swift */,
+				4EDFA7DF271EB6EA0067D83E /* row view */,
+			);
+			path = "home checkout";
+			sourceTree = "<group>";
+		};
 		4EB8FFE727148551008C0D03 /* support files */ = {
 			isa = PBXGroup;
 			children = (
@@ -859,9 +872,7 @@
 			children = (
 				4EAFFC3C27202B1D0027B8B3 /* track my order */,
 				4EAEE3B2271EC257003C482F /* Add Visa */,
-				4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */,
-				4E4ACA522720148100AE6703 /* HomeCheckoutSuccessfullSheetView.swift */,
-				4EDFA7DF271EB6EA0067D83E /* row view */,
+				4EB2A01F2721AAC6008DAC14 /* home checkout */,
 				4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */,
 				4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */,
 			);
@@ -991,6 +1002,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB2A0212721AB92008DAC14 /* SHomeCheckout.swift in Sources */,
 				4E250C86271C4B9D001873B6 /* SelectedCategoryRowView.swift in Sources */,
 				4EBED108271EEF1600FF5779 /* YearPicker.swift in Sources */,
 				4E1538C82714B36700D5DD52 /* NewPasswordView.swift in Sources */,

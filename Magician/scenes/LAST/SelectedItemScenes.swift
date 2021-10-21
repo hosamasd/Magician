@@ -14,6 +14,8 @@ struct SelectedItemScenes: View {
     @Binding var isShow:Bool
     var selectedItem =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
     @State var isFirstStep=false
+    @State var isMakeCheckout=false
+    
     @State var secondSelectedItem =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
     
     var body: some View {
@@ -49,11 +51,11 @@ struct SelectedItemScenes: View {
                     
                     ,alignment: .top)
                 .clipShape(CustomCorners(corners: [.bottomLeft,.bottomRight], width: 20))
-//                .cornerRadius(20)
+            //                .cornerRadius(20)
             
             SelectedItemScenesTopRow()
             
-            SelectedItemScenesBottomScroll(isShow: $isFirstStep, selected: $secondSelectedItem)
+            SelectedItemScenesBottomScroll(isShow: $isFirstStep, selected: $secondSelectedItem,isMakeCheckout:$isMakeCheckout)
             
             Spacer()
             
@@ -62,8 +64,16 @@ struct SelectedItemScenes: View {
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isFirstStep, content: {
-                                            SelectedItemAddNotes(isShow:  $isFirstStep,selectedItem:selectedItem)  })
+                                            SelectedItemAddNotes(isShow:  $isFirstStep,isMakeCheckout: $isMakeCheckout, selectedItem:selectedItem)  })
         )
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isMakeCheckout, content: {
+                            SHomeCheckout(isShow: $isMakeCheckout)
+
+//                            HomeCheckout(isShow: $isMakeCheckout)
+                        } )
+        )
+        
     }
 }
 

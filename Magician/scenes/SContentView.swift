@@ -14,9 +14,12 @@ struct SContentView: View {
 //    @StateObject var vmsss = MainHomeTabViewModel()
     
     var body: some View {
-        SelectedItemAddNotes(isShow: .constant(false))
+        SHomeCheckout(isShow: .constant(false))
+//        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))
+
+//        SelectedItemAddNotes(isShow: .constant(false))
 //        HomeFilter()
-            .environmentObject(vm)
+//            .environmentObject(vm)
 //            .environmentObject(vms)
 //        HomeTrackOrder()
 //        YearPicker(isMonth: .constant(false))//start: 2000, end: 2020)
