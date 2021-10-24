@@ -20,6 +20,7 @@ struct HomeSelectedCategory: View {
     @State var isShowFilter=false
     @State var isSelectItem=false
     @State var selectedItem = OfferModel(name: "", img: "", subImg: "", type: "", location: "", rating: "")
+    
     var body: some View {
         //        VStack {
         

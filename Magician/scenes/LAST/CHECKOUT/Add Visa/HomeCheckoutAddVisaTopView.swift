@@ -16,14 +16,16 @@ struct HomeCheckoutAddVisaTopView: View {
             VStack(alignment:.leading){
                 
                 Text("Delivery Address")
-                    .font(.customFontSystem(size: 14))
-                    .fontWeight(.regular)
-                    .foregroundColor(.gray.opacity(0.6))
+                    .font(.system(size: 14))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.gray.opacity(0.8))
+
+//                    .foregroundColor(.gray.opacity(0.6))
                     .padding(.vertical)
                 
                 HStack {
                     Text(vm.address)
-                        .font(.customFontSystem(size: 16))
+                        .font(.system(size: 16))
                         .fontWeight(.semibold)
                         .lineSpacing(6)
                     
@@ -40,13 +42,13 @@ struct HomeCheckoutAddVisaTopView: View {
             .padding(.vertical)
             
         }
-        .background(Color.white)
+//        .background(Color.white)
     }
 }
 
 struct HomeCheckoutAddVisaTopView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
+        SHomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
 
 //        HomeCheckoutAddVisaTopView()
     }

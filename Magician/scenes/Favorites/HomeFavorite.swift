@@ -12,24 +12,27 @@ struct HomeFavorite: View {
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
     
+    @State var isSelectItem=false
+    @State var selectedItem = OfferModel(name: "", img: "", subImg: "", type: "", location: "", rating: "")
+    
     var body: some View {
         VStack {
             
             ZStack {
                 
-            VStack {
+                VStack {
                     
                     HomeSelectedCategoryTopView()
                     //                        .padding(.horizontal,8)
                     //                        .padding(.bottom,20)
                     
-                HomeFavoriteTopView(columns: $columns)
-                    .padding(.vertical)
-                
+                    HomeFavoriteTopView(columns: $columns)
+                        .padding(.vertical)
+                    
                     ScrollView(showsIndicators:false){
                         
-//                        HomeFavoriteTopView(columns: $columns)
-//                            .padding(.vertical)
+                        //                        HomeFavoriteTopView(columns: $columns)
+                        //                            .padding(.vertical)
                         
                         
                         LazyVGrid(columns: columns,spacing: vm.isSingleItemLists == 1 ?  16 : 16){
@@ -39,6 +42,10 @@ struct HomeFavorite: View {
                             ForEach(vm.favoriteArray,id: \.name){gradient in
                                 
                                 FavoriteRowView(x:gradient)
+                                    .onTapGesture(perform: {
+                                        selectedItem=gradient
+                                        isSelectItem=true
+                                    })
                                 //                                    GradientView(columns: $columns, gradient: gradient, vm: vm)
                             }
                         }
@@ -46,12 +53,12 @@ struct HomeFavorite: View {
                         .padding(.bottom)
                         
                         .padding(.bottom,getBottomSpace())
-
+                        
                     }
                     
                 }
-            .padding(.horizontal,32)
-
+                .padding(.horizontal,32)
+                
                 if vm.isLooding {
                     LoadingCapsuleSpacing()
                 }
@@ -60,7 +67,7 @@ struct HomeFavorite: View {
         }
         .environmentObject(vmm)
         .environmentObject(vm)
-
+        
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")
@@ -69,6 +76,10 @@ struct HomeFavorite: View {
         
         //        }
         
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isSelectItem, content: {
+                                            SelectedItemScenes(isShow:  $isSelectItem,selectedItem:selectedItem)  })
+        )
         
     }
     

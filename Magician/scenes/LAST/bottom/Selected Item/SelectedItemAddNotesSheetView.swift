@@ -64,12 +64,14 @@ struct SelectedItemAddNotesSheetView: View {
                 })
                 .frame(height:60)
                 .padding(.top,50)
-                //                .padding(.bottom,bottomSafeArea(x: 15))
+                                .padding(.bottom,bottomSafeArea(x: 15))
                 .frame(width:getFrameSize().width-48)
                 
                 
             }
-            .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
+//            .padding(.bottom,bottomSafeArea(x: 0,y: 0) )
+
+//            .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
             
             //            .padding(.bottom,10)
             //            .padding(.bottom,getSafeArea()?.bottom)

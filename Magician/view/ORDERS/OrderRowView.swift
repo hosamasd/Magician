@@ -20,18 +20,18 @@ struct OrderRowView: View {
             VStack(alignment: .leading, content: {
                 
                 Text(x.name)
-//                    .font(.system(size: 20))
+                    //                    .font(.system(size: 20))
                     .font(.customFontSystem(size: 20))
-
+                    
                     .fontWeight(.bold)
                     .foregroundColor(Color("mains"))
-//                    .padding(.top,16)
-//                    .offset(y:8)
+                //                    .padding(.top,16)
+                //                    .offset(y:8)
                 
                 Text(x.desc)
                     .font(.customFontSystem(size: 15))
-
-//                    .font(.system(size: 15))
+                    
+                    //                    .font(.system(size: 15))
                     .fontWeight(.regular)
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
@@ -41,16 +41,16 @@ struct OrderRowView: View {
                 
                 Text(x.price)
                     .font(.customFontSystem(size: 25))
-
-//                    .font(.system(size: 25))
+                    
+                    //                    .font(.system(size: 25))
                     .fontWeight(.bold)
                     .foregroundColor(Color("oprice"))//.opacity(0.6))
                 
                 HStack{
                     Text(x.date)
                         .font(.customFontSystem(size: 11))
-
-//                        .font(.system(size: 11))
+                        
+                        //                        .font(.system(size: 11))
                         .fontWeight(.regular)
                         .foregroundColor(.black.opacity(0.8))
                     
@@ -61,8 +61,8 @@ struct OrderRowView: View {
                         ZStack {
                             Text("Track My Order")
                                 .font(.customFontSystem(size: 16))
-
-//                                .font(.system(size: 16))
+                                
+                                //                                .font(.system(size: 16))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("mains"))
                                 .opacity(x.isOrdered ? 0 : 1)
@@ -74,10 +74,10 @@ struct OrderRowView: View {
                                 icon: {
                                     Text("Reorder")
                                         .font(.customFontSystem(size: 16))
-
-//                                        .font(.system(size: 16))
+                                        
+                                        //                                        .font(.system(size: 16))
                                         .fontWeight(.bold)
-                                        .padding(.trailing,-8)
+                                        .padding(.trailing,-4)
                                         .foregroundColor(.black.opacity(0.4))
                                 }
                             )
@@ -94,11 +94,23 @@ struct OrderRowView: View {
         }
         
         .padding(8)
-        .background(Color.white)
-        .cornerRadius(20)
-        .modifier(viewModifiers())
-//        .padding(.leading,-8)
-//        .padding(.horizontal)
+        .background(
+            RoundedRectangle(
+                cornerRadius: 20
+            )
+            .foregroundColor(Color.white)
+            .shadow(
+                color: Color.gray.opacity(0.6),
+                radius: 2.5,
+                x: 0,
+                y: 2
+            )
+        )
+        //        .background(Color.white)
+        //        .cornerRadius(20)
+        //        .modifier(viewModifiers())
+        //        .padding(.leading,-8)
+        //        .padding(.horizontal)
     }
 }
 

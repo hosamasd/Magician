@@ -88,6 +88,6 @@ struct HomeCheckoutItemRowView: View {
 
 struct HomeCheckoutItemRowView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCheckout(isShow: .constant(false))
+        SSHomeCheckout(isShow: .constant(false))
     }
 }

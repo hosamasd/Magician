@@ -14,8 +14,8 @@ struct HomeCheckoutAddVisaAddVisa: View {
         VStack(spacing: 15){
             HStack {
                 Text("Payment method")
-                    .foregroundColor(.gray.opacity(0.6))
-                    .font(.customFontSystem(size: 18))
+                    .foregroundColor(.gray.opacity(0.8))
+                    .font(.system(size: 14))
                     .fontWeight(.bold)
                 
                 Spacer()
@@ -59,7 +59,7 @@ struct HomeCheckoutAddVisaAddVisa: View {
 
 struct HomeCheckoutAddVisaAddVisa_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
+        SHomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
         
         //        HomeCheckoutAddVisaAddVisa()
     }

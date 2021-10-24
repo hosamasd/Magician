@@ -16,18 +16,19 @@ struct HomeCheckoutTopView: View {
             
             HStack (spacing:16){
                 Button(action: {withAnimation{
-                    isShow.toggle()
-//                    vm.isCheckOut ? vm.isCheckOut.toggle() :
-//                        vm.isOperationSheetDone ? vm.isOperationSheetDone.toggle() :  isShow.toggle()
+                    //                    isShow.toggle()
+                    vm.isTrackMyOrder ? vm.isTrackMyOrder.toggle() :    vm.isCheckOut ? vm.isCheckOut.toggle() :
+                        isShow.toggle()
                 }}, label: {
                     //                Image(systemName: vmm.getBackImage())
                     Image(systemName: "chevron.backward")
                 })
                 .foregroundColor(.black)
                 
-                Text(LocalizedStringKey("My Order"))
+                Text(LocalizedStringKey(
+                        //"My Order"))
                         
-//                        vm.isCheckOut ? "Checkout" : vm.isTrackMyOrder ? "Back" : "My Order"))
+                        vm.isTrackMyOrder ? "Back" :   vm.isCheckOut ? "Checkout"  : "My Order"))
                     .font(.boldCustomFontSystem(size: 27))
                     .fontWeight(.bold)
             }
@@ -42,6 +43,7 @@ struct HomeCheckoutTopView: View {
 
 struct HomeCheckoutTopView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCheckout(isShow: .constant(false))
+//        SSHomeCheckout(isShow: .co)
+        SSHomeCheckout(isShow: .constant(false))
     }
 }

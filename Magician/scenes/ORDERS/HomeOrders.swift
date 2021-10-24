@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct HomeOrders: View {
-    @StateObject var vm = HomeOrdersViewModel()
-
+    //    @StateObject var vm = HomeOrdersViewModel()
+    @EnvironmentObject var vm : HomeOrdersViewModel
+    
+    @EnvironmentObject var vmm : HomeMainTabBarViewModel
+    
+    @State var isSelectItem=false
+    @State var selectedItem = OfferModel(name: "", img: "", subImg: "", type: "", location: "", rating: "")
+    
     var body: some View {
         VStack {
             
             VStack {
                 
-            HomeOrdersTopView(vm:vm)
-            
-            ScrollView(showsIndicators:false){
+                //                HomeOrdersTopView(vm:vm)
+                HomeOrdersTopView()
+                    .environmentObject(vm)
                 
+                ScrollView(showsIndicators:false){
+                    
                     
                     LazyVStack(alignment: .center, spacing: 16) {
                         //                            VStack(spacing: 20){
@@ -27,22 +35,27 @@ struct HomeOrders: View {
                             
                             OrderRowView(x: msg)
                                 .frame(width:getFrameSize().width-28)
-
+                                .onTapGesture(perform: {
+                                    
+                                    selectedItem=OfferModel(name: msg.name, img: msg.img, subImg: msg.img, type: msg.name, location: msg.desc, rating: msg.price)
+                                    isSelectItem=true
+                                })
+                            
                         }
                         
                     }
                     .padding(.top,20)
                     .frame(width:getFrameSize().width-28)
                     .padding(.bottom,getBottomSpace())
-
-            
+                    
+                    
+                    
+                }
                 
             }
+            .padding(.horizontal,32)
             
-        }
-        .padding(.horizontal,32)
-
-//            .padding(.bottom,getBottomSpace())
+            //            .padding(.bottom,getBottomSpace())
             Spacer()
         }
         .background(Color("bg"))
@@ -56,12 +69,17 @@ struct HomeOrders: View {
             Alert(title: Text("Error"), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
         }
         
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isSelectItem, content: {
+                                            SelectedItemScenes(isShow:  $isSelectItem,selectedItem:selectedItem)  })
+        )
+        
     }
     
     func getBottomSpace() ->CGFloat {
         CGFloat( isSmallDevice() ? 80 : 100)
-
-//       CGFloat( isSmallDevice() ? 130 : 100)
+        
+        //       CGFloat( isSmallDevice() ? 130 : 100)
     }
 }
 

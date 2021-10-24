@@ -153,9 +153,13 @@ struct HomeCheckoutSheetView: View {
                     })
                     //                .frame(height:60)
                     .padding(.top,20)
+                    .padding(.bottom,bottomSafeArea(x: 15))
+
+                    .frame(width:getFrameSize().width-48)
+
                     //                .frame(width:getFrameSize().width-48)
                     //                .background(Color("mains").clipShape(Capsule()))
-                    .padding(.bottom,bottomSafeArea(x: 15))
+//                    .padding(.bottom,bottomSafeArea(x: 15))
                     
                     
                 }
@@ -163,20 +167,29 @@ struct HomeCheckoutSheetView: View {
                 
                 //            .padding(.bottom,10)
                 //            .padding(.bottom,getSafeArea()?.bottom)
+                
+                
                 .padding(.top,20)
-                .background(GETBG().clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 18)))
+                .background(Color.white.clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 18)))
                 .offset(y: vm.isAddVisaSheet ? 0 : UIScreen.main.bounds.height/2)
-                //                .keyboardSpace()
-                
-                
-                
-                //            .background(Color.black.opacity(0.6))
-                //            .edgesIgnoringSafeArea(.all)
             }
-          
             .background(Color.black.opacity(0.6))
             .edgesIgnoringSafeArea(.all)
-            .ignoresSafeArea(.keyboard, edges: .bottom)
+                
+//                .padding(.top,20)
+//                .background(GETBG().clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 18)))
+//                .offset(y: vm.isAddVisaSheet ? 0 : UIScreen.main.bounds.height/2)
+//                //                .keyboardSpace()
+//
+//
+//
+//                //            .background(Color.black.opacity(0.6))
+//                //            .edgesIgnoringSafeArea(.all)
+//            }
+//
+//            .background(Color.black.opacity(0.6))
+//            .edgesIgnoringSafeArea(.all)
+//            .ignoresSafeArea(.keyboard, edges: .bottom)
             .popup(isPresented: vm.isMonth) {
                 BottomPopupView {
                     YearPicker.init(isMonth: $vm.isMonth,isYear:$vm.isYear, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
@@ -206,7 +219,7 @@ struct HomeCheckoutSheetView: View {
 
 struct HomeCheckoutSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCheckout(isShow: .constant(false))
+        SSHomeCheckout(isShow: .constant(false))
         //        HomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
     }
 }

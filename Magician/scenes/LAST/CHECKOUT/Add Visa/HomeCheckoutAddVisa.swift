@@ -17,6 +17,7 @@ struct HomeCheckoutAddVisa: View {
     var body: some View {
         
         ZStack {
+            
             VStack {
                 
                 HStack{
@@ -38,8 +39,11 @@ struct HomeCheckoutAddVisa: View {
                     Spacer()
                     
                 }
-                .padding(.top,getSafeArea()?.top)
-                .padding(.top,-12)
+                
+                //                .padding(.top,getSafeArea()?.top)
+                //                .background(Color.white)
+                
+                //                .padding(.top,-12)
                 .padding(.horizontal,24)//16
                 
                 //            HomeCheckoutTopView(vm:vm,isShow: $isShow)
@@ -55,6 +59,7 @@ struct HomeCheckoutAddVisa: View {
                             
                             HomeCheckoutAddVisaTopView(vm: vm)
                                 .padding(.horizontal,24)
+                            
                             VStack {
                                 VStack {
                                     HomeCheckoutAddVisaAddVisa(vm:vm)
@@ -81,7 +86,7 @@ struct HomeCheckoutAddVisa: View {
                             }
                             .padding(.vertical)
                             //                .background(Color.red)
-                            .background(Color.gray.opacity(0.1))
+                            //                            .background(Color.gray.opacity(0.1))
                             
                             //                .background(Color.gray.opacity(0.1))
                             //                .padding(.horizontal,-24)
@@ -144,42 +149,47 @@ struct HomeCheckoutAddVisa: View {
                                 }
                             }
                             .padding(.horizontal,24)
-                            .padding(.top)
+                            .padding(.top,30)
                             .padding(.bottom)
-    //                        Spacer()
-    //
-    //                        Button(action: {
-    //                            withAnimation{
-    //                                vm.isOperationSheetDone.toggle()
-    //
-    //                                //                        vm.isCheckOut.toggle()
-    //                            }
-    //                        }, label: {
-    //                            RoundedRectangle(cornerRadius: 28)
-    //
-    //                                .fill(Color("mains"))
-    //                                .overlay(
-    //
-    //                                    Text(LocalizedStringKey("Send order"))
-    //                                        .font(.customFontSystem(size: 16))
-    //                                        .fontWeight(.semibold)
-    //                                        .foregroundColor(Color.white)//.opacity(0.6))
-    //                                )
-    //
-    //                        })
-    //                        .frame(height:60)
-    //                        .padding(.horizontal,24)
-    //                        //                .padding(.horizontal)
-    //                        .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
+                            
+                            Spacer()
+                            //
+                            //                        Button(action: {
+                            //                            withAnimation{
+                            //                                vm.isOperationSheetDone.toggle()
+                            //
+                            //                                //                        vm.isCheckOut.toggle()
+                            //                            }
+                            //                        }, label: {
+                            //                            RoundedRectangle(cornerRadius: 28)
+                            //
+                            //                                .fill(Color("mains"))
+                            //                                .overlay(
+                            //
+                            //                                    Text(LocalizedStringKey("Send order"))
+                            //                                        .font(.customFontSystem(size: 16))
+                            //                                        .fontWeight(.semibold)
+                            //                                        .foregroundColor(Color.white)//.opacity(0.6))
+                            //                                )
+                            //
+                            //                        })
+                            //                        .frame(height:60)
+                            //                        .padding(.horizontal,24)
+                            //                        //                .padding(.horizontal)
+                            //                        .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
                             //            }
                             
                         }
+                        //                        .padding(.horizontal,48)
+                        
                         .padding(.horizontal,24)
+                        
                         .padding(.top)
                         
                         
                     }
                     .padding(.bottom)
+                    
                     
                     Spacer()
                     
@@ -203,18 +213,22 @@ struct HomeCheckoutAddVisa: View {
                         
                     })
                     .frame(height:60)
-                    .padding(.horizontal,24)
                     //                .padding(.horizontal)
+                    .padding(.horizontal,24)
+                    
                     .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
                 }
             }
-//            .edgesIgnoringSafeArea(.all)
-
+            //            .background(Color("bg"))
+            //            .edgesIgnoringSafeArea(.all)
+            
+            //            .edgesIgnoringSafeArea(.all)
+            
             if vm.isAddVisaSheet {
                 
                 HomeCheckoutSheetView(vm:vm)
-                    //                    .environmentObject(vmm)
-//                    .transition(.move(edge: .bottom))
+                //                    .environmentObject(vmm)
+                //                    .transition(.move(edge: .bottom))
                 
                 
             }
@@ -222,25 +236,25 @@ struct HomeCheckoutAddVisa: View {
             if vm.isOperationSheetDone {
                 
                 HomeCheckoutSuccessfullSheetView(vm:vm)
-                    //                    .environmentObject(vmm)
-//                    .transition(.move(edge: .bottom))
+                //                    .environmentObject(vmm)
+                //                    .transition(.move(edge: .bottom))
                 
             }
         }
-            //        .environmentObject(vmm)
-            //        .environmentObject(vm)
-            
+        //        .environmentObject(vmm)
+        //        .environmentObject(vm)
+        
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
+        //        .navigationBarTitle("")
+        //        .navigationBarHidden(true)
+        //        .navigationBarBackButtonHidden(true)
         
         .alert(isPresented: $vm.isChangeAddress, AlertConfig(title: "Change Address", action: {
             //                    print("Text \($0 ?? "Cancelled")")
             vm.address=$0 ?? ""
         }))
-//        }
+        //        }
         //        })
         //        .padding(.horizontal,24)
     }
@@ -248,8 +262,8 @@ struct HomeCheckoutAddVisa: View {
 
 struct HomeCheckoutAddVisa_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
-        //        SContentView()
+        //        HomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
+        SContentView()
         
     }
 }

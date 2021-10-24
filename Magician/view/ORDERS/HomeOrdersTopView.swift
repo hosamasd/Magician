@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeOrdersTopView: View {
-    @ObservedObject var vm:HomeOrdersViewModel
+//    @ObservedObject var vm:HomeOrdersViewModel
+    @EnvironmentObject var vm : HomeOrdersViewModel
 
     var body: some View {
         VStack {

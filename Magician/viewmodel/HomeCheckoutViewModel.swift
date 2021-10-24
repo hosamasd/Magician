@@ -15,22 +15,25 @@ class HomeCheckoutViewModel:ObservableObject {
     //main pages
     @Published var isCheckOut = false
     @Published var isTrackMyOrder = false
-
+    
     @Published var address = "653 Nostrand Ave.,\n Brooklyn, NY 11216"
     @Published var isChangeAddress = false
-
+    
     @Published var isCashOnDelivery = false
     @Published var isFirstVisa = false
     @Published var isSecondVisa = false
     
+    //notes
+    @Published var     notesText=""
+    @Published var isShowNotesText = false
     
     //add card
     @Published var cardNumber = ""
     @Published var isMonth = false
-
+    
     @Published var expiryMonth = "MM"
     @Published var isYear = false
-
+    
     @Published var expiryYear = "YY"
     @Published var securityCode = ""
     @Published var firstName = ""
@@ -40,7 +43,7 @@ class HomeCheckoutViewModel:ObservableObject {
     //sheet view
     @Published var isAddVisaSheet = false
     @Published var isOperationSheetDone = false
-
+    
     func makeCheckVisa(s:inout Bool)  {
         isCashOnDelivery=false
         isFirstVisa=false
@@ -56,4 +59,19 @@ class HomeCheckoutViewModel:ObservableObject {
         OfferModel(name: "Nobile Housez", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
         
     ]
+    
+    func makeAction(s:String)  {
+        switch s {
+        case "Checkout":
+            isCheckOut=true
+        case "Send Order":
+            isOperationSheetDone=true
+        default:
+            ()
+        }
+    }
+    
+    func getName() -> String {
+        isTrackMyOrder ? "Send Order" : "Checkout"
+    }
 }

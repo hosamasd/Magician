@@ -56,6 +56,7 @@ struct HomeCheckoutSuccessfullSheetView: View {
                         Button(action: {
                             withAnimation{
                                 vm.isOperationSheetDone.toggle()
+                                vm.isTrackMyOrder=true
                                 //                                vm.isOperationDone.toggle()
                                 
                                 //                        vm.isCheckOut.toggle()
@@ -88,6 +89,8 @@ struct HomeCheckoutSuccessfullSheetView: View {
                     }
                     .padding(.horizontal,50)
                     .padding(.top)
+                    .padding(.bottom,bottomSafeArea(x: 15))
+
                 }
                 
             }
@@ -105,7 +108,7 @@ struct HomeCheckoutSuccessfullSheetView: View {
 
 struct HomeCheckoutSuccessfullSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCheckout(isShow: .constant(false))
+        SSHomeCheckout(isShow: .constant(false))
         
         //        HomeCheckoutSuccessfullSheetView()
     }

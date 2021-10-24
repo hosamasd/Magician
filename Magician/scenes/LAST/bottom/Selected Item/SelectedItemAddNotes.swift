@@ -88,6 +88,7 @@ struct SelectedItemAddNotes: View {
                         .padding(.horizontal,24)
                         
                     })
+                    
                     Button(action: {withAnimation{
                         isMakeCheckout.toggle()
 
@@ -129,7 +130,8 @@ struct SelectedItemAddNotes: View {
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isMakeCheckout, content: {
-                            SHomeCheckout(isShow: $isMakeCheckout)
+//                            HomeCheckout(isShow: $isMakeCheckout)
+                            SSHomeCheckout(isShow: $isMakeCheckout)
 
 //                            HomeCheckout(isShow: $isMakeCheckout)
                         } )

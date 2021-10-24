@@ -70,9 +70,11 @@ struct SelectedItemScenes: View {
         )
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isMakeCheckout, content: {
-                            SHomeCheckout(isShow: $isMakeCheckout)
-
 //                            HomeCheckout(isShow: $isMakeCheckout)
+
+                            SSHomeCheckout(isShow: $isMakeCheckout)
+//                            SHomeCheckout(isShow: $isMakeCheckout)
+
                         } )
         )
         

@@ -14,7 +14,9 @@ struct SContentView: View {
 //    @StateObject var vmsss = MainHomeTabViewModel()
     
     var body: some View {
-        SHomeCheckout(isShow: .constant(false))
+        SSHomeCheckout(isShow: .constant(false))
+//        HomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
+//        SHomeCheckout(isShow: .constant(false))
 //        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))
 
 //        SelectedItemAddNotes(isShow: .constant(false))

@@ -12,15 +12,15 @@ struct BottomAddNotesView: View {
     @Binding var notesText:String
     @Binding var isShowSheet:Bool
     @Binding var isAddCheckout:Bool
-
+    
     
     var body: some View {
         VStack {
             
-          
+            
             HStack {
                 Text("Add Notes To Your Order")
-                        .font(.boldCustomFontSystem(size: 14))
+                    .font(.boldCustomFontSystem(size: 14))
                     .fontWeight(.bold)
                 
                 Spacer()
@@ -31,38 +31,38 @@ struct BottomAddNotesView: View {
                     Label(
                         title: { Text("Add Notes") },
                         icon: { Image( "Group 8358") }
-)
+                    )
                     .foregroundColor(Color("mains")                .opacity(notesText=="" ? 1 : 0)
-)
+                    )
                 })
                 .disabled(                notesText=="" ? false : true)
-
+                
             }
             
-         
-                
-                VStack {
-                    HStack {
-                        
-                        Text(notesText)
-                            .lineLimit(3)
-                        
-                        VStack {
-                            Button(action: {withAnimation{
-                                isShowSheet.toggle()
-                            }}, label: {
-                                Image("Icon awesome-edit")
-                            }
-                         )
-                            Spacer()
+            
+            
+            VStack {
+                HStack {
+                    
+                    Text(notesText)
+                        .lineLimit(3)
+                    
+                    VStack {
+                        Button(action: {withAnimation{
+                            isShowSheet.toggle()
+                        }}, label: {
+                            Image("Icon awesome-edit")
                         }
-                        .padding(.top,4)
-
+                        )
+                        Spacer()
                     }
-                    .padding()
+                    .padding(.top,4)
+                    
                 }
-                .background(Color.white)
-                .opacity(notesText=="" ? 0 : 1)
+                .padding()
+            }
+            .background(Color.white)
+            .opacity(notesText=="" ? 0 : 1)
             
             
             HStack {
@@ -72,28 +72,28 @@ struct BottomAddNotesView: View {
                     Label(
                         title: { Text("Add Cards")
                             .font(.boldCustomFontSystem(size: 18))
-                        .fontWeight(.bold)
+                            .fontWeight(.bold)
                             .foregroundColor(.white)
                         },
                         icon: { Image( "Group 8095") }
-    )
-            })
+                    )
+                })
                 .frame(width:180,height:60)
                 .background(Color("mains"))
                 .cornerRadius(24)
-//                .clipShape(Capsule())
+                //                .clipShape(Capsule())
                 
                 Spacer()
             }
         }
-//        .padding(.horizontal)
+        //        .padding(.horizontal)
     }
 }
 
 struct BottomAddNotesView_Previews: PreviewProvider {
     static var previews: some View {
-//        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))
-
+        //        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))
+        
         SelectedItemAddNotes(isShow: .constant(false))
     }
 }

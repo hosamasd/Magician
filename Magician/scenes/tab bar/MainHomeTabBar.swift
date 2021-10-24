@@ -11,11 +11,14 @@ struct MainHomeTabBar: View {
     @EnvironmentObject var vm : HomeMainTabBarViewModel
     @StateObject var vma = HomeAccountViewModel()
     @StateObject var vmas = HomeFavoriteViewModel()
-        @StateObject var vmF = HomeFilterViewModel()
-
+    @StateObject var vmF = HomeFilterViewModel()
+    
     @StateObject var vmh = MainHomeTabViewModel()
-//    @StateObject var vms=MainHomeTabViewModel()
-
+    
+    @StateObject var vmOrd = HomeOrdersViewModel()
+    
+    //    @StateObject var vms=MainHomeTabViewModel()
+    
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
@@ -23,14 +26,14 @@ struct MainHomeTabBar: View {
             
             if vm.index == "Home" {
                 //                HomeAccount()
-//                HomeSelectedCategory()
-////                HomeAccount()
-//                    .environmentObject(vma)
-//                    .environmentObject(vms)
+                //                HomeSelectedCategory()
+                ////                HomeAccount()
+                //                    .environmentObject(vma)
+                //                    .environmentObject(vms)
                 
                 //mains
-//                HomeAccount()
-//                                   .environmentObject(vma)
+                //                HomeAccount()
+                //                                   .environmentObject(vma)
                 
                 MainHomeTab()
                     .environmentObject(vmh)
@@ -49,12 +52,13 @@ struct MainHomeTabBar: View {
                 HomeFavorite()
                     .environmentObject(vm)
                     .environmentObject(vmas)
-//                Color.blue
+                //                Color.blue
                 //                    .padding(.horizontal,40)
                 
             }
             else if vm.index ==  "Orders" {
                 HomeOrders()
+                    .environmentObject(vmOrd)
                 //                    .padding(.horizontal,40)
                 
             }
@@ -67,14 +71,14 @@ struct MainHomeTabBar: View {
             }
             
             if !vm.isShowUserGift {
-
-            UsedTabBar()
-                .padding(.horizontal,24)
-                //                .padding(.horizontal,-16)
                 
-                .transition(.move(edge: .trailing))
-                .environmentObject(vm)
-            
+                UsedTabBar()
+                    .padding(.horizontal,24)
+                    //                .padding(.horizontal,-16)
+                    
+                    .transition(.move(edge: .trailing))
+                    .environmentObject(vm)
+                
             }
             
         })
