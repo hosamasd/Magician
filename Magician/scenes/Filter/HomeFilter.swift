@@ -39,18 +39,33 @@ struct HomeFilter: View {
                             
                             Spacer()
                             
-                            Text("Select Your Category")
-                                .font(.system(size: 25))
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))
+                            VStack {
+                                Text("Select Your Category")
+                                    .font(.system(size: 25))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color("mains"))
+                          
                             
                             Image("Group 8275")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+//                                .frame(height:getFrameSize().height/5)
+//                                .padding(.leading)
                             
+                            }
+                            .frame(width:getFrameSize().width-94)//,height:getFrameSize().height/8)
+
                             Spacer()
                             
                         }
                         .opacity(vm.selectedCategory == "" ? 1 : 0)
-                        .padding(.bottom,isSmallDevice() ? 80 : 0)
+                        .padding(.bottom)
+                        .padding(.horizontal)
+                        
+//                        .frame(height:getFrameSize().height/3)
+
+//                        .padding(.bottom,isSmallDevice() ? 80 : 100)
+//                        .padding(.bottom,isSmallDevice() ? 80 : 0)
                         
                         if    vm.selectedCategory != "" {
                             
@@ -76,6 +91,7 @@ struct HomeFilter: View {
                                 
                                 .padding(.bottom)
                                 .padding(.bottom,isSmallDevice() ? 80 : 100)
+                                
                             }
                             .padding(.top,-12)
                             .transition(.move(edge: .leading))

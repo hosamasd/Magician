@@ -9,9 +9,12 @@ import SwiftUI
 
 struct HomeTopRating: View {
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
-    @ObservedObject var vm : MainHomeTabViewModel
-    
+//    @ObservedObject var vm : MainHomeTabViewModel
+    @EnvironmentObject var vm:MainHomeTabViewModel
+
     @Binding var isShow:Bool
+    @State var isSelectItem=false
+    @State var selectedItem = OfferModel(name: "", img: "", subImg: "", type: "", location: "", rating: "")
 //    @Binding var selected:MainCategory
     
     var body: some View {
@@ -62,6 +65,12 @@ struct HomeTopRating: View {
                     ForEach(vm.topRatingArray){gradient in
                         
                         STopRatingRowView(vm: vm, x: gradient)
+                            .onTapGesture(perform: {
+                                withAnimation{
+                                    selectedItem=gradient
+                                    isSelectItem=true
+                                }
+                            })
                     }
                     //                    }
                     
@@ -70,6 +79,10 @@ struct HomeTopRating: View {
             }
             .padding(.top,-16)
         }
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isSelectItem, content: {
+                                            SelectedItemScenes(isShow:  $isSelectItem,selectedItem:selectedItem)  })
+        )
     }
 }
 

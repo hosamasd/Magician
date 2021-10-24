@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct HomeSpecialOffer: View {
+    @EnvironmentObject var vm:MainHomeTabViewModel
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
-    @ObservedObject var vm : MainHomeTabViewModel
+//    @ObservedObject var vm : MainHomeTabViewModel
+    @State var isSelectItem=false
+    @State var selectedItem = OfferModel(name: "", img: "", subImg: "", type: "", location: "", rating: "")
     
     var body: some View {
         VStack(spacing: 15){
@@ -23,9 +26,9 @@ struct HomeSpecialOffer: View {
                 
                 Button(action: {withAnimation{vm.selectedCategoryOffAll="Special Offers"
                     vm.isSelectedCategoryOffAll.toggle()
-
-                }
                     
+                }
+                
                 }, label: {
                     Label(
                         title: {
@@ -52,21 +55,32 @@ struct HomeSpecialOffer: View {
                 HStack(spacing:12){
                     
                     
-//                    LazyHGrid(rows: columns,spacing: 12){
-                        ForEach(vm.specialOffersArray){gradient in
-                            
-                            SpecialOfferRowView(vm: vm,x:gradient)
-                        }
-//                    }
-//                    .padding(.vertical)
+                    //                    LazyHGrid(rows: columns,spacing: 12){
+                    ForEach(vm.specialOffersArray){gradient in
+                        
+                        SpecialOfferRowView(vm: vm,x:gradient)
+                            .onTapGesture(perform: {
+                                withAnimation{
+                                    selectedItem=gradient
+                                    isSelectItem=true
+                                }
+                            })
+                    }
+                    //                    }
+                    //                    .padding(.vertical)
                     
                 }
                 .padding(.horizontal,16)
             }
             .padding(.top,-16)
-
-//            .padding(.vertical)
+            
+            //            .padding(.vertical)
         }
+        
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isSelectItem, content: {
+                                            SelectedItemScenes(isShow:  $isSelectItem,selectedItem:selectedItem)  })
+        )
     }
 }
 

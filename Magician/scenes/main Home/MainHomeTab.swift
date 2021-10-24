@@ -12,9 +12,9 @@ struct MainHomeTab: View {
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @EnvironmentObject var vm:MainHomeTabViewModel
     @State var isSelectFromCateg=false
-//    @State var selectedCategName=""
-//    @State var selectedCategImg=""
-   @State var selectedCateg = MainCategory(name: "", img: "", nameAr: "", subImage: "", mainImg: "")
+    //    @State var selectedCategName=""
+    //    @State var selectedCategImg=""
+    @State var selectedCateg = MainCategory(name: "", img: "", nameAr: "", subImage: "", mainImg: "")
     
     var body: some View {
         //        ZStack {
@@ -42,17 +42,19 @@ struct MainHomeTab: View {
                             
                             CarsoelHome(vm: vm)
                             
-//                            HomeCategoryView(vm: vm)
+                            //                            HomeCategoryView(vm: vm)
                             HomeCategoryView(vm: vm, isShow: $isSelectFromCateg, selected: $selectedCateg)
-
-                            HomeTopRating(vm: vm,isShow:$isSelectFromCateg)
                             
-                            HomeSpecialOffer(vm:vm)
+                            HomeTopRating(isShow:$vm.isSelectedCategoryOffAll)
+                            //                            HomeTopRating(vm: vm,isShow:$isSelectFromCateg)
+                            
+                            HomeSpecialOffer()
+                            //                            HomeSpecialOffer(vm:vm)
                             
                         }
                         .padding(.top,20)
                         //                    .frame(width:getFrameSize().width-28)
-//                        .padding(.bottom,getBottomSpace())
+                        //                        .padding(.bottom,getBottomSpace())
                         .padding(.bottom)
                         .padding(.bottom,isSmallDevice() ? 80 : 100)
                     }
@@ -68,6 +70,7 @@ struct MainHomeTab: View {
             }
             
         }
+        .environmentObject(vm)
         .environmentObject(vmm)
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
