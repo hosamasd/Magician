@@ -47,4 +47,8 @@ class HomeMainTabBarViewModel: ObservableObject {
     func addTabBadget() -> Bool {
         index == "Orders" && isAddNewOrder
     }
+    
+    func goToMainTab()  {
+        index = "Home"
+    }
 }

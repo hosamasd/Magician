@@ -12,6 +12,7 @@ struct SelectedItemScenes: View {
     
     @StateObject var vm = HomeFavoriteViewModel()
     @Binding var isShow:Bool
+    
     var selectedItem =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
     @State var isFirstStep=false
     @State var isMakeCheckout=false
@@ -72,7 +73,8 @@ struct SelectedItemScenes: View {
                         .fullScreenCover(isPresented: $isMakeCheckout, content: {
 //                            HomeCheckout(isShow: $isMakeCheckout)
 
-                            SSHomeCheckout(isShow: $isMakeCheckout)
+                            SSHomeCheckout(isShow: $isMakeCheckout, isShowMainParent: $isShow)
+                                .environmentObject(vmm)
 //                            SHomeCheckout(isShow: $isMakeCheckout)
 
                         } )

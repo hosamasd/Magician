@@ -15,7 +15,7 @@ struct HomeTrackOrderAnimated: View {
 
 struct HomeTrackOrderAnimated_Previews: PreviewProvider {
     static var previews: some View {
-        SSHomeCheckout(isShow: .constant(false))
+        SSHomeCheckout(isShow: .constant(false), isShowMainParent: .constant(false))
 
 //        HomeTrackOrderAnimated()
     }

@@ -131,7 +131,8 @@ struct SelectedItemAddNotes: View {
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isMakeCheckout, content: {
 //                            HomeCheckout(isShow: $isMakeCheckout)
-                            SSHomeCheckout(isShow: $isMakeCheckout)
+                            SSHomeCheckout(isShow: $isMakeCheckout, isShowMainParent: $isShow)
+                                .environmentObject(vmm)
 
 //                            HomeCheckout(isShow: $isMakeCheckout)
                         } )

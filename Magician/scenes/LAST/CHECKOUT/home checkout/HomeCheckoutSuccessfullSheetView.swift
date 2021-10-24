@@ -9,8 +9,12 @@ import SwiftUI
 
 struct HomeCheckoutSuccessfullSheetView: View {
     @ObservedObject var vm:HomeCheckoutViewModel
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+
     @State var isFocus=false
-    
+    @Binding var isShowMainParent:Bool
+    @Binding var isShow:Bool
+
     var body: some View {
         VStack() {
             Spacer()
@@ -22,7 +26,8 @@ struct HomeCheckoutSuccessfullSheetView: View {
                     Spacer()
                     
                     Button(action: {withAnimation{
-                            vm.isOperationSheetDone.toggle()}}, label: {
+                            vm.isOperationSheetDone.toggle()
+                    }}, label: {
                                 Image(systemName: "xmark")
                                     .foregroundColor(.black)
                             })
@@ -77,7 +82,11 @@ struct HomeCheckoutSuccessfullSheetView: View {
                         .frame(height:60)
                         
                         Button(action: {withAnimation{
-                            
+                            vm.isOperationSheetDone.toggle()
+                            isShow=false
+                            isShowMainParent=false
+                            vmm.goToMainTab()
+
                         }}, label: {
                             Text("Back to home")
                                 .font(.boldCustomFontSystem(size: 18))
@@ -108,7 +117,7 @@ struct HomeCheckoutSuccessfullSheetView: View {
 
 struct HomeCheckoutSuccessfullSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        SSHomeCheckout(isShow: .constant(false))
+        SSHomeCheckout(isShow: .constant(false), isShowMainParent: .constant(false))
         
         //        HomeCheckoutSuccessfullSheetView()
     }
