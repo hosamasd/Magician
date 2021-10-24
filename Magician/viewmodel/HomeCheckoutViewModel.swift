@@ -16,6 +16,7 @@ class HomeCheckoutViewModel:ObservableObject {
     @Published var isCheckOut = false
     @Published var isTrackMyOrder = false
     
+    
     @Published var address = "653 Nostrand Ave.,\n Brooklyn, NY 11216"
     @Published var isChangeAddress = false
     
@@ -30,7 +31,8 @@ class HomeCheckoutViewModel:ObservableObject {
     //add card
     @Published var cardNumber = ""
     @Published var isMonth = false
-    
+    @Published var isDeleteCard=false
+
     @Published var expiryMonth = "MM"
     @Published var isYear = false
     
@@ -41,7 +43,7 @@ class HomeCheckoutViewModel:ObservableObject {
     @Published var isCanRemoveCard = false
     
     //sheet view
-    @Published var isAddVisaSheet = false
+    @Published var isAddVisaSheet = true
     @Published var isOperationSheetDone = false
     
     func makeCheckVisa(s:inout Bool)  {

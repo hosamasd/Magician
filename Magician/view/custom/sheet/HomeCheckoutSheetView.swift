@@ -10,7 +10,9 @@ import SwiftUI
 struct HomeCheckoutSheetView: View {
     @ObservedObject var vm:HomeCheckoutViewModel
     @State var isFocus=false
-    
+    @StateObject var keyboardHeightHelper = KeyboardHeightHelper()
+    @State var isHeight=false
+
     var body: some View {
         
             
@@ -101,13 +103,31 @@ struct HomeCheckoutSheetView: View {
                         CustomTF(txt: $vm.securityCode, hint: "security Code",hide: .constant(false),isAddVisa:true)
                             .keyboardType(.numberPad)
                         
-                        CustomTF(txt: $vm.firstName, hint: "first Name",hide: .constant(false),isAddVisa:true)
-                            .frame(height:60)
+//                        CustomTF(txt: $vm.firstName, hint: "first Name",hide: .constant(false),isAddVisa:true)
+//                            .frame(height:60)
                         
+                        SCustomTF(txt: $vm.firstName,isFocus: $isHeight, hint: "first Name")
+                            .keyboardType(.namePhonePad)
+                            .onReceive(keyboardHeightHelper.$keyboardHeight) { value in
+                                       print("the keyboard height is \(value)")
+                                   }
+                        Spacer()
+                            .frame(height:isHeight ? getHeight() : 0)
+//                        Spacer()346     260
+//                            .frame(height:isHeight ? self.keyboardHeightHelper.keyboardHeight-100 : 0)
                         
                         //                        CustomTF(txt: $vm.secondName, hint: "second Name",hide: .constant(false),isAddVisa:true)
                         SCustomTF(txt: $vm.secondName,isFocus: $isFocus, hint: "second Name")
-                        
+                            .keyboardType(.namePhonePad)
+                            .padding(.top,-16)
+
+                            .onReceive(keyboardHeightHelper.$keyboardHeight) { value in
+                                       print("the keyboard height is \(value)")
+                                   }
+                        Spacer()
+                            .frame(height:isFocus ? getHeightLast() : 0)
+//                        Spacer()
+//                            .frame(height:isFocus ? self.keyboardHeightHelper.keyboardHeight-100 : 0)
                         //                            .
                         
                         HStack{
@@ -119,13 +139,14 @@ struct HomeCheckoutSheetView: View {
                             
                             Spacer()
                             
+                            Toggle("", isOn: $vm.isDeleteCard)
                             
                         }
                         .padding(.vertical)
                     }
                     .padding(.horizontal,24)
                     .padding(.top,30)
-                    .offset(y:isFocus  ? -60 : 0)
+//                    .offset(y:isFocus  ? -60 : 0)
                     
                     Button(action: {withAnimation{
                         vm.isAddVisaSheet.toggle()
@@ -206,6 +227,14 @@ struct HomeCheckoutSheetView: View {
         ////                    YearPicker(isMonth: $vm.isMonth, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
         //            )
         
+    }
+    
+    func getHeight() -> CGFloat {
+        keyboardHeightHelper.keyboardHeight > 300 ? 60 : 10
+    }
+    
+    func getHeightLast() -> CGFloat {
+        keyboardHeightHelper.keyboardHeight > 300 ? 140 : 80
     }
     
     func GETBG() -> Color {

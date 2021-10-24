@@ -11,7 +11,7 @@ struct SelectedItemAddNotes: View {
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     
     @StateObject var vm = HomeFavoriteViewModel()
-    @State var isShowSheetView = false
+    @State var isShowSheetView = true
     @State var notesText=""
     @State var isAddCheckout=false
 

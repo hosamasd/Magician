@@ -15,7 +15,7 @@ struct AccountSavedAddress: View {
     @EnvironmentObject var vm : HomeAccountViewModel
     var names = "Saved addresses"
     
-    var name : Namespace.ID
+//    var name : Namespace.ID
     @State var changePositions=false
     
     var body: some View {
@@ -41,7 +41,6 @@ struct AccountSavedAddress: View {
                             .font(.customFontSystem(size: 16))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
-                            .matchedGeometryEffect(id: names, in: name)
                         
                         Spacer()
                         

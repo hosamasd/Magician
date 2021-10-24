@@ -9,7 +9,9 @@ import SwiftUI
 
 struct AddAddressSheetView: View {
     @ObservedObject var vm:HomeAccountViewModel
-
+@State var isHeight=false
+    @StateObject var keyboardHeightHelper = KeyboardHeightHelper()
+    
     var body: some View {
         VStack() {
             
@@ -38,21 +40,27 @@ struct AddAddressSheetView: View {
                     .stroke(Color.black.opacity(0.5), lineWidth: 1)
                     .overlay(
                     
-                        Text(vm.newAddedAddress)
+                        TextField("", text: $vm.newAddedAddress, onEditingChanged: { s in
+                            isHeight=s
+                        }, onCommit: {
+                            print(333)
+                        })
+                        
+//                        Text(vm.newAddedAddress)
                             .padding(.vertical)
                             .padding(.horizontal)
-                            .multilineTextAlignment(.leading)
                         ,alignment: .leading)
                     .frame(width:getFrameSize().width-64,height: 45)
                     .padding(.vertical,20)
-                    .onTapGesture(perform: {
-                                           withAnimation{vm.isSHowLocation.toggle()}
-                                       })
+                   
                 
 //                CustomTF(txt: $vm.newAddedAddress,hint: "Al-obour , Cairo , Egypt", hide: .constant(false),isAddress:true)
 //                    .onTapGesture(perform: {
 //                        withAnimation{vm.isSHowLocation.toggle()}
 //                    })
+                
+                Spacer()
+                    .frame(height:isHeight ? self.keyboardHeightHelper.keyboardHeight-100 : 0)
                 
                 Button(action: {
                     withAnimation{
@@ -80,6 +88,8 @@ struct AddAddressSheetView: View {
 
                 
             }
+//            .offset(y: -self.keyboardHeightHelper.keyboardHeight)
+
             .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
 
 //            .padding(.bottom,10)

@@ -68,6 +68,7 @@ struct SCustomTF: View {
                 }
             )
             .frame(height:60 )
+//            .background(Color.red)
     }
 }
 

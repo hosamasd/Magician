@@ -68,6 +68,7 @@
 		4EAFFC4227202DC60027B8B3 /* HomeTrackOrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC4127202DC60027B8B3 /* HomeTrackOrderRowView.swift */; };
 		4EAFFC45272031A90027B8B3 /* HomeTrackOrdersRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC44272031A90027B8B3 /* HomeTrackOrdersRowView.swift */; };
 		4EB2A0212721AB92008DAC14 /* SHomeCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2A0202721AB92008DAC14 /* SHomeCheckout.swift */; };
+		4EB2ECA5272575630075A8D2 /* listenForKeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2ECA4272575630075A8D2 /* listenForKeyboardNotifications.swift */; };
 		4EB56956271EDE8300AB03B4 /* HomeCheckoutSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB56955271EDE8300AB03B4 /* HomeCheckoutSheetView.swift */; };
 		4EB64AF9271D96D20012EB48 /* HomeAccountGifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */; };
 		4EB64AFB271D9C970012EB48 /* AccountSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */; };
@@ -210,6 +211,7 @@
 		4EAFFC4127202DC60027B8B3 /* HomeTrackOrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrderRowView.swift; sourceTree = "<group>"; };
 		4EAFFC44272031A90027B8B3 /* HomeTrackOrdersRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrdersRowView.swift; sourceTree = "<group>"; };
 		4EB2A0202721AB92008DAC14 /* SHomeCheckout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHomeCheckout.swift; sourceTree = "<group>"; };
+		4EB2ECA4272575630075A8D2 /* listenForKeyboardNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listenForKeyboardNotifications.swift; sourceTree = "<group>"; };
 		4EB56955271EDE8300AB03B4 /* HomeCheckoutSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutSheetView.swift; sourceTree = "<group>"; };
 		4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountGifts.swift; sourceTree = "<group>"; };
 		4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSheetView.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				4EBED106271EEF0B00FF5779 /* sheet */,
 				4EDC3932271FE79F008011E0 /* alert with text field */,
 				4EDA2DAC271F0679003CA71A /* textfield */,
+				4EB2ECA4272575630075A8D2 /* listenForKeyboardNotifications.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -1079,6 +1082,7 @@
 				4EFC79542716D11D00C5DF36 /* SHomeONBoard.swift in Sources */,
 				4EDBAB152718053D00AFD181 /* viewModifiers.swift in Sources */,
 				4EDFA7DE271EB3E80067D83E /* HomeCheckoutItemRowView.swift in Sources */,
+				4EB2ECA5272575630075A8D2 /* listenForKeyboardNotifications.swift in Sources */,
 				4EFC794C2716CD9300C5DF36 /* GifI_mage.swift in Sources */,
 				4E250C84271C478E001873B6 /* SecondHomeSelectedCategoryTopView.swift in Sources */,
 				4E38AF83271E948A00D87FAA /* FirstStepViewRowView.swift in Sources */,

@@ -19,7 +19,6 @@ struct AccountRowView: View {
     var isOriginal = true
     var isLogout = false
     var isChangeLanguage = false
-    var names : Namespace.ID
 
     var body: some View {
         VStack{
@@ -32,7 +31,6 @@ struct AccountRowView: View {
                     //                    .font(.system(size: 14))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)//.opacity(0.6))
-                    .matchedGeometryEffect(id: name, in: names)
 
                 
                 

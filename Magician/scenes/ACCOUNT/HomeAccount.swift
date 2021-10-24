@@ -12,7 +12,6 @@ struct HomeAccount: View {
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @EnvironmentObject var vm : HomeAccountViewModel
     
-    @Namespace var name
     
     
     //    var name : Namespace.ID
@@ -51,25 +50,25 @@ struct HomeAccount: View {
                             
                             VStack(spacing:28) {
                                 
-                                AccountRowView(vm: vm,names: name)
+                                AccountRowView(vm: vm)
                                     .onTapGesture(perform: {
                                         withAnimation{vm.isAccountInfo.toggle()}
                                     })
                                 
-                                AccountRowView(vm: vm,name: "Saved addresses",names: name)
+                                AccountRowView(vm: vm,name: "Saved addresses")
                                     .onTapGesture(perform: {
                                         withAnimation{vm.isSavedAddress.toggle()}
                                     })
                                 
-                                AccountRowView(vm: vm,name: "Wallet",isText: true,isOriginal: false,names: name)
+                                AccountRowView(vm: vm,name: "Wallet",isText: true,isOriginal: false)
                                 
-                                AccountRowView(vm: vm,name: "Change password",names: name)
+                                AccountRowView(vm: vm,name: "Change password")
                                     .onTapGesture(perform: {
                                         withAnimation{vm.isChangePassword.toggle()}
                                     })
-                                AccountRowView(vm: vm,name: "Notification",isCheck: true,isOriginal: false,names: name)
-                                AccountRowView(vm: vm,name: "Language",isCheck: false,isOriginal: false,isChangeLanguage: true,names: name)
-                                AccountRowView(vm: vm,name: "Logout",isCheck: false,isOriginal: false,isLogout: true,names: name)
+                                AccountRowView(vm: vm,name: "Notification",isCheck: true,isOriginal: false)
+                                AccountRowView(vm: vm,name: "Language",isCheck: false,isOriginal: false,isChangeLanguage: true)
+                                AccountRowView(vm: vm,name: "Logout",isCheck: false,isOriginal: false,isLogout: true)
                                     .onTapGesture(perform: {
                                         withAnimation{vm.isShowLogout.toggle()}
                                     })
@@ -145,7 +144,7 @@ struct HomeAccount: View {
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $vm.isSavedAddress, content: {
-                            AccountSavedAddress(name:name)
+                            AccountSavedAddress()
                                 .environmentObject(vmm)
 //                            AccountSavedAddress(vm: vm,vmm: vmm, name: name)
                             
