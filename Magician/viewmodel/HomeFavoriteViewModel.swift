@@ -35,4 +35,13 @@ class HomeFavoriteViewModel: ObservableObject {
     @Published var selectedMenu="Special Offers"
     
     @Published var selectedItem =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
+    
+    func addOrRemoveToFavorite(x:OfferModel)  {
+        favoriteArray.contains(where: {$0.name==x.name}) ? favoriteArray.removeAll(where:{$0.name==x.name}) : favoriteArray.append(x)
+        
+    }
+    
+    func checkIfFavorite(x:OfferModel) -> Bool {
+        favoriteArray.contains(where: {$0.name==x.name})
+    }
 }

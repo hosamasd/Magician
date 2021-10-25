@@ -11,6 +11,9 @@ struct MainHomeTab: View {
     //    @StateObject var vm = MainHomeTabViewModel()
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @EnvironmentObject var vm:MainHomeTabViewModel
+    @EnvironmentObject var vmFavorirte:HomeFavoriteViewModel
+    
+    
     @State var isSelectFromCateg=false
     //    @State var selectedCategName=""
     //    @State var selectedCategImg=""
@@ -87,6 +90,8 @@ struct MainHomeTab: View {
                             HomeSelectedCategory(isShow: $isSelectFromCateg, x:selectedCateg)
                                 .environmentObject(vmm)
                                 .environmentObject(vm)
+                            
+                                .environmentObject(vmFavorirte)
                             
                         })
         )

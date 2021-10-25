@@ -15,9 +15,10 @@ struct SContentView: View {
     @StateObject var wqq = HomeAccountViewModel()
 
     var body: some View {
+        SSHomeONBoard()
 //        AccountSavedAddress()
 //        SelectedItemAddNotes(isShow: .constant(false))
-        SSHomeCheckout(isShow: .constant(false), isShowMainParent: .constant(false))
+//        SSHomeCheckout(isShow: .constant(false), isShowMainParent: .constant(false))
 //        HomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
 //        SHomeCheckout(isShow: .constant(false))
 //        SelectedItemAddNotes(isShow: .constant(false), isMakeCheckout: .constant(false))

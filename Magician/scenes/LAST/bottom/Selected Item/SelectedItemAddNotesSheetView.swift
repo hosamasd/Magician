@@ -106,7 +106,7 @@ struct SelectedItemAddNotesSheetView: View {
         .edgesIgnoringSafeArea(.all)
         
         .onChange(of: notesText) { value in
-            let words = notesText.split { $0 == " " || $0.isNewline }
+//            let words = notesText.split { $0 == " " || $0.isNewline }
             print(123)
             //                           self.notesText = words.count
         }

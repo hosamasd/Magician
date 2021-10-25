@@ -1,5 +1,5 @@
 //
-//  SelectedCategoryRowView.swift
+//  FavoriteRowView.swift
 //  Magician
 //
 //  Created by hosam on 17/10/2021.
@@ -7,13 +7,10 @@
 
 import SwiftUI
 
-struct SelectedCategoryRowView: View {
-    var x =                 OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
-    @EnvironmentObject var vm:MainHomeTabViewModel
-    //    @StateObject var vm=MainHomeTabViewModel()
-    @EnvironmentObject var vmm:HomeMainTabBarViewModel
-    @EnvironmentObject var vmFavorirte:HomeFavoriteViewModel
+struct FavoriteRowView: View {
+    @EnvironmentObject var vm:HomeFavoriteViewModel
     
+    var x =                 OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true)
     
     var body: some View {
         VStack{
@@ -22,6 +19,7 @@ struct SelectedCategoryRowView: View {
                 .resizable()
                 //                .aspectRatio(contentMode: .fit)
                 .frame( height: 130)
+                .cornerRadius(20)
                 
                 //                .cornerRadius(12)
                 .overlay(
@@ -44,128 +42,96 @@ struct SelectedCategoryRowView: View {
                         Spacer()
                         
                         Button(action: {withAnimation{
-                            vmFavorirte.addOrRemoveToFavorite(x: x)
+                            vm.addOrRemoveToFavorite(x: x)
                         }}, label: {
-                            Image(vmFavorirte.checkIfFavorite(x:x) ? "Group 8440" : "Group 8441-1")
+                            Image( "Group 8440")
                         })
                         
                     }
                     .padding(10)
-                    //                    .offset(x: 10.0, y: 10)
+//                    Label(
+//                        title: { Text(x.rating)
+//                            .font(.system(size: 10))
+//                            .foregroundColor(.black)
+//                            .padding(.leading,-4)
+//                        },
+//                        icon: {
+//                            
+//                            Button(action: {withAnimation{
+//                                vm.addOrRemoveToFavorite(x: x)
+//                                
+//                            }}, label: {
+//                                Image( "Icon awesome-star")
+//                            })
+//                        }
+//                    )
+//                    .padding(.horizontal,6)
+//                    .padding(.vertical,8)
+//                    .background(Color.white)
+//                    .clipShape(Capsule())
+//                    .offset(x: 10.0, y: 10)
                     
-                    
-                    ,alignment:.top)
+                    ,alignment:.top)//topLeading
                 .cornerRadius(19)
             
             
             ZStack {
                 VStack(alignment: .leading, spacing: 12, content: {
                     //                VStack {
-                    //                    HStack {
-                    Text(x.name)
-                        .font(.system(size: 15))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
-                    
-                    //                        Spacer()
-                    //
-                    //                        Text("50% OFF")
-                    //                            .font(.system(size: 14))
-                    ////                            .font(.system(size:  14))
-                    //                            .fontWeight(.bold)
-                    //                            .foregroundColor(Color("mains"))
-                    //                            .padding(.horizontal ,  16 )
-                    //                            .padding(.vertical, 6 )
-                    //                            .background(Color("mains").opacity(0.22))
-                    //                            .clipShape(Capsule())
-                    //                    }
                     HStack {
-                        
-                        Text("Chicken skewers ")
-                            .font(.system(size: 12))
-                            .fontWeight(.regular)
-                            .foregroundColor(Color.black.opacity(0.6))
-                            .padding(.top,4)
+                        Text(x.name)
+                            .font(.system(size: 15))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("mains"))
                         
                         Spacer()
                         
                         Text("50% OFF")
                             .font(.system(size: 14))
-                            //                            .font(.system(size:  14))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
-                            .padding(.horizontal ,  16 )
-                            .padding(.vertical, 6 )
+                            .padding(.horizontal)
+                            .padding(.vertical,6)
                             .background(Color("mains").opacity(0.22))
                             .clipShape(Capsule())
-                        
                     }
-                    //                    Text("Chicken skewers with slices of sweet peppers and dill")
-                    //                        .font(.system(size: 12))
-                    //                        .fontWeight(.regular)
-                    //                        .foregroundColor(Color.black.opacity(0.6))
-                    //                        .padding(.top,4)
+                    
+                    
+                    Text("Chicken skewers with slices of sweet peppers and dill")
+                        .font(.system(size: 12))
+                        .fontWeight(.regular)
+                        .foregroundColor(Color.black.opacity(0.6))
+                        .padding(.top,4)
                     
                     //                }
                     //                .padding(.ver)
                     
-                    HStack {
+                    HStack(spacing:24){
+                        
+                        Label(
+                            title: { Text("Cairo, Egypt") },
+                            icon: { Image("pin") }
+                        )
+                        
+                        Label(
+                            title: { Text("20 min") },
+                            icon: { Image("XMLID_1031_") }
+                        )
                         
                         Label(
                             title: { Text("10 EGP") },
                             icon: { Image("delivery") }
                         )
+                        
                         Spacer()
-                        
-                        HStack(spacing:12){
-                            
-                            Text("110 EGP")
-                                .font(.system(size:  15))
-                                .fontWeight(.semibold)
-                                .foregroundColor(Color("mains"))
-                                .overlay(
-                                    
-                                    RoundedRectangle(cornerRadius: 2)
-                                        .fill(Color("mains").opacity(0.6))
-                                        .frame(height:1)
-                                    
-                                )
-                            
-                            Text("50EGP")
-                                .font(.system(size: 20))
-                                
-                                //                    .font(.system(size: 25))
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("oprice"))
-                            
-                        }
-                        
-                        //                    HStack(spacing:24){
-                        //
-                        //                        Label(
-                        //                            title: { Text("Cairo, Egypt") },
-                        //                            icon: { Image("pin") }
-                        //                        )
-                        //
-                        //                        Label(
-                        //                            title: { Text("20 min") },
-                        //                            icon: { Image("XMLID_1031_") }
-                        //                        )
-                        //
-                        //                            Label(
-                        //                                title: { Text("10 EGP") },
-                        //                                icon: { Image("delivery") }
-                        //                            )
-                        //
-                        //                        Spacer()
-                        //                    }
-                        .foregroundColor(Color.black.opacity(0.6))
                     }
+                    .foregroundColor(Color.black.opacity(0.6))
                     
                     
                     
                 })
                 .padding(.horizontal)
+                .padding(.bottom,20)
                 //                .padding(.bottom,24)
                 .opacity(vm.isSingleItemLists==1 ? 1 : 0)
                 
@@ -301,8 +267,10 @@ struct SelectedCategoryRowView: View {
                     
                 }
             }
+            .frame(height:vm.isSingleItemLists==1 ? 120 : 80)//230
+            
         }
-        .frame(height:vm.isSingleItemLists==1 ? 250 : 240)//230
+        //        .frame(height:vm.isSingleItemLists==1 ? 250 : 250)//230
         
         //        .padding(.bottom,12)
         .background(
@@ -317,18 +285,86 @@ struct SelectedCategoryRowView: View {
                 y: 2
             )
         )
+        
+        //                if self.vm.isSingleItemLists==2 {
+        //
+        //                    VStack(alignment: .leading, spacing: 12, content: {
+        //                        //                VStack {
+        //                        Text(x.name)
+        //                            .font(.system(size: 15))
+        //                            .fontWeight(.bold)
+        //                            .foregroundColor(Color("mains"))
+        //
+        //                        Text("Chicken skewers with slices of sweet peppers and dill")
+        //                            .font(.system(size: 12))
+        //                            .fontWeight(.regular)
+        //                            .lineLimit(2)
+        //                            .foregroundColor(Color.black.opacity(0.6))
+        //                            .padding(.top,4)
+        //
+        //
+        //                        HStack(){
+        //
+        //                            Label(
+        //                                title: { Text("Cairo, Egypt")
+        //                                    .font(.system(size: 10))
+        //
+        //                                },
+        //                                icon: { Image("pin") }
+        //                            )
+        //
+        //                            Spacer()
+        //
+        //                            Text("50% OFF")
+        //                                .font(.system(size: 10))
+        //                                .fontWeight(.semibold)
+        //                                .foregroundColor(Color("mains"))
+        //                                .padding(.horizontal)
+        //                                .padding(.vertical,6)
+        //                                .background(Color("mains").opacity(0.22))
+        //                                .clipShape(Capsule())
+        //
+        //
+        //
+        //                        }
+        //
+        //                        HStack(){
+        //                            Label(
+        //                                title: { Text("20 min")
+        //                                    .font(.system(size: 10))
+        //                                },
+        //                                icon: { Image("XMLID_1031_") }
+        //                            )
+        //
+        //                            Spacer()
+        //
+        //                            Label(
+        //                                title: { Text("10 EGP")
+        //                                    .font(.system(size: 10))
+        //
+        //                                },
+        //                                icon: { Image("delivery") }
+        //                            )
+        //
+        //                        }
+        //                    })
+        //                    .padding(.horizontal,12)
+        ////                    .background(Color.red)
+        ////                    .offset(y:-60)
+        //
+        //                }
+        //            }
+        //        }
+        //        //        .padding(.bottom,12)
         //        .background(Color.white)
         //        .cornerRadius(20)
         //        .modifier(viewModifiers())
-        //        .frame(height:vm.isSingleItemLists==1 ? 250 : 230)
-        
+        //        .frame(height:vm.isSingleItemLists==1 ? 250 : 300)
     }
 }
 
-struct SelectedCategoryRowView_Previews: PreviewProvider {
+struct FavoriteRowView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedCategoryRowView()
-        //        ContentView()
-        //        SelectedCategoryRowView()
+        FavoriteRowView()
     }
 }

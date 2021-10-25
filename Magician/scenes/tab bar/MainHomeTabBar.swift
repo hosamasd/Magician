@@ -39,6 +39,8 @@ struct MainHomeTabBar: View {
                 MainHomeTab()
                     .environmentObject(vmh)
                     .environmentObject(vm)
+                    
+                    .environmentObject(vmas)//for favorite
                 //                SSecondMainHome()
                 //                    .environmentObject(vm)
             }

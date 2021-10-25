@@ -302,8 +302,8 @@
             filePath = "Magician/scenes/Register/SSHomeONBoard.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "goToMainApp()"
             landmarkType = "7">
             <Locations>
@@ -350,8 +350,8 @@
             filePath = "Magician/scenes/Register/SSHomeONBoard.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -366,8 +366,8 @@
             filePath = "Magician/scenes/Register/SSHomeONBoard.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -446,8 +446,8 @@
             filePath = "Magician/view/main Home/Selected/SelectedCategoryRowView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -478,8 +478,8 @@
             filePath = "Magician/view/main Home/Selected/SelectedCategoryRowView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -494,8 +494,8 @@
             filePath = "Magician/view/main Home/Selected/SelectedCategoryRowView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -510,8 +510,8 @@
             filePath = "Magician/view/main Home/Selected/SelectedCategoryRowView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -526,8 +526,8 @@
             filePath = "Magician/scenes/main Home/category/selected/HomeSelectedCategory.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -654,8 +654,8 @@
             filePath = "Magician/scenes/main Home/category/selected/HomeSelectedCategory.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>

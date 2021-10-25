@@ -358,8 +358,6 @@
 			isa = PBXGroup;
 			children = (
 				4E171E3F2716F31A000837BF /* HomeAccount.swift */,
-				4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */,
-				4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */,
 				4EEF4D8827171F1B00D39193 /* info */,
 				4E2ADBF12717E51B0039C842 /* saved address */,
 				4EEF4D8D2717277400D39193 /* AccountChangePassword.swift */,
@@ -634,8 +632,6 @@
 			isa = PBXGroup;
 			children = (
 				4ECAD7F3271C674800C258A5 /* HomeFavorite.swift */,
-				4ECAD7F9271C68B500C258A5 /* HomeFavoriteTopView.swift */,
-				4ECAD7F7271C67E800C258A5 /* FavoriteRowView.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -643,6 +639,8 @@
 		4ECAD7F2271C673D00C258A5 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				4ECAD7F9271C68B500C258A5 /* HomeFavoriteTopView.swift */,
+				4ECAD7F7271C67E800C258A5 /* FavoriteRowView.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -874,8 +872,6 @@
 			isa = PBXGroup;
 			children = (
 				4EDDBF4C271BFBCC00BACD49 /* HomeRemindingOrders.swift */,
-				4EDDBF52271BFFDD00BACD49 /* SelectedOrderRowView.swift */,
-				4EDDBF50271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift */,
 			);
 			path = reminding;
 			sourceTree = "<group>";
@@ -883,6 +879,8 @@
 		4EDDBF4F271BFD5100BACD49 /* reminding */ = {
 			isa = PBXGroup;
 			children = (
+				4EDDBF52271BFFDD00BACD49 /* SelectedOrderRowView.swift */,
+				4EDDBF50271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift */,
 			);
 			path = reminding;
 			sourceTree = "<group>";
@@ -914,6 +912,8 @@
 				4EDC438F2717054C00C2347B /* AccountRowView.swift */,
 				4EEF4D8527171D3900D39193 /* HomeAccountImage.swift */,
 				4EDC43912717087600C2347B /* HomeAccountPointsView.swift */,
+				4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */,
+				4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";

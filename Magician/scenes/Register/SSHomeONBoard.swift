@@ -43,7 +43,7 @@ struct SSHomeONBoard: View {
                 
                 if index == 0 {
                     Image("Group 8396-2")
-                        .offset(y:-60)
+                        .offset(y:isSmallDevice() ? -100 : -80)//-60
                     //                    ZStack(alignment: Alignment(horizontal: .center, vertical: .center), content: {
                     //
                     //                        Image("Group 8396-1")
@@ -104,7 +104,9 @@ struct SSHomeONBoard: View {
                     
                 }
             }
-            .padding(.top, isSmallDevice() ?  100 : 0)// : -120)
+            .padding(.top, isSmallDevice() ?  0 : 0)// : -120)
+
+//            .padding(.top, isSmallDevice() ?  100 : 0)// : -120)
             //            .padding(.top,30)
             
             VStack {
@@ -171,7 +173,7 @@ struct SSHomeONBoard: View {
     }
     
     func getHeights() ->CGFloat {
-        isSmallDevice() ? getFrameSize().height/2 : getFrameSize().height/2+120
+        isSmallDevice() ? getFrameSize().height/1.5 : getFrameSize().height/2+120
     }
     
     func goToMainApp()  {

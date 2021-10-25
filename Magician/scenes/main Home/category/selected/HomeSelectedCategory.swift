@@ -10,6 +10,9 @@ import SwiftUI
 struct HomeSelectedCategory: View {
     @EnvironmentObject var vm:MainHomeTabViewModel
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
+    
+    @EnvironmentObject var vmFavorirte:HomeFavoriteViewModel
+
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
     //    var x = "Top Rating"
     @Binding var isShow:Bool
@@ -77,6 +80,7 @@ struct HomeSelectedCategory: View {
         .environmentObject(vm)
         
         .environmentObject(vmm)
+        .environmentObject(vmFavorirte)
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isShowFilter, content: {
