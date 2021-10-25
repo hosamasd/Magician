@@ -54,14 +54,16 @@ struct HomeTrackMyOrder: View {
                         
                         VStack {
                             HomeTrackOrderAnimated()
-                                
+//                                .padding(.top,20)
+                                .frame(height:getFrameSize().height/1.5)
                                 //                            .padding(.horizontal,24)
-                                .padding(.top,20)
-                                .frame(height:isSmallDevice() ?  getFrameSize().height/1.5 : getFrameSize().height/2)
+//                                .padding(.top,20)
+//                                .frame(height:isSmallDevice() ?  getFrameSize().height/1.5 : getFrameSize().height/2)
                             //                                .frame(height:500)//isSmallDevice() ?  getFrameSize().height/1.5 : getFrameSize().height/2)
                             
                             HomeTrackOrderRowView(vm:vm)
-                            
+                                .padding(.top,isSmallDevice() ?  -60 : -180)
+
                             //                        Divider()
                             //                            .padding(.horizontal,48)
                             
@@ -111,6 +113,7 @@ struct HomeTrackMyOrder: View {
 
 struct HomeTrackMyOrder_Previews: PreviewProvider {
     static var previews: some View {
-        HomeTrackMyOrder()
+        SContentView()
+//        HomeTrackMyOrder()
     }
 }

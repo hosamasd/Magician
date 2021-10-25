@@ -95,7 +95,7 @@ struct HomeTrackOrderRowView: View {
                         Image("stopwatch")
                         
                         Text("30:00 min")
-                            .font(.system(size: 20))
+                            .font(.system(size: isSmallDevice() ? 16 : 20))
     //                        .font(.boldsystem(size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
@@ -129,7 +129,7 @@ struct HomeTrackOrderRowView: View {
                 
           
         }
-        .padding(.horizontal, 24 )
+        .padding(.horizontal, 12)//24 )
         .padding(.top,30)
     }
 }

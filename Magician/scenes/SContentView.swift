@@ -14,8 +14,11 @@ struct SContentView: View {
 //    @StateObject var vmsss = MainHomeTabViewModel()
     @StateObject var wqq = HomeAccountViewModel()
 
+    @StateObject var vmt=HomeCheckoutViewModel()
+
     var body: some View {
-        SSHomeONBoard()
+        HomeTrackMyOrder()
+//        SSHomeONBoard()
 //        AccountSavedAddress()
 //        SelectedItemAddNotes(isShow: .constant(false))
 //        SSHomeCheckout(isShow: .constant(false), isShowMainParent: .constant(false))
@@ -32,7 +35,7 @@ struct SContentView: View {
 //        HomeCheckout(isShow: .constant(false))
 //        HomeFilterProcess()
 //        SelectedItemAddNotes()
-            .environmentObject(vm)
+            .environmentObject(vmt)
             .environmentObject(wqq)
 //            .environmentObject(vmsss)
     }
