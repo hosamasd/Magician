@@ -18,7 +18,8 @@ struct MainSelectedCateg:Identifiable {
 struct MainCategory:Identifiable {
     var id = UUID().uuidString
     var name,img,nameAr,subImage,mainImg:String
-    
+    var index = 0
+
     
 }
 

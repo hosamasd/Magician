@@ -24,7 +24,7 @@ struct SpecialOfferRowView: View {
                     
                     Label(
                         title: { Text(x.rating)
-                            .font(.customFontSystem(size: 10))
+                            .font(.system(size: 10))
                             .foregroundColor(.black)
                             .padding(.leading,-4)
                         },
@@ -48,12 +48,12 @@ struct SpecialOfferRowView: View {
                         VStack (alignment:.leading,spacing:6){
                             HStack {
                                 Text(x.name)
-                                    .font(.customFontSystem(size: 10))
+                                    .font(.system(size: 10))
                                     .fontWeight(.regular)
                                     .foregroundColor(.black)
                                 
                                 Text(x.offersRange)
-                                    .font(.customFontSystem(size: 10))
+                                    .font(.system(size: 10))
                                     .fontWeight(.regular)
                                     
                                     .foregroundColor(Color("mains").opacity(0.8))
@@ -62,7 +62,7 @@ struct SpecialOfferRowView: View {
                             }
                             //                                .padding(.leading,-4)
                             Text(x.type)
-                                .font(.customFontSystem(size: 8))
+                                .font(.system(size: 8))
                                 .foregroundColor(.black.opacity(0.8))
                             //                                .padding(.top,4)
                         }
@@ -94,14 +94,14 @@ struct SpecialOfferRowView: View {
                 //                Text("chickens stevers")
                 VStack(alignment:.leading) {
                     Text("Chicken Skewers")
-                        .font(.customFontSystem(size: 14))
+                        .font(.system(size: 14))
                         .fontWeight(.regular)
                         
                         .foregroundColor(Color("mains"))//.opacity(0.8))
                     
                     
                     Text("Chicken skewers with slices of sweet peppers and dill")
-                        .font(.customFontSystem(size: 15))
+                        .font(.system(size: 15))
                         
                         //                    .font(.system(size: 15))
                         .fontWeight(.regular)
@@ -120,7 +120,7 @@ struct SpecialOfferRowView: View {
                     Label(
                         title: {
                             Text(x.location)
-                                .font(.customFontSystem(size: 10))
+                                .font(.system(size: 10))
                                 .foregroundColor(Color.black.opacity(0.6))
                             
                             //                                .foregroundColor(.gray.opacity(0.8))
@@ -135,13 +135,13 @@ struct SpecialOfferRowView: View {
                         title: {
                             Text("55EGP")
                                 
-                                .font(.customFontSystem(size: 10))
+                                .font(.system(size: 10))
                                 .fontWeight(.bold)
                                 .foregroundColor(.green.opacity(1))
                         },
                         icon: {
                             Text("75EGP")
-                                .font(.customFontSystem(size: 8))
+                                .font(.system(size: 8))
                                 
                                 .fontWeight(.regular)
                                 .foregroundColor(Color("mains").opacity(0.6))//.opacity(1))

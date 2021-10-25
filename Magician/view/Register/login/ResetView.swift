@@ -14,10 +14,10 @@ struct ResetView: View {
         VStack {
             
             Text(LocalizedStringKey("Reset Password"))
-                .font(.customFontSystem(size: 30))
+                .font(.system(size: 30))
             
             Text(LocalizedStringKey("Please enter your email to receive a\nlink to  create a new password via email"))
-                .font(.customFontSystem(size: 14))
+                .font(.system(size: 14))
                 .foregroundColor(.black.opacity(0.6))
 //                .padding(.top)
                 .padding(.top,2)
@@ -40,7 +40,7 @@ struct ResetView: View {
                         .overlay(
                             
                             Text(LocalizedStringKey("Send"))
-                                .font(.customFontSystem(size: 16))
+                                .font(.system(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.white)//.opacity(0.6))
                         )

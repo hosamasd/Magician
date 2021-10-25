@@ -21,13 +21,13 @@ struct MainHomeTaPointsView: View {
                             
                             Text("Eslam Hisham")
 
-                                .font(.customFontSystem(size: 14))
+                                .font(.system(size: 14))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("mains"))
 //                                .padding(.top,20)
                             
                             Text("( Superman )")
-                                .font(.customFontSystem(size: 12))
+                                .font(.system(size: 12))
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
                         }
@@ -47,12 +47,12 @@ struct MainHomeTaPointsView: View {
                 Spacer()
                 
                 Text("2700 /\n")
-                    .font(.customFontSystem(size: 14))
+                    .font(.system(size: 14))
                     .fontWeight(.semibold)
                     .foregroundColor(Color("mains"))
                 +
                  Text(   "3000 EXP")
-                    .font(.customFontSystem(size: 14))
+                    .font(.system(size: 14))
                     .fontWeight(.semibold)
             }
             

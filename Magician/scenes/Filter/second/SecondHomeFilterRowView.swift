@@ -16,7 +16,7 @@ struct SecondHomeFilterRowView: View {
         }}, label: {
             Label(
                 title: { Text(x.name)
-                    .font(.customFontSystem(size: 13))
+                    .font(.system(size: 13))
                     
                     .foregroundColor(selected==x.name ? .white : .black)
                 },

@@ -226,7 +226,7 @@ struct SSHomeCheckout: View {
                                 .overlay(
                                     
                                     Text(LocalizedStringKey(vm.isCheckOut ? "Send Order" : "Checkout"))
-                                        .font(.customFontSystem(size: 16))
+                                        .font(.system(size: 16))
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color.white)//.opacity(0.6))
                                 )

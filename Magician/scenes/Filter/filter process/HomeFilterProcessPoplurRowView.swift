@@ -16,7 +16,7 @@ struct HomeFilterProcessPoplurRowView: View {
             HStack {
                 
                 Text(x.name)
-                    .font(.boldCustomFontSystem(size: 16))
+                    .font(.system(size: 16))
                     .fontWeight(.bold)
                 
                 Spacer()

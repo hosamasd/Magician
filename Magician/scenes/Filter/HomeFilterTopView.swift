@@ -16,7 +16,7 @@ struct HomeFilterTopView: View {
                 
                 Label(
                     title: { Text("Hello , Eslam")
-                        .font(.customFontSystem(size: 14))
+                        .font(.system(size: 14))
                         
                         //                        .font(.system(size: 14))
                         .fontWeight(.bold)
@@ -34,7 +34,7 @@ struct HomeFilterTopView: View {
                 Label(
                     title: {
                         Text("Cairo, Egypt")
-                            .font(.customFontSystem(size: 14))
+                            .font(.system(size: 14))
                             
                             //                            .font(.system(size: 14))
                             .fontWeight(.regular)

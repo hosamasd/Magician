@@ -27,7 +27,7 @@ struct HomeFilterProcessMainChoise: View {
                     
                     
                     Text(LocalizedStringKey("Popular Filters"))
-                        .font(.boldCustomFontSystem(size: 16))
+                        .font(.system(size: 16))
                         .fontWeight(.bold)
                         .foregroundColor(vm.isFirst ? Color("mains") : Color.gray.opacity(0.6))
                         .overlay(
@@ -38,7 +38,7 @@ struct HomeFilterProcessMainChoise: View {
                             ,alignment: .bottom)
                     
                 })
-                .font(.boldCustomFontSystem(size: 20))
+                .font(.system(size: 20))
                 
                 Button(action: {withAnimation{
                     
@@ -48,7 +48,7 @@ struct HomeFilterProcessMainChoise: View {
                     
                     
                     Text(LocalizedStringKey("Sort By"))
-                        .font(.boldCustomFontSystem(size: 16))
+                        .font(.system(size: 16))
                         .fontWeight(.bold)
                         .foregroundColor(vm.isSecond ? Color("mains") : Color.gray.opacity(0.6))
                         .overlay(
@@ -59,7 +59,7 @@ struct HomeFilterProcessMainChoise: View {
                             ,alignment: .bottom)
                     
                 })
-                .font(.boldCustomFontSystem(size: 20))
+                .font(.system(size: 20))
             }
             
             Spacer()

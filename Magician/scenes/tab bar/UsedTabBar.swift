@@ -79,7 +79,7 @@ struct TabButton : View {
                             .overlay(
                             
                                 Text(("\(vm.totalAddedNewOrders)"))
-                                    .font(.customFontSystem(size: 10))
+                                    .font(.system(size: 10))
                                     .fontWeight(.bold)
                                     .foregroundColor(.white)
                             )

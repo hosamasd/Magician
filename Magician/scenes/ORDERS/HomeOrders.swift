@@ -12,8 +12,11 @@ struct HomeOrders: View {
     @EnvironmentObject var vm : HomeOrdersViewModel
     
     @EnvironmentObject var vmm : HomeMainTabBarViewModel
-    
+    @EnvironmentObject var vms : HomeCheckoutViewModel
+
     @State var isSelectItem=false
+    @State var isSelectItemTrack=false
+
     @State var selectedItem = OfferModel(name: "", img: "", subImg: "", type: "", location: "", rating: "")
     
     var body: some View {
@@ -35,10 +38,11 @@ struct HomeOrders: View {
                             
                             OrderRowView(x: msg)
                                 .frame(width:getFrameSize().width-28)
-                                .onTapGesture(perform: {
+                                .onTapGesture(perform: {getDistination(msg: msg)
                                     
-                                    selectedItem=OfferModel(name: msg.name, img: msg.img, subImg: msg.img, type: msg.name, location: msg.desc, rating: msg.price)
-                                    isSelectItem=true
+                                   
+//                                    selectedItem=OfferModel(name: msg.name, img: msg.img, subImg: msg.img, type: msg.name, location: msg.desc, rating: msg.price)
+//                                    isSelectItem=true
                                 })
                             
                         }
@@ -73,7 +77,24 @@ struct HomeOrders: View {
                         .fullScreenCover(isPresented: $isSelectItem, content: {
                                             SelectedItemScenes(isShow:  $isSelectItem,selectedItem:selectedItem)  })
         )
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isSelectItemTrack, content: {
+                                            HomeTrackMyOrder()
+                                                .environmentObject(vmm)
+                                                .environmentObject(vms)
+                                              })
+        )
         
+    }
+    
+    func getDistination(msg:OrderMmodel)  {
+        if !msg.isOrdered {
+            isSelectItemTrack=true
+            
+        }else {
+            selectedItem=OfferModel(name: msg.name, img: msg.img, subImg: msg.img, type: msg.name, location: msg.desc, rating: msg.price)
+            isSelectItem=true
+        }
     }
     
     func getBottomSpace() ->CGFloat {

@@ -28,7 +28,7 @@ struct SelectedCategoryRowView: View {
                     HStack {
                         Label(
                             title: { Text(x.rating)
-                                .font(.customFontSystem(size: 10))
+                                .font(.system(size: 10))
                                 .foregroundColor(.black)
                                 .padding(.leading,-4)
                             },
@@ -62,7 +62,7 @@ struct SelectedCategoryRowView: View {
                     //                VStack {
                     //                    HStack {
                     Text(x.name)
-                        .font(.customFontSystem(size: 15))
+                        .font(.system(size: 15))
                         .fontWeight(.bold)
                         .foregroundColor(Color("mains"))
                     
@@ -70,7 +70,7 @@ struct SelectedCategoryRowView: View {
                     //
                     //                        Text("50% OFF")
                     //                            .font(.system(size: 14))
-                    ////                            .font(.customFontSystem(size:  14))
+                    ////                            .font(.system(size:  14))
                     //                            .fontWeight(.bold)
                     //                            .foregroundColor(Color("mains"))
                     //                            .padding(.horizontal ,  16 )
@@ -81,7 +81,7 @@ struct SelectedCategoryRowView: View {
                     HStack {
                         
                         Text("Chicken skewers ")
-                            .font(.customFontSystem(size: 12))
+                            .font(.system(size: 12))
                             .fontWeight(.regular)
                             .foregroundColor(Color.black.opacity(0.6))
                             .padding(.top,4)
@@ -90,7 +90,7 @@ struct SelectedCategoryRowView: View {
                         
                         Text("50% OFF")
                             .font(.system(size: 14))
-                            //                            .font(.customFontSystem(size:  14))
+                            //                            .font(.system(size:  14))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
                             .padding(.horizontal ,  16 )
@@ -100,7 +100,7 @@ struct SelectedCategoryRowView: View {
                         
                     }
                     //                    Text("Chicken skewers with slices of sweet peppers and dill")
-                    //                        .font(.customFontSystem(size: 12))
+                    //                        .font(.system(size: 12))
                     //                        .fontWeight(.regular)
                     //                        .foregroundColor(Color.black.opacity(0.6))
                     //                        .padding(.top,4)
@@ -119,7 +119,7 @@ struct SelectedCategoryRowView: View {
                         HStack(spacing:12){
                             
                             Text("110 EGP")
-                                .font(.customFontSystem(size:  15))
+                                .font(.system(size:  15))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("mains"))
                                 .overlay(
@@ -131,7 +131,7 @@ struct SelectedCategoryRowView: View {
                                 )
                             
                             Text("50EGP")
-                                .font(.customFontSystem(size: 20))
+                                .font(.system(size: 20))
                                 
                                 //                    .font(.system(size: 25))
                                 .fontWeight(.bold)
@@ -175,7 +175,7 @@ struct SelectedCategoryRowView: View {
                         HStack {
                             
                             Text(x.name)
-                                .font(.customFontSystem(size: isSmallDevice() ? 12 : 15))
+                                .font(.system(size: isSmallDevice() ? 12 : 12))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("mains"))
                             
@@ -184,7 +184,7 @@ struct SelectedCategoryRowView: View {
                             Text("50% OFF")
                                 .font(.system(size: 10))
 
-//                                .font(.customFontSystem(size: 10))
+//                                .font(.system(size: 10))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("mains"))
                                 .padding(.horizontal,6)
@@ -196,7 +196,7 @@ struct SelectedCategoryRowView: View {
                         
                         Text("Chicken skewers ")
                             .font(.system(size: 12))
-//                            .font(.customFontSystem(size: 12))
+//                            .font(.system(size: 12))
                             .fontWeight(.regular)
                             .lineLimit(2)
                             .foregroundColor(Color.black.opacity(0.6))
@@ -206,7 +206,7 @@ struct SelectedCategoryRowView: View {
 //
 //                            Label(
 //                                title: { Text("Cairo, Egypt")
-//                                    .font(.customFontSystem(size: 10))
+//                                    .font(.system(size: 10))
 //
 //                                },
 //                                icon: { Image("pin") }
@@ -215,7 +215,7 @@ struct SelectedCategoryRowView: View {
 //                            Spacer()
 //
 //                            Text("50% OFF")
-//                                .font(.customFontSystem(size: 10))
+//                                .font(.system(size: 10))
 //                                .fontWeight(.semibold)
 //                                .foregroundColor(Color("mains"))
 //                                .padding(.horizontal,8)
@@ -230,7 +230,7 @@ struct SelectedCategoryRowView: View {
 //                        HStack(){
 //                            Label(
 //                                title: { Text("20 min")
-//                                    .font(.customFontSystem(size: 10))
+//                                    .font(.system(size: 10))
 //                                },
 //                                icon: { Image("XMLID_1031_") }
 //                            )
@@ -239,7 +239,7 @@ struct SelectedCategoryRowView: View {
 //
 //                            Label(
 //                                title: { Text("10 EGP")
-//                                    .font(.customFontSystem(size: 10))
+//                                    .font(.system(size: 10))
 //
 //                                },
 //                                icon: { Image("delivery") }
@@ -270,7 +270,7 @@ struct SelectedCategoryRowView: View {
                                 Text("110 EGP")
                                     .font(.system(size: isSmallDevice() ? 8 : 10))
 
-//                                    .font(.customFontSystem(size:  15))
+//                                    .font(.system(size:  15))
                                     .fontWeight(.semibold)
                                     .foregroundColor(Color("mains"))
                                     .overlay(
@@ -284,7 +284,7 @@ struct SelectedCategoryRowView: View {
                                 Text("50EGP")
                                     .font(.system(size:isSmallDevice() ? 8 : 10))
 
-//                                    .font(.customFontSystem(size: 20))
+//                                    .font(.system(size: 20))
                                     
                                     //                    .font(.system(size: 25))
                                     .fontWeight(.bold)
@@ -294,14 +294,14 @@ struct SelectedCategoryRowView: View {
                             .padding(.leading,4)
                         }
                     })
-                    .padding(.horizontal,isSmallDevice() ? 3 : 6)
+                    .padding(.horizontal,isSmallDevice() ? 3 : 8)//6
                     //                    .background(Color.red)
                     //                    .offset(y:-60)
                     
                 }
             }
         }
-        .frame(height:vm.isSingleItemLists==1 ? 250 : 230)
+        .frame(height:vm.isSingleItemLists==1 ? 250 : 240)//230
 
         //        .padding(.bottom,12)
         .background(

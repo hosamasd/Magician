@@ -67,7 +67,7 @@ struct YearPicker: View {
                     isMonth=false
                 }}, label: {
                     Text("Done")
-                        .font(.boldCustomFontSystem(size: 20))
+                        .font(.system(size: 20))
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
                     

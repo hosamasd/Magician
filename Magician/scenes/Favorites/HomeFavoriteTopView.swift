@@ -18,7 +18,7 @@ struct HomeFavoriteTopView: View {
           
                 
                         Text(LocalizedStringKey("Favorite"))
-                            .font(.customFontSystem(size: 17))
+                            .font(.system(size: 17))
                             .fontWeight(.bold)
                  
               

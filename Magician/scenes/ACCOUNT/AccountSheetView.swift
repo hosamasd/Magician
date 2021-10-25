@@ -77,7 +77,7 @@ struct AccountSheetView: View {
                             .overlay(
                                 
                                 Text(LocalizedStringKey("Order With Gift"))
-                                    .font(.customFontSystem(size: 18))
+                                    .font(.system(size: 18))
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.white)//.opacity(0.6))
                             )
@@ -90,7 +90,7 @@ struct AccountSheetView: View {
                     }}, label: {
                         Text("Later")
                             
-                                .font(.customFontSystem(size: 18))
+                                .font(.system(size: 18))
                                 .fontWeight(.bold)
                             .foregroundColor(Color.black.opacity(0.77))
                     })

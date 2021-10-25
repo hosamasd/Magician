@@ -17,7 +17,7 @@ struct MainHomeTabTopView: View {
                 Label(
                     title: { Text("Hello , Eslam")
 //                        .modifier(customFont())
-                        .font(.customFontSystem(size: 14))
+                        .font(.system(size: 14))
 //                        .font(.system(size: 14))
                         .fontWeight(.bold)
                         .padding(.leading,2)
@@ -34,7 +34,7 @@ struct MainHomeTabTopView: View {
                 Label(
                     title: {
                         Text("Cairo, Egypt")
-                            .font(.customFontSystem(size: 14))
+                            .font(.system(size: 14))
 
 //                            .font(.system(size: 14))
                             .fontWeight(.regular)

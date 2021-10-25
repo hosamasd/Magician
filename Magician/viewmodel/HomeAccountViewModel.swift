@@ -25,7 +25,7 @@ class HomeAccountViewModel: ObservableObject {
     @Published var isLooding = false
     
     //add address
-    @Published var isAddAddressSheet = true
+    @Published var isAddAddressSheet = false
     @Published var newAddedAddress = "Al-obour , Cairo , Egypt"
     @Published var isSHowLocation=false
     

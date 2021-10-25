@@ -34,7 +34,7 @@ struct SelectedItemAddNotesSheetView: View {
                 .padding(.horizontal)
                 
                 Text("Add Notes To Your Order")
-                    .font(.boldCustomFontSystem(size: 20))
+                    .font(.system(size: 20))
                     .fontWeight(.bold)
                 
                 RoundedRectangle(cornerRadius: 10)
@@ -79,7 +79,7 @@ struct SelectedItemAddNotesSheetView: View {
                         .overlay(
                             
                             Text("Add Notes")
-                                .font(.customFontSystem(size: 16))
+                                .font(.system(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.white)//.opacity(0.6))
                         )

@@ -21,7 +21,7 @@ struct HomeCategoryView: View {
             HStack {
                 Text("Categories")
                     .foregroundColor(.black)
-                    .font(.customFontSystem(size: 18))
+                    .font(.system(size: 18))
                     .fontWeight(.bold)
                 
                 Spacer()

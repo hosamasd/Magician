@@ -42,16 +42,16 @@ struct HomeCheckoutSuccessfullSheetView: View {
                 VStack{
                     
                     Text("Thank You!")
-                        .font(.boldCustomFontSystem(size: 30))
+                        .font(.system(size: 30))
                         .fontWeight(.bold)
                     
                     Text("for your order")
-                        .font(.boldCustomFontSystem(size: 18))
+                        .font(.system(size: 18))
                         .fontWeight(.bold)
                     
                     VStack {
                         Text("Your Order is now being processed. We will let you know once the order is picked from the outlet. Check the status of your Order")
-                            .font(.boldCustomFontSystem(size: 14))
+                            .font(.system(size: 14))
                             .fontWeight(.regular)
                             .lineLimit(3)
                             .foregroundColor(.black.opacity(0.6))
@@ -73,7 +73,7 @@ struct HomeCheckoutSuccessfullSheetView: View {
                                 .overlay(
                                     
                                     Text(LocalizedStringKey("Track my order"))
-                                        .font(.customFontSystem(size: 16))
+                                        .font(.system(size: 16))
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color.white)//.opacity(0.6))
                                 )
@@ -89,7 +89,7 @@ struct HomeCheckoutSuccessfullSheetView: View {
 
                         }}, label: {
                             Text("Back to home")
-                                .font(.boldCustomFontSystem(size: 18))
+                                .font(.system(size: 18))
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
                         })

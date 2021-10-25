@@ -22,7 +22,7 @@ struct HomeTopRating: View {
             HStack {
                 Text("Top Rating")
                     .foregroundColor(.black)
-                    .font(.customFontSystem(size: 18))
+                    .font(.system(size: 18))
                     .fontWeight(.bold)
                 
                 Spacer()
@@ -44,7 +44,7 @@ struct HomeTopRating: View {
                         },
                         icon: {
                             Text("View All")
-                                .font(.customFontSystem(size: 12))
+                                .font(.system(size: 12))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("mains"))
                         }

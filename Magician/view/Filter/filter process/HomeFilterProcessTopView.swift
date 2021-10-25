@@ -21,7 +21,7 @@ struct HomeFilterProcessTopView: View {
                 Image(systemName: "chevron.backward")
 
 //                Image(systemName: vmm.getBackImage())//"chevron.backward")
-                    .font(.customFontSystem(size: 25))
+                    .font(.system(size: 25))
                     .foregroundColor(Color("mains"))
                 
             })
@@ -29,7 +29,7 @@ struct HomeFilterProcessTopView: View {
             Spacer()
             
             Text(LocalizedStringKey("Filter"))
-                .font(.customFontSystem(size: 17))
+                .font(.system(size: 17))
                 .fontWeight(.bold)
             
             

@@ -17,9 +17,9 @@ struct HomeFilterRowView: View {
                 .resizable()
 //                .aspectRatio(contentMode: .fill)
                 .frame( height: 190)
+                .cornerRadius(20)
                 
                     
-                .cornerRadius(19)
             
             HStack (spacing:12){
                 
@@ -27,7 +27,7 @@ struct HomeFilterRowView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 30, height: 30)
-                    .padding(6)
+                    .padding(8)
                     .modifier(viewModifiers())
                 
 //                Image("1-3")
@@ -43,27 +43,16 @@ struct HomeFilterRowView: View {
                 
                 VStack (alignment:.leading,spacing:8){
                 Text(x.name)
-                    .font(.customFontSystem(size: 18))
+                    .font(.system(size: 20))
                     .foregroundColor(.black)
                 //                                .padding(.leading,-4)
                 Text(x.type)
-                    .font(.customFontSystem(size: 8))
+                    .font(.system(size: 8))
                     .foregroundColor(Color.black.opacity(0.8))
 
-//                            .foregroundColor(.gray.opacity(0.8))
-//                    .padding(.top,8)
-                    
-                    Spacer()
+//                            .fore
                 }
-                .offset(y:8)
-                
             }
-//            .background(Color.red)
-
-//            .offset(y:4)
-//            .padding(.leading,-8)
-            
-            
           
             
         }

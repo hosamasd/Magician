@@ -29,6 +29,7 @@ class HomeFilterViewModel:ObservableObject {
     @Published var isLooding = false
     
     @Published var selectedCategory = ""//"Food"
+
     @Published var isShowFilter = false
     
     @Published var isFirst = true
@@ -37,20 +38,20 @@ class HomeFilterViewModel:ObservableObject {
     
     @Published var categoryArray:[MainCategory] = [
         MainCategory(name: "Food", img: "Group 8367-1",nameAr:"Food",subImage:"food",mainImg: "Group 8367"),
-        MainCategory(name: "Toys", img: "Group 8368",nameAr:"Toys",subImage:"Page-1", mainImg: "Group 8368"),
-        MainCategory(name: "Clothes", img: "Group 8369",nameAr:"Clothes",subImage:"clothes-1",mainImg: "Group 8369"),
-        MainCategory(name: "Others", img: "Group 8370",nameAr:"Others",subImage:"other",mainImg: "Group 8370"),
+        MainCategory(name: "Toys", img: "Group 8368",nameAr:"Toys",subImage:"Page-1", mainImg: "Group 8368",index:1),
+        MainCategory(name: "Clothes", img: "Group 8369",nameAr:"Clothes",subImage:"clothes-1",mainImg: "Group 8369",index:2),
+        MainCategory(name: "Others", img: "Group 8370",nameAr:"Others",subImage:"other",mainImg: "Group 8370",index:3),
         
     ]
     
     @Published var filterArray:[OfferModel] = [
-        OfferModel(name: "Nobile Houses", img: "28", subImg: "ramen", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-        OfferModel(name: "Nobile Housev", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true),
+        OfferModel(name: "Nobile", img: "28", subImg: "ramen", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        OfferModel(name: "Nobile ", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true),
         //        OfferModel(name: "Nobile Houseb", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-        OfferModel(name: "Nobile Housex", img: "28", subImg: "ramen", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true),
-        OfferModel(name: "Nobile Housez", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
-        OfferModel(name: "Nobile Housesax", img: "28", subImg: "ramen", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true),
-        OfferModel(name: "Nobile Housezsad", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        OfferModel(name: "Nobil", img: "28", subImg: "ramen", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true),
+        OfferModel(name: "Nobiles", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
+        OfferModel(name: "Nobilz", img: "28", subImg: "ramen", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5",isFavorite:true),
+        OfferModel(name: "PIZZA", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5"),
     ]
     
     @Published var popularArray:[FixedFilterModel] = [
@@ -135,5 +136,12 @@ class HomeFilterViewModel:ObservableObject {
         //
         //        }
         
+    }
+    
+ 
+    
+    func getDatas() -> [OfferModel] {
+        
+       return selectedCategory == "Food" ? filterArray : selectedCategory=="Toys" ? filterArray.suffix(2) : selectedCategory == "Clothes" ? filterArray.suffix(3) : filterArray.suffix(1)
     }
 }

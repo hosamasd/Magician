@@ -22,12 +22,12 @@ struct HomeAccountPointsView: View {
                             
                             Text("Eslam Hisham")
 
-                                .font(.customFontSystem(size: 18))
+                                .font(.system(size: 18))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("mains"))
                             
                             Text("( Superman )")
-                                .font(.customFontSystem(size: 13))
+                                .font(.system(size: 13))
                                 .fontWeight(.semibold)
                         }
                         
@@ -43,12 +43,12 @@ struct HomeAccountPointsView: View {
                 Spacer()
                 
                 Text("1500 /\n")
-                    .font(.customFontSystem(size: 18))
+                    .font(.system(size: 18))
                     .fontWeight(.semibold)
                     .foregroundColor(Color("mains"))
                 +
                  Text(   "3000 EXP")
-                    .font(.customFontSystem(size: 18))
+                    .font(.system(size: 18))
                     .fontWeight(.semibold)
             }
             

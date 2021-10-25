@@ -20,7 +20,7 @@ struct BottomAddNotesView: View {
             
             HStack {
                 Text("Add Notes To Your Order")
-                    .font(.boldCustomFontSystem(size: 14))
+                    .font(.system(size: 14))
                     .fontWeight(.bold)
                 
                 Spacer()
@@ -71,7 +71,7 @@ struct BottomAddNotesView: View {
                 }}, label: {
                     Label(
                         title: { Text("Add Cards")
-                            .font(.boldCustomFontSystem(size: 18))
+                            .font(.system(size: 18))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
                         },

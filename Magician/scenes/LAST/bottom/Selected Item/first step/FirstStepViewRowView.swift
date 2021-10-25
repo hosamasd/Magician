@@ -16,7 +16,7 @@ struct FirstStepViewRowView: View {
             HStack {
                 
                 Text("First Step Item (\(x)")
-                    .font(.boldCustomFontSystem(size: 14))
+                    .font(.system(size: 14))
                     .fontWeight(.regular)
                 
                 Spacer()

@@ -31,7 +31,7 @@ struct HomeCheckoutTopView: View {
                         //"My Order"))
                         
                         vm.isTrackMyOrder ? "Back" :   vm.isCheckOut ? "Checkout"  : "My Order"))
-                    .font(.boldCustomFontSystem(size: 27))
+                    .font(.system(size: 27))
                     .fontWeight(.bold)
             }
             

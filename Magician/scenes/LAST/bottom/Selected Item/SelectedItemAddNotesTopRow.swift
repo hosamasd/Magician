@@ -38,12 +38,12 @@ struct SelectedItemAddNotesTopRow: View {
                             VStack (alignment:.leading){
                                 
                                 Text(x.name)
-                                    .font(.customFontSystem(size: 16))
+                                    .font(.system(size: 16))
                                     .foregroundColor(.black)
                                 
                                 //                                .padding(.leading,-4)
                                 Text(x.type)
-                                    .font(.customFontSystem(size: 12))
+                                    .font(.system(size: 12))
                                     .foregroundColor(Color.black.opacity(0.6))
                                     
                                     //                            .foregroundColor(.gray.opacity(0.8))
@@ -56,7 +56,7 @@ struct SelectedItemAddNotesTopRow: View {
                         
                         Label(
                             title: { Text("4.5")
-                                .font(.customFontSystem(size: 9))
+                                .font(.system(size: 9))
                                 .foregroundColor(.white)
                                 
                             },
@@ -83,7 +83,7 @@ struct SelectedItemAddNotesTopRow: View {
                                 }
                             )
                         })
-                        .font(.customFontSystem(size: 16))
+                        .font(.system(size: 16))
                         .foregroundColor(Color("mains"))
                         
                         
@@ -94,7 +94,7 @@ struct SelectedItemAddNotesTopRow: View {
                         
                         Label(
                             title: { Text("10 EGP")
-                                .font(.customFontSystem(size: 10))
+                                .font(.system(size: 10))
                                 
                             },
                             icon: { Image("delivery") }
@@ -114,7 +114,7 @@ struct SelectedItemAddNotesTopRow: View {
                             title: { Text("Cairo, Egypt") },
                             icon: { Image("pin") }
                         )
-                        .font(.customFontSystem(size: 10))
+                        .font(.system(size: 10))
 
                         
                     }

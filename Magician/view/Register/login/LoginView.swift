@@ -46,7 +46,7 @@ struct LoginView: View {
                             .overlay(
                                 
                                 Text(LocalizedStringKey("Login"))
-                                    .font(.customFontSystem(size: 16))
+                                    .font(.system(size: 16))
                                     .fontWeight(.semibold)
                                     .foregroundColor(Color.white)//.opacity(0.6))
                             )
@@ -62,7 +62,7 @@ struct LoginView: View {
                 
                 Button(action: {withAnimation{vm.isResetPass.toggle()}}, label: {
                     Text(LocalizedStringKey("Forgot your password?"))
-                        .font(.customFontSystem(size: 14))
+                        .font(.system(size: 14))
                         .fontWeight(.semibold)
                         .foregroundColor(.black.opacity(0.6))
                 })

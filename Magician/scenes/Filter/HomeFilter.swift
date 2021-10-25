@@ -44,17 +44,17 @@ struct HomeFilter: View {
                                     .font(.system(size: 25))
                                     .fontWeight(.bold)
                                     .foregroundColor(Color("mains"))
-                          
-                            
-                            Image("Group 8275")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-//                                .frame(height:getFrameSize().height/5)
-//                                .padding(.leading)
-                            
+                                
+                                
+                                Image("Group 8275")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                //                                .frame(height:getFrameSize().height/5)
+                                //                                .padding(.leading)
+                                
                             }
                             .frame(width:getFrameSize().width-94)//,height:getFrameSize().height/8)
-
+                            
                             Spacer()
                             
                         }
@@ -62,10 +62,10 @@ struct HomeFilter: View {
                         .padding(.bottom)
                         .padding(.horizontal)
                         
-//                        .frame(height:getFrameSize().height/3)
-
-//                        .padding(.bottom,isSmallDevice() ? 80 : 100)
-//                        .padding(.bottom,isSmallDevice() ? 80 : 0)
+                        //                        .frame(height:getFrameSize().height/3)
+                        
+                        //                        .padding(.bottom,isSmallDevice() ? 80 : 100)
+                        //                        .padding(.bottom,isSmallDevice() ? 80 : 0)
                         
                         if    vm.selectedCategory != "" {
                             
@@ -76,7 +76,7 @@ struct HomeFilter: View {
                                     
                                     // assigning name as ID...
                                     
-                                    ForEach(vm.filterArray,id: \.name){gradient in
+                                    ForEach(vm.getDatas(),id: \.name){gradient in
                                         
                                         HomeFilterRowView(x:gradient)
                                             .onTapGesture(perform: {

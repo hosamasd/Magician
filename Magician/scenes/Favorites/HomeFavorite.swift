@@ -83,6 +83,8 @@ struct HomeFavorite: View {
         
     }
     
+    
+    
     func getBottomSpace() ->CGFloat {
         CGFloat( isSmallDevice() ? 80 : 100)
     }

@@ -17,6 +17,7 @@ struct MainHomeTabBar: View {
     
     @StateObject var vmOrd = HomeOrdersViewModel()
     
+    @StateObject var checkout=HomeCheckoutViewModel()
     //    @StateObject var vms=MainHomeTabViewModel()
     
     
@@ -58,7 +59,9 @@ struct MainHomeTabBar: View {
             }
             else if vm.index ==  "Orders" {
                 HomeOrders()
+                    .environmentObject(vm)
                     .environmentObject(vmOrd)
+                    .environmentObject(checkout)
                 //                    .padding(.horizontal,40)
                 
             }

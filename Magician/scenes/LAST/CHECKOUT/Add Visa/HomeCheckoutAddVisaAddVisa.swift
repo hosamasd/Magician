@@ -25,7 +25,7 @@ struct HomeCheckoutAddVisaAddVisa: View {
                 }}, label: {
                     Label(
                         title: { Text("Add Cards")
-                            .font(.boldCustomFontSystem(size: 14))
+                            .font(.system(size: 14))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
                         },

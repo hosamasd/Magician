@@ -15,13 +15,14 @@ struct OrderRowView: View {
             
             Image(x.img)
                 .resizable()
-                .frame(width:140, height: 140)
+                .frame(width:140, height: 150)
+                .cornerRadius(19)
             
             VStack(alignment: .leading, content: {
                 
                 Text(x.name)
                     //                    .font(.system(size: 20))
-                    .font(.customFontSystem(size: 20))
+                    .font(.system(size: 20))
                     
                     .fontWeight(.bold)
                     .foregroundColor(Color("mains"))
@@ -29,7 +30,7 @@ struct OrderRowView: View {
                 //                    .offset(y:8)
                 
                 Text(x.desc)
-                    .font(.customFontSystem(size: 15))
+                    .font(.system(size: 15))
                     
                     //                    .font(.system(size: 15))
                     .fontWeight(.regular)
@@ -40,7 +41,7 @@ struct OrderRowView: View {
                     .padding(.bottom,4)
                 
                 Text(x.price)
-                    .font(.customFontSystem(size: 25))
+                    .font(.system(size: 25))
                     
                     //                    .font(.system(size: 25))
                     .fontWeight(.bold)
@@ -48,7 +49,7 @@ struct OrderRowView: View {
                 
                 HStack{
                     Text(x.date)
-                        .font(.customFontSystem(size: 11))
+                        .font(.system(size: 11))
                         
                         //                        .font(.system(size: 11))
                         .fontWeight(.regular)
@@ -60,7 +61,7 @@ struct OrderRowView: View {
                         
                         ZStack {
                             Text("Track My Order")
-                                .font(.customFontSystem(size: 16))
+                                .font(.system(size: isSmallDevice() ? 14 : 16))
                                 
                                 //                                .font(.system(size: 16))
                                 .fontWeight(.bold)
@@ -73,7 +74,7 @@ struct OrderRowView: View {
                                 },
                                 icon: {
                                     Text("Reorder")
-                                        .font(.customFontSystem(size: 16))
+                                        .font(.system(size: 16))
                                         
                                         //                                        .font(.system(size: 16))
                                         .fontWeight(.bold)

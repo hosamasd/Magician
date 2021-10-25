@@ -22,7 +22,7 @@ struct STopRatingRowView: View {
                     
                     Label(
                         title: { Text(x.rating)
-                            .font(.customFontSystem(size: 10))
+                            .font(.system(size: 10))
                             .foregroundColor(.black)
                             .padding(.leading,-4)
                         },
@@ -35,60 +35,70 @@ struct STopRatingRowView: View {
                     .offset(x: 10.0, y: 10)
                     
                     ,alignment:.topLeading)
-                .cornerRadius(10)
+                .cornerRadius(19)
             
             Label(
                 title: {
-                    VStack (alignment:.leading){
+                    VStack (alignment:.leading,spacing:8){
                         Text(x.name)
-                            .font(.customFontSystem(size: 14))
+                            .font(.system(size: 14))
                             .foregroundColor(.black)
                         //                                .padding(.leading,-4)
                         Text(x.type)
-                            .font(.customFontSystem(size: 12))
+                            .font(.system(size: 12))
                             .foregroundColor(Color.black.opacity(0.6))
 
 //                            .foregroundColor(.gray.opacity(0.8))
-                            .padding(.top,4)
+//                            .padding(.top,4)
+                            
+                        Spacer()
                     }
                     .offset(x:-4,y:-10)
+                    .padding(.leading,4)
                 },
                 icon: {
                     Image( x.subImg)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 23, height: 24)
+                        .frame(width: 30, height: 30)
                         .padding(6)
                         .modifier(viewModifiers())
+//                        .padding(.trailing)
 //                    Image("1-3")
 //                        .overlay(
 //                            Image( x.subImg)
 //                        )
                 }
             )
+            .padding(.top,12)
+            .frame(height:50)
             //
-            Label(
-                title: {
-                    Text(x.location)
-                        .font(.customFontSystem(size: 10))
-                        .foregroundColor(Color.black.opacity(0.6))
+            HStack {
+                Label(
+                    title: {
+                        Text(x.location)
+                            .font(.system(size: 10))
+                            .foregroundColor(Color.black.opacity(0.6))
 
-//                        .foregroundColor(.gray.opacity(0.8))
-                },
-                icon: { Image( "pin") }
-            )
-            .frame(maxWidth:.infinity,alignment: .leading)
+    //                        .foregroundColor(.gray.opacity(0.8))
+                    },
+                    icon: { Image( "pin") }
+                )
+                
+                Spacer()
+               
+            }
             .padding(.horizontal,8)
             .padding(.bottom,4)
             
         }
         
-        .padding(.horizontal,8)
-        .padding(.vertical,8)
+        .padding(.horizontal,6)
+        .padding(.vertical,6)
         
         .background(
             RoundedRectangle(
-                cornerRadius: 10
+                cornerRadius: 19
             )
             .foregroundColor(Color("topRate"))
             .shadow(
@@ -119,6 +129,7 @@ struct STopRatingRowView: View {
 
 struct STopRatingRowView_Previews: PreviewProvider {
     static var previews: some View {
-        MainHomeTab()
+        STopRatingRowView(vm: MainHomeTabViewModel())
+//        MainHomeTab()
     }
 }

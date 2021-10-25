@@ -30,7 +30,7 @@ struct ThirdHomeSelectedCategoryRowView: View {
 
                     
             Text(x.name)
-                .font(.customFontSystem(size: 16))
+                .font(.system(size: 16))
                 .fontWeight(.bold)
                 .foregroundColor(.black.opacity(0.8))
         }

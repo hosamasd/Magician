@@ -36,7 +36,7 @@ struct SCustomTF: View {
                             if txt.isEmpty { Text(LocalizedStringKey(hint))
                                 .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                                 .fontWeight(.semibold)
-                                .font(.customFontSystem(size: 12))
+                                .font(.system(size: 12))
                             }
                             
                             //                                    TextField(hint,text:$txt)

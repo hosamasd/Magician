@@ -21,7 +21,7 @@ struct SelectedItemSceneRowView: View {
         VStack {
             
             Text(x)
-                .font(.customFontSystem(size: 16))
+                .font(.system(size: 16))
                 .fontWeight(.bold)
                 .foregroundColor(selected==x ? Color("mains") : .black)
             

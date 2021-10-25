@@ -28,7 +28,7 @@ struct AccountChangePassword: View {
                     
                     Button(action: {withAnimation{vm.isChangePassword.toggle()}}, label: {
                         Image(systemName: vmm.getBackImage())//"chevron.backward")
-                            .font(.customFontSystem(size: 25))
+                            .font(.system(size: 25))
                             .foregroundColor(Color("mains"))
                         
                     })
@@ -36,16 +36,17 @@ struct AccountChangePassword: View {
                     Spacer()
                     
                     Text("Change password")
-                        .font(.customFontSystem(size: 16))
+                        .font(.system(size: 16))
                         .fontWeight(.bold)
                         .foregroundColor(Color("mains"))
-                    
+                        .offset(x: changePositions ? 0 : -600,y:changePositions ? 0 : 200)//, y: changePositions ? 0 )
+
                     Spacer()
                     
                 }
                 .padding(.horizontal,8)
                 .padding(.bottom,20)
-                .offset(x: changePositions ? 0 : -600)//, y: changePositions ? 0 )
+//                .offset(x: changePositions ? 0 : -600)//, y: changePositions ? 0 )
 
                 
                 VStack(spacing:20) {
@@ -71,7 +72,7 @@ struct AccountChangePassword: View {
                         .overlay(
                             
                             Text("Save")
-                                .font(.customFontSystem(size: 16))
+                                .font(.system(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.white)//.opacity(0.6))
                         )
@@ -82,14 +83,15 @@ struct AccountChangePassword: View {
                 
             }
             .padding(.horizontal,24)
-            
+            .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
+
         }
+
         .edgesIgnoringSafeArea(.all)
-        .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
         
         .onAppear(perform: {
             withAnimation{
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.3) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.2) {
                     withAnimation{
                         changePositions=true
                     }

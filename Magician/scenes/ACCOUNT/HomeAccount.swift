@@ -145,7 +145,9 @@ struct HomeAccount: View {
         .background(EmptyView()
                         .fullScreenCover(isPresented: $vm.isSavedAddress, content: {
                             AccountSavedAddress()
+//                                .environmentObject(vmm)
                                 .environmentObject(vmm)
+                                .environmentObject(vm)
 //                            AccountSavedAddress(vm: vm,vmm: vmm, name: name)
                             
                         })
@@ -154,8 +156,9 @@ struct HomeAccount: View {
         .background(EmptyView()
                         .fullScreenCover(isPresented: $vm.isAccountInfo, content: {
                             AccountInfoView()
+//                                .environmentObject(vmm)
                                 .environmentObject(vmm)
-
+                                .environmentObject(vm)
 //                            AccountInfoView(vm: vm,vmm: vmm)
                             
                         })
@@ -163,8 +166,9 @@ struct HomeAccount: View {
         .background(EmptyView()
                         .fullScreenCover(isPresented: $vm.isChangePassword, content: {
                             AccountChangePassword()
+//                                .environmentObject(vmm)
                                 .environmentObject(vmm)
-
+                                .environmentObject(vm)
 //                            AccountChangePassword(vm: vm,vmm: vmm)
                             
                         })

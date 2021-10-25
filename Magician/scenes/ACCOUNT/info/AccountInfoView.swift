@@ -29,7 +29,7 @@ struct AccountInfoView: View {
                     
                     Button(action: {withAnimation{vm.isAccountInfo.toggle()}}, label: {
                         Image(systemName: vmm.getBackImage())// "chevron.backward")
-                            .font(.customFontSystem(size: 25))
+                            .font(.system(size: 25))
                             .foregroundColor(Color("mains"))
                         
                     })
@@ -37,16 +37,16 @@ struct AccountInfoView: View {
                     Spacer()
                     
                     Text("Account info")
-                        .font(.customFontSystem(size: 16))
+                        .font(.system(size: 16))
                         .fontWeight(.bold)
                         .foregroundColor(Color("mains"))
+                        .offset(x: changePositions ? 0 : -600,y:changePositions ? 0 : 200)//, y: changePositions ? 0 )
 
                     Spacer()
                     
                 }
                 .padding(.horizontal,0)
                 .padding(.bottom,20)
-                .offset(x: changePositions ? 0 : -600)//, y: changePositions ? 0 )
 
             
             VStack(spacing:20) {
@@ -73,7 +73,7 @@ struct AccountInfoView: View {
                     .overlay(
                         
                         Text("Save")
-                            .font(.customFontSystem(size: 16))
+                            .font(.system(size: 16))
                             .fontWeight(.semibold)
                             .foregroundColor(Color.white)//.opacity(0.6))
                     )
@@ -86,12 +86,13 @@ struct AccountInfoView: View {
             .padding(.horizontal,24)
 
         }
-        .edgesIgnoringSafeArea(.all)
         .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
+
+        .edgesIgnoringSafeArea(.all)
         
         .onAppear(perform: {
             withAnimation{
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.3) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.2) {
                     withAnimation{
                         changePositions=true
                     }

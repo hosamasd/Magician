@@ -15,7 +15,7 @@ struct HomeFilterProcessPinnedRowView: View {
         HStack {
             
             Text(x.name)
-                .font(.customFontSystem(size: 13))
+                .font(.system(size: 13))
             
             Button(action: {withAnimation(.default){
                 vm.removePinnedFilter(x: x)

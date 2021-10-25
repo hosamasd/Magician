@@ -20,7 +20,7 @@ struct HomeCheckoutItemRowView: View {
             
             VStack(alignment: .leading, spacing: 8, content: {
                 Text("King Burgers")
-                    .font(.boldCustomFontSystem(size: 16))
+                    .font(.system(size: 16))
                     .fontWeight(.bold)
                 
                 HStack(spacing:4) {
@@ -29,7 +29,7 @@ struct HomeCheckoutItemRowView: View {
                     
                     HStack {
                         Text("4.9")
-                            .font(.customFontSystem(size: 12))
+                            .font(.system(size: 12))
                             
                             .foregroundColor(Color("mains"))
                             //                                                    .offset(y:-4)
@@ -37,7 +37,7 @@ struct HomeCheckoutItemRowView: View {
                             +
                             
                             Text("(124 ratings)")
-                            .font(.customFontSystem(size: 13))
+                            .font(.system(size: 13))
                             .foregroundColor(Color.gray.opacity(0.6))
                     }
                     
@@ -46,14 +46,14 @@ struct HomeCheckoutItemRowView: View {
                 }
                 
                 Text("Burger     Western Food")
-                    .font(.customFontSystem(size: 13))
+                    .font(.system(size: 13))
                     .foregroundColor(Color.gray.opacity(0.6))
                 
                 Label(
                     title: {
                         
                         Text("No 03, 4th Lane, Newyork")
-                            .font(.customFontSystem(size: 13))
+                            .font(.system(size: 13))
                             .fontWeight(.regular)
                             .foregroundColor(Color.gray.opacity(0.6))
                     },
@@ -69,12 +69,12 @@ struct HomeCheckoutItemRowView: View {
             VStack{
                 
                 Text("x2")
-                    .font(.boldCustomFontSystem(size: 20))
+                    .font(.system(size: 20))
                     .fontWeight(.bold)
                     .foregroundColor(Color("mains"))
                 
                 Text("110 EGP")
-                    .font(.customFontSystem(size:  12))
+                    .font(.system(size:  12))
                     .fontWeight(.semibold)
                     .foregroundColor(Color("mains"))
                     .padding(8)

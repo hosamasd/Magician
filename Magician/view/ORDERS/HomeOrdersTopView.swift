@@ -18,7 +18,7 @@ struct HomeOrdersTopView: View {
                 Label(
                     title: { Text("Hello , Eslam")
 //                        .font(.system(size: 14))
-                        .font(.customFontSystem(size: 14))
+                        .font(.system(size: 14))
 
                         .fontWeight(.bold)
                         .padding(.leading,2)
@@ -35,7 +35,7 @@ struct HomeOrdersTopView: View {
                 Label(
                     title: {
                         Text("Cairo, Egypt")
-                            .font(.customFontSystem(size: 14))
+                            .font(.system(size: 14))
 
 //                            .font(.system(size: 14))
                             .fontWeight(.regular)
@@ -64,7 +64,7 @@ struct HomeOrdersTopView: View {
 //                        Label(
 //                            title: { Text("Cairo, Egypt")
 ////                                .font(.system(size: 14))
-//                                .font(.customFontSystem(size: 14))
+//                                .font(.system(size: 14))
 //
 //                                .fontWeight(.regular)
 ////                                .padding(.horizontal,16)

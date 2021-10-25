@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeTrackOrderAnimated: View {
     var body: some View {
         GifImage("1")
+            
     }
 }
 

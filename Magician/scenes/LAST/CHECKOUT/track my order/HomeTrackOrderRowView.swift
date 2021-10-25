@@ -29,12 +29,12 @@ struct HomeTrackOrderRowView: View {
                         
                         Label(
                             title: {  Text("x2")
-                                .font(.customFontSystem(size: 18))
+                                .font(.system(size: 18))
                                 .fontWeight(.bold)
                                 
                                 .foregroundColor(Color("mains")) },
                             icon: { Text(x.name)
-                                .font(.customFontSystem(size: 10))
+                                .font(.system(size: 10))
                                 .fontWeight(.regular)
                                 .foregroundColor(.black)
                                 .padding(.trailing,4)
@@ -49,7 +49,7 @@ struct HomeTrackOrderRowView: View {
                             
                             HStack {
                                 Text("4.9")
-                                    .font(.customFontSystem(size: 9))
+                                    .font(.system(size: 9))
                                     
                                     .foregroundColor(Color("mains"))
                                     //                                                    .offset(y:-4)
@@ -57,7 +57,7 @@ struct HomeTrackOrderRowView: View {
                                     +
                                     
                                     Text("(124 ratings)")
-                                    .font(.customFontSystem(size: 9))
+                                    .font(.system(size: 9))
                                     .foregroundColor(Color.gray.opacity(0.6))
                             }
                             
@@ -66,14 +66,14 @@ struct HomeTrackOrderRowView: View {
                         }
                         
                         Text("Burger     Western Food")
-                            .font(.customFontSystem(size: 10))
+                            .font(.system(size: 10))
                             .foregroundColor(Color.gray.opacity(0.6))
                         
                         Label(
                             title: {
                                 
                                 Text("No 03, 4th Lane, Newyork")
-                                    .font(.customFontSystem(size: 10))
+                                    .font(.system(size: 10))
                                     .fontWeight(.regular)
                                     .foregroundColor(Color.gray.opacity(0.6))
                             },
@@ -96,14 +96,14 @@ struct HomeTrackOrderRowView: View {
                         
                         Text("30:00 min")
                             .font(.system(size: 20))
-    //                        .font(.boldCustomFontSystem(size: 20))
+    //                        .font(.boldsystem(size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
                         
                         Text("Reminding ")
                             .font(.system(size: 16))
 
-    //                        .font(.customFontSystem(size: 20))
+    //                        .font(.system(size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(Color.black.opacity(0.8))
                     }
@@ -118,7 +118,7 @@ struct HomeTrackOrderRowView: View {
         }
             
             Text("Get 60 EXP")
-                .font(.boldCustomFontSystem(size:  12))
+                .font(.system(size:  12))
                 .fontWeight(.bold)
                 .foregroundColor(Color("mains"))
                 .padding(.horizontal ,  12 )

@@ -15,7 +15,7 @@ struct SelectedItemAddNotesAddMinusView: View {
             
             HStack {
                 Text("Chicken Skewers")
-                    .font(.boldCustomFontSystem(size: 20))
+                    .font(.system(size: 20))
                     
                     .fontWeight(.bold)
                     .foregroundColor(Color("mains"))
@@ -23,7 +23,7 @@ struct SelectedItemAddNotesAddMinusView: View {
                 Spacer()
                 
                 Text("Get 30 EXP")
-                    .font(.boldCustomFontSystem(size:  12))
+                    .font(.system(size:  12))
                     .fontWeight(.bold)
                     .foregroundColor(Color("mains"))
                     .padding(.horizontal ,  12 )
@@ -32,7 +32,7 @@ struct SelectedItemAddNotesAddMinusView: View {
                     .clipShape(Capsule())
             }
             Text("Chicken skewers with slices of sweet peppers and \ndill")
-                .font(.customFontSystem(size: 15))
+                .font(.system(size: 15))
                 
                 .fontWeight(.regular)
                 .lineLimit(2)
@@ -51,7 +51,7 @@ struct SelectedItemAddNotesAddMinusView: View {
                     })
                     
                     Text("\(itemCount)")
-                        .font(.boldCustomFontSystem(size:  28))
+                        .font(.system(size:  28))
                         .fontWeight(.bold)
                         .foregroundColor(Color("mains"))
                     
@@ -67,7 +67,7 @@ struct SelectedItemAddNotesAddMinusView: View {
                 Spacer()
                 
                 Text("55 EGP")
-                    .font(.customFontSystem(size: 24))
+                    .font(.system(size: 24))
                     
                     //                    .font(.system(size: 25))
                     .fontWeight(.regular)

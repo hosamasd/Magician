@@ -22,20 +22,20 @@ struct SelectedItemScenesBottomRowView: View {
                 VStack(alignment: .leading){
                     
                     Text("Chicken Skewers")
-                        .font(.boldCustomFontSystem(size: 20))
+                        .font(.system(size: 20))
                         
                         .fontWeight(.bold)
                         .foregroundColor(Color("mains"))
                     
                     Text("Chicken skewers with slices of \nsweet peppers and dill")
-                        .font(.customFontSystem(size: 12))
+                        .font(.system(size: 12))
                         .fontWeight(.regular)
                         .foregroundColor(Color.black.opacity(0.6))
                         .lineLimit(3)
                 }
                 
                 Text("Get 30 EXP")
-                    .font(.boldCustomFontSystem(size:  12))
+                    .font(.system(size:  12))
                     .fontWeight(.bold)
                     .foregroundColor(Color("mains"))
                     .padding(.horizontal ,  12 )
@@ -47,7 +47,7 @@ struct SelectedItemScenesBottomRowView: View {
                     Spacer()
                     
                     Text("50 % OFF")
-                        .font(.customFontSystem(size:  15))
+                        .font(.system(size:  15))
                         .fontWeight(.semibold)
                         .foregroundColor(Color("mains"))
                 }
@@ -55,7 +55,7 @@ struct SelectedItemScenesBottomRowView: View {
                 HStack{
                     
                     Text("110 EGP")
-                        .font(.customFontSystem(size:  15))
+                        .font(.system(size:  15))
                         .fontWeight(.semibold)
                         .foregroundColor(Color("mains"))
                         .overlay(
@@ -69,7 +69,7 @@ struct SelectedItemScenesBottomRowView: View {
                     Spacer()
                     
                     Text("55 EGP")
-                        .font(.customFontSystem(size: 24))
+                        .font(.system(size: 24))
                         
                         //                    .font(.system(size: 25))
                         .fontWeight(.regular)

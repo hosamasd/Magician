@@ -26,7 +26,7 @@ struct MainHomeTabProfileInfo: View {
                     
                 }
             )
-            .font(.customFontSystem(size: 20))
+            .font(.system(size: 20))
             
             
             Label(
@@ -44,7 +44,7 @@ struct MainHomeTabProfileInfo: View {
                         }
                     )
                     .padding(.horizontal,-8)
-                    .font(.customFontSystem(size: 12))
+                    .font(.system(size: 12))
 
                     
                 },
@@ -54,7 +54,7 @@ struct MainHomeTabProfileInfo: View {
                     
                 }
             )
-            .font(.customFontSystem(size: 12))
+            .font(.system(size: 12))
             
             MainHomeTaPointsView(vm: vm)
         }

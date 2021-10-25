@@ -17,10 +17,10 @@ struct SignUpView: View {
                 VStack {
                     
                     Text(LocalizedStringKey("Sign Up"))
-                        .font(.customFontSystem(size: 30))
+                        .font(.system(size: 30))
                     
                     Text(LocalizedStringKey("Add your details to sign up"))
-                        .font(.customFontSystem(size: 14))
+                        .font(.system(size: 14))
                         .foregroundColor(.black.opacity(0.6))
                         .padding(.top,2)
                     
@@ -121,7 +121,7 @@ struct SignUpView: View {
                                 .overlay(
                                     
                                     Text(LocalizedStringKey("Sign Up"))
-                                        .font(.customFontSystem(size: 16))
+                                        .font(.system(size: 16))
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color.white)//.opacity(0.6))
                                 )
