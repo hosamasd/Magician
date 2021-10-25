@@ -42,10 +42,16 @@ struct SSHomeONBoard: View {
                 
                 
                 if index == 0 {
-                    Image("Group 8396-2")//Group 8802 Group 8396-2
+                    Image("Group 8446")
+//                        .resizable()
+//                        .frame(height:getFrameSize().height/2)
+                        .offset(y:isSmallDevice() ? 80 : 100)
+                    
+//                    Image("Group 8396-2")//Group 8802 Group 8396-2
+//                        .offset(y:isSmallDevice() ? -100 : -80)//-60
 //                    Image("Group 8802-1")//Group 8802 Group 8396-2
 
-                        .offset(y:isSmallDevice() ? -100 : -80)//-60
+//
                     //                    ZStack(alignment: Alignment(horizontal: .center, vertical: .center), content: {
                     //
                     //                        Image("Group 8396-1")

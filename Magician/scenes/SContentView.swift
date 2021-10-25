@@ -17,8 +17,8 @@ struct SContentView: View {
     @StateObject var vmt=HomeCheckoutViewModel()
 
     var body: some View {
-        HomeTrackMyOrder()
-//        SSHomeONBoard()
+//        HomeTrackMyOrder()
+        SSHomeONBoard()
 //        AccountSavedAddress()
 //        SelectedItemAddNotes(isShow: .constant(false))
 //        SSHomeCheckout(isShow: .constant(false), isShowMainParent: .constant(false))

@@ -130,6 +130,8 @@ struct HomeTrackOrderRowView: View {
           
         }
         .padding(.horizontal, 12)//24 )
+        .background(Color("bg"))
+
         .padding(.top,30)
     }
 }
