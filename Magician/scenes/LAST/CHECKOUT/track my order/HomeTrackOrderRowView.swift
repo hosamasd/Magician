@@ -13,19 +13,20 @@ struct HomeTrackOrderRowView: View {
     
     var body: some View {
         VStack {
-            HStack {
+            HStack() {
                 
                 Image(x.img)
                     .resizable()
                     //                .aspectRatio(contentMode: .fill)
-                    .frame(width: 75,height: 75)//, h
+                    .frame(width: 75,height: 80)//, h
+                    .cornerRadius(19)
                 
             VStack(alignment:.leading) {
                 
                 
                 HStack(spacing:12) {
                     
-                    VStack (alignment:.leading){
+                    VStack (alignment:.leading,spacing:4){
                         
                         Label(
                             title: {  Text("x2")
@@ -34,7 +35,7 @@ struct HomeTrackOrderRowView: View {
                                 
                                 .foregroundColor(Color("mains")) },
                             icon: { Text(x.name)
-                                .font(.system(size: 10))
+                                .font(.system(size: isSmallDevice() ? 12 : 14))
                                 .fontWeight(.regular)
                                 .foregroundColor(.black)
                                 .padding(.trailing,4)
@@ -88,7 +89,9 @@ struct HomeTrackOrderRowView: View {
                         //                                    .padding(.top,4)
                     }
                     
-                    Spacer()
+                    
+//                    Spacer()
+                    
                     
                     VStack {
                         
@@ -101,11 +104,12 @@ struct HomeTrackOrderRowView: View {
                             .foregroundColor(Color("mains"))
                         
                         Text("Reminding ")
-                            .font(.system(size: 16))
+                            .font(.system(size:isSmallDevice() ? 12 : 16))
 
     //                        .font(.system(size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(Color.black.opacity(0.8))
+                            .padding(.leading,8)
                     }
                     
                 }
@@ -114,9 +118,11 @@ struct HomeTrackOrderRowView: View {
                 
                 
             }
+            .padding(.leading,isSmallDevice() ? 4 : 8)
             
         }
-            
+            .frame(height:85)
+
             Text("Get 60 EXP")
                 .font(.system(size:  12))
                 .fontWeight(.bold)
@@ -129,9 +135,9 @@ struct HomeTrackOrderRowView: View {
                 
           
         }
-        .padding(.horizontal, 12)//24 )
-        .background(Color("bg"))
+        .padding(.horizontal, 8)//24 )3
 
+        .background(Color("bg"))
         .padding(.top,30)
     }
 }

@@ -11,13 +11,13 @@ import SwiftUI
 struct MagicianApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-
+    
     var body: some Scene {
         WindowGroup {
-            SContentView()
-//            ContentView()
+            //            SContentView()
+            ContentView()
                 .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
-
+            
         }
     }
 }

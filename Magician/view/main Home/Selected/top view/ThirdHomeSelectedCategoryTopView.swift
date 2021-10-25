@@ -22,7 +22,7 @@ struct ThirdHomeSelectedCategoryTopView: View {
                 //                    LazyVGrid(columns: columns,spacing: 12){
                 
                 ForEach(vm.selectedMainCategoryArray){index in
-                                        ThirdHomeSelectedCategoryRowView(x:index,selected: $selectedMenu)
+                    ThirdHomeSelectedCategoryRowView(x:index,selected: $vm.selectedMenu)
                     //                    CategoryRowView(x: vm.categoryArray[index], vm: vm)
                     //                            TopRatingRowView(vm: vm,x:vm.topRatingArray[index])
                     

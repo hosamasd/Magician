@@ -54,7 +54,7 @@ struct HomeSelectedCategory: View {
                             
                             // assigning name as ID...
                             
-                            ForEach(vm.topRatingArray,id: \.name){gradient in
+                            ForEach(vm.getDatas(),id: \.name){gradient in//topRatingArray
                                 
                                 SelectedCategoryRowView(x:gradient)
                                     .onTapGesture(perform: {

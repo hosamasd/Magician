@@ -44,4 +44,9 @@ class HomeFavoriteViewModel: ObservableObject {
     func checkIfFavorite(x:OfferModel) -> Bool {
         favoriteArray.contains(where: {$0.name==x.name})
     }
+    
+    func getDatas() -> [OfferModel] {
+        
+        return selectedMenu == "Special Offers" ? favoriteArray : selectedMenu=="Breakfast" ? favoriteArray.suffix(2) : selectedMenu == "Burgers" ? favoriteArray.suffix(3) : favoriteArray.suffix(1)
+    }
 }

@@ -52,7 +52,7 @@ struct SelectedItemScenesBottomScroll: View {
                             
                             // assigning name as ID...
                             
-                            ForEach(vm.favoriteArray){gradient in
+                            ForEach(vm.getDatas()){gradient in
                                 SelectedItemScenesBottomRowView(x:gradient)
                                     .onTapGesture {
                                         withAnimation{

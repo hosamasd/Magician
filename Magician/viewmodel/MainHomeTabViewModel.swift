@@ -19,7 +19,7 @@ struct MainCategory:Identifiable {
     var id = UUID().uuidString
     var name,img,nameAr,subImage,mainImg:String
     var index = 0
-
+    
     
 }
 
@@ -51,27 +51,29 @@ class MainHomeTabViewModel: ObservableObject {
         MainSelectedCateg(name: "Burgers", img: "hamburger"),
         MainSelectedCateg(name: "Crepes", img: "all food"),
         MainSelectedCateg(name: "Asian", img: "hamburger"),
-
+        
     ]
+    @Published var selectedMenu = "All"
+    
     
     func selectCategory()  {
-//        selectedMainCategoryArray.map{$0.isChosen = true}
+        //        selectedMainCategoryArray.map{$0.isChosen = true}
     }
     
     @Published var carseolSwapArray = [
         "Group 8188", "Group 8188", "Group 8188", "Group 8188",
     ]
     
-//    @Published var categoryArray = [
-//        "Group 8367", "Group 8368", "Group 8370", "Group 8369",
-//    ]
+    //    @Published var categoryArray = [
+    //        "Group 8367", "Group 8368", "Group 8370", "Group 8369",
+    //    ]
     
     @Published var categoryArray:[MainCategory] = [
         MainCategory(name: "Food", img: "Group 8367-1",nameAr:"Food",subImage:"food",mainImg: "Group 8367"),
         MainCategory(name: "Toys", img: "Group 8368",nameAr:"Toys",subImage:"Page-1", mainImg: "Group 8368"),
         MainCategory(name: "Clothes", img: "Group 8369",nameAr:"Clothes",subImage:"clothes-1",mainImg: "Group 8369"),
         MainCategory(name: "Others", img: "Group 8370",nameAr:"Others",subImage:"other",mainImg: "Group 8370"),
-
+        
     ]
     
     init() {
@@ -113,5 +115,11 @@ class MainHomeTabViewModel: ObservableObject {
         //
         //        }
         
+    }
+    
+    
+    func getDatas() -> [OfferModel] {
+        
+        return selectedMenu == "All" ? topRatingArray : selectedMenu=="Pizza" ? topRatingArray.suffix(2) : selectedMenu == "Burgers" ? topRatingArray.suffix(3)  : selectedMenu=="Crepes" ? topRatingArray.suffix(1) : topRatingArray.suffix(3)
     }
 }
