@@ -9,9 +9,15 @@ import SwiftUI
 
 struct HomeSpecialOffer: View {
     @EnvironmentObject var vm:MainHomeTabViewModel
+    @EnvironmentObject var vmFavorirte:HomeFavoriteViewModel
+    @EnvironmentObject var vms:MainHomeTabViewModel
+    @State var selectedCateg = MainCategory(name: "", img: "", nameAr: "", subImage: "", mainImg: "")
+
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
 //    @ObservedObject var vm : MainHomeTabViewModel
     @State var isSelectItem=false
+    @State var isMainSeletct=false
+
     @State var selectedItem = OfferModel(name: "", img: "", subImg: "", type: "", location: "", rating: "")
     
     var body: some View {
@@ -24,8 +30,10 @@ struct HomeSpecialOffer: View {
                 
                 Spacer()
                 
-                Button(action: {withAnimation{vm.selectedCategoryOffAll="Special Offers"
-                    vm.isSelectedCategoryOffAll.toggle()
+                Button(action: {withAnimation{
+                    isMainSeletct=true
+                    vm.selectedCategoryOffAll="Special Offers"
+//                    vm.isSelectedCategoryOffAll.toggle()
                     
                 }
                 
@@ -80,6 +88,17 @@ struct HomeSpecialOffer: View {
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isSelectItem, content: {
                                             SelectedItemScenes(isShow:  $isSelectItem,selectedItem:selectedItem)  })
+        )
+        
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isMainSeletct, content: {
+                            HomeSelectedCategory(isShow: $isMainSeletct, x:selectedCateg)
+                                .environmentObject(vms)
+                                .environmentObject(vm)
+                                
+                                .environmentObject(vmFavorirte)
+                            
+                        })
         )
     }
 }

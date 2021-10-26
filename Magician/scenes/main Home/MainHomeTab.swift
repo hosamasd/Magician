@@ -48,7 +48,7 @@ struct MainHomeTab: View {
                             //                            HomeCategoryView(vm: vm)
                             HomeCategoryView(vm: vm, isShow: $isSelectFromCateg, selected: $selectedCateg)
                             
-                            HomeTopRating(isShow:$vm.isSelectedCategoryOffAll)
+                            HomeTopRating(isShow:$vm.isSelectedCategoryOffAll)//isSelectedCategoryOffAll
                             //                            HomeTopRating(vm: vm,isShow:$isSelectFromCateg)
                             
                             HomeSpecialOffer()
@@ -75,6 +75,7 @@ struct MainHomeTab: View {
         }
         .environmentObject(vm)
         .environmentObject(vmm)
+        .environmentObject(vmFavorirte)
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")

@@ -9,13 +9,19 @@ import SwiftUI
 
 struct HomeTopRating: View {
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
-//    @ObservedObject var vm : MainHomeTabViewModel
+    //    @ObservedObject var vm : MainHomeTabViewModel
     @EnvironmentObject var vm:MainHomeTabViewModel
-
+    @EnvironmentObject var vmFavorirte:HomeFavoriteViewModel
+    @EnvironmentObject var vms:MainHomeTabViewModel
+    
     @Binding var isShow:Bool
     @State var isSelectItem=false
+    @State var isMainSeletct=false
+    @State var selectedCateg = MainCategory(name: "", img: "", nameAr: "", subImage: "", mainImg: "")
+    
     @State var selectedItem = OfferModel(name: "", img: "", subImg: "", type: "", location: "", rating: "")
-//    @Binding var selected:MainCategory
+    
+    //    @Binding var selected:MainCategory
     
     var body: some View {
         VStack(spacing: 15){
@@ -28,11 +34,13 @@ struct HomeTopRating: View {
                 Spacer()
                 
                 Button(action: {withAnimation{
-//                    vm.isMainCategoryChosen=true
-                    isShow=true
-//                    vm.isSelectFromCateg=true
+                    //                    vm.isMainCategoryChosen=true
+                    //                    isShow=true
+                    isMainSeletct=true
+                    //                    vm.isSelectFromCateg=true
+                    //                    vm.isSelectFromCateg=true
                     vm.selectedCategoryOffAll="Top Rating"
-//                    vm.isSelectedCategoryOffAll.toggle()
+                    //                    vm.isSelectedCategoryOffAll.toggle()
                 }
                 }, label: {
                     Label(
@@ -82,6 +90,17 @@ struct HomeTopRating: View {
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isSelectItem, content: {
                                             SelectedItemScenes(isShow:  $isSelectItem,selectedItem:selectedItem)  })
+        )
+        
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isMainSeletct, content: {
+                            HomeSelectedCategory(isShow: $isMainSeletct, x:selectedCateg)
+                                .environmentObject(vms)
+                                .environmentObject(vm)
+                                
+                                .environmentObject(vmFavorirte)
+                            
+                        })
         )
     }
 }
