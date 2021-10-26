@@ -66,3 +66,36 @@
 " Click Here"=" Click Here";
 "Don't Receive?"="Don't Receive?";
 
+//MainHomeTabBar
+
+"Home"="Home";
+"Filter"="Filter";
+"Favorite"="Favorite";
+"Orders"="Orders";
+"Account"="Account";
+
+//HomeAccount
+
+"Hello , Eslam"="Hello , Eslam";
+"Choose mode"="Choose mode";
+"Please choose your preferred mode to set your profile image"="Please choose your preferred mode to set your profile image";
+"Camera"="Camera";
+"Photo Library"="Photo Library";
+"Gifts"="Gifts";
+"Get 50 % Off For Your Next Order"="Get 50 % Off For Your Next Order";
+"End in : 25/10/2021"="End in : 25/10/2021";
+"300$"="300$";
+"Eng"="Eng";
+"AR"="AR";
+"Saved addresses"="Saved addresses";
+"Wallet"= "Wallet";
+"Change password"="Change password";
+"Notification"="Notification";
+"Language"= "Language";
+"Logout"="Logout";
+"Thank You!"="Thank You!";
+"Get 50 % Off For Your Next Order"="Get 50 % Off For Your Next Order";
+"Order With Gift"="Order With Gift";
+"Later"="Later";
+
+

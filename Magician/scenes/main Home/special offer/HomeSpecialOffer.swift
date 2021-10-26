@@ -65,8 +65,10 @@ struct HomeSpecialOffer: View {
                     
                     //                    LazyHGrid(rows: columns,spacing: 12){
                     ForEach(vm.specialOffersArray){gradient in
-                        
-                        SpecialOfferRowView(vm: vm,x:gradient)
+//                        SpecialOfferRowView
+//                        SpecialOfferRowView(vm: vm,x:gradient)
+
+                        SSSpecialOfferRowView(vm: vm,x:gradient)
                             .onTapGesture(perform: {
                                 withAnimation{
                                     selectedItem=gradient

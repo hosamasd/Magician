@@ -36,7 +36,7 @@ struct AccountSheetView: View {
                     
                     Image("Group 8168")
                     
-                    Text("Thank You!")
+                    Text(LocalizedStringKey("Thank You!"))
                         .font(.system(size: 30))
                     
                     Text("You reach 3000 EXP")
@@ -55,7 +55,7 @@ struct AccountSheetView: View {
                                     
                                     Image("gift")
                                     
-                                    Text("Get 50 % Off For Your Next Order")
+                                    Text(LocalizedStringKey("Get 50 % Off For Your Next Order"))
                                         .font(.system(size: 20))
                                         //                            .font(.customFontSystem(size: 20))
                                         .fontWeight(.regular)
@@ -88,7 +88,7 @@ struct AccountSheetView: View {
                     Button(action: {withAnimation{
                         
                     }}, label: {
-                        Text("Later")
+                        Text(LocalizedStringKey("Later"))
                             
                                 .font(.system(size: 18))
                                 .fontWeight(.bold)

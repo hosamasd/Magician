@@ -139,6 +139,8 @@
 		4EEF4D8A27171F3F00D39193 /* AccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8927171F3F00D39193 /* AccountInfoView.swift */; };
 		4EEF4D8C271724D300D39193 /* AccountSavedAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */; };
 		4EEF4D8E2717277400D39193 /* AccountChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8D2717277400D39193 /* AccountChangePassword.swift */; };
+		4EF580D927283D1A00478BCD /* SSpecialOfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF580D827283D1A00478BCD /* SSpecialOfferRowView.swift */; };
+		4EF580DB27283E4B00478BCD /* SSSpecialOfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF580DA27283E4B00478BCD /* SSSpecialOfferRowView.swift */; };
 		4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB12282716950D008A240A /* MainHomeTabBar.swift */; };
 		4EFB122B27169575008A240A /* HomeMainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB122A27169575008A240A /* HomeMainTabBarViewModel.swift */; };
 		4EFB122D271695F7008A240A /* UsedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB122C271695F7008A240A /* UsedTabBar.swift */; };
@@ -289,6 +291,8 @@
 		4EEF4D8927171F3F00D39193 /* AccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoView.swift; sourceTree = "<group>"; };
 		4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSavedAddress.swift; sourceTree = "<group>"; };
 		4EEF4D8D2717277400D39193 /* AccountChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountChangePassword.swift; sourceTree = "<group>"; };
+		4EF580D827283D1A00478BCD /* SSpecialOfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSpecialOfferRowView.swift; sourceTree = "<group>"; };
+		4EF580DA27283E4B00478BCD /* SSSpecialOfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSpecialOfferRowView.swift; sourceTree = "<group>"; };
 		4EFB12282716950D008A240A /* MainHomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeTabBar.swift; sourceTree = "<group>"; };
 		4EFB122A27169575008A240A /* HomeMainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainTabBarViewModel.swift; sourceTree = "<group>"; };
 		4EFB122C271695F7008A240A /* UsedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedTabBar.swift; sourceTree = "<group>"; };
@@ -338,7 +342,9 @@
 			isa = PBXGroup;
 			children = (
 				4E09BFB827183092006928FD /* HomeSpecialOffer.swift */,
+				4EF580DA27283E4B00478BCD /* SSSpecialOfferRowView.swift */,
 				4E56093F2718558300539B9C /* SpecialOfferRowView.swift */,
+				4EF580D827283D1A00478BCD /* SSpecialOfferRowView.swift */,
 			);
 			path = "special offer";
 			sourceTree = "<group>";
@@ -1122,6 +1128,7 @@
 				4E5609402718558300539B9C /* SpecialOfferRowView.swift in Sources */,
 				4EDC393A271FEA51008011E0 /* HomeFilterProcessTopView.swift in Sources */,
 				4ED0F594271D57CC00D12DBD /* SContentView.swift in Sources */,
+				4EF580DB27283E4B00478BCD /* SSSpecialOfferRowView.swift in Sources */,
 				4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */,
 				4E38AF85271E962500D87FAA /* BottomAddNotesView.swift in Sources */,
 				4EDDBF53271BFFDD00BACD49 /* SelectedOrderRowView.swift in Sources */,
@@ -1158,6 +1165,7 @@
 				4EFB122B27169575008A240A /* HomeMainTabBarViewModel.swift in Sources */,
 				4ECAD7F4271C674800C258A5 /* HomeFavorite.swift in Sources */,
 				4ECD6D9D27145E0400011208 /* MagicianApp.swift in Sources */,
+				4EF580D927283D1A00478BCD /* SSpecialOfferRowView.swift in Sources */,
 				4EFC79492716C8DE00C5DF36 /* LocationView.swift in Sources */,
 				4EE52441271A9E4600AADB1F /* MainHomeWelcome.swift in Sources */,
 				4ECD6DC02714610B00011208 /* InfoModel.swift in Sources */,

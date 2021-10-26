@@ -11,7 +11,7 @@ struct HomeAccountGifts: View {
     var body: some View {
         VStack {
             
-            Text("Gifts")
+            Text(LocalizedStringKey("Gifts"))
                 .font(.system(size: 14))
                 
                 //                .font(.customFontSystem(size: 14))
@@ -32,12 +32,12 @@ struct HomeAccountGifts: View {
                         
                         Image("gift")
                         
-                        Text("Get 50 % Off For Your Next Order")
+                        Text(LocalizedStringKey("Get 50 % Off For Your Next Order"))
                             .font(.system(size: 20))
                             //                            .font(.customFontSystem(size: 20))
                             .fontWeight(.bold)
                         
-                        Text("End in : 25/10/2021")
+                        Text(LocalizedStringKey("End in : 25/10/2021"))
                             .font(.customFontSystem(size: 12))
                             .fontWeight(.bold)
                             .foregroundColor(.black.opacity(0.6))

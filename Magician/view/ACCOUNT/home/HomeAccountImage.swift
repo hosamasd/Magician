@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct HomeAccountImage: View {
-//    @ObservedObject var vm:HomeAccountViewModel
+    //    @ObservedObject var vm:HomeAccountViewModel
     @EnvironmentObject var vm : HomeAccountViewModel
-
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 0)
             .fill(Color("bg"))
@@ -40,7 +40,7 @@ struct HomeAccountImage: View {
                                 SUImagePickerView(sourceType: self.vm.shouldPresentCamera ? .camera : .photoLibrary, image: self.$vm.image, isPresented: self.$vm.shouldPresentImagePicker)
                             }
                             .actionSheet(isPresented: $vm.shouldPresentActionScheet) { () -> ActionSheet in
-                                ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                                ActionSheet(title: Text(LocalizedStringKey("Choose mode")), message: Text(LocalizedStringKey("Please choose your preferred mode to set your profile image")), buttons: [ActionSheet.Button.default(Text(LocalizedStringKey("Camera")), action: {
                                     self.vm.shouldPresentImagePicker = true
                                     self.vm.shouldPresentCamera = true
                                     
@@ -74,10 +74,10 @@ struct HomeAccountImage: View {
                             .sheet(isPresented: $vm.shouldPresentImagePicker) {
                                 SUImagePickerView(sourceType: self.vm.shouldPresentCamera ? .camera : .photoLibrary, image: self.$vm.image, isPresented: self.$vm.shouldPresentImagePicker)
                             }.actionSheet(isPresented: $vm.shouldPresentActionScheet) { () -> ActionSheet in
-                                ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                                ActionSheet(title: Text(LocalizedStringKey("Choose mode")), message: Text(LocalizedStringKey("Please choose your preferred mode to set your profile image")), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
                                     self.vm.shouldPresentImagePicker = true
                                     self.vm.shouldPresentCamera = true
-                                }), ActionSheet.Button.default(Text("Photo Library"), action: {
+                                }), ActionSheet.Button.default(Text(LocalizedStringKey("Photo Library")), action: {
                                     self.vm.shouldPresentImagePicker = true
                                     self.vm.shouldPresentCamera = false
                                 }), ActionSheet.Button.cancel()])

@@ -1,20 +1,34 @@
 ////
-////  SpecialOfferRowView.swift
+////  SSpecialOfferRowView.swift
 ////  Magician
 ////
-////  Created by hosam on 14/10/2021.
+////  Created by hosam on 26/10/2021.
 ////
 //
 //import SwiftUI
 //
-//struct SpecialOfferRowView: View {
+//struct SSpecialOfferRowView: View {
 //    @ObservedObject var vm:MainHomeTabViewModel
 //    @EnvironmentObject var vmm:HomeMainTabBarViewModel
 //    
 //    var x =  OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
+//    
 //    var body: some View {
-//        
+//        VStack(spacing:4) {
 //            
+//            HStack{
+//                
+//                Spacer()
+//                
+//                Text(x.offersRange)
+//                    .font(.system(size: 15))
+//                    .fontWeight(.semibold)
+//                    
+//                    .foregroundColor(Color("mains").opacity(0.8))
+//                
+//                
+//            }
+//            .padding(.horizontal)
 //            
 //            HStack {
 //                
@@ -45,27 +59,26 @@
 //                //
 //                VStack(alignment:.leading) {
 //                    
-//               
-//                    
+//                
 //                    
 //                    Label(
 //                        title: {
 //                            VStack (alignment:.leading,spacing:6){
-//                                HStack {
+//    //                            HStack {
 //                                    Text(x.name)
 //                                        .font(.system(size: 10))
 //                                        .fontWeight(.regular)
 //                                        .foregroundColor(.black)
 //                                    
-//                                    Text(x.offersRange)
-//                                        .font(.system(size: 10))
-//                                        .fontWeight(.regular)
+//    //                                Text(x.offersRange)
+//    //                                    .font(.system(size: 10))
+//    //                                    .fontWeight(.regular)
 //    //
-//                                        .foregroundColor(Color("mains").opacity(0.8))
-//                                                                        .offset(y:8)
-//                                                                            .padding(.top,4)
-//                                }
-//                                                                .padding(.leading,-4)
+//    //                                    .foregroundColor(Color("mains").opacity(0.8))
+//                                    //                                    .offset(y:8)
+//                                    //                                        .padding(.top,4)
+//    //                            }
+//                                //                                .padding(.leading,-4)
 //                                Text(x.type)
 //                                    .font(.system(size: 8))
 //                                    .foregroundColor(.black.opacity(0.8))
@@ -170,10 +183,12 @@
 //                
 //                
 //            }
-//     
+//            .frame(height:140)
+//        
+//        }
 //        .padding(.horizontal,8)
 //        .padding(.vertical,8)
-//        .frame(width:getFrameSize().width-64,height: 145)//,height:220)
+//        .frame(width:getFrameSize().width-64)//,height: 145)//,height:220)
 //        
 //        .background(
 //            RoundedRectangle(
@@ -187,17 +202,6 @@
 //                y: 2
 //            )
 //    )
-//        //        .frame(height:200)
-//        //        .padding(8)
-//        //        .padding(.horizontal,8)
-//        //        .padding(.vertical,8)
-//        //
-//        //        .background(Color.white)
-//        //        .frame(width:getFrameSize().width-64)//,height:220)
-//        //
-//        //        .cornerRadius(12)
-//        //        .modifier(viewModifiers())
-//        //        .padding(.vertical)
 //        
 //    }
 //    
@@ -208,7 +212,7 @@
 //    }
 //}
 //
-//struct SpecialOfferRowView_Previews: PreviewProvider {
+//struct SpecialOffesrRowView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        //        ContentView()
 //        MainHomeTab()

@@ -25,7 +25,7 @@ struct AccountRowView: View {
             
             HStack {
                 
-                Text(name)
+                Text(LocalizedStringKey(name))
                     .font(.system(size: 14))
                     
                     //                    .font(.system(size: 14))
@@ -53,7 +53,7 @@ struct AccountRowView: View {
                     
                     if isText {
                         
-                        Text("300$")
+                        Text(LocalizedStringKey("300$"))
                             .font(.system(size: 15))
                             
                             //                            .font(.system(size: 15))
@@ -81,7 +81,7 @@ struct AccountRowView: View {
                                     
                                     Label(
                                         title: {
-                                            Text("Eng")
+                                            Text(LocalizedStringKey("Eng"))
                                                 .foregroundColor(.black)
                                         },
                                         icon: {
@@ -105,7 +105,7 @@ struct AccountRowView: View {
                                     
                                     Label(
                                         title: {
-                                            Text("AR")
+                                            Text(LocalizedStringKey("AR"))
                                                 .foregroundColor(.black)
                                             
                                             
