@@ -25,33 +25,22 @@ struct MainHomeTabBar: View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             
             
-            if vm.index == "Home" {
-                //                HomeAccount()
-                //                HomeSelectedCategory()
-                ////                HomeAccount()
-                //                    .environmentObject(vma)
-                //                    .environmentObject(vms)
-                
-                //mains
-                //                HomeAccount()
-                //                                   .environmentObject(vma)
+            if vm.sindex == 0{//"Home" {
                 
                 MainHomeTab()
                     .environmentObject(vmh)
                     .environmentObject(vm)
                     
                     .environmentObject(vmas)//for favorite
-                //                SSecondMainHome()
-                //                    .environmentObject(vm)
             }
-            else if vm.index == "Filter" {
+            else if vm.sindex == 1{//"Filter" {
                 HomeFilter()
                     .environmentObject(vmh)
                     .environmentObject(vmF)
                 
             }
             
-            else if vm.index == "Favorite" {
+            else if vm.sindex == 2{//"Favorite" {
                 HomeFavorite()
                     .environmentObject(vm)
                     .environmentObject(vmas)
@@ -59,7 +48,7 @@ struct MainHomeTabBar: View {
                 //                    .padding(.horizontal,40)
                 
             }
-            else if vm.index ==  "Orders" {
+            else if vm.sindex ==  3{//"Orders" {
                 HomeOrders()
                     .environmentObject(vm)
                     .environmentObject(vmOrd)
@@ -77,7 +66,8 @@ struct MainHomeTabBar: View {
             
             if !vm.isShowUserGift {
                 
-                UsedTabBar()
+                //                UsedTabBar()
+                SSUsedTabBar()
                     .padding(.horizontal,24)
                     //                .padding(.horizontal,-16)
                     

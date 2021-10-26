@@ -50,53 +50,93 @@ struct TabButton : View {
     var body: some View{
         
         Button(action: {
-            withAnimation{selectedTab = tab.title}
+            withAnimation(.linear(duration: 0.2)) {selectedTab = tab.title}
+//            withAnimation{selectedTab = tab.title}
         }) {
             
-            VStack(spacing: 0){
-                
-                // Top Indicator....
-                
-                // Custom Shape...
-                
-                // Slide in and out animation...
-                
-                //                ZStack{
-                
-                Image("Rectangle 17385")
-                    .opacity(selectedTab==tab.title ? 1 : 0)
-                    .padding(.bottom,10)
-               
-                
-                Image(selectedTab==tab.title ? tab.sImg : tab.img)
-                    .offset(y: selectedTab==tab.title ? 8 : 0)
-                
-                    .overlay(
+          
                     
-                        Circle()
-                            .fill(Color("mains"))
-                            .frame(width: 15, height: 15)
-                            .overlay(
+                    VStack(spacing: 0){
+                        
+                        // Top Indicator....
+                        
+                        // Custom Shape...
+                        
+                        // Slide in and out animation...
+                        
+                        //                ZStack{
+                        
+                        Image("Rectangle 17385")
+                            .opacity(selectedTab==tab.title ? 1 : 0)
+                            .padding(.bottom,10)
+                        
+                    Image(selectedTab==tab.title ? tab.sImg : tab.img)
+                        .offset(y: selectedTab==tab.title ? 8 : 0)
+                    
+                
+                        
+                        Text(tab.title)
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .opacity(selectedTab==tab.title ? 0 : 1)
                             
-                                Text(("\(vm.totalAddedNewOrders)"))
-                                    .font(.system(size: 10))
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                            )
-                            .offset(x: 12, y: -2)
-                            .opacity(selectedTab==tab.title&&vm.addTabBadget() ? 1 : 0)
-
-                        ,alignment:.topTrailing)
-                
-                Text(tab.title)
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                    .opacity(selectedTab==tab.title ? 0 : 1)
+                            .foregroundColor(Color.black.opacity( 0.6 ))
+                  
                     
-                    .foregroundColor(Color.black.opacity( 0.6 ))
-            }
-            
-        }
+                  
+                    }
+                }
+                
+                
+//                VStack(spacing: 0){
+//
+//                    // Top Indicator....
+//
+//                    // Custom Shape...
+//
+//                    // Slide in and out animation...
+//
+//                    //                ZStack{
+//
+//                    Image("Rectangle 17385")
+//                        .opacity(selectedTab==tab.title ? 1 : 0)
+//                        .padding(.bottom,10)
+//
+//
+//                    ZStack {
+//    //                    Image(selectedTab==tab.title ? tab.sImg : tab.img)
+//    //                        .offset(y: selectedTab==tab.title ? 8 : 0)
+//    //
+//                            .overlay(
+//    
+//                                Circle()
+//                                    .fill(Color("mains"))
+//                                    .frame(width: 15, height: 15)
+//                                    .overlay(
+//    
+//                                        Text(("\(vm.totalAddedNewOrders)"))
+//                                            .font(.system(size: 10))
+//                                            .fontWeight(.bold)
+//                                            .foregroundColor(.white)
+//                                    )
+//                                    .offset(x: 12, y: -2)
+//                                    .opacity(selectedTab==tab.title&&vm.addTabBadget() ? 1 : 0)
+//    
+//                            ,alignment:.topTrailing)
+//
+//
+//                    }
+//
+//                    Text(tab.title)
+//                        .font(.caption)
+//                        .fontWeight(.semibold)
+//                        .opacity(selectedTab==tab.title ? 0 : 1)
+//
+//                        .foregroundColor(Color.black.opacity( 0.6 ))
+//                }
+//            }
+//
+//        }
         //        .background(Color.red)
     }
     

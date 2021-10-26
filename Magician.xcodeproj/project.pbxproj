@@ -29,6 +29,8 @@
 		4E2A37AA27254F3900280F33 /* SSHomeCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A37A927254F3900280F33 /* SSHomeCheckout.swift */; };
 		4E2ADBF32717E5380039C842 /* AddAddressSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ADBF22717E5380039C842 /* AddAddressSheetView.swift */; };
 		4E2ADBF52717E5E90039C842 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ADBF42717E5E90039C842 /* CustomCorners.swift */; };
+		4E2F0D4B2727CC230092CE91 /* SUsedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F0D4A2727CC230092CE91 /* SUsedTabBar.swift */; };
+		4E2F0D4D2727D0620092CE91 /* SSUsedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F0D4C2727D0620092CE91 /* SSUsedTabBar.swift */; };
 		4E38AF7A271E8F6000D87FAA /* SelectedItemAddNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF79271E8F6000D87FAA /* SelectedItemAddNotes.swift */; };
 		4E38AF7C271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF7B271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift */; };
 		4E38AF7E271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38AF7D271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift */; };
@@ -174,6 +176,8 @@
 		4E2A37A927254F3900280F33 /* SSHomeCheckout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHomeCheckout.swift; sourceTree = "<group>"; };
 		4E2ADBF22717E5380039C842 /* AddAddressSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressSheetView.swift; sourceTree = "<group>"; };
 		4E2ADBF42717E5E90039C842 /* CustomCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		4E2F0D4A2727CC230092CE91 /* SUsedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUsedTabBar.swift; sourceTree = "<group>"; };
+		4E2F0D4C2727D0620092CE91 /* SSUsedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSUsedTabBar.swift; sourceTree = "<group>"; };
 		4E38AF79271E8F6000D87FAA /* SelectedItemAddNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemAddNotes.swift; sourceTree = "<group>"; };
 		4E38AF7B271E8FE600D87FAA /* SelectedItemAddNotesTopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemAddNotesTopRow.swift; sourceTree = "<group>"; };
 		4E38AF7D271E902700D87FAA /* SelectedItemAddNotesAddMinusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemAddNotesAddMinusView.swift; sourceTree = "<group>"; };
@@ -933,7 +937,9 @@
 			isa = PBXGroup;
 			children = (
 				4EFB12282716950D008A240A /* MainHomeTabBar.swift */,
+				4E2F0D4A2727CC230092CE91 /* SUsedTabBar.swift */,
 				4EFB122C271695F7008A240A /* UsedTabBar.swift */,
+				4E2F0D4C2727D0620092CE91 /* SSUsedTabBar.swift */,
 			);
 			path = "tab bar";
 			sourceTree = "<group>";
@@ -1072,6 +1078,7 @@
 				4E1538CD2714B48C00D5DD52 /* HomeReigtserViewModel.swift in Sources */,
 				4E2A37AA27254F3900280F33 /* SSHomeCheckout.swift in Sources */,
 				4E28828127269DAD00088800 /* HomeTrackMyOrder.swift in Sources */,
+				4E2F0D4D2727D0620092CE91 /* SSUsedTabBar.swift in Sources */,
 				4E3AF3F9271D81DF0051A70B /* HomeFilterTopView.swift in Sources */,
 				4E2ADBF52717E5E90039C842 /* CustomCorners.swift in Sources */,
 				4E09BFB327182EC3006928FD /* HomeCategoryView.swift in Sources */,
@@ -1135,6 +1142,7 @@
 				4EAEE3BA271EC891003C482F /* PaymentCosenRowView.swift in Sources */,
 				4E3F6B26271E7A9500529C15 /* SelectedItemScenesBottomScroll.swift in Sources */,
 				4ECD6DBC27145EBC00011208 /* AppDelegate.swift in Sources */,
+				4E2F0D4B2727CC230092CE91 /* SUsedTabBar.swift in Sources */,
 				4E560942271855A200539B9C /* OfferModel.swift in Sources */,
 				4E3F6B29271E7B9800529C15 /* SelectedItemSceneRowView.swift in Sources */,
 				4EDBAB0F2717FFCF00AFD181 /* HomeOrdersTopView.swift in Sources */,

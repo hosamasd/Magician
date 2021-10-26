@@ -21,6 +21,8 @@ class HomeMainTabBarViewModel: ObservableObject {
     @Published var isShowUserGift=false
 
     @Published var index = "Home"
+    @Published var sindex = 0
+
     var tabs:[TabModel] =
         [
             .init(title: "Home", img: "home-1", sImg: "home"),
@@ -32,8 +34,8 @@ class HomeMainTabBarViewModel: ObservableObject {
             
         ]
     
-    @Published var isAddNewOrder = false
-    @Published var totalAddedNewOrders=0
+    @Published var isAddNewOrder = true
+    @Published var totalAddedNewOrders=1//
     
     func getAppLanguage() -> String {
         isArabicLanguage ? "AR" : "Eng"
@@ -45,10 +47,10 @@ class HomeMainTabBarViewModel: ObservableObject {
     }
     
     func addTabBadget() -> Bool {
-        index == "Orders" && isAddNewOrder
+        isAddNewOrder
     }
     
     func goToMainTab()  {
-        index = "Home"
+        sindex = 0//"Home"
     }
 }
