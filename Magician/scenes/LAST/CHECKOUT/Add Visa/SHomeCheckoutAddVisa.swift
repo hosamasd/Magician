@@ -124,6 +124,11 @@ struct SHomeCheckoutAddVisa: View {
         //        .padding(.horizontal,24)
         //        
         //        .padding(.top)
+        
+//        .alert(isPresented: $vm.isChangeAddress, AlertConfig(title: "Change Address", action: {
+//            //                    print("Text \($0 ?? "Cancelled")")
+//            vm.address=$0 ?? ""
+//        }))
     }
 }
 

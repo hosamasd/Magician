@@ -255,10 +255,10 @@
 //        //        .navigationBarHidden(true)
 //        //        .navigationBarBackButtonHidden(true)
 //        //
-//        //        .alert(isPresented: $vm.isChangeAddress, AlertConfig(title: "Change Address", action: {
-//        //            //                    print("Text \($0 ?? "Cancelled")")
-//        //            vm.address=$0 ?? ""
-//        //        }))
+//                .alert(isPresented: $vm.isChangeAddress, AlertConfig(title: "Change Address", action: {
+//                    //                    print("Text \($0 ?? "Cancelled")")
+//                    vm.address=$0 ?? ""
+//                }))
 //        
 //        .background(EmptyView()
 //                        .fullScreenCover(isPresented: $vm.isCheckOut, content: {

@@ -29,12 +29,16 @@ struct BottomAddNotesView: View {
                     isShow.toggle()
                 }}, label: {
                     Label(
-                        title: { Text("Add Notes") },
+                        title: { Text("Add Notes")
+                            .foregroundColor(Color("mains"))
+
+                        },
                         icon: { Image( "Group 8358") }
                     )
-                    .foregroundColor(Color("mains")                .opacity(notesText=="" ? 1 : 0)
-                    )
+//                                        .opacity(notesText=="" ? 1 : 0)
+                    
                 })
+                .opacity(notesText=="" ? 1 : 0.2)
                 .disabled(                notesText=="" ? false : true)
                 
             }
@@ -45,7 +49,9 @@ struct BottomAddNotesView: View {
                 HStack {
                     
                     Text(notesText)
-                        .lineLimit(3)
+                        .lineLimit(4)
+                    
+                    Spacer()
                     
                     VStack {
                         Button(action: {withAnimation{

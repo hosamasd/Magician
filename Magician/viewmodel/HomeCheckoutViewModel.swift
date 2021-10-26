@@ -32,7 +32,7 @@ class HomeCheckoutViewModel:ObservableObject {
     @Published var cardNumber = ""
     @Published var isMonth = false
     @Published var isDeleteCard=false
-
+    
     @Published var expiryMonth = "MM"
     @Published var isYear = false
     
@@ -43,7 +43,7 @@ class HomeCheckoutViewModel:ObservableObject {
     @Published var isCanRemoveCard = false
     
     //sheet view
-    @Published var isAddVisaSheet = true
+    @Published var isAddVisaSheet = false
     @Published var isOperationSheetDone = false
     
     func makeCheckVisa(s:inout Bool)  {

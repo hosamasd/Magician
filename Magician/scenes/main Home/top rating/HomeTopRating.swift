@@ -30,7 +30,7 @@ struct HomeTopRating: View {
                 Button(action: {withAnimation{
 //                    vm.isMainCategoryChosen=true
                     isShow=true
-                    
+//                    vm.isSelectFromCateg=true
                     vm.selectedCategoryOffAll="Top Rating"
 //                    vm.isSelectedCategoryOffAll.toggle()
                 }

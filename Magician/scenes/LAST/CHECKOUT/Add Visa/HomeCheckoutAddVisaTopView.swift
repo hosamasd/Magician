@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeCheckoutAddVisaTopView: View {
     @ObservedObject var vm:HomeCheckoutViewModel
-
+    
     var body: some View {
         VStack {
             
@@ -19,15 +19,41 @@ struct HomeCheckoutAddVisaTopView: View {
                     .font(.system(size: 14))
                     .fontWeight(.semibold)
                     .foregroundColor(.gray.opacity(0.8))
-
-//                    .foregroundColor(.gray.opacity(0.6))
+                    
+                    //                    .foregroundColor(.gray.opacity(0.6))
                     .padding(.vertical)
                 
                 HStack {
-                    Text(vm.address)
-                        .font(.system(size: 16))
-                        .fontWeight(.semibold)
-                        .lineSpacing(6)
+                    
+                    ZStack {
+                        if self.vm.address.isEmpty {
+                            TextEditor(text:.constant("Add Your Address...."))
+                                .font(.system(size: 16))
+                                
+                                //                                .padding()
+                                
+                                //                                        .font(.body)
+                                .foregroundColor(.black)
+                                .disabled(true)
+                        }
+                        TextEditor(text: $vm.address)
+                            .font(.system(size: 16))
+                            .lineLimit(2)
+                            .disabled(vm.isChangeAddress ? false : true)
+                            .frame(height:60)
+                            
+                            .padding(.trailing)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .opacity(self.vm.address.isEmpty ? 0.25 : 1)
+                        
+                    }
+                    //                        .introspectTextView { textView in
+                    //                                textView.isScrollEnabled = false
+                    //                            }
+                    //                    Text(vm.address)
+                    //                        .font(.system(size: 16))
+                    //                        .fontWeight(.semibold)
+                    //                        .lineSpacing(6)
                     
                     Spacer()
                     
@@ -42,14 +68,14 @@ struct HomeCheckoutAddVisaTopView: View {
             .padding(.vertical)
             
         }
-//        .background(Color.white)
+        //        .background(Color.white)
     }
 }
 
 struct HomeCheckoutAddVisaTopView_Previews: PreviewProvider {
     static var previews: some View {
         SHomeCheckoutAddVisa(vm: HomeCheckoutViewModel())
-
-//        HomeCheckoutAddVisaTopView()
+        
+        //        HomeCheckoutAddVisaTopView()
     }
 }

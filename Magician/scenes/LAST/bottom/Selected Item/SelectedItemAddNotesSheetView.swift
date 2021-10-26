@@ -12,7 +12,7 @@ struct SelectedItemAddNotesSheetView: View {
     @Binding var notesText:String
     @State var isHeight=false
     @StateObject var keyboardHeightHelper = KeyboardHeightHelper()
-
+    
     var body: some View {
         VStack() {
             
@@ -40,14 +40,20 @@ struct SelectedItemAddNotesSheetView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.black.opacity(0.6), lineWidth: 1)
                     .overlay(
-                        ZStack(alignment: .leading) {
-                            Text(notesText)
-                                .padding([.leading, .trailing], 5)
-                                .padding([.top, .bottom], 8)
-                                .foregroundColor(Color.gray.opacity(0.6))
-                            
+                        
+                        //                        TextArea("Add Your Notes....", text: $notesText)
+                        ZStack {
+                            if self.notesText.isEmpty {
+                                TextEditor(text:.constant("Add Your Notes...."))
+                                    .padding()
+                                    
+                                    //                                        .font(.body)
+                                    .foregroundColor(.black)
+                                    .disabled(true)
+                            }
                             TextEditor(text: $notesText )
                                 .padding()
+                                .opacity(self.notesText.isEmpty ? 0.25 : 1)
                                 .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
                                     self.isHeight=true
                                     
@@ -55,18 +61,20 @@ struct SelectedItemAddNotesSheetView: View {
                                 .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
                                     self.isHeight=false
                                 }
+                            //                        }
+                            
+                            //                            .onTapGesture {}
+                            //
+                            
                         }
-                        
-                        //                            .onTapGesture {}
-                        
                         ,alignment: .leading)
                     .frame(width:getFrameSize().width-64,height: 150)
                     .padding(.vertical,20)
                 
                 Spacer()
                     .frame(height:isHeight ? self.keyboardHeightHelper.keyboardHeight-100 : 0)
-
-//                    .frame(height:isHeight ? 100 : 0)
+                
+                //                    .frame(height:isHeight ? 100 : 0)
                 //                    .onTapGesture { hideKeyboardAndSave() }
                 
                 Button(action: {
@@ -106,15 +114,11 @@ struct SelectedItemAddNotesSheetView: View {
         .edgesIgnoringSafeArea(.all)
         
         .onChange(of: notesText) { value in
-//            let words = notesText.split { $0 == " " || $0.isNewline }
+            //            let words = notesText.split { $0 == " " || $0.isNewline }
             print(123)
             //                           self.notesText = words.count
         }
         
-        //                   Text("\(wordCount) words")
-        //                       .font(.headline)
-        //                       .foregroundColor(.secondary)
-        //                       .padding(.trailing)
     }
     
     private func hideKeyboardAndSave() {

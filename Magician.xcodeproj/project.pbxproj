@@ -937,9 +937,9 @@
 			isa = PBXGroup;
 			children = (
 				4EFB12282716950D008A240A /* MainHomeTabBar.swift */,
+				4E2F0D4C2727D0620092CE91 /* SSUsedTabBar.swift */,
 				4E2F0D4A2727CC230092CE91 /* SUsedTabBar.swift */,
 				4EFB122C271695F7008A240A /* UsedTabBar.swift */,
-				4E2F0D4C2727D0620092CE91 /* SSUsedTabBar.swift */,
 			);
 			path = "tab bar";
 			sourceTree = "<group>";

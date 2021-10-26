@@ -70,16 +70,19 @@ struct SSHomeCheckout: View {
                                                 Label(
                                                     title: { Text("Add Notes")
                                                         .fontWeight(.semibold)
-                                                        
+                                                        .foregroundColor(Color("mains"))
+
                                                     },
                                                     icon: { Image( "Group 8358")
                                                         .padding(.horizontal,8)
                                                     }
                                                 )
-                                                .foregroundColor(Color("mains")  )              .opacity(vm.notesText=="" ? 1 : 0)
+//                                                .foregroundColor(Color("mains")  )              .opacity(vm.notesText=="" ? 1 : 0)
                                                 
-                                                .disabled(                vm.notesText=="" ? false : true)
+                                               
                                             })
+                                            .opacity(vm.notesText=="" ? 1 : 0.2)
+                                            .disabled(                vm.notesText=="" ? false : true)
                                             
                                             
                                         }
@@ -93,7 +96,7 @@ struct SSHomeCheckout: View {
                                                     HStack {
                                                         
                                                         Text(vm.notesText)
-                                                            .lineLimit(3)
+                                                            .lineLimit(4)
                                                         
                                                         Spacer()
                                                         
@@ -283,6 +286,11 @@ struct SSHomeCheckout: View {
         }
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
+        
+//        .alert(isPresented: $vm.isChangeAddress, AlertConfig(title: "Change Address", action: {
+//            //                    print("Text \($0 ?? "Cancelled")")
+//            vm.address=$0 ?? ""
+//        }))
     }
 }
 
