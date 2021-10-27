@@ -103,7 +103,7 @@ struct HomeTrackOrderRowView: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color("mains"))
                         
-                        Text("Reminding ")
+                        Text(LocalizedStringKey("Reminding "))
                             .font(.system(size:isSmallDevice() ? 12 : 16))
 
     //                        .font(.system(size: 20))

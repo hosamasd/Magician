@@ -41,16 +41,16 @@ struct HomeCheckoutSuccessfullSheetView: View {
                 
                 VStack{
                     
-                    Text("Thank You!")
+                    Text(LocalizedStringKey("Thank You!"))
                         .font(.system(size: 30))
                         .fontWeight(.bold)
                     
-                    Text("for your order")
+                    Text(LocalizedStringKey("for your order"))
                         .font(.system(size: 18))
                         .fontWeight(.bold)
                     
                     VStack {
-                        Text("Your Order is now being processed. We will let you know once the order is picked from the outlet. Check the status of your Order")
+                        Text(LocalizedStringKey("Your Order is now being processed. We will let you know once the order is picked from the outlet. Check the status of your Order"))
                             .font(.system(size: 14))
                             .fontWeight(.regular)
                             .lineLimit(3)
@@ -88,7 +88,7 @@ struct HomeCheckoutSuccessfullSheetView: View {
                             vmm.goToMainTab()
 
                         }}, label: {
-                            Text("Back to home")
+                            Text(LocalizedStringKey("Back to home"))
                                 .font(.system(size: 18))
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)

@@ -60,7 +60,7 @@ struct OrderRowView: View {
                     Button(action: {withAnimation{}}, label: {
                         
                         ZStack {
-                            Text("Track My Order")
+                            Text(LocalizedStringKey("Track My Order"))
                                 .font(.system(size: isSmallDevice() ? 14 : 16))
                                 
                                 //                                .font(.system(size: 16))
@@ -73,7 +73,7 @@ struct OrderRowView: View {
                                     Image("Icon open-reload")
                                 },
                                 icon: {
-                                    Text("Reorder")
+                                    Text(LocalizedStringKey("Reorder"))
                                         .font(.system(size: 16))
                                         
                                         //                                        .font(.system(size: 16))

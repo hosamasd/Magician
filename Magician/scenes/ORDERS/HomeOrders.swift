@@ -70,7 +70,7 @@ struct HomeOrders: View {
         
         .alert(isPresented: $vm.alert) {
             
-            Alert(title: Text("Error"), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
+            Alert(title: Text(LocalizedStringKey("Error")), message: Text(self.vm.alertMsg), dismissButton: .default(Text(LocalizedStringKey("Ok"))))
         }
         
         .background(EmptyView()

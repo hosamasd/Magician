@@ -41,7 +41,7 @@ struct HomeCheckoutSheetView: View {
                         
                         
                         
-                        Text("Add Credit/Debit Card")
+                        Text(LocalizedStringKey("Add Credit/Debit Card"))
                             .font(.system(size: 15))
                             .fontWeight(.bold)
                         
@@ -57,7 +57,7 @@ struct HomeCheckoutSheetView: View {
                         
                         HStack {
                             
-                            Text("Expiry")
+                            Text(LocalizedStringKey("Expiry"))
                                 .font(.system(size: 15))
                                 .fontWeight(.bold)
                             
@@ -132,7 +132,7 @@ struct HomeCheckoutSheetView: View {
                         
                         HStack{
                             
-                            Text("You can remove this card \n at anytime ")
+                            Text(LocalizedStringKey("You can remove this card \n at anytime "))
                                 .font(.system(size: 14))
                                 .fontWeight(.semibold)
                                 .foregroundColor(.black.opacity(0.6))
@@ -160,7 +160,7 @@ struct HomeCheckoutSheetView: View {
                                 
                                 
                                 Label(
-                                    title: { Text("Add Card")
+                                    title: { Text(LocalizedStringKey("Add Card"))
                                         .font(.system(size: 18))
                                         .fontWeight(.bold)
                                         .foregroundColor(.white)

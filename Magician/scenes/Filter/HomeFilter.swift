@@ -40,7 +40,7 @@ struct HomeFilter: View {
                             Spacer()
                             
                             VStack {
-                                Text("Select Your Category")
+                                Text(LocalizedStringKey("Select Your Category"))
                                     .font(.system(size: 25))
                                     .fontWeight(.bold)
                                     .foregroundColor(Color("mains"))

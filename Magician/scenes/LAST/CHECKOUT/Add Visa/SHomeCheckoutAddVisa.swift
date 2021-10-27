@@ -60,7 +60,7 @@ struct SHomeCheckoutAddVisa: View {
             VStack(alignment:.leading,spacing:20) {
                 
                 HStack {
-                    Text("Sub Total")
+                    Text(LocalizedStringKey("Sub Total"))
                         .font(.system(size: 15))
                         .fontWeight(.semibold)
                     
@@ -74,7 +74,7 @@ struct SHomeCheckoutAddVisa: View {
                 }
                 
                 HStack {
-                    Text("Delivery Cost")
+                    Text(LocalizedStringKey("Delivery Cost"))
                         .font(.system(size: 15))
                         .fontWeight(.semibold)
                     Spacer()
@@ -87,7 +87,7 @@ struct SHomeCheckoutAddVisa: View {
                 }
                 
                 HStack {
-                    Text("Discount")
+                    Text(LocalizedStringKey("Discount"))
                         .font(.system(size: 15))
                         .fontWeight(.semibold)
                     Spacer()
@@ -103,7 +103,7 @@ struct SHomeCheckoutAddVisa: View {
                 
                 
                 HStack {
-                    Text("Total")
+                    Text(LocalizedStringKey("Total"))
                         .font(.system(size: 15))
                         .fontWeight(.semibold)
                     Spacer()

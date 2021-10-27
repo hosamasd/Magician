@@ -98,4 +98,77 @@
 "Order With Gift"="Order With Gift";
 "Later"="Later";
 
+//HomeFavorite
+
+
+//HomeFilter
+
+"Select Your Category"="Select Your Category";
+
+
+//SelectedItemScenes
+
+//SelectedItemAddNotes
+
+"First Step"="First Step";
+"Second Step"="Second Step";
+"Add Notes To Your Order"="Add Notes To Your Order";
+"Add Notes"="Add Notes";
+"Add Cards"="Add Cards";
+
+//SelectedItemAddNotesSheetView
+
+"Add Notes To Your Order"="Add Notes To Your Order";
+"Add Your Notes...."="Add Your Notes....";
+
+
+//SSHomeCheckout
+
+"Back"="Back";
+"Checkout"="Checkout";
+"My Order"="My Order";
+"Send Order"="Send Order";
+"Checkout"="Checkout";
+"Total"="Total";
+"Delivery Cost"="Delivery Cost";
+"Sub Total"="Sub Total";
+
+//SHomeCheckoutAddVisa
+
+"Delivery Address"="Delivery Address";
+"Change"="Change";
+"Discount"="Discount";
+
+//HomeTrackOrder
+
+"Reminding "="Reminding ";
+
+
+//HomeCheckoutSheetView
+
+"Add Credit/Debit Card"="Add Credit/Debit Card";
+"Card Number"="Card Number";
+"Expiry"="Expiry";
+"security Code"="security Code";
+"first Name"="first Name";
+"second Name"="second Name";
+"You can remove this card \n at anytime "="You can remove this card \n at anytime ";
+"Add Card"="Add Card";
+"Done"="Done";
+
+//HomeCheckoutSuccessfullSheetView
+
+"Thank You!"="Thank You!";
+"for your order"="for your order";
+"Your Order is now being processed. We will let you know once the order is picked from the outlet. Check the status of your Order"="Your Order is now being processed. We will let you know once the order is picked from the outlet. Check the status of your Order";
+"Track my order"="Track my order";
+"Back to home"="Back to home";
+
+//HomeOrders
+
+"Reorder"="Reorder";
+"Error"="Error";
+"Ok"="Ok";
+
+
 

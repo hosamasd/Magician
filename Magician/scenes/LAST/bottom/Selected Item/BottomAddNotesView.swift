@@ -19,7 +19,7 @@ struct BottomAddNotesView: View {
             
             
             HStack {
-                Text("Add Notes To Your Order")
+                Text(LocalizedStringKey("Add Notes To Your Order"))
                     .font(.system(size: 14))
                     .fontWeight(.bold)
                 
@@ -29,7 +29,7 @@ struct BottomAddNotesView: View {
                     isShow.toggle()
                 }}, label: {
                     Label(
-                        title: { Text("Add Notes")
+                        title: { Text(LocalizedStringKey("Add Notes"))
                             .foregroundColor(Color("mains"))
 
                         },
@@ -76,7 +76,7 @@ struct BottomAddNotesView: View {
                     isAddCheckout.toggle()
                 }}, label: {
                     Label(
-                        title: { Text("Add Cards")
+                        title: { Text(LocalizedStringKey("Add Cards"))
                             .font(.system(size: 18))
                             .fontWeight(.bold)
                             .foregroundColor(.white)

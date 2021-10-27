@@ -33,7 +33,7 @@ struct SelectedItemAddNotesSheetView: View {
                 //                .padding()
                 .padding(.horizontal)
                 
-                Text("Add Notes To Your Order")
+                Text(LocalizedStringKey("Add Notes To Your Order"))
                     .font(.system(size: 20))
                     .fontWeight(.bold)
                 
@@ -86,7 +86,7 @@ struct SelectedItemAddNotesSheetView: View {
                         .fill(Color("mains"))
                         .overlay(
                             
-                            Text("Add Notes")
+                            Text(LocalizedStringKey("Add Notes"))
                                 .font(.system(size: 16))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.white)//.opacity(0.6))

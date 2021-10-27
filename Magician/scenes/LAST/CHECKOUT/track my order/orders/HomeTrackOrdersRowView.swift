@@ -19,7 +19,7 @@ struct HomeTrackOrdersRowView: View {
             
             HStack{
                 
-                Text(isDelvery ? "Delivery Cost" :  isTotal ? "Total" :x.name)
+                Text(LocalizedStringKey(isDelvery ? "Delivery Cost" :  isTotal ? "Total" :x.name))
                     .font(.system(size: isTotal ? 18 : 15))
                     
                     //                    .font(.customFontSystem(size: 15))

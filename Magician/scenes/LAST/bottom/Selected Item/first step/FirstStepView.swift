@@ -15,7 +15,7 @@ struct FirstStepView: View {
             
           
             HStack {
-                Text("First Step")
+                Text(LocalizedStringKey("Second Step"))
                         .font(.system(size: 14))
                     .fontWeight(.bold)
                 Spacer()

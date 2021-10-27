@@ -59,7 +59,7 @@ struct SSHomeCheckout: View {
                                     VStack {
                                         HStack {
                                             
-                                            Text("Add Notes To Your Order")
+                                            Text(LocalizedStringKey("Add Notes To Your Order"))
                                                 .font(.system(size: 15))
                                                 .fontWeight(.semibold)
                                             Spacer()
@@ -68,7 +68,7 @@ struct SSHomeCheckout: View {
                                                 vm.isShowNotesText=true
                                             }}, label: {
                                                 Label(
-                                                    title: { Text("Add Notes")
+                                                    title: { Text(LocalizedStringKey("Add Notes"))
                                                         .fontWeight(.semibold)
                                                         .foregroundColor(Color("mains"))
 
@@ -129,7 +129,7 @@ struct SSHomeCheckout: View {
                                     Divider()
                                     
                                     HStack {
-                                        Text("Sub Total")
+                                        Text(LocalizedStringKey("Sub Total"))
                                             .font(.system(size: 15))
                                             .fontWeight(.semibold)
                                         
@@ -144,7 +144,7 @@ struct SSHomeCheckout: View {
                                     }
                                     
                                     HStack {
-                                        Text("Delivery Cost")
+                                        Text(LocalizedStringKey("Delivery Cost"))
                                             .font(.system(size: 15))
                                             .fontWeight(.semibold)
                                         
@@ -162,7 +162,7 @@ struct SSHomeCheckout: View {
                                     
                                     
                                     HStack {
-                                        Text("Total")
+                                        Text(LocalizedStringKey("Total"))
                                             .font(.system(size: 15))
                                             .fontWeight(.semibold)
                                         

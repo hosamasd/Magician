@@ -15,7 +15,7 @@ struct HomeCheckoutAddVisaTopView: View {
             
             VStack(alignment:.leading){
                 
-                Text("Delivery Address")
+                Text(LocalizedStringKey("Delivery Address"))
                     .font(.system(size: 14))
                     .fontWeight(.semibold)
                     .foregroundColor(.gray.opacity(0.8))
@@ -60,7 +60,7 @@ struct HomeCheckoutAddVisaTopView: View {
                     Button(action: {withAnimation{
                         vm.isChangeAddress.toggle()
                     }}, label: {
-                        Text("Change")
+                        Text(LocalizedStringKey("Change"))
                             .foregroundColor(Color("mains"))
                     })
                 }
