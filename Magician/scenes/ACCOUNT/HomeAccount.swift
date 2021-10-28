@@ -25,6 +25,7 @@ struct HomeAccount: View {
                     
 //                    HomeAccountTopView(vm:vm)
                     HomeAccountTopView()
+                        .padding(.horizontal,32)
                         
 
                     ScrollView(showsIndicators:false){
@@ -83,10 +84,14 @@ struct HomeAccount: View {
                         .padding(.top,20)
                         
                     }
+
                     .padding(.bottom,CGFloat(isSmallDevice() ? 60 : 80))
+                    .frame(width:getFrameSize().width-64)
+
                     
                 }
-                .padding(.horizontal,32)
+
+//                .padding(.horizontal,32)
                 //                .environmentObject(vmm)
                 
                 if vm.isLooding {
@@ -108,6 +113,7 @@ struct HomeAccount: View {
             
             Spacer()
         }
+        
         .environmentObject(vmm)
         .environmentObject(vm)
 
@@ -178,6 +184,7 @@ struct HomeAccount: View {
 
 struct HomeAccount_Previews: PreviewProvider {
     static var previews: some View {
-        HomeAccount()
+        SContentView()
+//        HomeAccount()
     }
 }

@@ -46,7 +46,7 @@ struct SCustomTF: View {
                             //                                        .disabled(isAddress ? true : false)
                             
                             
-                            TextField(hint,text:$txt, onEditingChanged: { focused in
+                            TextField("",text:$txt, onEditingChanged: { focused in
                                 withAnimation{
                                 isFocus = focused
                                 }

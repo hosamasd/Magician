@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct AccountInfoView: View {
-//    var na = <#value#>
-//    @ObservedObject var vm:HomeAccountViewModel
-//    @ObservedObject var vmm:HomeMainTabBarViewModel
+    //    var na = <#value#>
+    //    @ObservedObject var vm:HomeAccountViewModel
+    //    @ObservedObject var vmm:HomeMainTabBarViewModel
     
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
     @EnvironmentObject var vm : HomeAccountViewModel
     @State var changePositions=false
-
+    
     var body: some View {
         VStack {
             
             HomeAccountTopView()
-
-//            HomeAccountTopView(vm: vm)
+                
+                //            HomeAccountTopView(vm: vm)
                 .padding(.bottom,20)
             
             VStack {
@@ -41,65 +41,73 @@ struct AccountInfoView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color("mains"))
                         .offset(x: changePositions ? 0 : -600,y:changePositions ? 0 : 200)//, y: changePositions ? 0 )
-
+                    
                     Spacer()
                     
                 }
                 .padding(.horizontal,0)
                 .padding(.bottom,20)
-
-            
-            VStack(spacing:20) {
-                CustomTF(txt: $vm.name,hint: "Name", hide: .constant(false),isAccountInfo:true)
                 
-                CustomTF(txt: $vm.email,hint: "Email", hide: .constant(false),isAccountInfo:true)
-
-                CustomTF(txt: $vm.phone,hint: "Mobile No", hide: .constant(false),isAccountInfo:true)
-
-            }
-            
-            Spacer()
-            
-            Button(action: {
-                withAnimation{
-//                    vm.isOTP.toggle()
-//                                vm.isLooding=true
-
-                }
-            }, label: {
-                RoundedRectangle(cornerRadius: 28)
+                
+                VStack(spacing:20) {
+                    CustomTF(txt: $vm.name,hint: "Name", hide: .constant(false),isAccountInfo:true)
                     
-                    .fill(Color("mains"))
-                    .overlay(
+                    CustomTF(txt: $vm.email,hint: "Email", hide: .constant(false),isAccountInfo:true)
+                    
+                    CustomTF(txt: $vm.phone,hint: "Mobile No", hide: .constant(false),isAccountInfo:true)
+                    
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    withAnimation{
+                        //                    vm.isOTP.toggle()
+                        //                                vm.isLooding=true
                         
-                        Text("Save")
-                            .font(.system(size: 16))
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color.white)//.opacity(0.6))
-                    )
+                    }
+                }, label: {
+                    RoundedRectangle(cornerRadius: 28)
+                        
+                        .fill(Color("mains"))
+                        .overlay(
+                            
+                            Text("Save")
+                                .font(.system(size: 16))
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.white)//.opacity(0.6))
+                        )
+                    
+                })
+                .frame(height:60)
                 
-            })
-            .frame(height:60)
-            
                 
-        }
+            }
             .padding(.horizontal,24)
-
+            
         }
         .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
-
+        
         .edgesIgnoringSafeArea(.all)
         
         .onAppear(perform: {
             withAnimation{
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.2) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
                     withAnimation{
                         changePositions=true
                     }
                 }
             }
         })
-    }
+        .onDisappear(perform: {
+            withAnimation{
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+                    withAnimation{
+                        changePositions=false
+                    }
+                }
+            }
+        })    }
 }
 
 struct AccountInfoView_Previews: PreviewProvider {

@@ -18,10 +18,13 @@ struct SContentView: View {
 
     var body: some View {
         
-        MainHomeReg()
-            
+        HomeAccount()
+            .environmentObject(wqq)
                    .environmentObject(vm)
         
+//            .environment(\.layoutDirection,  .leftToRight )
+//            .environment(\.locale, Locale(identifier: "en" ))
+            
             .environment(\.layoutDirection,  .rightToLeft )
             .environment(\.locale, Locale(identifier: "ar" ))
 //.environment(\.layoutDirection, vm.isArabicLanguage ?  .rightToLeft : .leftToRight)

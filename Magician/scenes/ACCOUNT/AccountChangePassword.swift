@@ -91,9 +91,18 @@ struct AccountChangePassword: View {
         
         .onAppear(perform: {
             withAnimation{
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.2) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
                     withAnimation{
                         changePositions=true
+                    }
+                }
+            }
+        })
+        .onDisappear(perform: {
+            withAnimation{
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+                    withAnimation{
+                        changePositions=false
                     }
                 }
             }

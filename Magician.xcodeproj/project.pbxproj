@@ -142,6 +142,7 @@
 		4EEF4D8A27171F3F00D39193 /* AccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8927171F3F00D39193 /* AccountInfoView.swift */; };
 		4EEF4D8C271724D300D39193 /* AccountSavedAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */; };
 		4EEF4D8E2717277400D39193 /* AccountChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF4D8D2717277400D39193 /* AccountChangePassword.swift */; };
+		4EF4B6C2272A920600C4A4AC /* SHomeAccountPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4B6C1272A920600C4A4AC /* SHomeAccountPointsView.swift */; };
 		4EF580D927283D1A00478BCD /* SSpecialOfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF580D827283D1A00478BCD /* SSpecialOfferRowView.swift */; };
 		4EF580DB27283E4B00478BCD /* SSSpecialOfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF580DA27283E4B00478BCD /* SSSpecialOfferRowView.swift */; };
 		4EFB12292716950D008A240A /* MainHomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB12282716950D008A240A /* MainHomeTabBar.swift */; };
@@ -297,6 +298,7 @@
 		4EEF4D8927171F3F00D39193 /* AccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoView.swift; sourceTree = "<group>"; };
 		4EEF4D8B271724D300D39193 /* AccountSavedAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSavedAddress.swift; sourceTree = "<group>"; };
 		4EEF4D8D2717277400D39193 /* AccountChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountChangePassword.swift; sourceTree = "<group>"; };
+		4EF4B6C1272A920600C4A4AC /* SHomeAccountPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHomeAccountPointsView.swift; sourceTree = "<group>"; };
 		4EF580D827283D1A00478BCD /* SSpecialOfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSpecialOfferRowView.swift; sourceTree = "<group>"; };
 		4EF580DA27283E4B00478BCD /* SSSpecialOfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSpecialOfferRowView.swift; sourceTree = "<group>"; };
 		4EFB12282716950D008A240A /* MainHomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeTabBar.swift; sourceTree = "<group>"; };
@@ -989,7 +991,7 @@
 				4E171E442716F3C3000837BF /* HomeAccountTopView.swift */,
 				4EDC438F2717054C00C2347B /* AccountRowView.swift */,
 				4EEF4D8527171D3900D39193 /* HomeAccountImage.swift */,
-				4EDC43912717087600C2347B /* HomeAccountPointsView.swift */,
+				4EF4B6C0272A91F700C4A4AC /* points */,
 				4EB64AF8271D96D20012EB48 /* HomeAccountGifts.swift */,
 				4EB64AFA271D9C970012EB48 /* AccountSheetView.swift */,
 			);
@@ -1002,6 +1004,15 @@
 				4EEF4D8927171F3F00D39193 /* AccountInfoView.swift */,
 			);
 			path = info;
+			sourceTree = "<group>";
+		};
+		4EF4B6C0272A91F700C4A4AC /* points */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC43912717087600C2347B /* HomeAccountPointsView.swift */,
+				4EF4B6C1272A920600C4A4AC /* SHomeAccountPointsView.swift */,
+			);
+			path = points;
 			sourceTree = "<group>";
 		};
 		4EFB1227271694F4008A240A /* tab bar */ = {
@@ -1123,6 +1134,7 @@
 				4EED73C2271D45B60059DD57 /* ThirdHomeSelectedCategoryTopView.swift in Sources */,
 				4EDC393C271FEB71008011E0 /* HomeFilterProcessMainChoise.swift in Sources */,
 				4EEF4D8C271724D300D39193 /* AccountSavedAddress.swift in Sources */,
+				4EF4B6C2272A920600C4A4AC /* SHomeAccountPointsView.swift in Sources */,
 				4EEF4D8E2717277400D39193 /* AccountChangePassword.swift in Sources */,
 				4E5B598227182501004C7D2F /* MainHomeTaPointsView.swift in Sources */,
 				4ECAD7F6271C678800C258A5 /* HomeFavoriteViewModel.swift in Sources */,

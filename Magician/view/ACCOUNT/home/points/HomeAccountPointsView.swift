@@ -13,58 +13,70 @@ struct HomeAccountPointsView: View {
 
     var body: some View {
         VStack {
+            
+       
+            
             HStack{
-                
+
                 Label(
                     title: {
-                        
+
                         VStack(alignment:.leading) {
-                            
+
                             Text("Eslam Hisham")
 
                                 .font(.system(size: 18))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("mains"))
-                            
+
                             Text("( Superman )")
                                 .font(.system(size: 13))
                                 .fontWeight(.semibold)
                         }
-                        
+
                     },
                     icon: {  Image("Profile picture")
                         .resizable()
                         .frame(width: 28, height: 28)
                         .offset(y:8)
-                        .padding(.trailing)
+//                        .padding(.trailing)
                     }
     )
-                
+
                 Spacer()
-                
-                Text("1500 /\n")
+
+                VStack() {
+                    
+                Text("1500 /")
                     .font(.system(size: 18))
                     .fontWeight(.semibold)
                     .foregroundColor(Color("mains"))
-                +
+                
                  Text(   "3000 EXP")
                     .font(.system(size: 18))
                     .fontWeight(.semibold)
+                }
             }
+            .padding(.horizontal)
             
             ZStack(alignment:.leading, content: {
                 
-                RoundedRectangle(cornerRadius: 4)
+                
+                
+                RoundedRectangle(cornerRadius: 6)
                     .fill(Color.gray.opacity(0.4))
                     
-                RoundedRectangle(cornerRadius: 4)
+                RoundedRectangle(cornerRadius: 6)
                     .fill(Color("mains"))
                     .frame(width: getFrameSize().width/2)
             })
             .frame( height: 6)
+            .padding(.horizontal)
 
+//            .padding(.horizontal,8)
         }
-        .padding(.horizontal,32)
+        .frame(width:getFrameSize().width-64)
+//        .padding(.horizontal,32)
         .cornerRadius(10)
 //        .frame(width:getFrameSize().width-32)
 
@@ -73,7 +85,8 @@ struct HomeAccountPointsView: View {
 
 struct HomeAccountPointsView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeAccountPointsView(vm: HomeAccountViewModel())
+        SContentView()
+//        HomeAccountPointsView(vm: HomeAccountViewModel())
 //        ContentView()
     }
 }
