@@ -50,7 +50,7 @@ struct CustomTF: View {
                             }
                             ZStack {
                                 if hide {
-                                    SecureField(hint,text:$txt)
+                                    SecureField("",text:$txt)
                                         .foregroundColor(.black.opacity(isAccountInfo ? 1 : 0.6))
                                         //                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
                                         .font(.system(size: 12))
@@ -65,7 +65,7 @@ struct CustomTF: View {
 //                                        .disabled(isAddress ? true : false)
                                         
                                     
-                                    TextField(hint,text:$txt, onEditingChanged: { focused in
+                                    TextField("",text:$txt, onEditingChanged: { focused in
                                         print(focused ? "focused" : "unfocused")
                                     })
                                         .foregroundColor(.black.opacity(isAccountInfo ? 1 : 0.6))

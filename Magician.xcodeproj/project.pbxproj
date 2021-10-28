@@ -64,7 +64,7 @@
 		4E8F59042726C323006CA7DC /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E8F59032726C323006CA7DC /* gif.gif */; };
 		4EAEE3B1271EC135003C482F /* HomeCheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B0271EC135003C482F /* HomeCheckoutViewModel.swift */; };
 		4EAEE3B4271EC260003C482F /* HomeCheckoutAddVisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B3271EC260003C482F /* HomeCheckoutAddVisa.swift */; };
-		4EAEE3B6271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B5271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift */; };
+		4EAEE3B6271EC36B003C482F /* AddVisaChangeAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B5271EC36B003C482F /* AddVisaChangeAddressView.swift */; };
 		4EAEE3B8271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B7271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift */; };
 		4EAEE3BA271EC891003C482F /* PaymentCosenRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B9271EC891003C482F /* PaymentCosenRowView.swift */; };
 		4EAFFC3E27202B320027B8B3 /* HomeTrackOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFFC3D27202B320027B8B3 /* HomeTrackOrder.swift */; };
@@ -122,6 +122,9 @@
 		4EDC393E271FEF47008011E0 /* HomeFilterProcessPoplurRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC393D271FEF47008011E0 /* HomeFilterProcessPoplurRowView.swift */; };
 		4EDC43902717054C00C2347B /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC438F2717054C00C2347B /* AccountRowView.swift */; };
 		4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC43912717087600C2347B /* HomeAccountPointsView.swift */; };
+		4EDCE3F627292B7D001CADBB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCE3F327292B7D001CADBB /* Reachability.swift */; };
+		4EDCE3F727292B7D001CADBB /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCE3F427292B7D001CADBB /* InternetConnection.swift */; };
+		4EDCE3F827292B7D001CADBB /* ICheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCE3F527292B7D001CADBB /* ICheckConnection.swift */; };
 		4EDDBF4B271BF4FC00BACD49 /* HomeONBoardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDBF4A271BF4FC00BACD49 /* HomeONBoardScene.swift */; };
 		4EDDBF4D271BFBCD00BACD49 /* HomeRemindingOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDBF4C271BFBCC00BACD49 /* HomeRemindingOrders.swift */; };
 		4EDDBF51271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDBF50271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift */; };
@@ -213,7 +216,7 @@
 		4E8F59032726C323006CA7DC /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 		4EAEE3B0271EC135003C482F /* HomeCheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutViewModel.swift; sourceTree = "<group>"; };
 		4EAEE3B3271EC260003C482F /* HomeCheckoutAddVisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutAddVisa.swift; sourceTree = "<group>"; };
-		4EAEE3B5271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutAddVisaTopView.swift; sourceTree = "<group>"; };
+		4EAEE3B5271EC36B003C482F /* AddVisaChangeAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVisaChangeAddressView.swift; sourceTree = "<group>"; };
 		4EAEE3B7271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutAddVisaAddVisa.swift; sourceTree = "<group>"; };
 		4EAEE3B9271EC891003C482F /* PaymentCosenRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCosenRowView.swift; sourceTree = "<group>"; };
 		4EAFFC3D27202B320027B8B3 /* HomeTrackOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackOrder.swift; sourceTree = "<group>"; };
@@ -274,6 +277,9 @@
 		4EDC393D271FEF47008011E0 /* HomeFilterProcessPoplurRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterProcessPoplurRowView.swift; sourceTree = "<group>"; };
 		4EDC438F2717054C00C2347B /* AccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowView.swift; sourceTree = "<group>"; };
 		4EDC43912717087600C2347B /* HomeAccountPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccountPointsView.swift; sourceTree = "<group>"; };
+		4EDCE3F327292B7D001CADBB /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		4EDCE3F427292B7D001CADBB /* InternetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
+		4EDCE3F527292B7D001CADBB /* ICheckConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICheckConnection.swift; sourceTree = "<group>"; };
 		4EDDBF4A271BF4FC00BACD49 /* HomeONBoardScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeONBoardScene.swift; sourceTree = "<group>"; };
 		4EDDBF4C271BFBCC00BACD49 /* HomeRemindingOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemindingOrders.swift; sourceTree = "<group>"; };
 		4EDDBF50271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemindingOrdersTopView.swift; sourceTree = "<group>"; };
@@ -397,10 +403,6 @@
 		4E181F57271DB58500248DF3 /* LAST */ = {
 			isa = PBXGroup;
 			children = (
-				4EDFA7D8271EB1D20067D83E /* CHECKOUT */,
-				4E181F58271DB5AA00248DF3 /* SelectedItemScenes.swift */,
-				4E3F6B27271E7B8F00529C15 /* bottom */,
-				4E181F5A271DB7FC00248DF3 /* SelectedItemScenesTopRow.swift */,
 			);
 			path = LAST;
 			sourceTree = "<group>";
@@ -531,6 +533,51 @@
 			path = login;
 			sourceTree = "<group>";
 		};
+		4E52C28E27293F3000C92648 /* home checkout */ = {
+			isa = PBXGroup;
+			children = (
+				4E4ACA522720148100AE6703 /* HomeCheckoutSuccessfullSheetView.swift */,
+				4EDFA7DF271EB6EA0067D83E /* row view */,
+			);
+			path = "home checkout";
+			sourceTree = "<group>";
+		};
+		4E52C28F27293FB700C92648 /* Add Visa */ = {
+			isa = PBXGroup;
+			children = (
+				4EAEE3B5271EC36B003C482F /* AddVisaChangeAddressView.swift */,
+				4EAEE3B7271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift */,
+				4EAEE3B9271EC891003C482F /* PaymentCosenRowView.swift */,
+			);
+			path = "Add Visa";
+			sourceTree = "<group>";
+		};
+		4E52C2902729409400C92648 /* CHECKOUT */ = {
+			isa = PBXGroup;
+			children = (
+				4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */,
+				4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */,
+			);
+			path = CHECKOUT;
+			sourceTree = "<group>";
+		};
+		4E52C291272940C900C92648 /* SelectedItemScenes */ = {
+			isa = PBXGroup;
+			children = (
+				4E181F58271DB5AA00248DF3 /* SelectedItemScenes.swift */,
+			);
+			path = SelectedItemScenes;
+			sourceTree = "<group>";
+		};
+		4E52C293272940E800C92648 /* SelectedItemScenes */ = {
+			isa = PBXGroup;
+			children = (
+				4E3F6B27271E7B8F00529C15 /* bottom */,
+				4E181F5A271DB7FC00248DF3 /* SelectedItemScenesTopRow.swift */,
+			);
+			path = SelectedItemScenes;
+			sourceTree = "<group>";
+		};
 		4E5B597527181B14004C7D2F /* main Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,9 +606,6 @@
 			children = (
 				4EBE65EC272531A2006B065C /* SHomeCheckoutAddVisa.swift */,
 				4EAEE3B3271EC260003C482F /* HomeCheckoutAddVisa.swift */,
-				4EAEE3B9271EC891003C482F /* PaymentCosenRowView.swift */,
-				4EAEE3B7271EC5C0003C482F /* HomeCheckoutAddVisaAddVisa.swift */,
-				4EAEE3B5271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift */,
 			);
 			path = "Add Visa";
 			sourceTree = "<group>";
@@ -589,10 +633,8 @@
 			isa = PBXGroup;
 			children = (
 				4E2A37A927254F3900280F33 /* SSHomeCheckout.swift */,
-				4E4ACA522720148100AE6703 /* HomeCheckoutSuccessfullSheetView.swift */,
 				4EB2A0202721AB92008DAC14 /* SHomeCheckout.swift */,
 				4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */,
-				4EDFA7DF271EB6EA0067D83E /* row view */,
 			);
 			path = "home checkout";
 			sourceTree = "<group>";
@@ -704,6 +746,9 @@
 		4ECD6DAB27145E1500011208 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4EDFA7D8271EB1D20067D83E /* CHECKOUT */,
+				4EB2A01F2721AAC6008DAC14 /* home checkout */,
+				4E52C291272940C900C92648 /* SelectedItemScenes */,
 				4E181F57271DB58500248DF3 /* LAST */,
 				4E3AF3F0271D80A60051A70B /* Filter */,
 				4ECAD7F1271C673400C258A5 /* Favorites */,
@@ -721,6 +766,10 @@
 		4ECD6DAC27145E1900011208 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4E52C293272940E800C92648 /* SelectedItemScenes */,
+				4E52C2902729409400C92648 /* CHECKOUT */,
+				4E52C28F27293FB700C92648 /* Add Visa */,
+				4E52C28E27293F3000C92648 /* home checkout */,
 				4E3AF3F1271D80AD0051A70B /* Filter */,
 				4ECAD7F2271C673D00C258A5 /* Favorites */,
 				4E5B597627181B1F004C7D2F /* main Home */,
@@ -760,13 +809,10 @@
 		4ECD6DAF27145E2300011208 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4EDCE3F227292B6E001CADBB /* Internet Connection */,
 				4EBF115A27158869008C3C89 /* ApiURL.swift */,
 				4ECD6DBB27145EBC00011208 /* AppDelegate.swift */,
-				4ECD6DB327145E8500011208 /* ex_Image.swift */,
-				4ECD6DB627145E8500011208 /* EX_View.swift */,
-				4ECD6DB527145E8500011208 /* Extensions_ui.swift */,
-				4EFC794B2716CD9300C5DF36 /* GifI_mage.swift */,
-				4ECD6DB427145E8500011208 /* hideKeyboard.swift */,
+				4EDCE3F127292B27001CADBB /* EXTENSIONS */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -881,6 +927,28 @@
 			path = "filter process";
 			sourceTree = "<group>";
 		};
+		4EDCE3F127292B27001CADBB /* EXTENSIONS */ = {
+			isa = PBXGroup;
+			children = (
+				4ECD6DB327145E8500011208 /* ex_Image.swift */,
+				4ECD6DB627145E8500011208 /* EX_View.swift */,
+				4ECD6DB527145E8500011208 /* Extensions_ui.swift */,
+				4EFC794B2716CD9300C5DF36 /* GifI_mage.swift */,
+				4ECD6DB427145E8500011208 /* hideKeyboard.swift */,
+			);
+			path = EXTENSIONS;
+			sourceTree = "<group>";
+		};
+		4EDCE3F227292B6E001CADBB /* Internet Connection */ = {
+			isa = PBXGroup;
+			children = (
+				4EDCE3F527292B7D001CADBB /* ICheckConnection.swift */,
+				4EDCE3F427292B7D001CADBB /* InternetConnection.swift */,
+				4EDCE3F327292B7D001CADBB /* Reachability.swift */,
+			);
+			path = "Internet Connection";
+			sourceTree = "<group>";
+		};
 		4EDDBF4E271BFD4600BACD49 /* reminding */ = {
 			isa = PBXGroup;
 			children = (
@@ -903,9 +971,6 @@
 			children = (
 				4EAFFC3C27202B1D0027B8B3 /* track my order */,
 				4EAEE3B2271EC257003C482F /* Add Visa */,
-				4EB2A01F2721AAC6008DAC14 /* home checkout */,
-				4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */,
-				4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */,
 			);
 			path = CHECKOUT;
 			sourceTree = "<group>";
@@ -1046,9 +1111,11 @@
 				4EDC3937271FE9DF008011E0 /* HomeFilterProcess.swift in Sources */,
 				4E3AF3F3271D80B90051A70B /* HomeFilter.swift in Sources */,
 				4E39BD3A272002F400C57866 /* HomeFilterProcessPinnedRowView.swift in Sources */,
+				4EDCE3F627292B7D001CADBB /* Reachability.swift in Sources */,
 				4EE279862718765D004EE0B6 /* STopRatingRowView.swift in Sources */,
 				4EEF4D8A27171F3F00D39193 /* AccountInfoView.swift in Sources */,
 				4ECD6DB927145E8500011208 /* Extensions_ui.swift in Sources */,
+				4EDCE3F727292B7D001CADBB /* InternetConnection.swift in Sources */,
 				4E171E452716F3C3000837BF /* HomeAccountTopView.swift in Sources */,
 				4EFC794A2716C8DE00C5DF36 /* MainMapView.swift in Sources */,
 				4EAEE3B1271EC135003C482F /* HomeCheckoutViewModel.swift in Sources */,
@@ -1100,7 +1167,7 @@
 				4ED0F596271D633900D12DBD /* CarsoelRowView.swift in Sources */,
 				4EC550A42716AE990025F5C9 /* KeyboardSpace.swift in Sources */,
 				4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */,
-				4EAEE3B6271EC36B003C482F /* HomeCheckoutAddVisaTopView.swift in Sources */,
+				4EAEE3B6271EC36B003C482F /* AddVisaChangeAddressView.swift in Sources */,
 				4EAFFC45272031A90027B8B3 /* HomeTrackOrdersRowView.swift in Sources */,
 				4EDDBF51271BFD5A00BACD49 /* HomeRemindingOrdersTopView.swift in Sources */,
 				4E5C6C2D27184C8300FA5298 /* TopRatingRowView.swift in Sources */,
@@ -1130,6 +1197,7 @@
 				4ED0F594271D57CC00D12DBD /* SContentView.swift in Sources */,
 				4EF580DB27283E4B00478BCD /* SSSpecialOfferRowView.swift in Sources */,
 				4EDC43922717087600C2347B /* HomeAccountPointsView.swift in Sources */,
+				4EDCE3F827292B7D001CADBB /* ICheckConnection.swift in Sources */,
 				4E38AF85271E962500D87FAA /* BottomAddNotesView.swift in Sources */,
 				4EDDBF53271BFFDD00BACD49 /* SelectedOrderRowView.swift in Sources */,
 				4EDC3934271FE7AA008011E0 /* AlertHelper.swift in Sources */,

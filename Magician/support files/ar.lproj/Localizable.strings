@@ -7,4 +7,168 @@
 */
 
 
-//
+
+//SSHomeONBoard
+
+"Fast Delivery"="Fast ";
+"Fast Order Delivery To Your Home, Office Wherever \n You Are"=" To Your Home, Office Wherever \n You Are";
+"Select the Favorites Menu"="Select  Menu";
+"Now eat well, don't leave the house,You can \nchoose your favorite food only with \none click"="You can \nchoose your favorite food only with \none click";
+"Good food at a cheap price"="Gap price";
+"You can eat at expensive restaurants with\n affordable price"="You curants with\n affordable price";
+"Next"="Nxt";
+
+//MainHomeReg
+
+"Discover The Best Order From Over 10,000\n Restaurants, Store And Fast Delivery To Your\n Doorstep"="Disc0,000\n Restaurants, Store And Fast Delivery To Your\n Doorstep";
+"Login"="Lon";
+"Create an Account"="Crecount";
+"Error"="Err";
+
+//LoginView
+
+"Your Email"="Youmail";
+"Password"="Pasord";
+"Login"="Lin";
+"Forgot your password?"="Forgot yosword?";
+" Sign Up"=" Sip";
+"Don't have an Account?"="Don't hn Account?";
+
+//ResetView
+
+"Reset Password"="Ressword";
+"Please enter your email to receive a\nlink to  create a new password via email"="Pleasil to receive a\nlink to  create a new password via email";
+"Email"="Ema";
+"Send"="Sen";
+
+//NewPasswordView
+
+"New Password"="New Pass";
+"Please enter your email to receive a\nlink to  create a new password via email"="Ple email to receive a\nlink to  create a new password via email";
+"Confirm Password"="Conirm Paord";
+
+//SignUpView
+
+"Sign Up"="Sigp";
+"Add your details to sign up"="Addails to sign up";
+"Name"="Nae";
+"Male"="Mle";
+"Female"="Feale";
+"Mobile No"="Mobe No";
+"Address"="Addss";
+"Confirm Password"="Cfirm Pasord";
+" Login"= " Lin";
+"Don't have an Account?"="Don't have ccount?";
+
+//OTPView
+
+"We have sent an OTP to\nyour Mobile"="We haTP to\nyour Mobile";
+" Click Here"=" Clicre";
+"Don't Receive?"="Doneive?";
+
+//MainHomeTabBar
+
+"Home"="Home";
+"Filter"="Filter";
+"Favorite"="Favorite";
+"Orders"="Orders";
+"Account"="Account";
+
+//HomeAccount
+
+"Hello , Eslam"="Hello , Eslam";
+"Choose mode"="Choose mode";
+"Please choose your preferred mode to set your profile image"="Please choose your preferred mode to set your profile image";
+"Camera"="Camera";
+"Photo Library"="Photo Library";
+"Gifts"="Gifts";
+"Get 50 % Off For Your Next Order"="Get 50 % Off For Your Next Order";
+"End in : 25/10/2021"="End in : 25/10/2021";
+"300$"="300$";
+"Eng"="Eng";
+"AR"="AR";
+"Saved addresses"="Saved addresses";
+"Wallet"= "Wallet";
+"Change password"="Change password";
+"Notification"="Notification";
+"Language"= "Language";
+"Logout"="Logout";
+"Thank You!"="Thank You!";
+"Get 50 % Off For Your Next Order"="Get 50 % Off For Your Next Order";
+"Order With Gift"="Order With Gift";
+"Later"="Later";
+
+//HomeFavorite
+
+
+//HomeFilter
+
+"Select Your Category"="Select Your Category";
+
+
+//SelectedItemScenes
+
+//SelectedItemAddNotes
+
+"First Step"="First Step";
+"Second Step"="Second Step";
+"Add Notes To Your Order"="Add Notes To Your Order";
+"Add Notes"="Add Notes";
+"Add Cards"="Add Cards";
+
+//SelectedItemAddNotesSheetView
+
+"Add Notes To Your Order"="Add Notes To Your Order";
+"Add Your Notes...."="Add Your Notes....";
+
+
+//SSHomeCheckout
+
+"Back"="Back";
+"Checkout"="Checkout";
+"My Order"="My Order";
+"Send Order"="Send Order";
+"Checkout"="Checkout";
+"Total"="Total";
+"Delivery Cost"="Delivery Cost";
+"Sub Total"="Sub Total";
+
+//SHomeCheckoutAddVisa
+
+"Delivery Address"="Delivery Address";
+"Change"="Change";
+"Discount"="Discount";
+
+//HomeTrackOrder
+
+"Reminding "="Reminding ";
+
+
+//HomeCheckoutSheetView
+
+"Add Credit/Debit Card"="Add Credit/Debit Card";
+"Card Number"="Card Number";
+"Expiry"="Expiry";
+"security Code"="security Code";
+"first Name"="first Name";
+"second Name"="second Name";
+"You can remove this card \n at anytime "="You can remove this card \n at anytime ";
+"Add Card"="Add Card";
+"Done"="Done";
+
+//HomeCheckoutSuccessfullSheetView
+
+"Thank You!"="Thank You!";
+"for your order"="for your order";
+"Your Order is now being processed. We will let you know once the order is picked from the outlet. Check the status of your Order"="Your Order is now being processed. We will let you know once the order is picked from the outlet. Check the status of your Order";
+"Track my order"="Track my order";
+"Back to home"="Back to home";
+
+//HomeOrders
+
+"Reorder"="Reorder";
+"Error"="Error";
+"Ok"="Ok";
+
+
+

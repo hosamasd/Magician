@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeCheckoutAddVisaTopView: View {
+struct AddVisaChangeAddressView: View {
     @ObservedObject var vm:HomeCheckoutViewModel
     
     var body: some View {

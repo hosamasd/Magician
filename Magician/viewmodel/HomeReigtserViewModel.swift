@@ -176,7 +176,7 @@ class HomeReigtserViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self.isUserLogin.toggle()
                 self.isOTP=false
-                self.isSignUp=false
+//                self.isSignUp=false
                 
             }
         }

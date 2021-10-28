@@ -22,7 +22,7 @@ struct SHomeCheckoutAddVisa: View {
             //        ScrollView(isSmallDevice() ? .vertical : .init(), showsIndicators: false, content: {
             //            VStack {
             
-            HomeCheckoutAddVisaTopView(vm: vm)
+            AddVisaChangeAddressView(vm: vm)
                 .padding(.horizontal,24)
                 .background(Color.white)
             
