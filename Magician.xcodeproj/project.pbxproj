@@ -472,8 +472,8 @@
 		4E3AF3F0271D80A60051A70B /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				4EDC3935271FE9CA008011E0 /* filter process */,
 				4E3AF3F2271D80B90051A70B /* HomeFilter.swift */,
+				4EDC3935271FE9CA008011E0 /* filter process */,
 				4E3AF3FE271D83E10051A70B /* second */,
 				4E3AF3F8271D81DF0051A70B /* HomeFilterTopView.swift */,
 				4E3AF3F6271D818A0051A70B /* HomeFilterRowView.swift */,

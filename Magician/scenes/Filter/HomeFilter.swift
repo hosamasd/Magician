@@ -121,6 +121,10 @@ struct HomeFilter: View {
             vm.filterArray.isEmpty ? vm.getData() : ()
         })
         
+        .overlay(overlayView: Banner.init(data: Banner.BannerDataModel(title: "Eroor",titleAr: "خطأ", detail: vm.alertMsg, type: .error), show: $vm.alert)
+                    .padding(.horizontal)
+                 , show: $vm.alert)
+        
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isSelectItem, content: {
                                             SelectedItemScenes(isShow:  $isSelectItem,selectedItem:selectedItem)  })

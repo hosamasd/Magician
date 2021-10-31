@@ -74,6 +74,10 @@ struct HomeFavorite: View {
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         
+        .overlay(overlayView: Banner.init(data: Banner.BannerDataModel(title: "Eroor",titleAr: "خطأ", detail: vm.alertMsg, type: .error), show: $vm.alert)
+                    .padding(.horizontal)
+                 , show: $vm.alert)
+        
         //        }
         
         .background(EmptyView()

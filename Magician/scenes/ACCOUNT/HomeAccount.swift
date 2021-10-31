@@ -123,10 +123,15 @@ struct HomeAccount: View {
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         
-        .alert(isPresented: $vm.alert) {
-            
-            Alert(title: Text("Error"), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
-        }
+//        .alert(isPresented: $vm.alert) {
+//            
+//            Alert(title: Text("Error"), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
+//        }
+        
+        .overlay(overlayView: Banner.init(data: Banner.BannerDataModel(title: "Eroor",titleAr: "خطأ", detail: vm.alertMsg, type: .error), show: $vm.alert)
+                    .padding(.horizontal)
+                 , show: $vm.alert)
+        
         .alert(isPresented:$vm.isShowLogout) {
             Alert(
                 title: Text(" Logout?"),
@@ -147,6 +152,8 @@ struct HomeAccount: View {
                 secondaryButton: .cancel()
             )
         }
+        
+        
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $vm.isSavedAddress, content: {

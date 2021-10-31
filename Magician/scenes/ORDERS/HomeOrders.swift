@@ -13,54 +13,61 @@ struct HomeOrders: View {
     
     @EnvironmentObject var vmm : HomeMainTabBarViewModel
     @EnvironmentObject var vms : HomeCheckoutViewModel
-
+    
     @State var isSelectItem=false
     @State var isSelectItemTrack=false
-
+    
     @State var selectedItem = OfferModel(name: "", img: "", subImg: "", type: "", location: "", rating: "")
     
     var body: some View {
         VStack {
             
-            VStack {
+            ZStack{
                 
-                //                HomeOrdersTopView(vm:vm)
-                HomeOrdersTopView()
-                    .environmentObject(vm)
-                
-                ScrollView(showsIndicators:false){
+                VStack {
                     
+                    //                HomeOrdersTopView(vm:vm)
+                    HomeOrdersTopView()
+                        .environmentObject(vm)
                     
-                    LazyVStack(alignment: .center, spacing: 16) {
-                        //                            VStack(spacing: 20){
+                    ScrollView(showsIndicators:false){
                         
-                        ForEach(vm.ordersArray){msg in
+                        
+                        LazyVStack(alignment: .center, spacing: 16) {
+                            //                            VStack(spacing: 20){
                             
-                            OrderRowView(x: msg)
-                                .frame(width:getFrameSize().width-28)
-                                .onTapGesture(perform: {getDistination(msg: msg)
-                                    
-                                   
-//                                    selectedItem=OfferModel(name: msg.name, img: msg.img, subImg: msg.img, type: msg.name, location: msg.desc, rating: msg.price)
-//                                    isSelectItem=true
-                                })
+                            ForEach(vm.ordersArray){msg in
+                                
+                                OrderRowView(x: msg)
+                                    .frame(width:getFrameSize().width-28)
+                                    .onTapGesture(perform: {getDistination(msg: msg)
+                                        
+                                        
+                                        //                                    selectedItem=OfferModel(name: msg.name, img: msg.img, subImg: msg.img, type: msg.name, location: msg.desc, rating: msg.price)
+                                        //                                    isSelectItem=true
+                                    })
+                                
+                            }
                             
                         }
+                        .padding(.top,20)
+                        .frame(width:getFrameSize().width-28)
+                        .padding(.bottom,getBottomSpace())
+                        
+                        
                         
                     }
-                    .padding(.top,20)
-                    .frame(width:getFrameSize().width-28)
-                    .padding(.bottom,getBottomSpace())
-                    
-                    
                     
                 }
+                .padding(.horizontal,32)
                 
+                if vm.isLooding {
+                    LoadingCapsuleSpacing()
+                }
             }
-            .padding(.horizontal,32)
             
             //            .padding(.bottom,getBottomSpace())
-            Spacer()
+            //            Spacer()
         }
         .background(Color("bg"))
         .edgesIgnoringSafeArea(.all)
@@ -68,10 +75,14 @@ struct HomeOrders: View {
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         
-        .alert(isPresented: $vm.alert) {
-            
-            Alert(title: Text(LocalizedStringKey("Error")), message: Text(self.vm.alertMsg), dismissButton: .default(Text(LocalizedStringKey("Ok"))))
-        }
+        //        .alert(isPresented: $vm.alert) {
+        //            
+        //            Alert(title: Text(LocalizedStringKey("Error")), message: Text(self.vm.alertMsg), dismissButton: .default(Text(LocalizedStringKey("Ok"))))
+        //        }
+        
+        .overlay(overlayView: Banner.init(data: Banner.BannerDataModel(title: "Eroor",titleAr: "خطأ", detail: vm.alertMsg, type: .error), show: $vm.alert)
+                    .padding(.horizontal)
+                 , show: $vm.alert)
         
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isSelectItem, content: {
@@ -79,10 +90,10 @@ struct HomeOrders: View {
         )
         .background(EmptyView()
                         .fullScreenCover(isPresented: $isSelectItemTrack, content: {
-                                            HomeTrackMyOrder()
-                                                .environmentObject(vmm)
-                                                .environmentObject(vms)
-                                              })
+                            HomeTrackMyOrder()
+                                .environmentObject(vmm)
+                                .environmentObject(vms)
+                        })
         )
         
     }

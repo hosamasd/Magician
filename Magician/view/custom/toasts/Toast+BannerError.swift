@@ -11,6 +11,8 @@ struct Banner: View {
     
     struct BannerDataModel {
         var title:String
+        var titleAr:String=""
+
         var detail:String
         var type: BannerType
     }
