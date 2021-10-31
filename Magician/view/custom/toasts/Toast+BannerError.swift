@@ -12,9 +12,11 @@ struct Banner: View {
     struct BannerDataModel {
         var title:String
         var titleAr:String=""
-
+        
         var detail:String
         var type: BannerType
+        var isArabic=false
+        
     }
     
     enum BannerType {
@@ -56,9 +58,9 @@ struct Banner: View {
             HStack {
                 Image.init(systemName: data.type.sfSymbol)
                     .font(.system(size: 35))
-                    
+                
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(LocalizedStringKey(data.title))
+                    Text(LocalizedStringKey(data.isArabic ? data.titleAr : data.title))
                         .font(.system(size: 18))
                         .bold()
                     Text(LocalizedStringKey(data.detail))
@@ -68,7 +70,7 @@ struct Banner: View {
             }
             .foregroundColor(Color.white)
             .padding(12)
-//            .padding(.horizontal)
+            //            .padding(.horizontal)
             .background(data.type.tintColor)
             .cornerRadius(8)
             
@@ -76,7 +78,7 @@ struct Banner: View {
         }
         .padding()
         .padding(.horizontal)
-
+        
         .animation(.easeInOut)
         .transition(AnyTransition.move(edge: .top).combined(with: .opacity))
         .onTapGesture {

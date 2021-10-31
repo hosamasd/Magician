@@ -19,7 +19,7 @@ struct AccountRowView: View {
     var isOriginal = true
     var isLogout = false
     var isChangeLanguage = false
-
+    
     var body: some View {
         VStack{
             
@@ -31,7 +31,7 @@ struct AccountRowView: View {
                     //                    .font(.system(size: 14))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)//.opacity(0.6))
-
+                
                 
                 
                 
@@ -75,6 +75,7 @@ struct AccountRowView: View {
                                 
                                 Button(action: {
                                     withAnimation{
+                                        //                                        vmm.isArabicLanguage=false
                                         print(123)
                                     }
                                 }, label: {
@@ -97,6 +98,8 @@ struct AccountRowView: View {
                                 
                                 Button(action: {
                                     withAnimation{
+                                        //                                        vmm.isArabicLanguage=true
+                                        
                                         print(123)
                                         
                                     }
@@ -155,6 +158,6 @@ struct AccountRowView: View {
 struct AccountRowView_Previews: PreviewProvider {
     static var previews: some View {
         HomeAccount()
-//        AccountRowView(vm: HomeAccountViewModel())
+        //        AccountRowView(vm: HomeAccountViewModel())
     }
 }

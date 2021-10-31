@@ -12,37 +12,15 @@ struct ContentView: View {
     @StateObject var vms = HomeReigtserViewModel()
     @StateObject var vmss = HomeOrdersViewModel()
     @StateObject var vmsss = MainHomeTabViewModel()
-
+    
     var body: some View {
         
-        //        HomeONBoardScene()
-        //        MainHomeTabBar()
-        //                    .environmentObject(vm)
         
         
-        //        LoginView(vm: HomeReigtserViewModel())
-        
-        //        MainHomeTabBar()
-        
-        //enteredLocation: $enteredLocation)
-        
-        //        AccountSavedAddress(vm: HomeAccountViewModel())
-        
-        
-        
-        
-        
-//            .environmentObject(vmsss)
+        //final
+        MainHomeWelcome()
+            .environmentObject(vm)
             
-            
-            //        MainHomeWelcome()
-//            .environmentObject(vm)
-//            .environmentObject(vmss)
-            
-            
-            //final
-                    MainHomeWelcome()
-                               .environmentObject(vm)
             .environment(\.layoutDirection, vm.isArabicLanguage ?  .rightToLeft : .leftToRight)
             .environment(\.locale, Locale(identifier:vm.isArabicLanguage ? "ar" : "en"))
     }
