@@ -21,6 +21,9 @@ struct SSHomeCheckout: View {
         
     ]
     
+//    @State var placement: Placement = ToolbarItemPlacement.leading
+
+    
     @StateObject var vm = HomeCheckoutViewModel()
     @EnvironmentObject var vmm:HomeMainTabBarViewModel
 

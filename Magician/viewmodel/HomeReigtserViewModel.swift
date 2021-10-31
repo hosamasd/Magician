@@ -73,9 +73,9 @@ class HomeReigtserViewModel: ObservableObject {
     
     func makeLogin()  {
         
-//        if checkPhone(p: emailLogin) {getError(s: "Please type valid Phone Number")  ; return  }
-//        //
-//        if checkPhone(p:passwordLogin) {getError(s: "Please type valid Password") ; return  }
+        if checkPhone(p: emailLogin) {getError(s: "Please type valid Phone Number")  ; return  }
+        //
+        if checkPhone(p:passwordLogin) {getError(s: "Please type valid Password") ; return  }
         //
         withAnimation{
             
@@ -95,17 +95,17 @@ class HomeReigtserViewModel: ObservableObject {
     
     func makeSignUp()  {
         
-//        if checkPhone(p: nameSign) {getError(s: "Please type valid User Name")  ; return  }
-//        //
-//        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
-//
-//        if checkPhone(p: mobileSign) {getError(s: "Please type valid Phone Number")  ; return  }
-//
-//        if checkPhone(p:addressSign) {getError(s: "Please Choose vaLid Address") ; return  }
-//
-//        if checkPhone(p: passwordSign) {getError(s: "Please type valid Password")  ; return  }
-//        //
-//        if !checkPasswordAndRe() {getError(s: "Please make Password and confirm password same!") ; return }
+        if checkPhone(p: nameSign) {getError(s: "Please type valid User Name")  ; return  }
+        //
+        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
+
+        if checkPhone(p: mobileSign) {getError(s: "Please type valid Phone Number")  ; return  }
+
+        if checkPhone(p:addressSign) {getError(s: "Please Choose vaLid Address") ; return  }
+
+        if checkPhone(p: passwordSign) {getError(s: "Please type valid Password")  ; return  }
+        //
+        if !checkPasswordAndRe() {getError(s: "Please make Password and confirm password same!") ; return }
 //
         withAnimation{
             

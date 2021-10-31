@@ -113,8 +113,8 @@ struct MainHomeReg: View {
             if vm.isSHowLocation {
                 //                LoadingCircleOpacity()
                 LocationView(dismiss: $vm.isSHowLocation, locationText: $vm.addressSign)
-//                LocationView(  locationText: $vm.addressSign )
-//                    .environmentObject(vm)
+                    //                LocationView(  locationText: $vm.addressSign )
+                    //                    .environmentObject(vm)
                     .transition(.move(edge: .bottom))
                 
             }
@@ -125,10 +125,13 @@ struct MainHomeReg: View {
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         
-        .alert(isPresented: $vm.alert) {
-            
-            Alert(title: Text(LocalizedStringKey("Error")), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
-        }
+        //        .alert(isPresented: $vm.alert) {
+        //
+        //            Alert(title: Text(LocalizedStringKey("Error")), message: Text(self.vm.alertMsg), dismissButton: .default(Text("Ok")))
+        //        }
+        .overlay(overlayView: Banner.init(data: Banner.BannerDataModel(title: "Eroor", detail: vm.alertMsg, type: .error), show: $vm.alert)
+                    .padding(.horizontal)
+                 , show: $vm.alert)
     }
     
     func getHeight() -> CGFloat {

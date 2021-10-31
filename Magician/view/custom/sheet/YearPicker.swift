@@ -46,7 +46,7 @@ struct YearPicker: View {
 
     let monthSymbols = Calendar.current.monthSymbols
 //    let years = Array(Date().year..<Date().year+10)
-    let years = Array(1980..<Date().year)
+    let years = Array(Date().year..<Date().year+20)
 
     @Binding var isMonth:Bool
     @Binding var isYear:Bool

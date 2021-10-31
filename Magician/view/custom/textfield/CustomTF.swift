@@ -103,12 +103,19 @@ struct CustomTF: View {
                     }
                 }
             )
-            .frame(height:isAccountInfo ? 60 : isAddVisa ? 60 : 50)
+//            .frame(height:isAccountInfo ? 60 : isAddVisa ? 60 : 50)
+        
+            .frame(height:CGFloat(isAccountInfo ? 60 : isAddVisa ? 60 : 50))
+
     }
 }
 
 struct CustomTF_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTF(txt: .constant(""),hide: .constant(false))
+//        CustomTF(txt: .constant(""),hide: .constant(false),is)
+        CustomTF(txt: .constant(""),hint: "Confirm Password",isHide: true, hide: .constant(false),isAccountInfo:true)
+
+            .environment(\.layoutDirection,  .rightToLeft )
+            .environment(\.locale, Locale(identifier: "ar" ))
     }
 }

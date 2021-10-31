@@ -15,7 +15,7 @@ struct HomeCheckoutSheetView: View {
 
     var body: some View {
         
-            
+
             VStack() {
                 Spacer()
                 
@@ -197,20 +197,6 @@ struct HomeCheckoutSheetView: View {
             .background(Color.black.opacity(0.6))
             .edgesIgnoringSafeArea(.all)
                 
-//                .padding(.top,20)
-//                .background(GETBG().clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 18)))
-//                .offset(y: vm.isAddVisaSheet ? 0 : UIScreen.main.bounds.height/2)
-//                //                .keyboardSpace()
-//
-//
-//
-//                //            .background(Color.black.opacity(0.6))
-//                //            .edgesIgnoringSafeArea(.all)
-//            }
-//
-//            .background(Color.black.opacity(0.6))
-//            .edgesIgnoringSafeArea(.all)
-//            .ignoresSafeArea(.keyboard, edges: .bottom)
             .popup(isPresented: vm.isMonth) {
                 BottomPopupView {
                     YearPicker.init(isMonth: $vm.isMonth,isYear:$vm.isYear, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
@@ -221,7 +207,19 @@ struct HomeCheckoutSheetView: View {
                 BottomPopupView {
                     YearPicker.init(isMonth: $vm.isMonth,isYear:$vm.isYear, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
                 }
+                
+                
         }
+        
+            
+    
+//        .toolBarPopover(show: vm.isYear) {
+//            
+//            Text("sdsad ")
+////                BottomPopupView {
+////                    YearPicker.init(isMonth: $vm.isMonth,isYear:$vm.isYear, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
+////                }
+//        }
         //            .popup(isPresented: vm.isMonth, alignment: .center, content:
         //                    YearPicker.init(isMonth: $vm.isMonth, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)
         ////                    YearPicker(isMonth: $vm.isMonth, monthText: $vm.expiryMonth, yearText: $vm.expiryYear)

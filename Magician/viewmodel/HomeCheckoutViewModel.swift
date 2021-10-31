@@ -43,7 +43,7 @@ class HomeCheckoutViewModel:ObservableObject {
     @Published var isCanRemoveCard = false
     
     //sheet view
-    @Published var isAddVisaSheet = false
+    @Published var isAddVisaSheet = true
     @Published var isOperationSheetDone = false
     
     func makeCheckVisa(s:inout Bool)  {
