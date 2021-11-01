@@ -20,7 +20,7 @@ struct SContentView: View {
 
     var body: some View {
        
-        MainHomeReg()
+        HomeAccount()
 //        OverlayDemo()
 //        SSSSSSS()
 //        SSHomeCheckout(isShow: .constant(false), isShowMainParent: .constant(false))
@@ -29,7 +29,7 @@ struct SContentView: View {
         
 //        MainHomeTab()
 //            .environmentObject(vmt)
-//                   .environmentObject(vm)
+                   .environmentObject(wqq)
             .environmentObject(vm)
 
 //            .environment(\.layoutDirection,  .leftToRight )

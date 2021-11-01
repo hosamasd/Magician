@@ -151,7 +151,7 @@ struct AccountRowView: View {
             .padding(.horizontal,32)
             
         }
-        .background(Color.white)
+//        .background(Color.white)
     }
 }
 

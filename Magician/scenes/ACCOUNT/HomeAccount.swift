@@ -55,20 +55,22 @@ struct HomeAccount: View {
                                     .onTapGesture(perform: {
                                         withAnimation{vm.isAccountInfo.toggle()}
                                     })
-                                
+//
                                 AccountRowView(vm: vm,name: "Saved addresses")
                                     .onTapGesture(perform: {
                                         withAnimation{vm.isSavedAddress.toggle()}
                                     })
-                                
+
                                 AccountRowView(vm: vm,name: "Wallet",isText: true,isOriginal: false)
-                                
+
                                 AccountRowView(vm: vm,name: "Change password")
                                     .onTapGesture(perform: {
                                         withAnimation{vm.isChangePassword.toggle()}
                                     })
                                 AccountRowView(vm: vm,name: "Notification",isCheck: true,isOriginal: false)
+
                                 AccountRowView(vm: vm,name: "Language",isCheck: false,isOriginal: false,isChangeLanguage: true)
+
                                 AccountRowView(vm: vm,name: "Logout",isCheck: false,isOriginal: false,isLogout: true)
                                     .onTapGesture(perform: {
                                         withAnimation{vm.isShowLogout.toggle()}
@@ -78,7 +80,7 @@ struct HomeAccount: View {
                             }
                             .padding(.vertical,30)
                             .background(Color.white)
-                            .cornerRadius(10)
+                            .cornerRadius(19)
                         }
                         //                        .background(Color.white)
                         .padding(.top,20)

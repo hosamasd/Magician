@@ -30,34 +30,53 @@ struct HomeOrders: View {
                     HomeOrdersTopView()
                         .environmentObject(vm)
                     
-                    ScrollView(showsIndicators:false){
+                    if vm.ordersArray.isEmpty {
                         
                         
-                        LazyVStack(alignment: .center, spacing: 16) {
-                            //                            VStack(spacing: 20){
+                        
+                        VStack {
                             
-                            ForEach(vm.ordersArray){msg in
-                                
-                                OrderRowView(x: msg)
-                                    .frame(width:getFrameSize().width-28)
-                                    .onTapGesture(perform: {getDistination(msg: msg)
-                                        
-                                        
-                                        //                                    selectedItem=OfferModel(name: msg.name, img: msg.img, subImg: msg.img, type: msg.name, location: msg.desc, rating: msg.price)
-                                        //                                    isSelectItem=true
-                                    })
-                                
-                            }
+                            Spacer()
+                            
+                            Text(LocalizedStringKey("No Orders Found"))
+                                .font(.system(size: 25))
+                                .fontWeight(.bold)
+                            
+                            Spacer()
                             
                         }
-                        .padding(.top,20)
-                        .frame(width:getFrameSize().width-28)
-                        .padding(.bottom,getBottomSpace())
+                    }
+                    else {
                         
-                        
+                        ScrollView(showsIndicators:false){
+                            
+                            
+                            LazyVStack(alignment: .center, spacing: 16) {
+                                //                            VStack(spacing: 20){
+                                
+                                ForEach(vm.ordersArray){msg in
+                                    
+                                    OrderRowView(x: msg)
+                                        .frame(width:getFrameSize().width-28)
+                                        .onTapGesture(perform: {getDistination(msg: msg)
+                                            
+                                            
+                                            //                                    selectedItem=OfferModel(name: msg.name, img: msg.img, subImg: msg.img, type: msg.name, location: msg.desc, rating: msg.price)
+                                            //                                    isSelectItem=true
+                                        })
+                                    
+                                }
+                                
+                            }
+                            .padding(.top,20)
+                            .frame(width:getFrameSize().width-28)
+                            .padding(.bottom,getBottomSpace())
+                            
+                            
+                            
+                        }
                         
                     }
-                    
                 }
                 .padding(.horizontal,32)
                 
@@ -95,6 +114,12 @@ struct HomeOrders: View {
                                 .environmentObject(vms)
                         })
         )
+        
+        .onAppear(perform: {
+            withAnimation{
+                vm.ordersArray.isEmpty ? vm.fetchApi() : ()
+            }
+        })
         
     }
     

@@ -29,39 +29,61 @@ struct HomeFavorite: View {
                     HomeFavoriteTopView(columns: $columns)
                         .padding(.vertical)
                     
-                    ScrollView(showsIndicators:false){
-                        
-                        //                        HomeFavoriteTopView(columns: $columns)
-                        //                            .padding(.vertical)
+                    if vm.favoriteArray.isEmpty {
                         
                         
-                        LazyVGrid(columns: columns,spacing: vm.isSingleItemLists == 1 ?  16 : 16){
+                        
+                        VStack {
                             
-                            // assigning name as ID...
+                            Spacer()
                             
-                            ForEach(vm.favoriteArray,id: \.name){gradient in
-                                
-                                FavoriteRowView(x:gradient)
-                                    .onTapGesture(perform: {
-                                        selectedItem=gradient
-                                        isSelectItem=true
-                                    })
-                                //                                    GradientView(columns: $columns, gradient: gradient, vm: vm)
-                            }
+                            Text(LocalizedStringKey("No Favorites Found"))
+                                .font(.system(size: 25))
+                                .fontWeight(.bold)
+                            
+                            Spacer()
+                            
                         }
-                        .padding(.horizontal)
-                        .padding(.bottom)
+                    }
+                    else {
                         
-                        .padding(.bottom,getBottomSpace())
+                        
+                        ScrollView(showsIndicators:false){
+                            
+                            //                        HomeFavoriteTopView(columns: $columns)
+                            //                            .padding(.vertical)
+                            
+                            
+                            LazyVGrid(columns: columns,spacing: vm.isSingleItemLists == 1 ?  16 : 16){
+                                
+                                // assigning name as ID...
+                                
+                                ForEach(vm.favoriteArray,id: \.name){gradient in
+                                    
+                                    FavoriteRowView(x:gradient)
+                                        .redacted(reason: vm.isLooding ? .placeholder : [])//for shimmer
+                                        .onTapGesture(perform: {
+                                            selectedItem=gradient
+                                            isSelectItem=true
+                                        })
+                                    //                                    GradientView(columns: $columns, gradient: gradient, vm: vm)
+                                }
+                            }
+                            .padding(.horizontal)
+                            .padding(.bottom)
+                            
+                            .padding(.bottom,getBottomSpace())
+                            
+                        }
                         
                     }
                     
                 }
                 .padding(.horizontal,32)
                 
-                if vm.isLooding {
-                    LoadingCapsuleSpacing()
-                }
+                                if vm.isLooding {
+                                    LoadingCapsuleSpacing()
+                                }
             }
             
         }
@@ -85,6 +107,12 @@ struct HomeFavorite: View {
                                             SelectedItemScenes(isShow:  $isSelectItem,selectedItem:selectedItem)  })
         )
         
+        .onAppear(perform: {
+            withAnimation{
+                                vm.favoriteArray.isEmpty ? vm.fetchApi() : ()
+            }
+        })
+        
     }
     
     
@@ -96,6 +124,7 @@ struct HomeFavorite: View {
 
 struct HomeFavorite_Previews: PreviewProvider {
     static var previews: some View {
-        HomeFavorite()
+        SContentView()
+        //        HomeFavorite()
     }
 }

@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+struct SS:Identifiable {
+    var id = UUID().uuidString
+    var name,price:String
+
+
+}
+
 struct SSHomeCheckout: View {
     var x =         OfferModel(name: "Nobile Houses", img: "bsfwf", subImg: "1-1", type: "TYPE-TYPE", location: "cairo,egypt", rating: "4.5")
     @Binding var isShow:Bool

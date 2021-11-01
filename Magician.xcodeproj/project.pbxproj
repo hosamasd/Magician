@@ -10,6 +10,8 @@
 		4E09BFB327182EC3006928FD /* HomeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09BFB227182EC3006928FD /* HomeCategoryView.swift */; };
 		4E09BFB627182FD5006928FD /* HomeTopRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09BFB527182FD5006928FD /* HomeTopRating.swift */; };
 		4E09BFB927183092006928FD /* HomeSpecialOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09BFB827183092006928FD /* HomeSpecialOffer.swift */; };
+		4E09FAF2272ED5C300872BF8 /* MainServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09FAF1272ED5C300872BF8 /* MainServices.swift */; };
+		4E09FAF5272ED68100872BF8 /* MonthlyReportEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09FAF4272ED68100872BF8 /* MonthlyReportEndpoint.swift */; };
 		4E1538C62714B15200D5DD52 /* MainHomeReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538C52714B15200D5DD52 /* MainHomeReg.swift */; };
 		4E1538C82714B36700D5DD52 /* NewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538C72714B36700D5DD52 /* NewPasswordView.swift */; };
 		4E1538CA2714B3C100D5DD52 /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1538C92714B3C100D5DD52 /* CustomTF.swift */; };
@@ -66,6 +68,7 @@
 		4E5C6C2B271847A100FA5298 /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C6C2A271847A100FA5298 /* CategoryRowView.swift */; };
 		4E5C6C2D27184C8300FA5298 /* TopRatingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C6C2C27184C8300FA5298 /* TopRatingRowView.swift */; };
 		4E8F59042726C323006CA7DC /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E8F59032726C323006CA7DC /* gif.gif */; };
+		4EAD4EC5272FC0380026C7EE /* HomeFavoriteWithShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD4EC4272FC0380026C7EE /* HomeFavoriteWithShimmer.swift */; };
 		4EAEE3B1271EC135003C482F /* HomeCheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B0271EC135003C482F /* HomeCheckoutViewModel.swift */; };
 		4EAEE3B4271EC260003C482F /* HomeCheckoutAddVisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B3271EC260003C482F /* HomeCheckoutAddVisa.swift */; };
 		4EAEE3B6271EC36B003C482F /* AddVisaChangeAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEE3B5271EC36B003C482F /* AddVisaChangeAddressView.swift */; };
@@ -167,6 +170,8 @@
 		4E09BFB227182EC3006928FD /* HomeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryView.swift; sourceTree = "<group>"; };
 		4E09BFB527182FD5006928FD /* HomeTopRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopRating.swift; sourceTree = "<group>"; };
 		4E09BFB827183092006928FD /* HomeSpecialOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpecialOffer.swift; sourceTree = "<group>"; };
+		4E09FAF1272ED5C300872BF8 /* MainServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainServices.swift; sourceTree = "<group>"; };
+		4E09FAF4272ED68100872BF8 /* MonthlyReportEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyReportEndpoint.swift; sourceTree = "<group>"; };
 		4E1538C52714B15200D5DD52 /* MainHomeReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeReg.swift; sourceTree = "<group>"; };
 		4E1538C72714B36700D5DD52 /* NewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordView.swift; sourceTree = "<group>"; };
 		4E1538C92714B3C100D5DD52 /* CustomTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
@@ -223,6 +228,7 @@
 		4E5C6C2A271847A100FA5298 /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
 		4E5C6C2C27184C8300FA5298 /* TopRatingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatingRowView.swift; sourceTree = "<group>"; };
 		4E8F59032726C323006CA7DC /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
+		4EAD4EC4272FC0380026C7EE /* HomeFavoriteWithShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFavoriteWithShimmer.swift; sourceTree = "<group>"; };
 		4EAEE3B0271EC135003C482F /* HomeCheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutViewModel.swift; sourceTree = "<group>"; };
 		4EAEE3B3271EC260003C482F /* HomeCheckoutAddVisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutAddVisa.swift; sourceTree = "<group>"; };
 		4EAEE3B5271EC36B003C482F /* AddVisaChangeAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVisaChangeAddressView.swift; sourceTree = "<group>"; };
@@ -349,7 +355,6 @@
 			children = (
 				4E09BFB527182FD5006928FD /* HomeTopRating.swift */,
 				4EE279852718765D004EE0B6 /* STopRatingRowView.swift */,
-				4E5C6C2C27184C8300FA5298 /* TopRatingRowView.swift */,
 			);
 			path = "top rating";
 			sourceTree = "<group>";
@@ -359,10 +364,30 @@
 			children = (
 				4E09BFB827183092006928FD /* HomeSpecialOffer.swift */,
 				4EF580DA27283E4B00478BCD /* SSSpecialOfferRowView.swift */,
-				4E56093F2718558300539B9C /* SpecialOfferRowView.swift */,
-				4EF580D827283D1A00478BCD /* SSpecialOfferRowView.swift */,
 			);
 			path = "special offer";
+			sourceTree = "<group>";
+		};
+		4E09FAF0272ED52000872BF8 /* may be used */ = {
+			isa = PBXGroup;
+			children = (
+				4E2F0D4A2727CC230092CE91 /* SUsedTabBar.swift */,
+				4EFB122C271695F7008A240A /* UsedTabBar.swift */,
+				4E56093F2718558300539B9C /* SpecialOfferRowView.swift */,
+				4EF580D827283D1A00478BCD /* SSpecialOfferRowView.swift */,
+				4E5C6C2C27184C8300FA5298 /* TopRatingRowView.swift */,
+				4EB2A0202721AB92008DAC14 /* SHomeCheckout.swift */,
+				4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */,
+			);
+			path = "may be used";
+			sourceTree = "<group>";
+		};
+		4E09FAF3272ED65E00872BF8 /* End Points */ = {
+			isa = PBXGroup;
+			children = (
+				4E09FAF4272ED68100872BF8 /* MonthlyReportEndpoint.swift */,
+			);
+			path = "End Points";
 			sourceTree = "<group>";
 		};
 		4E1538CB2714B3C300D5DD52 /* custom */ = {
@@ -409,13 +434,6 @@
 				4ECD6DBD271460D800011208 /* HomeONBoard.swift */,
 			);
 			path = "may be used";
-			sourceTree = "<group>";
-		};
-		4E181F57271DB58500248DF3 /* LAST */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LAST;
 			sourceTree = "<group>";
 		};
 		4E28827F27269D9200088800 /* TRACK ORDER */ = {
@@ -669,8 +687,6 @@
 			isa = PBXGroup;
 			children = (
 				4E2A37A927254F3900280F33 /* SSHomeCheckout.swift */,
-				4EB2A0202721AB92008DAC14 /* SHomeCheckout.swift */,
-				4EDFA7D9271EB1F00067D83E /* HomeCheckout.swift */,
 			);
 			path = "home checkout";
 			sourceTree = "<group>";
@@ -703,8 +719,10 @@
 		4EBF11552715881C008C3C89 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				4E09FAF1272ED5C300872BF8 /* MainServices.swift */,
 				4EBF11562715882B008C3C89 /* NetworkManger.swift */,
 				4EBF11572715882B008C3C89 /* URLBuilder.swift */,
+				4E09FAF3272ED65E00872BF8 /* End Points */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -723,6 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				4ECAD7F3271C674800C258A5 /* HomeFavorite.swift */,
+				4EAD4EC4272FC0380026C7EE /* HomeFavoriteWithShimmer.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -764,6 +783,7 @@
 				4ECD6DAD27145E1C00011208 /* model */,
 				4ECD6DAC27145E1900011208 /* view */,
 				4ECD6DAB27145E1500011208 /* scenes */,
+				4E09FAF0272ED52000872BF8 /* may be used */,
 				4ECD6DA027145E0700011208 /* Assets.xcassets */,
 				4EB8FFE727148551008C0D03 /* support files */,
 				4ECD6DA527145E0700011208 /* Info.plist */,
@@ -786,7 +806,6 @@
 				4EDFA7D8271EB1D20067D83E /* CHECKOUT */,
 				4EB2A01F2721AAC6008DAC14 /* home checkout */,
 				4E52C291272940C900C92648 /* SelectedItemScenes */,
-				4E181F57271DB58500248DF3 /* LAST */,
 				4E3AF3F0271D80A60051A70B /* Filter */,
 				4ECAD7F1271C673400C258A5 /* Favorites */,
 				4E5B597527181B14004C7D2F /* main Home */,
@@ -1056,8 +1075,6 @@
 			children = (
 				4EFB12282716950D008A240A /* MainHomeTabBar.swift */,
 				4E2F0D4C2727D0620092CE91 /* SSUsedTabBar.swift */,
-				4E2F0D4A2727CC230092CE91 /* SUsedTabBar.swift */,
-				4EFB122C271695F7008A240A /* UsedTabBar.swift */,
 			);
 			path = "tab bar";
 			sourceTree = "<group>";
@@ -1164,6 +1181,7 @@
 				4ECD6DB927145E8500011208 /* Extensions_ui.swift in Sources */,
 				4EDCE3F727292B7D001CADBB /* InternetConnection.swift in Sources */,
 				4E171E452716F3C3000837BF /* HomeAccountTopView.swift in Sources */,
+				4E09FAF5272ED68100872BF8 /* MonthlyReportEndpoint.swift in Sources */,
 				4EFC794A2716C8DE00C5DF36 /* MainMapView.swift in Sources */,
 				4EAEE3B1271EC135003C482F /* HomeCheckoutViewModel.swift in Sources */,
 				4E3AF3FB271D823A0051A70B /* SecondHomeFilterTopView.swift in Sources */,
@@ -1182,6 +1200,7 @@
 				4E5B597E27181D0D004C7D2F /* MainHomeTabProfileInfo.swift in Sources */,
 				4E1538CA2714B3C100D5DD52 /* CustomTF.swift in Sources */,
 				4EBF11592715882B008C3C89 /* URLBuilder.swift in Sources */,
+				4EAD4EC5272FC0380026C7EE /* HomeFavoriteWithShimmer.swift in Sources */,
 				4E38AF81271E93B000D87FAA /* FirstStepView.swift in Sources */,
 				4E1538D12714B6DF00D5DD52 /* LoginView.swift in Sources */,
 				4EEF4D8627171D3900D39193 /* HomeAccountImage.swift in Sources */,
@@ -1261,6 +1280,7 @@
 				4EFB122D271695F7008A240A /* UsedTabBar.swift in Sources */,
 				4EDBAB13271801C300AFD181 /* OrderRowView.swift in Sources */,
 				4ECD6D9F27145E0400011208 /* ContentView.swift in Sources */,
+				4E09FAF2272ED5C300872BF8 /* MainServices.swift in Sources */,
 				4EED73C4271D48D50059DD57 /* ThirdHomeSelectedCategoryRowView.swift in Sources */,
 				4EDA2DB0271F09D6003CA71A /* BottomPopupView.swift in Sources */,
 				4E3AF3FD271D83DB0051A70B /* SecondHomeFilterRowView.swift in Sources */,

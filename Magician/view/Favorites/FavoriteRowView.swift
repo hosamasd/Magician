@@ -94,6 +94,7 @@ struct FavoriteRowView: View {
                             .padding(.vertical,6)
                             .background(Color("mains").opacity(0.22))
                             .clipShape(Capsule())
+                            .unredacted()//for keep not shimmer
                     }
                     
                     
@@ -158,7 +159,7 @@ struct FavoriteRowView: View {
                                 .padding(.vertical,3)
                                 .background(Color("mains").opacity(0.22))
                                 .clipShape(Capsule())
-                                .padding(.leading,isSmallDevice() ? 2 : 4)
+                                .padding(.leading,CGFloat(isSmallDevice() ? 2 : 4))
                         }
                         
                         Text("Chicken skewers ")
@@ -232,7 +233,7 @@ struct FavoriteRowView: View {
                                 Spacer()
                                 
                             }
-                            HStack(spacing:isSmallDevice() ? 2 : 2){
+                            HStack(spacing:CGFloat(isSmallDevice() ? 2 : 2)){
                                 
                                 Text("110 EGP")
                                     .font(.system(size: isSmallDevice() ? 8 : 10))
@@ -261,13 +262,13 @@ struct FavoriteRowView: View {
                             .padding(.leading,4)
                         }
                     })
-                    .padding(.horizontal,isSmallDevice() ? 3 : 8)//6
+                    .padding(.horizontal,CGFloat(isSmallDevice() ? 3 : 8))//6
                     //                    .background(Color.red)
                     //                    .offset(y:-60)
                     
                 }
             }
-            .frame(height:vm.isSingleItemLists==1 ? 120 : 80)//230
+            .frame(height:CGFloat(vm.isSingleItemLists==1 ? 120 : 80))//230
             
         }
         //        .frame(height:vm.isSingleItemLists==1 ? 250 : 250)//230
@@ -285,6 +286,7 @@ struct FavoriteRowView: View {
                 y: 2
             )
         )
+//        .redacted(reason: .placeholder)//for shimmer
         
         //                if self.vm.isSingleItemLists==2 {
         //
@@ -365,6 +367,7 @@ struct FavoriteRowView: View {
 
 struct FavoriteRowView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteRowView()
+        SContentView()
+//        FavoriteRowView()
     }
 }

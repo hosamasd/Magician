@@ -72,15 +72,20 @@ struct HomeAccountPointsView: View {
             })
             .frame( height: 6)
             .padding(.horizontal)
+            .padding(.top,0)
 
 //            .padding(.horizontal,8)
         }
         .frame(width:getFrameSize().width-64)
+        .padding(.vertical,8)
+        .background(Color.white)
+
 //        .padding(.horizontal,32)
-        .cornerRadius(10)
+        .cornerRadius(19)
 //        .frame(width:getFrameSize().width-32)
 
     }
+    
 }
 
 struct HomeAccountPointsView_Previews: PreviewProvider {

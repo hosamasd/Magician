@@ -31,30 +31,27 @@ struct HomeSelectedCategoryTopView: View {
                 
                 Spacer()
                 
-                Image("Group 8179")
-                    .resizable()
-                    .frame(width:130,height:40)
+                Label(
+                    title: {
+                        Text("Cairo, Egypt")
+                            .font(.system(size: 14))
 
-//                    .frame(width:150,height:40)
-                    .overlay(
+//                            .font(.system(size: 14))
+                            .fontWeight(.regular)
                         
-                        Label(
-                            title: { Text("Cairo, Egypt")
-//                                .font(.system(size: 14))
-                                .font(.system(size: 14))
-
-                                .fontWeight(.regular)
-                                .padding(.horizontal,8)
-                                
-                            },
-                            icon: { Image("location")
-                                .padding(.leading)
-                                //                            .resizable()
-                                //                            .frame(width: 45, height: 50)
-                            }
-                        )
-                        
-                    )
+                    },
+                    icon: {
+                        Image("location")
+                        //                        .resizable()
+                        //                        .frame(width: 45, height: 50)
+                    }
+                )
+//                .padding(.horizontal,16)
+//                .frame(height:40)
+                .frame(width:130,height:40)
+                //                .padding(16)
+                .background(Color("mains").opacity(0.10))
+                .cornerRadius(10)
                 
             }
             
