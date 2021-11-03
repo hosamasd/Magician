@@ -104,7 +104,7 @@ struct MainHomeReg: View {
                 SignUpView()//vm:vm)
                     .environmentObject(vm)
                     .environmentObject(vmm)
-
+                    
                     .transition(.move(edge: .bottom))
                     .opacity(vm.isSignUp ? 1 : 0)
                 
@@ -116,14 +116,14 @@ struct MainHomeReg: View {
             }
             
             //if need location panel
-//            if vm.isSHowLocation {
-//                //                LoadingCircleOpacity()
-//                LocationView(dismiss: $vm.isSHowLocation, locationText: $vm.addressSign)
-//                    //                LocationView(  locationText: $vm.addressSign )
-//                    //                    .environmentObject(vm)
-//                    .transition(.move(edge: .bottom))
-//
-//            }
+            //            if vm.isSHowLocation {
+            //                //                LoadingCircleOpacity()
+            //                LocationView(dismiss: $vm.isSHowLocation, locationText: $vm.addressSign)
+            //                    //                LocationView(  locationText: $vm.addressSign )
+            //                    //                    .environmentObject(vm)
+            //                    .transition(.move(edge: .bottom))
+            //
+            //            }
         }
         
         .edgesIgnoringSafeArea(.all)

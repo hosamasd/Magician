@@ -125,25 +125,20 @@ class HomeReigtserViewModel: ObservableObject {
     
     func makeResetPass()  {
 //        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
-        DispatchQueue.main.async {
-            self.isNewPass.toggle()
-//                self.isResetPass=false
-            
+   
+        withAnimation{
+
+            self.isLooding.toggle()
         }
-        
-//        withAnimation{
-//
-//            self.isLooding.toggle()
-//        }
-//
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
-//            withAnimation{self.isLooding.toggle()}
-//            DispatchQueue.main.async {
-//                self.isNewPass.toggle()
-////                self.isResetPass=false
-//
-//            }
-//        }
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
+            withAnimation{self.isLooding.toggle()}
+            DispatchQueue.main.async {
+                self.isNewPass.toggle()
+//                self.isResetPass=false
+
+            }
+        }
         
     }
     

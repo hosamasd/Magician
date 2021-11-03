@@ -24,6 +24,7 @@ struct MainHomeWelcome: View {
                 MainHomeReg()
 
                     .transition(.move(edge: .bottom))
+                    .environmentObject(vm)
                 //                    .environmentObject(vm)
 
                 if isUserLogin {
