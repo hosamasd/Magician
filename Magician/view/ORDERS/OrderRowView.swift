@@ -25,7 +25,7 @@ struct OrderRowView: View {
                     .font(.system(size: 20))
                     
                     .fontWeight(.bold)
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                 //                    .padding(.top,16)
                 //                    .offset(y:8)
                 
@@ -45,7 +45,7 @@ struct OrderRowView: View {
                     
                     //                    .font(.system(size: 25))
                     .fontWeight(.bold)
-                    .foregroundColor(Color("oprice"))//.opacity(0.6))
+                    .foregroundColor(ColorConstants.oprice)//.opacity(0.6))
                 
                 HStack{
                     Text(x.date)
@@ -65,7 +65,7 @@ struct OrderRowView: View {
                                 
                                 //                                .font(.system(size: 16))
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                                 .opacity(x.isOrdered ? 0 : 1)
                             
                             Label(

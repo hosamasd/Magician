@@ -100,7 +100,7 @@ struct STopRatingRowView: View {
             RoundedRectangle(
                 cornerRadius: 19
             )
-            .foregroundColor(Color("topRate"))
+            .foregroundColor(ColorConstants.topRate)
             .shadow(
                 color: Color.gray.opacity(0.6),
                 radius: 2.5,
@@ -111,7 +111,7 @@ struct STopRatingRowView: View {
         
 //        .padding(.horizontal,8)
 //        .padding(.vertical,8)
-//        .background(Color("topRate"))
+//        .background(ColorConstants.topRate)
 //        .cornerRadius(12)
 ////        .cornerRadius(12)
 //

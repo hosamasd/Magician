@@ -45,7 +45,7 @@ struct SelectedItemAddNotes: View {
                                     .frame(width: 31, height: 31)
                                     .overlay(
                                         Image(systemName: vmm.getBackImage())// "chevron.backward")
-                                            .foregroundColor(Color("mains"))
+                                            .foregroundColor(ColorConstants.mainColor)
                                     )
                                 //
                             })
@@ -97,7 +97,7 @@ struct SelectedItemAddNotes: View {
                             .overlay(
                                 
                                 Circle()
-                                    .fill(Color("mains"))
+                                    .fill(ColorConstants.mainColor)
                                     .frame(width: 25, height: 25)
                                     .overlay(
                                         

@@ -31,7 +31,7 @@ struct HomeCheckoutItemRowView: View {
                         Text("4.9")
                             .font(.system(size: 12))
                             
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
                             //                                                    .offset(y:-4)
                             
                             +
@@ -71,14 +71,14 @@ struct HomeCheckoutItemRowView: View {
                 Text("x2")
                     .font(.system(size: 20))
                     .fontWeight(.bold)
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                 
                 Text("110 EGP")
                     .font(.system(size:  12))
                     .fontWeight(.semibold)
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                     .padding(8)
-                    .background(Color("mains").opacity(0.1))
+                    .background(ColorConstants.mainColor.opacity(0.1))
                     .clipShape(Capsule())
                 
             }

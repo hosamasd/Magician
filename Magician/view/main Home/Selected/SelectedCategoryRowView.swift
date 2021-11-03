@@ -65,7 +65,7 @@ struct SelectedCategoryRowView: View {
                     Text(x.name)
                         .font(.system(size: 15))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                     
                     //                        Spacer()
                     //
@@ -73,10 +73,10 @@ struct SelectedCategoryRowView: View {
                     //                            .font(.system(size: 14))
                     ////                            .font(.system(size:  14))
                     //                            .fontWeight(.bold)
-                    //                            .foregroundColor(Color("mains"))
+                    //                            .foregroundColor(ColorConstants.mainColor)
                     //                            .padding(.horizontal ,  16 )
                     //                            .padding(.vertical, 6 )
-                    //                            .background(Color("mains").opacity(0.22))
+                    //                            .background(ColorConstants.mainColor.opacity(0.22))
                     //                            .clipShape(Capsule())
                     //                    }
                     HStack {
@@ -93,10 +93,10 @@ struct SelectedCategoryRowView: View {
                             .font(.system(size: 14))
                             //                            .font(.system(size:  14))
                             .fontWeight(.bold)
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
                             .padding(.horizontal ,  16 )
                             .padding(.vertical, 6 )
-                            .background(Color("mains").opacity(0.22))
+                            .background(ColorConstants.mainColor.opacity(0.22))
                             .clipShape(Capsule())
                         
                     }
@@ -122,11 +122,11 @@ struct SelectedCategoryRowView: View {
                             Text("110 EGP")
                                 .font(.system(size:  15))
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                                 .overlay(
                                     
                                     RoundedRectangle(cornerRadius: 2)
-                                        .fill(Color("mains").opacity(0.6))
+                                        .fill(ColorConstants.mainColor.opacity(0.6))
                                         .frame(height:1)
                                     
                                 )
@@ -136,7 +136,7 @@ struct SelectedCategoryRowView: View {
                                 
                                 //                    .font(.system(size: 25))
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("oprice"))
+                                .foregroundColor(ColorConstants.oprice)
                             
                         }
                         
@@ -178,7 +178,7 @@ struct SelectedCategoryRowView: View {
                             Text(x.name)
                                 .font(.system(size: isSmallDevice() ? 12 : 12))
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                             
                             //                            Spacer()
                             
@@ -187,10 +187,10 @@ struct SelectedCategoryRowView: View {
                                 
                                 //                                .font(.system(size: 10))
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                                 .padding(.horizontal,6)
                                 .padding(.vertical,3)
-                                .background(Color("mains").opacity(0.22))
+                                .background(ColorConstants.mainColor.opacity(0.22))
                                 .clipShape(Capsule())
                                 .padding(.leading,isSmallDevice() ? 2 : 4)
                         }
@@ -218,10 +218,10 @@ struct SelectedCategoryRowView: View {
                         //                            Text("50% OFF")
                         //                                .font(.system(size: 10))
                         //                                .fontWeight(.semibold)
-                        //                                .foregroundColor(Color("mains"))
+                        //                                .foregroundColor(ColorConstants.mainColor)
                         //                                .padding(.horizontal,8)
                         //                                .padding(.vertical,3)
-                        //                                .background(Color("mains").opacity(0.22))
+                        //                                .background(ColorConstants.mainColor.opacity(0.22))
                         //                                .clipShape(Capsule())
                         //
                         //
@@ -273,11 +273,11 @@ struct SelectedCategoryRowView: View {
                                     
                                     //                                    .font(.system(size:  15))
                                     .fontWeight(.semibold)
-                                    .foregroundColor(Color("mains"))
+                                    .foregroundColor(ColorConstants.mainColor)
                                     .overlay(
                                         
                                         RoundedRectangle(cornerRadius: 2)
-                                            .fill(Color("mains").opacity(0.6))
+                                            .fill(ColorConstants.mainColor.opacity(0.6))
                                             .frame(height:1)
                                         
                                     )
@@ -289,7 +289,7 @@ struct SelectedCategoryRowView: View {
                                     
                                     //                    .font(.system(size: 25))
                                     .fontWeight(.bold)
-                                    .foregroundColor(Color("oprice"))
+                                    .foregroundColor(ColorConstants.oprice)
                                 
                             }
                             .padding(.leading,4)

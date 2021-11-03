@@ -29,7 +29,7 @@ struct AccountChangePassword: View {
                     Button(action: {withAnimation{vm.isChangePassword.toggle()}}, label: {
                         Image(systemName: vmm.getBackImage())//"chevron.backward")
                             .font(.system(size: 25))
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
                         
                     })
                     
@@ -38,7 +38,7 @@ struct AccountChangePassword: View {
                     Text("Change password")
                         .font(.system(size: 16))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                         .offset(x: changePositions ? 0 : -600,y:changePositions ? 0 : 200)//, y: changePositions ? 0 )
 
                     Spacer()
@@ -68,7 +68,7 @@ struct AccountChangePassword: View {
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)
                         
-                        .fill(Color("mains"))
+                        .fill(ColorConstants.mainColor)
                         .overlay(
                             
                             Text("Save")

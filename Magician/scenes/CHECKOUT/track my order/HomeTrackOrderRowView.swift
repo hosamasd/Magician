@@ -33,7 +33,7 @@ struct HomeTrackOrderRowView: View {
                                 .font(.system(size: 18))
                                 .fontWeight(.bold)
                                 
-                                .foregroundColor(Color("mains")) },
+                                .foregroundColor(ColorConstants.mainColor) },
                             icon: { Text(x.name)
                                 .font(.system(size: isSmallDevice() ? 12 : 14))
                                 .fontWeight(.regular)
@@ -52,7 +52,7 @@ struct HomeTrackOrderRowView: View {
                                 Text("4.9")
                                     .font(.system(size: 9))
                                     
-                                    .foregroundColor(Color("mains"))
+                                    .foregroundColor(ColorConstants.mainColor)
                                     //                                                    .offset(y:-4)
                                     
                                     +
@@ -101,7 +101,7 @@ struct HomeTrackOrderRowView: View {
                             .font(.system(size: isSmallDevice() ? 16 : 20))
     //                        .font(.boldsystem(size: 20))
                             .fontWeight(.bold)
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
                         
                         Text(LocalizedStringKey("Reminding "))
                             .font(.system(size:isSmallDevice() ? 12 : 16))
@@ -126,10 +126,10 @@ struct HomeTrackOrderRowView: View {
             Text("Get 60 EXP")
                 .font(.system(size:  12))
                 .fontWeight(.bold)
-                .foregroundColor(Color("mains"))
+                .foregroundColor(ColorConstants.mainColor)
                 .padding(.horizontal ,  12 )
                 .padding(.vertical, 6 )
-                .background(Color("mains").opacity(0.1))
+                .background(ColorConstants.mainColor.opacity(0.1))
                 .clipShape(Capsule())
                 .padding(.vertical)
                 
@@ -137,7 +137,7 @@ struct HomeTrackOrderRowView: View {
         }
         .padding(.horizontal, 8)//24 )3
 
-        .background(Color("bg"))
+        .background(ColorConstants.bg)
         .padding(.top,30)
     }
 }

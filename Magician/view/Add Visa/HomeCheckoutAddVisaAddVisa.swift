@@ -27,7 +27,7 @@ struct HomeCheckoutAddVisaAddVisa: View {
                         title: { Text("Add Cards")
                             .font(.system(size: 14))
                             .fontWeight(.bold)
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
                         },
                         icon: { Image( "Group 8358") }
                     )

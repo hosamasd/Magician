@@ -69,7 +69,7 @@ struct HomeCheckoutSuccessfullSheetView: View {
                         }, label: {
                             RoundedRectangle(cornerRadius: 28)
                                 
-                                .fill(Color("mains"))
+                                .fill(ColorConstants.mainColor)
                                 .overlay(
                                     
                                     Text(LocalizedStringKey("Track my order"))

@@ -24,7 +24,7 @@ struct ThirdHomeSelectedCategoryRowView: View {
                         .frame(width: 43, height: 43)
                         .padding()
 //                        .padding()
-                        .background(selected == x.name ? Color("mains") : .white)
+                        .background(selected == x.name ? ColorConstants.mainColor : .white)
                         .cornerRadius(10)
                         .modifier(viewModifiers())
 

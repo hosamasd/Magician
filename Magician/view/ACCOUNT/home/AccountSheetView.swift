@@ -44,7 +44,7 @@ struct AccountSheetView: View {
                     
                     VStack(spacing:24) {
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(Color("topRate"))
+                            .fill(ColorConstants.topRate)
                             .overlay(
                                 
                                 
@@ -73,7 +73,7 @@ struct AccountSheetView: View {
                     }, label: {
                         RoundedRectangle(cornerRadius: 28)
                             
-                            .fill(Color("mains"))
+                            .fill(ColorConstants.mainColor)
                             .overlay(
                                 
                                 Text(LocalizedStringKey("Order With Gift"))

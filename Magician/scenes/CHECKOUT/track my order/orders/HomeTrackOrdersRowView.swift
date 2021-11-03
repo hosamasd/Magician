@@ -32,7 +32,7 @@ struct HomeTrackOrdersRowView: View {
                     .font(.system(size: isTotal ? 18 : 14))
                     //                    .font(.boldCustomFontSystem(size: isTotal ? 18 : 14))
                     .fontWeight(.bold)
-                    .foregroundColor(isTotal ? Color("mains") : .black)
+                    .foregroundColor(isTotal ? ColorConstants.mainColor : .black)
             }
             .padding(.vertical,8)
             
@@ -42,7 +42,7 @@ struct HomeTrackOrdersRowView: View {
             }
             else {
                 Divider()
-                    .background(isDelvery ? Color("mains").opacity(1)  :  .gray)
+                    .background(isDelvery ? ColorConstants.mainColor.opacity(1)  :  .gray)
                 
             }
             

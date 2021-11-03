@@ -31,14 +31,14 @@ struct SHomeAccountPointsView: View {
 
                                 .font(.system(size: 18))
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                             
                                 Spacer()
                                 
                                 Text("1500 /")
                                     .font(.system(size: 18))
                                     .fontWeight(.semibold)
-                                    .foregroundColor(Color("mains"))
+                                    .foregroundColor(ColorConstants.mainColor)
                                 
                             }
                             
@@ -67,7 +67,7 @@ struct SHomeAccountPointsView: View {
 //                Text("1500 /\n")
 //                    .font(.system(size: 18))
 //                    .fontWeight(.semibold)
-//                    .foregroundColor(Color("mains"))
+//                    .foregroundColor(ColorConstants.mainColor)
 //                +
 //                 Text(   "3000 EXP")
 //                    .font(.system(size: 18))
@@ -85,7 +85,7 @@ struct SHomeAccountPointsView: View {
 //
 //                                .font(.system(size: 18))
 //                                .fontWeight(.semibold)
-//                                .foregroundColor(Color("mains"))
+//                                .foregroundColor(ColorConstants.mainColor)
 //
 //                            Text("( Superman )")
 //                                .font(.system(size: 13))
@@ -106,7 +106,7 @@ struct SHomeAccountPointsView: View {
 //                Text("1500 /\n")
 //                    .font(.system(size: 18))
 //                    .fontWeight(.semibold)
-//                    .foregroundColor(Color("mains"))
+//                    .foregroundColor(ColorConstants.mainColor)
 //                +
 //                 Text(   "3000 EXP")
 //                    .font(.system(size: 18))
@@ -119,7 +119,7 @@ struct SHomeAccountPointsView: View {
                     .fill(Color.gray.opacity(0.4))
                     
                 RoundedRectangle(cornerRadius: 4)
-                    .fill(Color("mains"))
+                    .fill(ColorConstants.mainColor)
                     .frame(width: getFrameSize().width/2)
             })
             .frame( height: 6)

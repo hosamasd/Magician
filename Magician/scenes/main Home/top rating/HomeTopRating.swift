@@ -46,7 +46,7 @@ struct HomeTopRating: View {
                     Label(
                         title: {
                             Image(systemName: "chevron.forward")
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                                 .padding(.leading,-6)
                             
                         },
@@ -54,7 +54,7 @@ struct HomeTopRating: View {
                             Text("View All")
                                 .font(.system(size: 12))
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                         }
                     )
                 })

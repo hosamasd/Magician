@@ -76,7 +76,7 @@ struct MainHomeTab: View {
         .environmentObject(vm)
         .environmentObject(vmm)
         .environmentObject(vmFavorirte)
-        .background(Color("bg"))
+        .background(ColorConstants.bg)
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")
         .navigationBarHidden(true)

@@ -24,7 +24,7 @@
 //                    .font(.system(size: 15))
 //                    .fontWeight(.semibold)
 //                    
-//                    .foregroundColor(Color("mains").opacity(0.8))
+//                    .foregroundColor(ColorConstants.mainColor.opacity(0.8))
 //                
 //                
 //            }
@@ -74,7 +74,7 @@
 //    //                                    .font(.system(size: 10))
 //    //                                    .fontWeight(.regular)
 //    //
-//    //                                    .foregroundColor(Color("mains").opacity(0.8))
+//    //                                    .foregroundColor(ColorConstants.mainColor.opacity(0.8))
 //                                    //                                    .offset(y:8)
 //                                    //                                        .padding(.top,4)
 //    //                            }
@@ -115,7 +115,7 @@
 //                            .font(.system(size: 14))
 //                            .fontWeight(.regular)
 //                            
-//                            .foregroundColor(Color("mains"))//.opacity(0.8))
+//                            .foregroundColor(ColorConstants.mainColor)//.opacity(0.8))
 //                        
 //                        
 //                        Text("Chicken skewers with slices of sweet peppers and dill")
@@ -162,10 +162,10 @@
 //                                    .font(.system(size: 8))
 //                                    
 //                                    .fontWeight(.regular)
-//                                    .foregroundColor(Color("mains").opacity(0.6))//.opacity(1))
+//                                    .foregroundColor(ColorConstants.mainColor.opacity(0.6))//.opacity(1))
 //                                    .overlay(
 //                                        Rectangle()
-//                                            .fill(Color("mains"))
+//                                            .fill(ColorConstants.mainColor)
 //                                            .frame(height: 1)
 //                                            .offset(y: 0)
 //                                        , alignment: .center)
@@ -194,7 +194,7 @@
 //            RoundedRectangle(
 //                cornerRadius: 19
 //            )
-//            .foregroundColor(Color("topRate"))
+//            .foregroundColor(ColorConstants.topRate)
 //            .shadow(
 //                color: Color.gray.opacity(0.6),
 //                radius: 2.5,

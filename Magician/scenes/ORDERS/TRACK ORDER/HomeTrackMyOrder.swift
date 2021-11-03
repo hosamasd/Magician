@@ -104,7 +104,7 @@ struct HomeTrackMyOrder: View {
             }
             
         }
-        .background(Color("bg"))
+        .background(ColorConstants.bg)
         .edgesIgnoringSafeArea(.all)
     }
     

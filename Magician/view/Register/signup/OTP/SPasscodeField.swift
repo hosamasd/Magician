@@ -41,13 +41,13 @@ struct SPasscodeField: View {
             Spacer()
             ForEach(0..<maxDigits) { index in
                 //                RoundedRectangle(cornerRadius: 10)
-                //                    .fill(Color("txField"))//.opacity(0.2))
+                //                    .fill(ColorConstants.txField)//.opacity(0.2))
                 //                    .frame(width:50,height:50)
                 //                    .overlay(
                 Image(systemName: self.getImageName(at: index))
                     .font(.system(size:isSmallDevice() ? 40 : 50))
                     .foregroundColor(.gray.opacity(0.6))//.opacity(0.2))
-                    .background(Color("txField"))
+                    .background(ColorConstants.txField)
                 //                    )
                 //                Image(systemName: self.getImageName(at: index))
                 //                    .font(.customFontSystem(size:isSmallDevice() ? 40 : 50))

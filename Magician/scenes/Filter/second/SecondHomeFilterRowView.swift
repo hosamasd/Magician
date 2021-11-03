@@ -27,7 +27,7 @@ struct SecondHomeFilterRowView: View {
             )
         })
         .padding(12)
-        .background(selected==x.name ? Color("mains")  : Color.white )
+        .background(selected==x.name ? ColorConstants.mainColor  : Color.white )
         .cornerRadius(10)
         .modifier(viewModifiers())
         .padding(.bottom)

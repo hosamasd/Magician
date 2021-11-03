@@ -62,7 +62,7 @@ struct SelectedItemScenesTopRow: View {
                     )
                     .padding(.horizontal,4)
                     .padding(.vertical,8)
-                    .background(Color("mains"))
+                    .background(ColorConstants.mainColor)
                     .clipShape(Capsule())
                     
                     }
@@ -82,7 +82,7 @@ struct SelectedItemScenesTopRow: View {
                         )
                     })
                     .font(.system(size: 16))
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                     
                     
                 }

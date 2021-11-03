@@ -117,7 +117,7 @@ struct SignUpView: View {
                         }, label: {
                             RoundedRectangle(cornerRadius: 28)
                                 
-                                .fill(Color("mains"))
+                                .fill(ColorConstants.mainColor)
                                 .overlay(
                                     
                                     Text(LocalizedStringKey("Sign Up"))
@@ -146,7 +146,7 @@ struct SignUpView: View {
                             }}, label: {
                                 Text(LocalizedStringKey( " Login"))
                                     .fontWeight(.bold)
-                                    .foregroundColor(Color("mains"))//.opacity(0.6))
+                                    .foregroundColor(ColorConstants.mainColor)//.opacity(0.6))
                                     .padding(.leading,-8)
                                 
                             })

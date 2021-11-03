@@ -35,7 +35,7 @@ struct NewPasswordView: View {
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)
                         
-                        .fill(Color("mains"))
+                        .fill(ColorConstants.mainColor)
                         
                         .overlay(
                             

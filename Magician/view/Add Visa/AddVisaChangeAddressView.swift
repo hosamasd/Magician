@@ -61,7 +61,7 @@ struct AddVisaChangeAddressView: View {
                         vm.isChangeAddress.toggle()
                     }}, label: {
                         Text(LocalizedStringKey("Change"))
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
                     })
                 }
             }

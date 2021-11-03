@@ -43,7 +43,7 @@ struct HomeFilter: View {
                                 Text(LocalizedStringKey("Select Your Category"))
                                     .font(.system(size: 25))
                                     .fontWeight(.bold)
-                                    .foregroundColor(Color("mains"))
+                                    .foregroundColor(ColorConstants.mainColor)
                                 
                                 
                                 Image("Group 8275")
@@ -111,7 +111,7 @@ struct HomeFilter: View {
         }
         .environmentObject(vmm)
         .environmentObject(vm)
-        .background(Color("bg"))
+        .background(ColorConstants.bg)
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")
         .navigationBarHidden(true)

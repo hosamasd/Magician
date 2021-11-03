@@ -81,7 +81,7 @@ struct HomeFilterProcess: View {
                     }, label: {
                         RoundedRectangle(cornerRadius: 28)
                             
-                            .fill(Color("mains").opacity(vm.pinnedViewsArray.isEmpty ? 0.3 : 1))
+                            .fill(ColorConstants.mainColor.opacity(vm.pinnedViewsArray.isEmpty ? 0.3 : 1))
                             .overlay(
                                 
                                 Text(LocalizedStringKey("Apply "))

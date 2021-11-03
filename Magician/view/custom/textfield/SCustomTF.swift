@@ -19,7 +19,7 @@ struct SCustomTF: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 28)
-            .fill(Color("txField"))
+            .fill(ColorConstants.txField)
             //            .fill(Color.gray.opacity(0.2))
             //            .fill(Color.white)
             .overlay(
@@ -34,7 +34,7 @@ struct SCustomTF: View {
                         
                         ZStack(alignment: .leading) {
                             if txt.isEmpty { Text(LocalizedStringKey(hint))
-                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
+                                .foregroundColor(ColorConstants.hintTF)//.black.opacity(0.2))
                                 .fontWeight(.semibold)
                                 .font(.system(size: 12))
                             }

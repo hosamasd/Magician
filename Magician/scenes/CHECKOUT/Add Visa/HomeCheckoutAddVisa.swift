@@ -163,7 +163,7 @@
 //                            //                        }, label: {
 //                            //                            RoundedRectangle(cornerRadius: 28)
 //                            //
-//                            //                                .fill(Color("mains"))
+//                            //                                .fill(ColorConstants.mainColor)
 //                            //                                .overlay(
 //                            //
 //                            //                                    Text(LocalizedStringKey("Send order"))
@@ -202,7 +202,7 @@
 //                    }, label: {
 //                        RoundedRectangle(cornerRadius: 28)
 //                            
-//                            .fill(Color("mains"))
+//                            .fill(ColorConstants.mainColor)
 //                            .overlay(
 //                                
 //                                Text(LocalizedStringKey("Send order"))
@@ -219,7 +219,7 @@
 //                    .padding(.bottom,bottomSafeArea(x: 30,y: 0) )
 //                }
 //            }
-//            //            .background(Color("bg"))
+//            //            .background(ColorConstants.bg)
 //            //            .edgesIgnoringSafeArea(.all)
 //            
 //            //            .edgesIgnoringSafeArea(.all)
@@ -244,7 +244,7 @@
 //        //        .environmentObject(vmm)
 //        //        .environmentObject(vm)
 //        
-//        .background(Color("bg"))
+//        .background(ColorConstants.bg)
 //        .edgesIgnoringSafeArea(.all)
 //        //        .navigationBarTitle("")
 //        //        .navigationBarHidden(true)

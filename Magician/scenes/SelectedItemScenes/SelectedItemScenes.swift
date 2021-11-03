@@ -41,7 +41,7 @@ struct SelectedItemScenes: View {
                                 .frame(width: 31, height: 31)
                                 .overlay(
                                     Image(systemName: vmm.getBackImage())// "chevron.backward")
-                                        .foregroundColor(Color("mains"))
+                                        .foregroundColor(ColorConstants.mainColor)
                                 )
                             //
                         })

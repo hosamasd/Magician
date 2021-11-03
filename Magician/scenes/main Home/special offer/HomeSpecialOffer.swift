@@ -41,7 +41,7 @@ struct HomeSpecialOffer: View {
                     Label(
                         title: {
                             Image(systemName: "chevron.forward")
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                                 .padding(.leading,-6)
                             
                         },
@@ -49,7 +49,7 @@ struct HomeSpecialOffer: View {
                             Text("View All")
                                 .font(.customFontSystem(size: 12))
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                         }
                     )
                 })

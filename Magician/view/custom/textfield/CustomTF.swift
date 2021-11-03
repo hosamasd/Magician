@@ -19,7 +19,7 @@ struct CustomTF: View {
 
     var body: some View {
         RoundedRectangle(cornerRadius: 28)
-            .fill(Color("txField"))
+            .fill(ColorConstants.txField)
             //            .fill(Color.gray.opacity(0.2))
             //            .fill(Color.white)
             .overlay(
@@ -29,7 +29,7 @@ struct CustomTF: View {
                     if isAccountInfo {
                         
                         Text(LocalizedStringKey(hint))
-                            .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
+                            .foregroundColor(ColorConstants.hintTF)//.black.opacity(0.2))
                             .fontWeight(.semibold)
                             .font(.system(size: 12))
                             .frame(maxWidth:.infinity,alignment: .leading)
@@ -44,7 +44,7 @@ struct CustomTF: View {
                         
                         ZStack(alignment: .leading) {
                             if txt.isEmpty { Text(LocalizedStringKey(hint))
-                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
+                                .foregroundColor(ColorConstants.hintTF)//.black.opacity(0.2))
                                 .fontWeight(.semibold)
                                 .font(.system(size: 12))
                             }
@@ -52,7 +52,7 @@ struct CustomTF: View {
                                 if hide {
                                     SecureField("",text:$txt)
                                         .foregroundColor(.black.opacity(isAccountInfo ? 1 : 0.6))
-                                        //                                .foregroundColor(Color("hintTF"))//.black.opacity(0.2))
+                                        //                                .foregroundColor(ColorConstants.hintTF)//.black.opacity(0.2))
                                         .font(.system(size: 12))
                                         .disabled(isAddress ? true : false)
                                     

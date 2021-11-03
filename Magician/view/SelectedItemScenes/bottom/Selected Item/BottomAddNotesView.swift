@@ -30,7 +30,7 @@ struct BottomAddNotesView: View {
                 }}, label: {
                     Label(
                         title: { Text(LocalizedStringKey("Add Notes"))
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
 
                         },
                         icon: { Image( "Group 8358") }
@@ -85,7 +85,7 @@ struct BottomAddNotesView: View {
                     )
                 })
                 .frame(width:180,height:60)
-                .background(Color("mains"))
+                .background(ColorConstants.mainColor)
                 .cornerRadius(24)
                 //                .clipShape(Capsule())
                 

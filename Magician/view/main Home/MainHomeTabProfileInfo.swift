@@ -18,7 +18,7 @@ struct MainHomeTabProfileInfo: View {
                 title: {
                     Text("Order")
                         .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                 },
                 icon: {
                     Text( "Start Your")
@@ -39,7 +39,7 @@ struct MainHomeTabProfileInfo: View {
                         icon: {
                             Text("Prize")
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("hprize"))
+                                .foregroundColor(ColorConstants.hprize)
                             
                         }
                     )

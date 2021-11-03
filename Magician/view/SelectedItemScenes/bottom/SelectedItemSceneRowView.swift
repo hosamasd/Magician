@@ -23,10 +23,10 @@ struct SelectedItemSceneRowView: View {
             Text(x)
                 .font(.system(size: 16))
                 .fontWeight(.bold)
-                .foregroundColor(selected==x ? Color("mains") : .black)
+                .foregroundColor(selected==x ? ColorConstants.mainColor : .black)
             
             RoundedRectangle(cornerRadius: 2)
-                .fill(selected==x ? Color("mains") : .clear)
+                .fill(selected==x ? ColorConstants.mainColor : .clear)
 
                 .frame(width: 80, height: 2)
                 .padding(.top,-4)

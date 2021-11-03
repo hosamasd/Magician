@@ -25,7 +25,7 @@ struct SelectedItemScenesBottomRowView: View {
                         .font(.system(size: 20))
                         
                         .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                     
                     Text("Chicken skewers with slices of \nsweet peppers and dill")
                         .font(.system(size: 12))
@@ -37,10 +37,10 @@ struct SelectedItemScenesBottomRowView: View {
                 Text("Get 30 EXP")
                     .font(.system(size:  12))
                     .fontWeight(.bold)
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                     .padding(.horizontal ,  12 )
                     .padding(.vertical, 6 )
-                    .background(Color("mains").opacity(0.1))
+                    .background(ColorConstants.mainColor.opacity(0.1))
                     .clipShape(Capsule())
                 
                 HStack {
@@ -49,7 +49,7 @@ struct SelectedItemScenesBottomRowView: View {
                     Text("50 % OFF")
                         .font(.system(size:  15))
                         .fontWeight(.semibold)
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                 }
                 
                 HStack{
@@ -57,11 +57,11 @@ struct SelectedItemScenesBottomRowView: View {
                     Text("110 EGP")
                         .font(.system(size:  15))
                         .fontWeight(.semibold)
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                         .overlay(
                             
                             RoundedRectangle(cornerRadius: 2)
-                                .fill(Color("mains").opacity(0.6))
+                                .fill(ColorConstants.mainColor.opacity(0.6))
                                 .frame(height:1)
                             
                         )
@@ -73,7 +73,7 @@ struct SelectedItemScenesBottomRowView: View {
                         
                         //                    .font(.system(size: 25))
                         .fontWeight(.regular)
-                        .foregroundColor(Color("oprice"))
+                        .foregroundColor(ColorConstants.oprice)
                     
                     
                 }

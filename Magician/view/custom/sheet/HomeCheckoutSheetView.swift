@@ -67,13 +67,13 @@ struct HomeCheckoutSheetView: View {
                             HStack(spacing:24) {
                                 
                                 RoundedRectangle(cornerRadius: 24)
-                                    .fill(Color("txField"))
+                                    .fill(ColorConstants.txField)
                                     
                                     .frame(width:80,height:60)
                                     .overlay(
                                         
                                         Text(vm.expiryMonth)
-                                            .foregroundColor(Color("hintTF"))
+                                            .foregroundColor(ColorConstants.hintTF)
                                         
                                     )
                                     .onTapGesture(perform: {
@@ -83,12 +83,12 @@ struct HomeCheckoutSheetView: View {
                                     })
                                 
                                 RoundedRectangle(cornerRadius: 24)
-                                    .fill(Color("txField"))
+                                    .fill(ColorConstants.txField)
                                     .frame(width:80,height:60)
                                     .overlay(
                                         
                                         Text(vm.expiryYear)
-                                            .foregroundColor(Color("hintTF"))
+                                            .foregroundColor(ColorConstants.hintTF)
                                         
                                     )
                                     .onTapGesture(perform: {
@@ -152,7 +152,7 @@ struct HomeCheckoutSheetView: View {
                         vm.isAddVisaSheet.toggle()
                     }}, label: {
                         RoundedRectangle(cornerRadius: 24)
-                            .fill(Color("mains"))
+                            .fill(ColorConstants.mainColor)
                             .frame(height:60)
                             //                .padding(.top,50)
                             .frame(width:getFrameSize().width-48)
@@ -179,7 +179,7 @@ struct HomeCheckoutSheetView: View {
                     .frame(width:getFrameSize().width-48)
 
                     //                .frame(width:getFrameSize().width-48)
-                    //                .background(Color("mains").clipShape(Capsule()))
+                    //                .background(ColorConstants.mainColor.clipShape(Capsule()))
 //                    .padding(.bottom,bottomSafeArea(x: 15))
                     
                     

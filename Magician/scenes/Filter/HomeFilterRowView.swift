@@ -63,7 +63,7 @@ struct HomeFilterRowView: View {
             RoundedRectangle(
                 cornerRadius: 10
             )
-            .foregroundColor(Color("topRate"))
+            .foregroundColor(ColorConstants.topRate)
             .shadow(
                 color: Color.gray.opacity(0.6),
                 radius: 2.5,
@@ -72,7 +72,7 @@ struct HomeFilterRowView: View {
             )
         )
         
-//        .background(Color("topRate"))
+//        .background(ColorConstants.topRate)
 //        .cornerRadius(12)
 //        .cornerRadius(12)
 

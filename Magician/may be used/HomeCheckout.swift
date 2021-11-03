@@ -78,7 +78,7 @@ import SwiftUI
 //                                                        .padding(.horizontal,8)
 //                                                    }
 //                                                )
-//                                                .foregroundColor(Color("mains")  )              .opacity(vm.notesText=="" ? 1 : 0)
+//                                                .foregroundColor(ColorConstants.mainColor  )              .opacity(vm.notesText=="" ? 1 : 0)
 //
 //                                                .disabled(                vm.notesText=="" ? false : true)
 //                                            })
@@ -138,7 +138,7 @@ import SwiftUI
 //                                            .font(.system(size: 14))
 //                                            .fontWeight(.bold)
 //
-//                                            .foregroundColor(Color("mains"))
+//                                            .foregroundColor(ColorConstants.mainColor)
 //
 //                                    }
 //
@@ -153,7 +153,7 @@ import SwiftUI
 //                                            .font(.system(size: 14))
 //                                            .fontWeight(.bold)
 //
-//                                            .foregroundColor(Color("mains"))
+//                                            .foregroundColor(ColorConstants.mainColor)
 //
 //                                    }
 //
@@ -171,7 +171,7 @@ import SwiftUI
 //                                            .font(.system(size: 25))
 //                                            .fontWeight(.bold)
 //
-//                                            .foregroundColor(Color("mains"))
+//                                            .foregroundColor(ColorConstants.mainColor)
 //
 //                                    }
 //                                }
@@ -187,7 +187,7 @@ import SwiftUI
 //                                //                    }, label: {
 //                                //                        RoundedRectangle(cornerRadius: 28)
 //                                //
-//                                //                            .fill(Color("mains"))
+//                                //                            .fill(ColorConstants.mainColor)
 //                                //                            .overlay(
 //                                //
 //                                //                                Text(LocalizedStringKey("Checkout"))
@@ -228,7 +228,7 @@ import SwiftUI
 //                            //                                }, label: {
 //                            //                                    RoundedRectangle(cornerRadius: 28)
 //                            //
-//                            //                                        .fill(Color("mains"))
+//                            //                                        .fill(ColorConstants.mainColor)
 //                            //                                        .overlay(
 //                            //
 //                            //                                            Text(LocalizedStringKey("Checkout"))
@@ -256,7 +256,7 @@ import SwiftUI
 //                    }, label: {
 //                        RoundedRectangle(cornerRadius: 28)
 //
-//                            .fill(Color("mains"))
+//                            .fill(ColorConstants.mainColor)
 //                            .overlay(
 //
 //                                Text(LocalizedStringKey("Checkout"))
@@ -330,7 +330,7 @@ import SwiftUI
 //        //        .environmentObject(vmm)
 //        //        .environmentObject(vm)
 //
-//        .background(Color("bg"))
+//        .background(ColorConstants.bg)
 //        .edgesIgnoringSafeArea(.all)
 ////        .navigationBarTitle("")
 ////        .navigationBarHidden(true)

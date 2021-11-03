@@ -46,7 +46,7 @@ struct HomeFilterTopView: View {
                 )
                 .frame(width:130,height:40)
                 //                .padding(16)
-                .background(Color("mains").opacity(0.10))
+                .background(ColorConstants.mainColor.opacity(0.10))
                 .cornerRadius(10)
                 
             }

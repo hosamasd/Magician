@@ -150,7 +150,7 @@ struct HomeONBoard: View {
                     
                     
                     Circle()
-                        .fill(self.index == i ? Color("mains") : Color.gray.opacity(0.5))
+                        .fill(self.index == i ? ColorConstants.mainColor : Color.gray.opacity(0.5))
                         .frame(width: 10, height: 10)
                     
                 }
@@ -191,7 +191,7 @@ struct HomeONBoard: View {
             }, label: {
                 RoundedRectangle(cornerRadius: 28)
                     
-                    .fill(Color("mains"))
+                    .fill(ColorConstants.mainColor)
                     .overlay(
                         
                         Text("Next")

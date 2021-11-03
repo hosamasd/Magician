@@ -39,7 +39,7 @@ struct CategoryRowView: View {
 //                        Text("Order")
 //                        .font(.customFontSystem(size: 30))
 //                        .fontWeight(.bold)
-//                        .foregroundColor(Color("mains"))
+//                        .foregroundColor(ColorConstants.mainColor)
 //
 //                    Text("Get ")
 //                        .font(.customFontSystem(size: 22))
@@ -49,7 +49,7 @@ struct CategoryRowView: View {
 //                        Text("200 EXP")
 //                        .font(.customFontSystem(size: 22))
 //                        .fontWeight(.bold)
-//                        .foregroundColor(Color("mains"))
+//                        .foregroundColor(ColorConstants.mainColor)
 //                }
 //
 //                Spacer()

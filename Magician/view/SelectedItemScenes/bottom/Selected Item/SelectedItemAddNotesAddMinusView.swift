@@ -18,17 +18,17 @@ struct SelectedItemAddNotesAddMinusView: View {
                     .font(.system(size: 20))
                     
                     .fontWeight(.bold)
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                 
                 Spacer()
                 
                 Text("Get 30 EXP")
                     .font(.system(size:  12))
                     .fontWeight(.bold)
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                     .padding(.horizontal ,  12 )
                     .padding(.vertical, 6 )
-                    .background(Color("mains").opacity(0.1))
+                    .background(ColorConstants.mainColor.opacity(0.1))
                     .clipShape(Capsule())
             }
             Text("Chicken skewers with slices of sweet peppers and \ndill")
@@ -53,7 +53,7 @@ struct SelectedItemAddNotesAddMinusView: View {
                     Text("\(itemCount)")
                         .font(.system(size:  28))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                     
                     Button(action: {withAnimation{
                         if   itemCount == 1 {return}
@@ -71,7 +71,7 @@ struct SelectedItemAddNotesAddMinusView: View {
                     
                     //                    .font(.system(size: 25))
                     .fontWeight(.regular)
-                    .foregroundColor(Color("oprice"))
+                    .foregroundColor(ColorConstants.oprice)
             }
             .padding(.top,-8)
         }

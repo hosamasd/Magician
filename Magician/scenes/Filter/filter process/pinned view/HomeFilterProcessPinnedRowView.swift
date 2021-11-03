@@ -30,7 +30,7 @@ struct HomeFilterProcessPinnedRowView: View {
         .padding(.vertical,8)
         .padding(.horizontal,11)
         
-        .background(Color("mains").opacity(0.2))//0.16
+        .background(ColorConstants.mainColor.opacity(0.2))//0.16
         .clipShape(Capsule())
     }
 }

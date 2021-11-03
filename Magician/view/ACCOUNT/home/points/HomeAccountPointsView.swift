@@ -27,7 +27,7 @@ struct HomeAccountPointsView: View {
 
                                 .font(.system(size: 18))
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
 
                             Text("( Superman )")
                                 .font(.system(size: 13))
@@ -50,7 +50,7 @@ struct HomeAccountPointsView: View {
                 Text("1500 /")
                     .font(.system(size: 18))
                     .fontWeight(.semibold)
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                 
                  Text(   "3000 EXP")
                     .font(.system(size: 18))
@@ -67,7 +67,7 @@ struct HomeAccountPointsView: View {
                     .fill(Color.gray.opacity(0.4))
                     
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(Color("mains"))
+                    .fill(ColorConstants.mainColor)
                     .frame(width: getFrameSize().width/2)
             })
             .frame( height: 6)

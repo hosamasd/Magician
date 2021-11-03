@@ -58,7 +58,7 @@ struct AccountRowView: View {
                             
                             //                            .font(.system(size: 15))
                             .fontWeight(.bold)
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
                     }
                     if isOriginal {
                         Button(action: {}, label: {

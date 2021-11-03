@@ -80,14 +80,14 @@ struct SSHomeCheckout: View {
                                                 Label(
                                                     title: { Text(LocalizedStringKey("Add Notes"))
                                                         .fontWeight(.semibold)
-                                                        .foregroundColor(Color("mains"))
+                                                        .foregroundColor(ColorConstants.mainColor)
 
                                                     },
                                                     icon: { Image( "Group 8358")
                                                         .padding(.horizontal,8)
                                                     }
                                                 )
-//                                                .foregroundColor(Color("mains")  )              .opacity(vm.notesText=="" ? 1 : 0)
+//                                                .foregroundColor(ColorConstants.mainColor  )              .opacity(vm.notesText=="" ? 1 : 0)
                                                 
                                                
                                             })
@@ -149,7 +149,7 @@ struct SSHomeCheckout: View {
                                             .font(.system(size: 14))
                                             .fontWeight(.bold)
                                             
-                                            .foregroundColor(Color("mains"))
+                                            .foregroundColor(ColorConstants.mainColor)
                                         
                                     }
                                     
@@ -164,7 +164,7 @@ struct SSHomeCheckout: View {
                                             .font(.system(size: 14))
                                             .fontWeight(.bold)
                                             
-                                            .foregroundColor(Color("mains"))
+                                            .foregroundColor(ColorConstants.mainColor)
                                         
                                     }
                                     
@@ -182,7 +182,7 @@ struct SSHomeCheckout: View {
                                             .font(.system(size: 25))
                                             .fontWeight(.bold)
                                             
-                                            .foregroundColor(Color("mains"))
+                                            .foregroundColor(ColorConstants.mainColor)
                                         
                                     }
                                 }
@@ -235,7 +235,7 @@ struct SSHomeCheckout: View {
                         }, label: {
                             RoundedRectangle(cornerRadius: 28)
                                 
-                                .fill(Color("mains"))
+                                .fill(ColorConstants.mainColor)
                                 .overlay(
                                     
                                     Text(LocalizedStringKey(vm.isCheckOut ? "Send Order" : "Checkout"))
@@ -294,7 +294,7 @@ struct SSHomeCheckout: View {
             //        .environmentObject(vm)
             
         }
-        .background(Color("bg"))
+        .background(ColorConstants.bg)
         .edgesIgnoringSafeArea(.all)
         
 //        .alert(isPresented: $vm.isChangeAddress, AlertConfig(title: "Change Address", action: {

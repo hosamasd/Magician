@@ -18,7 +18,7 @@ struct PaymentCosenRowView: View {
     var body: some View {
         
         RoundedRectangle(cornerRadius: 6)
-            .stroke(Color("visa"))//.gray.opacity(0.6), lineWidth: 1)
+            .stroke(ColorConstants.visa)//.gray.opacity(0.6), lineWidth: 1)
             .frame(height:51)
             .overlay(
                 RoundedRectangle(cornerRadius: 6)

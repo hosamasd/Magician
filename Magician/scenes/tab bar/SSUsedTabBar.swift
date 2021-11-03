@@ -153,7 +153,7 @@ struct SSUsedTabBar: View {
                         .overlay(
                             
                             Circle()
-                                .fill(Color("mains"))
+                                .fill(ColorConstants.mainColor)
                                 .frame(width: 15, height: 15)
                                 .overlay(
                                     

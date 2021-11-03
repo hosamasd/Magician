@@ -22,7 +22,7 @@ struct HomeFilterProcessTopView: View {
 
 //                Image(systemName: vmm.getBackImage())//"chevron.backward")
                     .font(.system(size: 25))
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                 
             })
             

@@ -21,7 +21,7 @@ struct HomeAccountGifts: View {
                 .padding(.horizontal,24)
             
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color("topRate"))
+                .fill(ColorConstants.topRate)
                 .overlay(
                     
                     
@@ -46,7 +46,7 @@ struct HomeAccountGifts: View {
                 )
                 .frame(width:getFrameSize().width-32,height: 120)
         }
-        //        .background(Color("topRate"))
+        //        .background(ColorConstants.topRate)
         //        .cornerRadius(20)
     }
 }

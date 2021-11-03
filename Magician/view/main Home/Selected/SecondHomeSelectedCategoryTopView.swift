@@ -42,7 +42,7 @@ struct SecondHomeSelectedCategoryTopView: View {
             //                    icon: {
             //
             //                        Image(systemName: vmm.getBackImage())
-            //                            .foregroundColor(Color("mains"))
+            //                            .foregroundColor(ColorConstants.mainColor)
             //
             //                    }
             //                )
@@ -60,7 +60,7 @@ struct SecondHomeSelectedCategoryTopView: View {
                     //                    vm.isMainCategoryChosen=false
                 }}, label: {
                     Image(systemName: vmm.getBackImage())
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                 }  )
                 
                 ZStack {

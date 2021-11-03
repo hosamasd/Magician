@@ -82,17 +82,17 @@ struct FavoriteRowView: View {
                         Text(x.name)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
                         
                         Spacer()
                         
                         Text("50% OFF")
                             .font(.system(size: 14))
                             .fontWeight(.bold)
-                            .foregroundColor(Color("mains"))
+                            .foregroundColor(ColorConstants.mainColor)
                             .padding(.horizontal)
                             .padding(.vertical,6)
-                            .background(Color("mains").opacity(0.22))
+                            .background(ColorConstants.mainColor.opacity(0.22))
                             .clipShape(Capsule())
                             .unredacted()//for keep not shimmer
                     }
@@ -145,7 +145,7 @@ struct FavoriteRowView: View {
                             Text(x.name)
                                 .font(.system(size: isSmallDevice() ? 12 : 12))
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                             
                             //                            Spacer()
                             
@@ -154,10 +154,10 @@ struct FavoriteRowView: View {
                                 
                                 //                                .font(.system(size: 10))
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
                                 .padding(.horizontal,6)
                                 .padding(.vertical,3)
-                                .background(Color("mains").opacity(0.22))
+                                .background(ColorConstants.mainColor.opacity(0.22))
                                 .clipShape(Capsule())
                                 .padding(.leading,CGFloat(isSmallDevice() ? 2 : 4))
                         }
@@ -185,10 +185,10 @@ struct FavoriteRowView: View {
                         //                            Text("50% OFF")
                         //                                .font(.system(size: 10))
                         //                                .fontWeight(.semibold)
-                        //                                .foregroundColor(Color("mains"))
+                        //                                .foregroundColor(ColorConstants.mainColor)
                         //                                .padding(.horizontal,8)
                         //                                .padding(.vertical,3)
-                        //                                .background(Color("mains").opacity(0.22))
+                        //                                .background(ColorConstants.mainColor.opacity(0.22))
                         //                                .clipShape(Capsule())
                         //
                         //
@@ -240,11 +240,11 @@ struct FavoriteRowView: View {
                                     
                                     //                                    .font(.system(size:  15))
                                     .fontWeight(.semibold)
-                                    .foregroundColor(Color("mains"))
+                                    .foregroundColor(ColorConstants.mainColor)
                                     .overlay(
                                         
                                         RoundedRectangle(cornerRadius: 2)
-                                            .fill(Color("mains").opacity(0.6))
+                                            .fill(ColorConstants.mainColor.opacity(0.6))
                                             .frame(height:1)
                                         
                                     )
@@ -256,7 +256,7 @@ struct FavoriteRowView: View {
                                     
                                     //                    .font(.system(size: 25))
                                     .fontWeight(.bold)
-                                    .foregroundColor(Color("oprice"))
+                                    .foregroundColor(ColorConstants.oprice)
                                 
                             }
                             .padding(.leading,4)
@@ -295,7 +295,7 @@ struct FavoriteRowView: View {
         //                        Text(x.name)
         //                            .font(.system(size: 15))
         //                            .fontWeight(.bold)
-        //                            .foregroundColor(Color("mains"))
+        //                            .foregroundColor(ColorConstants.mainColor)
         //
         //                        Text("Chicken skewers with slices of sweet peppers and dill")
         //                            .font(.system(size: 12))
@@ -320,10 +320,10 @@ struct FavoriteRowView: View {
         //                            Text("50% OFF")
         //                                .font(.system(size: 10))
         //                                .fontWeight(.semibold)
-        //                                .foregroundColor(Color("mains"))
+        //                                .foregroundColor(ColorConstants.mainColor)
         //                                .padding(.horizontal)
         //                                .padding(.vertical,6)
-        //                                .background(Color("mains").opacity(0.22))
+        //                                .background(ColorConstants.mainColor.opacity(0.22))
         //                                .clipShape(Capsule())
         //
         //

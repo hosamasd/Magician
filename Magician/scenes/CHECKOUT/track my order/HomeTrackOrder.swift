@@ -100,7 +100,7 @@ struct HomeTrackOrder: View {
 //                }, label: {
 //                    RoundedRectangle(cornerRadius: 28)
 //
-//                        .fill(Color("mains"))
+//                        .fill(ColorConstants.mainColor)
 //                        .overlay(
 //
 //                            Text(LocalizedStringKey("Send Order"))
@@ -119,7 +119,7 @@ struct HomeTrackOrder: View {
         //        .environmentObject(vmm)
         //        .environmentObject(vm)
         
-//        .background(Color("bg"))
+//        .background(ColorConstants.bg)
 //        .edgesIgnoringSafeArea(.all)
 //        .navigationBarTitle("")
 //        .navigationBarHidden(true)

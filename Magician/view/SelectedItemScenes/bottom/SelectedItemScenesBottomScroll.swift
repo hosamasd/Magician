@@ -78,7 +78,7 @@ struct SelectedItemScenesBottomScroll: View {
 //                        .overlay(
 //                            
 //                            Circle()
-//                                .fill(Color("mains"))
+//                                .fill(ColorConstants.mainColor)
 //                                .frame(width: 25, height: 25)
 //                                .overlay(
 //                                    

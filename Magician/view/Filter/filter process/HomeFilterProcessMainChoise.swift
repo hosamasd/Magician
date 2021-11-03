@@ -29,11 +29,11 @@ struct HomeFilterProcessMainChoise: View {
                     Text(LocalizedStringKey("Popular Filters"))
                         .font(.system(size: 16))
                         .fontWeight(.bold)
-                        .foregroundColor(vm.isFirst ? Color("mains") : Color.gray.opacity(0.6))
+                        .foregroundColor(vm.isFirst ? ColorConstants.mainColor : Color.gray.opacity(0.6))
                         .overlay(
                             
                             RoundedRectangle(cornerRadius: 2)
-                                .fill(vm.isFirst ? Color("mains") : Color.clear)
+                                .fill(vm.isFirst ? ColorConstants.mainColor : Color.clear)
                                 .frame(width:100,height: 1)
                             ,alignment: .bottom)
                     
@@ -50,11 +50,11 @@ struct HomeFilterProcessMainChoise: View {
                     Text(LocalizedStringKey("Sort By"))
                         .font(.system(size: 16))
                         .fontWeight(.bold)
-                        .foregroundColor(vm.isSecond ? Color("mains") : Color.gray.opacity(0.6))
+                        .foregroundColor(vm.isSecond ? ColorConstants.mainColor : Color.gray.opacity(0.6))
                         .overlay(
                             
                             RoundedRectangle(cornerRadius: 2)
-                                .fill(vm.isSecond ? Color("mains") : Color.clear)
+                                .fill(vm.isSecond ? ColorConstants.mainColor : Color.clear)
                                 .frame(width:50,height: 1)
                             ,alignment: .bottom)
                     

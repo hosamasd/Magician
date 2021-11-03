@@ -71,7 +71,7 @@
 //                                                    .padding(.horizontal,8)
 //                                                }
 //                                            )
-//                                            .foregroundColor(Color("mains")  )              .opacity(vm.notesText=="" ? 1 : 0)
+//                                            .foregroundColor(ColorConstants.mainColor  )              .opacity(vm.notesText=="" ? 1 : 0)
 //                                            
 //                                            .disabled(                vm.notesText=="" ? false : true)
 //                                        })
@@ -131,7 +131,7 @@
 //                                        .font(.system(size: 14))
 //                                        .fontWeight(.bold)
 //                                        
-//                                        .foregroundColor(Color("mains"))
+//                                        .foregroundColor(ColorConstants.mainColor)
 //                                    
 //                                }
 //                                
@@ -146,7 +146,7 @@
 //                                        .font(.system(size: 14))
 //                                        .fontWeight(.bold)
 //                                        
-//                                        .foregroundColor(Color("mains"))
+//                                        .foregroundColor(ColorConstants.mainColor)
 //                                    
 //                                }
 //                                
@@ -164,7 +164,7 @@
 //                                        .font(.system(size: 25))
 //                                        .fontWeight(.bold)
 //                                        
-//                                        .foregroundColor(Color("mains"))
+//                                        .foregroundColor(ColorConstants.mainColor)
 //                                    
 //                                }
 //                            }
@@ -194,7 +194,7 @@
 //                    }, label: {
 //                        RoundedRectangle(cornerRadius: 28)
 //                            
-//                            .fill(Color("mains"))
+//                            .fill(ColorConstants.mainColor)
 //                            .overlay(
 //                                
 //                                Text(LocalizedStringKey("Checkout"))
@@ -247,9 +247,9 @@
 //            //        .environmentObject(vm)
 //            
 //        }
-//        .background(Color("bg"))
+//        .background(ColorConstants.bg)
 //        .edgesIgnoringSafeArea(.all)
-//        //        .background(Color("bg"))
+//        //        .background(ColorConstants.bg)
 //        //        .edgesIgnoringSafeArea(.all)
 //        //        .navigationBarTitle("")
 //        //        .navigationBarHidden(true)

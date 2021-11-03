@@ -30,7 +30,7 @@ struct HomeCategoryView: View {
                 //                    Label(
                 //                        title: {
                 //                            Image(systemName: "chevron.forward")
-                //                                .foregroundColor(Color("mains"))
+                //                                .foregroundColor(ColorConstants.mainColor)
                 //                                .padding(.leading,-6)
                 //                            
                 //                        },
@@ -38,7 +38,7 @@ struct HomeCategoryView: View {
                 //                            Text("View All")
                 //                                .font(.customFontSystem(size: 12))
                 //                                .fontWeight(.bold)
-                //                                .foregroundColor(Color("mains"))
+                //                                .foregroundColor(ColorConstants.mainColor)
                 //                        }
                 //                    )
                 //                })
@@ -87,8 +87,8 @@ struct HomeCategoryView: View {
     }
     
     func setupAppearance() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color("mains"))
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color("mains")).withAlphaComponent(0.2)
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(ColorConstants.mainColor)
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor(ColorConstants.mainColor).withAlphaComponent(0.2)
     }
 }
 

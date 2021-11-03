@@ -23,7 +23,7 @@ struct MainHomeTaPointsView: View {
 
                                 .font(.system(size: 14))
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("mains"))
+                                .foregroundColor(ColorConstants.mainColor)
 //                                .padding(.top,20)
                             
                             Text("( Superman )")
@@ -49,7 +49,7 @@ struct MainHomeTaPointsView: View {
                 Text("2700 /\n")
                     .font(.system(size: 14))
                     .fontWeight(.semibold)
-                    .foregroundColor(Color("mains"))
+                    .foregroundColor(ColorConstants.mainColor)
                 +
                  Text(   "3000 EXP")
                     .font(.system(size: 14))
@@ -62,7 +62,7 @@ struct MainHomeTaPointsView: View {
                     .fill(Color.gray.opacity(0.4))
                     
                 RoundedRectangle(cornerRadius: 4)
-                    .fill(Color("mains"))
+                    .fill(ColorConstants.mainColor)
                     .frame(width: getFrameSize().width/4)
             })
             .frame( height: 6)

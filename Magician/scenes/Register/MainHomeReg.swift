@@ -44,7 +44,7 @@ struct MainHomeReg: View {
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)
                         
-                        .fill(Color("mains"))
+                        .fill(ColorConstants.mainColor)
                         .overlay(
                             
                             Text(LocalizedStringKey("Login"))
@@ -67,13 +67,13 @@ struct MainHomeReg: View {
                 }, label: {
                     RoundedRectangle(cornerRadius: 28)
                         
-                        .stroke(Color("mains"))
+                        .stroke(ColorConstants.mainColor)
                         .overlay(
                             
                             Text(LocalizedStringKey("Create an Account"))
                                 .font(.system(size: 16))
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color("mains"))//.opacity(0.6))
+                                .foregroundColor(ColorConstants.mainColor)//.opacity(0.6))
                         )
                     
                 })

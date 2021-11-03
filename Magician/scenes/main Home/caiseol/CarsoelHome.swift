@@ -69,7 +69,7 @@ struct CarsoelHome: View {
                         Text("Order")
                         .font(.system(size: 30))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                     
                     Text("Get ")
                         .font(.system(size: 22))
@@ -79,7 +79,7 @@ struct CarsoelHome: View {
                         Text("200 EXP")
                         .font(.system(size: 22))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("mains"))
+                        .foregroundColor(ColorConstants.mainColor)
                     
                 }
                 .onTapGesture(perform: {

@@ -88,7 +88,7 @@ struct HomeOrders: View {
             //            .padding(.bottom,getBottomSpace())
             //            Spacer()
         }
-        .background(Color("bg"))
+        .background(ColorConstants.bg)
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")
         .navigationBarHidden(true)

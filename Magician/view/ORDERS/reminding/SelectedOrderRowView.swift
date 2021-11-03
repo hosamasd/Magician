@@ -31,7 +31,7 @@
 //                                            .font(.customFontSystem(size: 18))
 //                                            .fontWeight(.bold)
 //                                            
-//                                            .foregroundColor(Color("mains")) },
+//                                            .foregroundColor(ColorConstants.mainColor) },
 //                                        icon: { Text(x.name)
 //                                            .font(.customFontSystem(size: 10))
 //                                            .fontWeight(.regular)
@@ -50,7 +50,7 @@
 //                                                    Text("4.9")
 //                                                        .font(.customFontSystem(size: 9))
 //
-//                                                        .foregroundColor(Color("mains"))
+//                                                        .foregroundColor(ColorConstants.mainColor)
 //    //                                                    .offset(y:-4)
 //
 //                                                        +
@@ -94,7 +94,7 @@
 //                        Text("30:00 min")
 //                            .font(.customFontSystem(size: 20))
 //                            .fontWeight(.bold)
-//                            .foregroundColor(Color("mains"))
+//                            .foregroundColor(ColorConstants.mainColor)
 //
 //                        Text("Reminding ")
 //                            .font(.customFontSystem(size: 20))

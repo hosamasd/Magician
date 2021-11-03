@@ -119,7 +119,7 @@ struct HomeAccount: View {
         .environmentObject(vmm)
         .environmentObject(vm)
 
-        .background(Color("bg"))
+        .background(ColorConstants.bg)
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("")
         .navigationBarHidden(true)

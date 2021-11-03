@@ -13,7 +13,7 @@ struct HomeAccountImage: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 0)
-            .fill(Color("bg"))
+            .fill(ColorConstants.bg)
             .frame(height:170)
             .overlay(
                 ZStack {
