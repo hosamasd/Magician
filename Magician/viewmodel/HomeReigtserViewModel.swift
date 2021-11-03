@@ -125,20 +125,25 @@ class HomeReigtserViewModel: ObservableObject {
     
     func makeResetPass()  {
 //        if !emailLogin.isValidEmail { getError(s:  "Please type valid email ")  ; return   }
-        
-        withAnimation{
+        DispatchQueue.main.async {
+            self.isNewPass.toggle()
+//                self.isResetPass=false
             
-            self.isLooding.toggle()
         }
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
-            withAnimation{self.isLooding.toggle()}
-            DispatchQueue.main.async {
-                self.isNewPass.toggle()
-                self.isResetPass=false
-                
-            }
-        }
+//        withAnimation{
+//
+//            self.isLooding.toggle()
+//        }
+//
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
+//            withAnimation{self.isLooding.toggle()}
+//            DispatchQueue.main.async {
+//                self.isNewPass.toggle()
+////                self.isResetPass=false
+//
+//            }
+//        }
         
     }
     
@@ -146,19 +151,26 @@ class HomeReigtserViewModel: ObservableObject {
         
 //        if !checkNewPasswordAndRe() {getError(s: "Please make Password and confirm password same!") ; return }
         
-        withAnimation{
+        DispatchQueue.main.async {
+            //                self.isNewPass.toggle()
+            self.isNewPass=false
+            self.isResetPass=false
             
-            self.isLooding.toggle()
         }
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
-            withAnimation{self.isLooding.toggle()}
-            DispatchQueue.main.async {
-                //                self.isNewPass.toggle()
-                self.isNewPass=false
-                
-            }
-        }
+//        withAnimation{
+//
+//            self.isLooding.toggle()
+//        }
+//
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+4) {
+//            withAnimation{self.isLooding.toggle()}
+//            DispatchQueue.main.async {
+//                //                self.isNewPass.toggle()
+//                self.isNewPass=false
+//
+//            }
+//        }
         
     }
     

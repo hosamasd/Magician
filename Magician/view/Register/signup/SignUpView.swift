@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @ObservedObject var vm : HomeReigtserViewModel
+    //    @ObservedObject var vm : HomeReigtserViewModel
+    @EnvironmentObject var vm : HomeReigtserViewModel
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
     
     var body: some View {
         ZStack {
@@ -96,12 +98,12 @@ struct SignUpView: View {
                         CustomTF(txt: $vm.mobileSign,hint: "Mobile No",hide: .constant(false))
                         
                         CustomTF(txt: $vm.addressSign,hint: "Address",hide: .constant(false))
-                          
                         
-//                        CustomTF(txt: $vm.addressSign,hint: "Address",hide: .constant(false),isAddress:true)
-//                            .onTapGesture(perform: {
-//                                withAnimation{vm.isSHowLocation.toggle()}
-//                            })
+                        
+                        //                        CustomTF(txt: $vm.addressSign,hint: "Address",hide: .constant(false),isAddress:true)
+                        //                            .onTapGesture(perform: {
+                        //                                withAnimation{vm.isSHowLocation.toggle()}
+                        //                            })
                         
                         CustomTF(txt: $vm.passwordSign,hint: "Password",isHide: true,hide: $vm.isHidePassSign)
                         
@@ -109,10 +111,10 @@ struct SignUpView: View {
                         
                         Button(action: {
                             withAnimation{
-//                                vm.isOTP.toggle()
+                                //                                vm.isOTP.toggle()
                                 vm.makeSignUp()
-//                                vm.isLooding=true
-
+                                //                                vm.isLooding=true
+                                
                             }
                         }, label: {
                             RoundedRectangle(cornerRadius: 28)
@@ -167,12 +169,13 @@ struct SignUpView: View {
                 
             }
             .keyboardSpace()
-
+            
             .opacity(vm.isOTP ? 0 : 1)
             
             if vm.isOTP {
                 
-                OTPView(vm:vm)
+                OTPView()//vm:vm)
+                    .environmentObject(vm)
                     .transition(.move(edge: .leading))
                 
             }
@@ -185,6 +188,6 @@ struct SignUpView: View {
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         //        ContentView()
-        SignUpView(vm: HomeReigtserViewModel())
+        SignUpView()//vm: HomeReigtserViewModel())
     }
 }

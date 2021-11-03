@@ -139,6 +139,6 @@ struct SPasscodeField: View {
 
 struct SPasscodeField_Previews: PreviewProvider {
     static var previews: some View {
-        OTPView(vm: HomeReigtserViewModel())
+        OTPView()//vm: HomeReigtserViewModel())
     }
 }

@@ -91,7 +91,9 @@ struct MainHomeReg: View {
             
             if vm.isLogin {
                 
-                LoginView(vm:vm)
+                LoginView()//vm:vm)
+                    .environmentObject(vm)
+                    .environmentObject(vmm)
                     .transition(.move(edge: .bottom))
                     .opacity(vm.isLogin ? 1 : 0)
                 
@@ -99,7 +101,10 @@ struct MainHomeReg: View {
             
             if vm.isSignUp {
                 
-                SignUpView(vm:vm)
+                SignUpView()//vm:vm)
+                    .environmentObject(vm)
+                    .environmentObject(vmm)
+
                     .transition(.move(edge: .bottom))
                     .opacity(vm.isSignUp ? 1 : 0)
                 
@@ -110,14 +115,15 @@ struct MainHomeReg: View {
                 LoadingCapsuleSpacing()
             }
             
-            if vm.isSHowLocation {
-                //                LoadingCircleOpacity()
-                LocationView(dismiss: $vm.isSHowLocation, locationText: $vm.addressSign)
-                    //                LocationView(  locationText: $vm.addressSign )
-                    //                    .environmentObject(vm)
-                    .transition(.move(edge: .bottom))
-                
-            }
+            //if need location panel
+//            if vm.isSHowLocation {
+//                //                LoadingCircleOpacity()
+//                LocationView(dismiss: $vm.isSHowLocation, locationText: $vm.addressSign)
+//                    //                LocationView(  locationText: $vm.addressSign )
+//                    //                    .environmentObject(vm)
+//                    .transition(.move(edge: .bottom))
+//
+//            }
         }
         
         .edgesIgnoringSafeArea(.all)

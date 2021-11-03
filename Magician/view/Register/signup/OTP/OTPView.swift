@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct OTPView: View {
-    @ObservedObject var vm : HomeReigtserViewModel
-    
+//    @ObservedObject var vm : HomeReigtserViewModel
+    @EnvironmentObject var vm : HomeReigtserViewModel
+
     var body: some View {
         VStack {
             
@@ -102,6 +103,6 @@ struct OTPView: View {
 
 struct OTPView_Previews: PreviewProvider {
     static var previews: some View {
-        OTPView(vm: HomeReigtserViewModel())
+        OTPView()//vm: HomeReigtserViewModel())
     }
 }

@@ -141,6 +141,7 @@
 		4EDFA7DC271EB2960067D83E /* HomeCheckoutTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */; };
 		4EDFA7DE271EB3E80067D83E /* HomeCheckoutItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */; };
 		4EDFA7E1271EB6F10067D83E /* HomeCheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFA7E0271EB6F10067D83E /* HomeCheckoutRowView.swift */; };
+		4EE091C127329E7C009A24EF /* Reset+NewPassword+Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE091C027329E7C009A24EF /* Reset+NewPassword+Back.swift */; };
 		4EE2798427187122004EE0B6 /* CarsoelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE2798327187122004EE0B6 /* CarsoelHome.swift */; };
 		4EE279862718765D004EE0B6 /* STopRatingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE279852718765D004EE0B6 /* STopRatingRowView.swift */; };
 		4EE52441271A9E4600AADB1F /* MainHomeWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE52440271A9E4600AADB1F /* MainHomeWelcome.swift */; };
@@ -305,6 +306,7 @@
 		4EDFA7DB271EB2960067D83E /* HomeCheckoutTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutTopView.swift; sourceTree = "<group>"; };
 		4EDFA7DD271EB3E80067D83E /* HomeCheckoutItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutItemRowView.swift; sourceTree = "<group>"; };
 		4EDFA7E0271EB6F10067D83E /* HomeCheckoutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckoutRowView.swift; sourceTree = "<group>"; };
+		4EE091C027329E7C009A24EF /* Reset+NewPassword+Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reset+NewPassword+Back.swift"; sourceTree = "<group>"; };
 		4EE2798327187122004EE0B6 /* CarsoelHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsoelHome.swift; sourceTree = "<group>"; };
 		4EE279852718765D004EE0B6 /* STopRatingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STopRatingRowView.swift; sourceTree = "<group>"; };
 		4EE52440271A9E4600AADB1F /* MainHomeWelcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeWelcome.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 		4E09FAF0272ED52000872BF8 /* may be used */ = {
 			isa = PBXGroup;
 			children = (
+				4E1538CE2714B64000D5DD52 /* ResetView.swift */,
 				4E2F0D4A2727CC230092CE91 /* SUsedTabBar.swift */,
 				4EFB122C271695F7008A240A /* UsedTabBar.swift */,
 				4E56093F2718558300539B9C /* SpecialOfferRowView.swift */,
@@ -575,7 +578,7 @@
 			isa = PBXGroup;
 			children = (
 				4E1538D02714B6DF00D5DD52 /* LoginView.swift */,
-				4E1538CE2714B64000D5DD52 /* ResetView.swift */,
+				4EE091C027329E7C009A24EF /* Reset+NewPassword+Back.swift */,
 				4E1538C72714B36700D5DD52 /* NewPasswordView.swift */,
 			);
 			path = login;
@@ -671,8 +674,6 @@
 			children = (
 				4EAFFC3D27202B320027B8B3 /* HomeTrackOrder.swift */,
 				4EAFFC432720319D0027B8B3 /* orders */,
-				4EAFFC4127202DC60027B8B3 /* HomeTrackOrderRowView.swift */,
-				4EAFFC3F27202CEB0027B8B3 /* HomeTrackOrderAnimated.swift */,
 			);
 			path = "track my order";
 			sourceTree = "<group>";
@@ -735,6 +736,15 @@
 				4EC7A9AC27325D6800B19DCB /* ColorConstants.swift */,
 			);
 			path = CONSTANTS;
+			sourceTree = "<group>";
+		};
+		4EC7A9AE273260D800B19DCB /* track my order */ = {
+			isa = PBXGroup;
+			children = (
+				4EAFFC4127202DC60027B8B3 /* HomeTrackOrderRowView.swift */,
+				4EAFFC3F27202CEB0027B8B3 /* HomeTrackOrderAnimated.swift */,
+			);
+			path = "track my order";
 			sourceTree = "<group>";
 		};
 		4ECAD7F0271C61D300C258A5 /* Selected */ = {
@@ -833,6 +843,7 @@
 		4ECD6DAC27145E1900011208 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4EC7A9AE273260D800B19DCB /* track my order */,
 				4E52C293272940E800C92648 /* SelectedItemScenes */,
 				4E52C2902729409400C92648 /* CHECKOUT */,
 				4E52C28F27293FB700C92648 /* Add Visa */,
@@ -1305,6 +1316,7 @@
 				4E3F6B29271E7B9800529C15 /* SelectedItemSceneRowView.swift in Sources */,
 				4EDBAB0F2717FFCF00AFD181 /* HomeOrdersTopView.swift in Sources */,
 				4ED40A2A271C218A00E73138 /* HomeSelectedCategory.swift in Sources */,
+				4EE091C127329E7C009A24EF /* Reset+NewPassword+Back.swift in Sources */,
 				4E181F59271DB5AA00248DF3 /* SelectedItemScenes.swift in Sources */,
 				4EDA2DAE271F0683003CA71A /* SCustomTF.swift in Sources */,
 				4EAFFC4027202CEB0027B8B3 /* HomeTrackOrderAnimated.swift in Sources */,

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var vm : HomeReigtserViewModel
-    
+    @EnvironmentObject var vm : HomeReigtserViewModel
+    @EnvironmentObject var vmm:HomeMainTabBarViewModel
+
     var body: some View {
         ZStack {
             VStack {
@@ -36,7 +37,7 @@ struct LoginView: View {
                     
                     Button(action: {
                         withAnimation{
-//                            vm.isLooding=true
+                            //                            vm.isLooding=true
                             vm.makeLogin()
                         }
                     }, label: {
@@ -98,23 +99,33 @@ struct LoginView: View {
                 //            Spacer()
             }
             .opacity(vm.isResetPass ? 0 : 1)
-            .opacity(vm.isNewPass ? 0 : 1)
+            //            .opacity(vm.isNewPass ? 0 : 1)
+            
+            //            if vm.isResetPass {
+            //
+            //                ResetView()//vm:vm)
+            //                    .environmentObject(vm)
+            //                    .transition(.move(edge: .trailing))
+            //                    .opacity(!vm.isResetPass ? 0 : 1)
+            //
+            //
+            //            }
+            //
+            //            if vm.isNewPass {
+            //
+            //                NewPasswordView()//vm:vm)
+            //                    .environmentObject(vm)
+            //                    .transition(.move(edge: .leading))
+            //                    .opacity(!vm.isNewPass ? 0 : 1)
+            //
+            //
+            //            }
             
             if vm.isResetPass {
                 
-                ResetView(vm:vm)
-                    .transition(.move(edge: .trailing))
-                    .opacity(!vm.isResetPass ? 0 : 1)
-                
-                
-            }
-            
-            if vm.isNewPass {
-                
-                NewPasswordView(vm:vm)
-                    .transition(.move(edge: .leading))
-                    .opacity(!vm.isNewPass ? 0 : 1)
-                
+                Reset_NewPassword_Back()
+                    .environmentObject(vm)
+                    .environmentObject(vmm)
                 
             }
             
@@ -133,6 +144,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(vm: HomeReigtserViewModel())
+        LoginView()//vm: HomeReigtserViewModel())
     }
 }
