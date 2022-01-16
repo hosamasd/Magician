@@ -46,7 +46,7 @@ struct SPasscodeField: View {
                 //                    .overlay(
                 Image(systemName: self.getImageName(at: index))
                     .font(.system(size:isSmallDevice() ? 40 : 50))
-                    .foregroundColor(.gray.opacity(0.6))//.opacity(0.2))
+                    .foregroundColor(Color.gray.opacity(0.6))//.opacity(0.2))
                     .background(ColorConstants.txField)
                 //                    )
                 //                Image(systemName: self.getImageName(at: index))

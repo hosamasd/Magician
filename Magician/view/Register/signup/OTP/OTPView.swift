@@ -20,7 +20,7 @@ struct OTPView: View {
             
             Text("Please check your mobile number 071*****12 \ncontinue to reset your password")
                 .font(.system(size: 14))
-                .foregroundColor(.black.opacity(0.6))
+                .foregroundColor(Color.black.opacity(0.6))
                 //                .padding(.top)
                 .multilineTextAlignment(.center)
                 .lineSpacing(6)
@@ -88,7 +88,7 @@ struct OTPView: View {
                 },
                 icon: {
                     Text(LocalizedStringKey("Don't Receive?"))
-                        .foregroundColor(.black.opacity(0.6))
+                        .foregroundColor(Color.black.opacity(0.6))
                     
                 }
             )

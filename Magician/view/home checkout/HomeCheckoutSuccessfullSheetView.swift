@@ -54,7 +54,7 @@ struct HomeCheckoutSuccessfullSheetView: View {
                             .font(.system(size: 14))
                             .fontWeight(.regular)
                             .lineLimit(3)
-                            .foregroundColor(.black.opacity(0.6))
+                            .foregroundColor(Color.black.opacity(0.6))
                             .multilineTextAlignment(.center)
                             .padding(.bottom,40)
                         

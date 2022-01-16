@@ -36,7 +36,7 @@ struct SelectedItemAddNotesAddMinusView: View {
                 
                 .fontWeight(.regular)
                 .lineLimit(2)
-                .foregroundColor(.black.opacity(0.6))
+                .foregroundColor(Color.black.opacity(0.6))
                 
                 .padding(.bottom,4)
             //                .padding(.leading,-16)

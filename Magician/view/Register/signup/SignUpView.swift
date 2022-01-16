@@ -23,7 +23,7 @@ struct SignUpView: View {
                     
                     Text(LocalizedStringKey("Add your details to sign up"))
                         .font(.system(size: 14))
-                        .foregroundColor(.black.opacity(0.6))
+                        .foregroundColor(Color.black.opacity(0.6))
                         .padding(.top,2)
                     
                     VStack(spacing:12){
@@ -155,7 +155,7 @@ struct SignUpView: View {
                         },
                         icon: {
                             Text(LocalizedStringKey("Don't have an Account?"))
-                                .foregroundColor(.black.opacity(0.6))
+                                .foregroundColor(Color.black.opacity(0.6))
                             
                         }
                     )

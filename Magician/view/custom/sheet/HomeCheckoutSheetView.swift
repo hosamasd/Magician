@@ -135,7 +135,7 @@ struct HomeCheckoutSheetView: View {
                             Text(LocalizedStringKey("You can remove this card \n at anytime "))
                                 .font(.system(size: 14))
                                 .fontWeight(.semibold)
-                                .foregroundColor(.black.opacity(0.6))
+                                .foregroundColor(Color.black.opacity(0.6))
                             
                             Spacer()
                             

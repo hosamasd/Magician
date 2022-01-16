@@ -52,7 +52,7 @@ struct SCustomTF: View {
                                 }
                                 //                                        print(focused ? isFocus=true : "unfocused")
                             })
-                            .foregroundColor(.black.opacity( 0.6))
+                            .foregroundColor(Color.black.opacity( 0.6))
                             
                             .font(.customFontSystem(size: 12))
                             

@@ -40,7 +40,7 @@ struct HomeAccountGifts: View {
                         Text(LocalizedStringKey("End in : 25/10/2021"))
                             .font(.customFontSystem(size: 12))
                             .fontWeight(.bold)
-                            .foregroundColor(.black.opacity(0.6))
+                            .foregroundColor(Color.black.opacity(0.6))
                     }
                     
                 )

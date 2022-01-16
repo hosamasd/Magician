@@ -18,7 +18,7 @@ struct AddVisaChangeAddressView: View {
                 Text(LocalizedStringKey("Delivery Address"))
                     .font(.system(size: 14))
                     .fontWeight(.semibold)
-                    .foregroundColor(.gray.opacity(0.8))
+                    .foregroundColor(Color.gray.opacity(0.8))
                     
                     //                    .foregroundColor(.gray.opacity(0.6))
                     .padding(.vertical)

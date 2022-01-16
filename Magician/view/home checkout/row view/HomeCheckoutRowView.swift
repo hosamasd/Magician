@@ -18,7 +18,7 @@ struct HomeCheckoutRowView: View {
                 Text(x.name)
                     .font(.customFontSystem(size: 15))
                     .fontWeight(.bold)
-                    .foregroundColor(.black.opacity(0.6))
+                    .foregroundColor(Color.black.opacity(0.6))
                 
                 Spacer()
                 

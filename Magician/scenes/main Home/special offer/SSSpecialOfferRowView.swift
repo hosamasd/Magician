@@ -76,7 +76,7 @@ struct SSSpecialOfferRowView: View {
                                 
                                 Text(x.type)
                                     .font(.system(size: 8))
-                                    .foregroundColor(.black.opacity(0.8))
+                                    .foregroundColor(Color.black.opacity(0.8))
                                     .padding(.top,1)
                                 
                             }
@@ -127,7 +127,7 @@ struct SSSpecialOfferRowView: View {
                                         
                                         .font(.system(size: 10))
                                         .fontWeight(.bold)
-                                        .foregroundColor(.green.opacity(1))
+                                        .foregroundColor(Color.green.opacity(1))
                                 },
                                 icon: {
                                     Text("75EGP")

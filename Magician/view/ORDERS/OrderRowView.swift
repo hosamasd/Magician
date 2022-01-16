@@ -36,7 +36,7 @@ struct OrderRowView: View {
                     .fontWeight(.regular)
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
-                    .foregroundColor(.black.opacity(0.6))
+                    .foregroundColor(Color.black.opacity(0.6))
                     
                     .padding(.bottom,4)
                 
@@ -53,7 +53,7 @@ struct OrderRowView: View {
                         
                         //                        .font(.system(size: 11))
                         .fontWeight(.regular)
-                        .foregroundColor(.black.opacity(0.8))
+                        .foregroundColor(Color.black.opacity(0.8))
                     
                     Spacer()
                     
@@ -79,7 +79,7 @@ struct OrderRowView: View {
                                         //                                        .font(.system(size: 16))
                                         .fontWeight(.bold)
                                         .padding(.trailing,-4)
-                                        .foregroundColor(.black.opacity(0.4))
+                                        .foregroundColor(Color.black.opacity(0.4))
                                 }
                             )
                             .transition(.move(edge: .trailing))

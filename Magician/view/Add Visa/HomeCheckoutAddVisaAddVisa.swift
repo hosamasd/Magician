@@ -14,7 +14,7 @@ struct HomeCheckoutAddVisaAddVisa: View {
         VStack(spacing: 15){
             HStack {
                 Text("Payment method")
-                    .foregroundColor(.gray.opacity(0.8))
+                    .foregroundColor(Color.gray.opacity(0.8))
                     .font(.system(size: 14))
                     .fontWeight(.bold)
                 

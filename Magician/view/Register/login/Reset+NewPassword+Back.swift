@@ -34,7 +34,7 @@ struct Reset_NewPassword_Back: View {
             
             Text(LocalizedStringKey(getSubTitle()))
                 .font(.system(size: 14))
-                .foregroundColor(.black.opacity(0.6))
+                .foregroundColor(Color.black.opacity(0.6))
                 //                .padding(.top)
                 .padding(.top,2)
             

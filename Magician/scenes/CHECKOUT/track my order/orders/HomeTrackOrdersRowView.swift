@@ -24,7 +24,7 @@ struct HomeTrackOrdersRowView: View {
                     
                     //                    .font(.customFontSystem(size: 15))
                     .fontWeight(.bold)
-                    .foregroundColor(.black.opacity(isTotal ? 1 : 0.6))
+                    .foregroundColor(Color.black.opacity(isTotal ? 1 : 0.6))
                 
                 Spacer()
                 

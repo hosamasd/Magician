@@ -65,7 +65,7 @@ struct LoginView: View {
                     Text(LocalizedStringKey("Forgot your password?"))
                         .font(.system(size: 14))
                         .fontWeight(.semibold)
-                        .foregroundColor(.black.opacity(0.6))
+                        .foregroundColor(Color.black.opacity(0.6))
                 })
                 .padding(.top,20)
                 
@@ -88,7 +88,7 @@ struct LoginView: View {
                     },
                     icon: {
                         Text(LocalizedStringKey("Don't have an Account?"))
-                            .foregroundColor(.black.opacity(0.6))
+                            .foregroundColor(Color.black.opacity(0.6))
                         
                     }
                 )
