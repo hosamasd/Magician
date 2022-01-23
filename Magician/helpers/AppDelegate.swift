@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 //import Firebase
+import IQKeyboardManagerSwift
 
 
 
@@ -17,6 +18,11 @@ class AppDelegate : NSObject,UIApplicationDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
 //        FirebaseApp.configure()
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Done"
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysShow
         return true
     }
     
