@@ -1,0 +1,6 @@
+framework module Pods_Magician {
+  umbrella header "Pods-Magician-umbrella.h"
+
+  export *
+  module * { export * }
+}

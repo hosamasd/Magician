@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B7D7998044BCFB9730E5471 /* Pods_Magician.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD354037D1B203C91769CF0 /* Pods_Magician.framework */; };
 		4E09BFB327182EC3006928FD /* HomeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09BFB227182EC3006928FD /* HomeCategoryView.swift */; };
 		4E09BFB627182FD5006928FD /* HomeTopRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09BFB527182FD5006928FD /* HomeTopRating.swift */; };
 		4E09BFB927183092006928FD /* HomeSpecialOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09BFB827183092006928FD /* HomeSpecialOffer.swift */; };
@@ -331,6 +332,9 @@
 		4EFC79502716CF9D00C5DF36 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
 		4EFC79532716D11D00C5DF36 /* SHomeONBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHomeONBoard.swift; sourceTree = "<group>"; };
 		4EFC79552716D62F00C5DF36 /* SSHomeONBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHomeONBoard.swift; sourceTree = "<group>"; };
+		9B2387E4DDA9605DD3ADAA55 /* Pods-Magician.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magician.release.xcconfig"; path = "Target Support Files/Pods-Magician/Pods-Magician.release.xcconfig"; sourceTree = "<group>"; };
+		9DD354037D1B203C91769CF0 /* Pods_Magician.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magician.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56FE48C047ECB9E2F11B01C /* Pods-Magician.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magician.debug.xcconfig"; path = "Target Support Files/Pods-Magician/Pods-Magician.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,12 +342,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B7D7998044BCFB9730E5471 /* Pods_Magician.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ADD0BD04C2F50897FB848E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E56FE48C047ECB9E2F11B01C /* Pods-Magician.debug.xcconfig */,
+				9B2387E4DDA9605DD3ADAA55 /* Pods-Magician.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4E09BFB127182EB0006928FD /* category */ = {
 			isa = PBXGroup;
 			children = (
@@ -780,6 +795,8 @@
 			children = (
 				4ECD6D9B27145E0400011208 /* Magician */,
 				4ECD6D9A27145E0400011208 /* Products */,
+				2ADD0BD04C2F50897FB848E8 /* Pods */,
+				A270DD81CBA9EC6A0C383A09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1111,6 +1128,14 @@
 			path = location;
 			sourceTree = "<group>";
 		};
+		A270DD81CBA9EC6A0C383A09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DD354037D1B203C91769CF0 /* Pods_Magician.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1118,9 +1143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4ECD6DA827145E0700011208 /* Build configuration list for PBXNativeTarget "Magician" */;
 			buildPhases = (
+				AFCA62A720DB6BC803A0C18D /* [CP] Check Pods Manifest.lock */,
 				4ECD6D9527145E0400011208 /* Sources */,
 				4ECD6D9627145E0400011208 /* Frameworks */,
 				4ECD6D9727145E0400011208 /* Resources */,
+				3AFC169C4FE5328A41C5AA93 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1183,6 +1210,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3AFC169C4FE5328A41C5AA93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Magician/Pods-Magician-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Magician/Pods-Magician-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Magician/Pods-Magician-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFCA62A720DB6BC803A0C18D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Magician-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4ECD6D9527145E0400011208 /* Sources */ = {
@@ -1474,6 +1543,7 @@
 		};
 		4ECD6DA927145E0700011208 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E56FE48C047ECB9E2F11B01C /* Pods-Magician.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1496,6 +1566,7 @@
 		};
 		4ECD6DAA27145E0700011208 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B2387E4DDA9605DD3ADAA55 /* Pods-Magician.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
