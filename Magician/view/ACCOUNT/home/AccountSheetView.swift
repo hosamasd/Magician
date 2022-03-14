@@ -24,6 +24,7 @@ struct AccountSheetView: View {
 
                         Button(action: {withAnimation{
                             vm.isShowUserGift=false
+                            print()
                         }}, label: {
                             Image(systemName: "xmark")
                                 .font(.system(size: 20))
