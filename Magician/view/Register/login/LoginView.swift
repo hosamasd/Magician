@@ -37,8 +37,16 @@ struct LoginView: View {
                     
                     Button(action: {
                         withAnimation{
-                            //                            vm.isLooding=true
-                            vm.makeLogin()
+                            
+                            self.vm.isUserLogin.toggle()
+                            self.vm.isLogin=false
+                            
+                            
+//                            vm.isLooding=true
+                            
+                            
+//                                                        vm.isLooding=true
+//                            vm.makeLogin()
                         }
                     }, label: {
                         RoundedRectangle(cornerRadius: 28)
